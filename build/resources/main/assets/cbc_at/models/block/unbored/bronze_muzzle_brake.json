@@ -1,0 +1,10 @@
+{
+  "parent": "cbc_at:block/muzzle_brake",
+  "textures": {
+    "0": "cbc_at:block/bronze_cannon_barrel_side",
+    "1": "cbc_at:block/unbored_bronze_cannon_barrel_end",
+    "2": "cbc_at:block/bronze_cannon_chamber_side",
+    "3": "cbc_at:block/unbored_bronze_cannon_chamber_end",
+    "particle": "cbc_at:block/bronze_cannon_barrel_side"
+  }
+}

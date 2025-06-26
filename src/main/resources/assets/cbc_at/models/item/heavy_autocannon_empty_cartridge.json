@@ -1,0 +1,6 @@
+{
+  "parent": "cbc_at:item/base/heavyautocannonemptycartridge",
+  "textures": {
+    "0": "cbc_at:item/heavy_autocannon_cartridge"
+  }
+}

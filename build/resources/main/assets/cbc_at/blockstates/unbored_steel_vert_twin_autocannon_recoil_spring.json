@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=up"    : { "model" : "cbc_at:block/twin_autocannon/unbored_steel_vert_twin_autocannon_recoil_spring", "x":  0},
+    "facing=down"  : { "model" : "cbc_at:block/twin_autocannon/unbored_steel_vert_twin_autocannon_recoil_spring", "x": 180},
+    "facing=north" : { "model" : "cbc_at:block/twin_autocannon/unbored_steel_vert_twin_autocannon_recoil_spring", "x": 90},
+    "facing=east"  : { "model" : "cbc_at:block/twin_autocannon/unbored_steel_vert_twin_autocannon_recoil_spring", "y": 90, "x": 90},
+    "facing=south" : { "model" : "cbc_at:block/twin_autocannon/unbored_steel_vert_twin_autocannon_recoil_spring", "x": 270},
+    "facing=west"  : { "model" : "cbc_at:block/twin_autocannon/unbored_steel_vert_twin_autocannon_recoil_spring", "y": 90, "x": 270}
+  }
+}

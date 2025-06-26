@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cbc_at:item/apds_autocannon_round"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=up,handle=false"    : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech", "x":  0},
+    "facing=down,handle=false"  : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech", "x": 180},
+    "facing=north,handle=false" : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech", "x": -90, "y": 180},
+    "facing=east,handle=false"  : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech", "y": -90, "x": -90},
+    "facing=south,handle=false" : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech", "x": 270},
+    "facing=west,handle=false"  : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech", "y": 90, "x": 270},
+    "facing=up,handle=true"    : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech_handle", "x":  0},
+    "facing=down,handle=true"  : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech_handle", "x": 180},
+    "facing=north,handle=true" : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech_handle", "x": -90, "y": 180},
+    "facing=east,handle=true"  : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech_handle", "y": -90, "x": -90},
+    "facing=south,handle=true" : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech_handle", "x": 270},
+    "facing=west,handle=true"  : { "model" : "cbc_at:block/twin_autocannon/cast_iron_vert_twin_autocannon_breech_handle", "y": 90, "x": 270}
+  }
+}

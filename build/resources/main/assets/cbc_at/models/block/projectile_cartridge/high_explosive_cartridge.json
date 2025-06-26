@@ -1,0 +1,7 @@
+{
+  "parent": "cbc_at:block/projectile_cartridge/projectile_cartridge",
+  "textures": {
+    "top": "cbc_at:block/projectile_cartridge/high_explosive_shell_top",
+    "side": "cbc_at:block/projectile_cartridge/high_explosive_shell_side"
+  }
+}

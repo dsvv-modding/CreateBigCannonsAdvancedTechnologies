@@ -1,0 +1,6 @@
+{
+  "type": "createbigcannons:drill_boring",
+  "input": "cbc_at:unbored_bronze_autocannon_muzzle_brake",
+  "result": "cbc_at:bronze_autocannon_muzzle_brake",
+  "obey_facing_or_axis": true
+}

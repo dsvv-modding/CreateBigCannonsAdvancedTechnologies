@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "assembled=false,facing=up"    : { "model" : "cbc_at:block/heavy_autocannon/bronze_heavy_autocannon_barrel", "x":  0},
+    "assembled=false,facing=down"  : { "model" : "cbc_at:block/heavy_autocannon/bronze_heavy_autocannon_barrel", "x": 180},
+    "assembled=false,facing=north" : { "model" : "cbc_at:block/heavy_autocannon/bronze_heavy_autocannon_barrel", "x": 90},
+    "assembled=false,facing=east"  : { "model" : "cbc_at:block/heavy_autocannon/bronze_heavy_autocannon_barrel", "y": 90, "x": 90},
+    "assembled=false,facing=south" : { "model" : "cbc_at:block/heavy_autocannon/bronze_heavy_autocannon_barrel", "x": 270},
+    "assembled=false,facing=west"  : { "model" : "cbc_at:block/heavy_autocannon/bronze_heavy_autocannon_barrel", "y": 90, "x": 270},
+    "assembled=true,facing=up"    : { "model" : "cbc_at:block/heavy_autocannon/bronze_assembled_heavy_autocannon_barrel", "x":  0},
+    "assembled=true,facing=down"  : { "model" : "cbc_at:block/heavy_autocannon/bronze_assembled_heavy_autocannon_barrel", "x": 180},
+    "assembled=true,facing=north" : { "model" : "cbc_at:block/heavy_autocannon/bronze_assembled_heavy_autocannon_barrel", "x": 90},
+    "assembled=true,facing=east"  : { "model" : "cbc_at:block/heavy_autocannon/bronze_assembled_heavy_autocannon_barrel", "y": 90, "x": 90},
+    "assembled=true,facing=south" : { "model" : "cbc_at:block/heavy_autocannon/bronze_assembled_heavy_autocannon_barrel", "x": 270},
+    "assembled=true,facing=west"  : { "model" : "cbc_at:block/heavy_autocannon/bronze_assembled_heavy_autocannon_barrel", "y": 90, "x": 270}
+  }
+}

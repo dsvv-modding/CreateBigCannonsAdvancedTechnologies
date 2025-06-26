@@ -1,0 +1,6 @@
+{
+  "parent": "cbc_at:block/cluster_block",
+  "textures": {
+    "1": "cbc_at:block/projectile_cartridge/cluster_side"
+  }
+}

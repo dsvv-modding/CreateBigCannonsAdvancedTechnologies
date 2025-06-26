@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cbc_at:vert_twin_autocannon_silencer_mould"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "cbc_at:blocks/vert_twin_autocannon_silencer_mould"
+}

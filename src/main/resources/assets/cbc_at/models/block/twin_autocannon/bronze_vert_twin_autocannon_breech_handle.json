@@ -1,0 +1,9 @@
+{
+  "parent": "cbc_at:block/twin_autocannon/vert_twin_autocannon_breech_handle",
+  "textures": {
+    "0": "cbc_at:block/bronze_autocannon",
+    "1": "cbc_at:block/bronze_autocannon",
+    "2": "cbc_at:block/bronze_autocannon_1",
+    "particle": "cbc_at:block/bronze_autocannon"
+  }
+}

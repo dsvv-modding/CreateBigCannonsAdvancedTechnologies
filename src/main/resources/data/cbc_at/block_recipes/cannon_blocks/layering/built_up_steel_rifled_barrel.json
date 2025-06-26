@@ -1,0 +1,8 @@
+{
+  "type": "createbigcannons:built_up_heating",
+  "layers": [
+    "cbc_at:steel_rifled_barrel",
+    "createbigcannons:small_steel_cannon_layer"
+  ],
+  "result": "cbc_at:built_up_steel_rifled_barrel"
+}

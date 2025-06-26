@@ -1,0 +1,9 @@
+{
+  "parent": "cbc_at:block/twin_autocannon/twin_autocannon_silencer",
+  "textures": {
+    "0": "cbc_at:block/cast_iron_autocannon",
+    "1": "cbc_at:block/cast_iron_autocannon",
+    "2": "cbc_at:block/cast_iron_autocannon_1",
+    "particle": "cbc_at:block/cast_iron_autocannon"
+  }
+}

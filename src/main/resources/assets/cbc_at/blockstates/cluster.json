@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=up"    : { "model" : "cbc_at:block/cluster_block"},
+    "facing=down"  : { "model" : "cbc_at:block/cluster_block", "x": 180},
+    "facing=north" : { "model" : "cbc_at:block/cluster_block", "x": 90},
+    "facing=east"  : { "model" : "cbc_at:block/cluster_block", "y": 90, "x": 90},
+    "facing=south" : { "model" : "cbc_at:block/cluster_block", "x": 270},
+    "facing=west"  : { "model" : "cbc_at:block/cluster_block", "y": 90, "x": 270}
+  }
+}

@@ -1,0 +1,797 @@
+Java Launcher: C:\Program Files\Java\jdk-17\bin\java.exe
+Arguments: '--input, C:\Users\Daniel\Desktop\CBCAT\build\libs\cbc_at-com.dsvv-all.jar, --output, C:\Users\Daniel\Desktop\CBCAT\build\reobfJarJar\output.jar, --names, C:\Users\Daniel\Desktop\CBCAT\build\reobfJarJar\mappings.tsrg, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.5.0-beta.4\db6f21e91eed1f04c4f9558bfddab33adb44fd51\mixinextras-forge-0.5.0-beta.4.jar, --lib, C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\simibubi\create\create-1.20.1\0.5.1.j-55_mapped_parchment_2023.09.03-1.20.1\create-1.20.1-0.5.1.j-55_mapped_parchment_2023.09.03-1.20.1-slim.jar, --lib, C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\jozufozu\flywheel\flywheel-forge-1.20.1\0.6.11-13_mapped_parchment_2023.09.03-1.20.1\flywheel-forge-1.20.1-0.6.11-13_mapped_parchment_2023.09.03-1.20.1.jar, --lib, C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\tterrag\registrate\Registrate\MC1.20-1.3.3_mapped_parchment_2023.09.03-1.20.1\Registrate-MC1.20-1.3.3_mapped_parchment_2023.09.03-1.20.1.jar, --lib, C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\create-big-cannons-646668\5812633_mapped_parchment_2023.09.03-1.20.1\create-big-cannons-646668-5812633_mapped_parchment_2023.09.03-1.20.1.jar, --lib, C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\rbasamoyai\ritchiesprojectilelib\2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1\ritchiesprojectilelib-2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1.jar, --lib, C:\Users\Daniel\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1\forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.gradleup.shadow\shadow-gradle-plugin\8.3.0\b91c5c4329ad846d76564be2378e555b67097ba6\shadow-gradle-plugin-8.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\forge_gradle\minecraft_repo\versions\1.20.1\client-extra.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlloader\1.20.1-47.3.0\547850469c8a336b4c60cb8619f6cd421e9e5f55\fmlloader-1.20.1-47.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarSelector\0.3.19\376cc9c8ea60720cf027c01fc033de915699801c\JarJarSelector-0.3.19.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarMetadata\0.3.19\83feaa9b770e6ac0e96ee4fc23fa89325c5fe2\JarJarMetadata-0.3.19.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\31.1-jre\60458f877d055d0c9114d9e1a2efb737b4bc282c\guava-31.1-jre.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.1\1227f9e0666314f9de41477e3ec277e542ed7f7b\java-objc-bridge-1.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\forgespi\7.0.1\3b4972a0cdb135853dba219be61a79b22cff1309\forgespi-7.0.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mergetool\1.1.5\f3da18e12c696d35a47c82cbb2cc8b5aa15e1154\mergetool-1.1.5-api.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\24.0.1\13c5c75c4206580aa4d683bffee658caae6c9f43\annotations-24.0.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\cpw.mods\securejarhandler\2.1.10\51e6a22c6c716beb11e244bf5b8be480f51dd6b5\securejarhandler-2.1.10.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\coremods\5.1.6\62fab3c3d59d37f8e15af311cb638c6f6123423\coremods-5.1.6.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\cpw.mods\modlauncher\10.0.9\6d9443f56f50bb85cea383686ff9c867391458b\modlauncher-10.0.9.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.openjdk.nashorn\nashorn-core\15.3\43977e804697048fc8d81d333a36c17d07a5b3dd\nashorn-core-15.3.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-commons\9.7\e86dda4696d3c185fcc95d8d311904e7ce38a53f\asm-commons-9.7.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\9.7\c0655519f24d92af2202cb681cd7c1569df6ead6\asm-util-9.7.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\9.7\e4a258b7eb96107106c0599f0061cfc1832fe07a\asm-analysis-9.7.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\9.7\e446a17b175bfb733b87c5c2560ccb4e57d69f1a\asm-tree-9.7.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.7\73d7b3086e14beb604ced229c302feff6449723\asm-9.7.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\accesstransformers\8.0.4\272d240aa73f42195b2a68e2ebd8b701ecf41f63\accesstransformers-8.0.4.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4\4.9.1\e92af8ab33e428461927b484e90bb155a4f3a052\antlr4-4.9.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4-runtime\4.9.1\428664f05d2b7f7b7610204b5aa7c1763f62011a\antlr4-runtime-4.9.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\eventbus\6.0.5\699143dd438431d06b57416944f7cedbe52e1475\eventbus-6.0.5.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\unsafe\0.2.0\54d7a0a5e8fdb71b973025caa46f341ae5904f39\unsafe-0.2.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\toml\3.6.4\51d6cefb2b55ee55ee26b16391212fb2c7dfb4f4\toml-3.6.4.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\core\3.6.4\510f174abbf1c947494db50ef2445683bd52c230\core-3.6.4.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.8.5\4433f50c07debefaed0553bd0068f4f48d449313\maven-artifact-3.8.5.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.jodah\typetools\0.6.3\a01aaa6ddaea9ec07ec4f209487b7a46a526283a\typetools-0.6.3.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecrell\terminalconsoleappender\1.2.0\96d02cd3b384ff015a8fef4223bcb4ccf1717c95\terminalconsoleappender-1.2.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.jline\jline-reader\3.12.1\4382ab1382c7b6f379377ed5f665dc2f6e1218bc\jline-reader-3.12.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.jline\jline-terminal\3.12.1\c777448314e050d980a6b697c140f3bfe9eb7416\jline-terminal-3.12.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.spongepowered\mixin\0.8.5\9d1c0c3a304ae6697ecd477218fa61b850bf57fc\mixin-0.8.5.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\cpw.mods\bootstraplauncher\1.1.2\c546e00443d8432cda6baa1c860346980742628\bootstraplauncher-1.1.2.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarFileSystems\0.3.19\2464eb7d6b9ddb9db36a82cf8a95193e5c6fe020\JarJarFileSystems-0.3.19.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlearlydisplay\1.20.1-47.3.0\91e33682894f35862e9ce29d633e3258120952f0\fmlearlydisplay-1.20.1-47.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.github.oshi\oshi-core\6.2.2\54f5efc19bca95d709d9a37d19ffcbba3d21c1a6\oshi-core-6.2.2.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.10\dd9b193aef96e973d5a11ab13cd17430c2e4306b\gson-2.10.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j\71.1\9e7d3304c23f9ba5cb71915f7cce23231a57a445\icu4j-71.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\4.0.43\2ff9d747a77570a07a60d32ac77eb6162ad2a2d9\authlib-4.0.43.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\blocklist\1.0.10\5c685c5ffa94c4cd39496c7184c1d122e515ecef\blocklist-1.0.10.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\brigadier\1.1.8\5244ce82c3337bba4a196a3ce858bfaecc74404a\brigadier-1.1.8.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\datafixerupper\6.0.8\3ba4a30557a9b057760af4011f909ba619fc5125\datafixerupper-6.0.8.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\logging\1.1.1\832b8e6674a9b325a5175a3a6267dfaf34c85139\logging-1.1.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\2.2.10\da05971b07cbb379d002cf7eaec6a2048211fefc\patchy-2.2.10.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.17.9\3cad216e3a7f0c19b4b394388bc9ffc446f13b14\text2speech-1.17.9.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.15\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\commons-codec-1.15.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.11.0\a2503f302b11ebde7ebc3df41daebe0e4eea3689\commons-io-2.11.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler\4.1.82.Final\644041d1fa96a5d3130a29e8978630d716d76e38\netty-handler-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec\4.1.82.Final\b77200379acb345a9ffdece1c605e591ac3e4e0a\netty-codec-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-classes-epoll\4.1.82.Final\e7c7dd18deac93105797f30057c912651ea76521\netty-transport-classes-epoll-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-unix-common\4.1.82.Final\3e895b35ca1b8a0eca56cacff4c2dde5d2c6abce\netty-transport-native-unix-common-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport\4.1.82.Final\e431a218d91acb6476ccad5f5aafde50aa3945ca\netty-transport-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-buffer\4.1.82.Final\a544270cf1ae8b8077082f5036436a9a9971ea71\netty-buffer-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver\4.1.82.Final\38f665ae8dcd29032eea31245ba7806bed2e0fa8\netty-resolver-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-common\4.1.82.Final\22d148e85c3f5ebdacc0ce1f5aabb1d420f73f3\netty-common-4.1.82.Final.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\8.5.9\bb7ea75ecdb216654237830b3a96d87ad91f8cc5\fastutil-8.5.9.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna-platform\5.12.1\97406a297c852f4a41e688a176ec675f72e8329\jna-platform-5.12.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.12.1\b1e93a735caea94f503e95e6fe79bf9cdc1e985d\jna-5.12.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.4\4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c\jopt-simple-5.0.4.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.21\4ec95b60d4e86b5c95a0e919cb172a0af98011ef\commons-compress-1.21.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.15\7f2e0c573eaa7a74bac2e89b359e1f73d92a0a1d\httpcore-4.4.15.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.19.0\3b6eeb4de4c49c0fe38a4ee27188ff5fee44d0bb\log4j-core-2.19.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-slf4j2-impl\2.19.0\5c04bfdd63ce9dceb2e284b81e96b6a70010ee10\log4j-slf4j2-impl-2.19.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.19.0\ea1b37f38c327596b216542bc636cfdc0b8036fa\log4j-api-2.19.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.joml\joml\1.10.5\22566d58af70ad3d72308bab63b8339906deb649\joml-1.10.5.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\cbac1b8d30cb4795149c1ef540f912671a8616d0\lwjgl-glfw-3.3.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\ed892f945cf7e79c8756796f32d00fa4ceaf573b\lwjgl-glfw-3.3.1-natives-windows.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\beda65ee503443e60aa196d58ed31f8d001dc22a\lwjgl-glfw-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\b997e3391d6ce8f05487e7335d95c606043884a1\lwjgl-glfw-3.3.1-natives-windows-x86.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\a817bcf213db49f710603677457567c37d53e103\lwjgl-jemalloc-3.3.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\948a89b76a16aa324b046ae9308891216ffce5f9\lwjgl-jemalloc-3.3.1-natives-windows.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\cae85c4edb219c88b6a0c26a87955ad98dc9519d\lwjgl-jemalloc-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\fb476c8ec110e1c137ad3ce8a7f7bfe6b11c6324\lwjgl-jemalloc-3.3.1-natives-windows-x86.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\2623a6b8ae1dfcd880738656a9f0243d2e6840bd\lwjgl-openal-3.3.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\30a474d0e57193d7bc128849a3ab66bc9316fdb1\lwjgl-openal-3.3.1-natives-windows.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\40d65f1a7368a2aa47336f9cb69f5a190cf9975a\lwjgl-openal-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\888349f7b1be6fbae58bf8edfb9ef12def04c4e3\lwjgl-openal-3.3.1-natives-windows-x86.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\831a5533a21a5f4f81bbc51bb13e9899319b5411\lwjgl-opengl-3.3.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\c1807e9bd571402787d7e37e3029776ae2513bb8\lwjgl-opengl-3.3.1-natives-windows.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\527d78f1e9056aff3ed02ce93019c73c5e8f1721\lwjgl-opengl-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\deef3eb9b178ff2ff3ce893cc72ae741c3a17974\lwjgl-opengl-3.3.1-natives-windows-x86.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\b119297cf8ed01f247abe8685857f8e7fcf5980f\lwjgl-stb-3.3.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\86315914ac119efdb02dc9e8e978ade84f1702af\lwjgl-stb-3.3.1-natives-windows.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\fde63cdd2605c00636721a6c8b961e41d1f6b247\lwjgl-stb-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\a8d41f419eecb430b7c91ea2ce2c5c451cae2091\lwjgl-stb-3.3.1-natives-windows-x86.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\ff1914111ef2e3e0110ef2dabc8d8cdaad82347\lwjgl-tinyfd-3.3.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\a5d830475ec0958d9fdba1559efa99aef211e6ff\lwjgl-tinyfd-3.3.1-natives-windows.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\83a5e780df610829ff3a737822b4f931cffecd91\lwjgl-tinyfd-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\842eedd876fae354abc308c98a263f6bbc9e8a4d\lwjgl-tinyfd-3.3.1-natives-windows-x86.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\ae58664f88e18a9bb2c77b063833ca7aaec484cb\lwjgl-3.3.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\36c37f16ab611b3aa11f3bcf80b1d509b4ce6b\lwjgl-3.3.1-natives-windows.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\f46cadcf95675908fd3a550d63d9d709cb68998\lwjgl-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\3b14f4beae9dd39791ec9e12190a9380cd8a3ce6\lwjgl-3.3.1-natives-windows-x86.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.machinezoo.noexception\noexception\1.7.1\b65330c98e38a1f915fa54a6e5eca496505e3f0a\noexception-1.7.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.1\f48d81adce2abf5ad3cfe463df517952749e03bc\slf4j-api-2.0.1.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\3.3.0\cf43b5391de623b36fe066a21127baef82c64022\plexus-utils-3.3.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.12.0\d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5\checker-qual-3.12.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.11.0\c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69\error_prone_annotations-2.11.0.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\ST4\4.3\92f2c1ad8d84abcbeead6cf7f2c53a04166293c2\ST4-4.3.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\antlr-runtime\3.5.2\cd9cd41361c155f3af0f653009dcecb08d8b4afd\antlr-runtime-3.5.2.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.abego.treelayout\org.abego.treelayout.core\1.0.3\457216e8e6578099ae63667bb1e4439235892028\org.abego.treelayout.core-1.0.3.jar, --lib, C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.glassfish\javax.json\1.0.4\3178f73569fd7a1e5ffc464e680f7a8cc784b85a\javax.json-1.0.4.jar, --disable-abstract-param'
+Classpath:
+ - C:\Users\Daniel\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\ForgeAutoRenamingTool\1.0.6\ForgeAutoRenamingTool-1.0.6-all.jar
+Working directory: C:\Users\Daniel\Desktop\CBCAT\build\reobfJarJar
+Main class: net.minecraftforge.fart.Main
+====================================
+Forge Auto Renaming Tool v1.0.6
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.5.0-beta.4\db6f21e91eed1f04c4f9558bfddab33adb44fd51\mixinextras-forge-0.5.0-beta.4.jar
+lib: C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\simibubi\create\create-1.20.1\0.5.1.j-55_mapped_parchment_2023.09.03-1.20.1\create-1.20.1-0.5.1.j-55_mapped_parchment_2023.09.03-1.20.1-slim.jar
+lib: C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\jozufozu\flywheel\flywheel-forge-1.20.1\0.6.11-13_mapped_parchment_2023.09.03-1.20.1\flywheel-forge-1.20.1-0.6.11-13_mapped_parchment_2023.09.03-1.20.1.jar
+lib: C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\tterrag\registrate\Registrate\MC1.20-1.3.3_mapped_parchment_2023.09.03-1.20.1\Registrate-MC1.20-1.3.3_mapped_parchment_2023.09.03-1.20.1.jar
+lib: C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\create-big-cannons-646668\5812633_mapped_parchment_2023.09.03-1.20.1\create-big-cannons-646668-5812633_mapped_parchment_2023.09.03-1.20.1.jar
+lib: C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\rbasamoyai\ritchiesprojectilelib\2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1\ritchiesprojectilelib-2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1.jar
+lib: C:\Users\Daniel\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1\forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.gradleup.shadow\shadow-gradle-plugin\8.3.0\b91c5c4329ad846d76564be2378e555b67097ba6\shadow-gradle-plugin-8.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\forge_gradle\minecraft_repo\versions\1.20.1\client-extra.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlloader\1.20.1-47.3.0\547850469c8a336b4c60cb8619f6cd421e9e5f55\fmlloader-1.20.1-47.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarSelector\0.3.19\376cc9c8ea60720cf027c01fc033de915699801c\JarJarSelector-0.3.19.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarMetadata\0.3.19\83feaa9b770e6ac0e96ee4fc23fa89325c5fe2\JarJarMetadata-0.3.19.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\31.1-jre\60458f877d055d0c9114d9e1a2efb737b4bc282c\guava-31.1-jre.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.1\1227f9e0666314f9de41477e3ec277e542ed7f7b\java-objc-bridge-1.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\forgespi\7.0.1\3b4972a0cdb135853dba219be61a79b22cff1309\forgespi-7.0.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mergetool\1.1.5\f3da18e12c696d35a47c82cbb2cc8b5aa15e1154\mergetool-1.1.5-api.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\24.0.1\13c5c75c4206580aa4d683bffee658caae6c9f43\annotations-24.0.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\cpw.mods\securejarhandler\2.1.10\51e6a22c6c716beb11e244bf5b8be480f51dd6b5\securejarhandler-2.1.10.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\coremods\5.1.6\62fab3c3d59d37f8e15af311cb638c6f6123423\coremods-5.1.6.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\cpw.mods\modlauncher\10.0.9\6d9443f56f50bb85cea383686ff9c867391458b\modlauncher-10.0.9.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.openjdk.nashorn\nashorn-core\15.3\43977e804697048fc8d81d333a36c17d07a5b3dd\nashorn-core-15.3.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-commons\9.7\e86dda4696d3c185fcc95d8d311904e7ce38a53f\asm-commons-9.7.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\9.7\c0655519f24d92af2202cb681cd7c1569df6ead6\asm-util-9.7.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\9.7\e4a258b7eb96107106c0599f0061cfc1832fe07a\asm-analysis-9.7.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\9.7\e446a17b175bfb733b87c5c2560ccb4e57d69f1a\asm-tree-9.7.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.7\73d7b3086e14beb604ced229c302feff6449723\asm-9.7.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\accesstransformers\8.0.4\272d240aa73f42195b2a68e2ebd8b701ecf41f63\accesstransformers-8.0.4.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4\4.9.1\e92af8ab33e428461927b484e90bb155a4f3a052\antlr4-4.9.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4-runtime\4.9.1\428664f05d2b7f7b7610204b5aa7c1763f62011a\antlr4-runtime-4.9.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\eventbus\6.0.5\699143dd438431d06b57416944f7cedbe52e1475\eventbus-6.0.5.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\unsafe\0.2.0\54d7a0a5e8fdb71b973025caa46f341ae5904f39\unsafe-0.2.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\toml\3.6.4\51d6cefb2b55ee55ee26b16391212fb2c7dfb4f4\toml-3.6.4.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\core\3.6.4\510f174abbf1c947494db50ef2445683bd52c230\core-3.6.4.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.8.5\4433f50c07debefaed0553bd0068f4f48d449313\maven-artifact-3.8.5.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.jodah\typetools\0.6.3\a01aaa6ddaea9ec07ec4f209487b7a46a526283a\typetools-0.6.3.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecrell\terminalconsoleappender\1.2.0\96d02cd3b384ff015a8fef4223bcb4ccf1717c95\terminalconsoleappender-1.2.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.jline\jline-reader\3.12.1\4382ab1382c7b6f379377ed5f665dc2f6e1218bc\jline-reader-3.12.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.jline\jline-terminal\3.12.1\c777448314e050d980a6b697c140f3bfe9eb7416\jline-terminal-3.12.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.spongepowered\mixin\0.8.5\9d1c0c3a304ae6697ecd477218fa61b850bf57fc\mixin-0.8.5.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\cpw.mods\bootstraplauncher\1.1.2\c546e00443d8432cda6baa1c860346980742628\bootstraplauncher-1.1.2.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarFileSystems\0.3.19\2464eb7d6b9ddb9db36a82cf8a95193e5c6fe020\JarJarFileSystems-0.3.19.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlearlydisplay\1.20.1-47.3.0\91e33682894f35862e9ce29d633e3258120952f0\fmlearlydisplay-1.20.1-47.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.github.oshi\oshi-core\6.2.2\54f5efc19bca95d709d9a37d19ffcbba3d21c1a6\oshi-core-6.2.2.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.10\dd9b193aef96e973d5a11ab13cd17430c2e4306b\gson-2.10.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j\71.1\9e7d3304c23f9ba5cb71915f7cce23231a57a445\icu4j-71.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\4.0.43\2ff9d747a77570a07a60d32ac77eb6162ad2a2d9\authlib-4.0.43.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\blocklist\1.0.10\5c685c5ffa94c4cd39496c7184c1d122e515ecef\blocklist-1.0.10.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\brigadier\1.1.8\5244ce82c3337bba4a196a3ce858bfaecc74404a\brigadier-1.1.8.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\datafixerupper\6.0.8\3ba4a30557a9b057760af4011f909ba619fc5125\datafixerupper-6.0.8.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\logging\1.1.1\832b8e6674a9b325a5175a3a6267dfaf34c85139\logging-1.1.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\2.2.10\da05971b07cbb379d002cf7eaec6a2048211fefc\patchy-2.2.10.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.17.9\3cad216e3a7f0c19b4b394388bc9ffc446f13b14\text2speech-1.17.9.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.15\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\commons-codec-1.15.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.11.0\a2503f302b11ebde7ebc3df41daebe0e4eea3689\commons-io-2.11.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler\4.1.82.Final\644041d1fa96a5d3130a29e8978630d716d76e38\netty-handler-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec\4.1.82.Final\b77200379acb345a9ffdece1c605e591ac3e4e0a\netty-codec-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-classes-epoll\4.1.82.Final\e7c7dd18deac93105797f30057c912651ea76521\netty-transport-classes-epoll-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-unix-common\4.1.82.Final\3e895b35ca1b8a0eca56cacff4c2dde5d2c6abce\netty-transport-native-unix-common-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport\4.1.82.Final\e431a218d91acb6476ccad5f5aafde50aa3945ca\netty-transport-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-buffer\4.1.82.Final\a544270cf1ae8b8077082f5036436a9a9971ea71\netty-buffer-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver\4.1.82.Final\38f665ae8dcd29032eea31245ba7806bed2e0fa8\netty-resolver-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\io.netty\netty-common\4.1.82.Final\22d148e85c3f5ebdacc0ce1f5aabb1d420f73f3\netty-common-4.1.82.Final.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\8.5.9\bb7ea75ecdb216654237830b3a96d87ad91f8cc5\fastutil-8.5.9.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna-platform\5.12.1\97406a297c852f4a41e688a176ec675f72e8329\jna-platform-5.12.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.12.1\b1e93a735caea94f503e95e6fe79bf9cdc1e985d\jna-5.12.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.4\4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c\jopt-simple-5.0.4.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.21\4ec95b60d4e86b5c95a0e919cb172a0af98011ef\commons-compress-1.21.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.15\7f2e0c573eaa7a74bac2e89b359e1f73d92a0a1d\httpcore-4.4.15.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.19.0\3b6eeb4de4c49c0fe38a4ee27188ff5fee44d0bb\log4j-core-2.19.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-slf4j2-impl\2.19.0\5c04bfdd63ce9dceb2e284b81e96b6a70010ee10\log4j-slf4j2-impl-2.19.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.19.0\ea1b37f38c327596b216542bc636cfdc0b8036fa\log4j-api-2.19.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.joml\joml\1.10.5\22566d58af70ad3d72308bab63b8339906deb649\joml-1.10.5.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\cbac1b8d30cb4795149c1ef540f912671a8616d0\lwjgl-glfw-3.3.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\ed892f945cf7e79c8756796f32d00fa4ceaf573b\lwjgl-glfw-3.3.1-natives-windows.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\beda65ee503443e60aa196d58ed31f8d001dc22a\lwjgl-glfw-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\b997e3391d6ce8f05487e7335d95c606043884a1\lwjgl-glfw-3.3.1-natives-windows-x86.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\a817bcf213db49f710603677457567c37d53e103\lwjgl-jemalloc-3.3.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\948a89b76a16aa324b046ae9308891216ffce5f9\lwjgl-jemalloc-3.3.1-natives-windows.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\cae85c4edb219c88b6a0c26a87955ad98dc9519d\lwjgl-jemalloc-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\fb476c8ec110e1c137ad3ce8a7f7bfe6b11c6324\lwjgl-jemalloc-3.3.1-natives-windows-x86.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\2623a6b8ae1dfcd880738656a9f0243d2e6840bd\lwjgl-openal-3.3.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\30a474d0e57193d7bc128849a3ab66bc9316fdb1\lwjgl-openal-3.3.1-natives-windows.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\40d65f1a7368a2aa47336f9cb69f5a190cf9975a\lwjgl-openal-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\888349f7b1be6fbae58bf8edfb9ef12def04c4e3\lwjgl-openal-3.3.1-natives-windows-x86.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\831a5533a21a5f4f81bbc51bb13e9899319b5411\lwjgl-opengl-3.3.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\c1807e9bd571402787d7e37e3029776ae2513bb8\lwjgl-opengl-3.3.1-natives-windows.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\527d78f1e9056aff3ed02ce93019c73c5e8f1721\lwjgl-opengl-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\deef3eb9b178ff2ff3ce893cc72ae741c3a17974\lwjgl-opengl-3.3.1-natives-windows-x86.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\b119297cf8ed01f247abe8685857f8e7fcf5980f\lwjgl-stb-3.3.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\86315914ac119efdb02dc9e8e978ade84f1702af\lwjgl-stb-3.3.1-natives-windows.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\fde63cdd2605c00636721a6c8b961e41d1f6b247\lwjgl-stb-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\a8d41f419eecb430b7c91ea2ce2c5c451cae2091\lwjgl-stb-3.3.1-natives-windows-x86.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\ff1914111ef2e3e0110ef2dabc8d8cdaad82347\lwjgl-tinyfd-3.3.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\a5d830475ec0958d9fdba1559efa99aef211e6ff\lwjgl-tinyfd-3.3.1-natives-windows.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\83a5e780df610829ff3a737822b4f931cffecd91\lwjgl-tinyfd-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\842eedd876fae354abc308c98a263f6bbc9e8a4d\lwjgl-tinyfd-3.3.1-natives-windows-x86.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\ae58664f88e18a9bb2c77b063833ca7aaec484cb\lwjgl-3.3.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\36c37f16ab611b3aa11f3bcf80b1d509b4ce6b\lwjgl-3.3.1-natives-windows.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\f46cadcf95675908fd3a550d63d9d709cb68998\lwjgl-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\3b14f4beae9dd39791ec9e12190a9380cd8a3ce6\lwjgl-3.3.1-natives-windows-x86.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.machinezoo.noexception\noexception\1.7.1\b65330c98e38a1f915fa54a6e5eca496505e3f0a\noexception-1.7.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.1\f48d81adce2abf5ad3cfe463df517952749e03bc\slf4j-api-2.0.1.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\3.3.0\cf43b5391de623b36fe066a21127baef82c64022\plexus-utils-3.3.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.12.0\d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5\checker-qual-3.12.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.11.0\c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69\error_prone_annotations-2.11.0.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\ST4\4.3\92f2c1ad8d84abcbeead6cf7f2c53a04166293c2\ST4-4.3.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.antlr\antlr-runtime\3.5.2\cd9cd41361c155f3af0f653009dcecb08d8b4afd\antlr-runtime-3.5.2.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.abego.treelayout\org.abego.treelayout.core\1.0.3\457216e8e6578099ae63667bb1e4439235892028\org.abego.treelayout.core-1.0.3.jar
+lib: C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\org.glassfish\javax.json\1.0.4\3178f73569fd7a1e5ffc464e680f7a8cc784b85a\javax.json-1.0.4.jar
+log: null
+input: C:\Users\Daniel\Desktop\CBCAT\build\libs\cbc_at-com.dsvv-all.jar
+output: C:\Users\Daniel\Desktop\CBCAT\build\reobfJarJar\output.jar
+threads: 16
+Names: C:\Users\Daniel\Desktop\CBCAT\build\reobfJarJar\mappings.tsrg(reversed: false)
+Fix Annotations: false
+Fix Records: false
+Fix Identifiers: false
+Fix SourceFile: false
+Fix Line Numbers: false
+Strip codesigning signatures: false
+Adding Libraries to Inheritance
+Reading Input: C:\Users\Daniel\Desktop\CBCAT\build\libs\cbc_at-com.dsvv-all.jar
+Adding input to inheritance map
+Processing entries
+Conflicting propagated mapping for com/simibubi/create/foundation/blockEntity/renderer/SafeBlockEntityRenderer/render(Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V from net/minecraft/client/renderer/blockentity/BlockEntityRenderer/render(Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V: render -> m_6922_
+Conflicting propagated mapping for com/simibubi/create/foundation/blockEntity/SyncedBlockEntity/getUpdateTag()Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/level/block/entity/BlockEntity/getUpdateTag()Lnet/minecraft/nbt/CompoundTag;: getUpdateTag -> m_5995_
+Conflicting propagated mapping for com/simibubi/create/foundation/blockEntity/SyncedBlockEntity/getUpdatePacket()Lnet/minecraft/network/protocol/Packet; from net/minecraft/world/level/block/entity/BlockEntity/getUpdatePacket()Lnet/minecraft/network/protocol/Packet;: getUpdatePacket -> m_58483_
+Conflicting propagated mapping for com/simibubi/create/foundation/blockEntity/SmartBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for com/simibubi/create/foundation/blockEntity/SmartBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for com/simibubi/create/foundation/blockEntity/SmartBlockEntity/setRemoved()V from net/minecraft/world/level/block/entity/BlockEntity/setRemoved()V: setRemoved -> m_7651_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V from net/minecraft/world/level/block/state/BlockBehaviour/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V: onRemove -> m_6810_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/playerWillDestroy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/player/Player;)V from net/minecraft/world/level/block/Block/playerWillDestroy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/player/Player;)V: playerWillDestroy -> m_5707_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V from net/minecraft/world/level/block/state/BlockBehaviour/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V: onRemove -> m_6810_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/getFluidState(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState; from net/minecraft/world/level/block/state/BlockBehaviour/getFluidState(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState;: getFluidState -> m_5888_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/updateShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/updateShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;: updateShape -> m_7417_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock$State/getSerializedName()Ljava/lang/String; from net/minecraft/util/StringRepresentable/getSerializedName()Ljava/lang/String;: getSerializedName -> m_7912_
+Conflicting propagated mapping for com/simibubi/create/foundation/block/IBE/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker; from net/minecraft/world/level/block/EntityBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker;: getTicker -> m_142354_
+Conflicting propagated mapping for com/simibubi/create/foundation/block/IBE/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity; from net/minecraft/world/level/block/EntityBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;: newBlockEntity -> m_142194_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/SilencerBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/FumeExtractorBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/MuzzleBrakeBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/RifledBarrelBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from rbasamoyai/createbigcannons/cannons/big_cannons/BigCannonBaseBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/SilencerBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/FumeExtractorBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/RifledBarrelBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/MuzzleBrakeBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V from net/minecraft/world/level/block/state/BlockBehaviour/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V: onRemove -> m_6810_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/setPlacedBy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V from net/minecraft/world/level/block/Block/setPlacedBy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V: setPlacedBy -> m_6402_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/tick(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V from net/minecraft/world/level/block/state/BlockBehaviour/tick(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V: tick -> m_213897_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/playerWillDestroy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/player/Player;)V from net/minecraft/world/level/block/Block/playerWillDestroy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/player/Player;)V: playerWillDestroy -> m_5707_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/getFluidState(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState; from net/minecraft/world/level/block/state/BlockBehaviour/getFluidState(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState;: getFluidState -> m_5888_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/getAnalogOutputSignal(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I from net/minecraft/world/level/block/state/BlockBehaviour/getAnalogOutputSignal(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I: getAnalogOutputSignal -> m_6782_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/getCloneItemStack(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/level/block/Block/getCloneItemStack(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/item/ItemStack;: getCloneItemStack -> m_7397_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/updateShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/updateShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;: updateShape -> m_7417_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/recoil_spring/TwinAutocannonRecoilSpringBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannons/big_cannons/cannon_end/BigCannonEnd/getSerializedName()Ljava/lang/String; from net/minecraft/util/StringRepresentable/getSerializedName()Ljava/lang/String;: getSerializedName -> m_7912_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBarrelBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBarrelBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBarrelBlock$TwinAutocannonBarrelEnd/getSerializedName()Ljava/lang/String; from net/minecraft/util/StringRepresentable/getSerializedName()Ljava/lang/String;: getSerializedName -> m_7912_
+Conflicting propagated mapping for com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBlockItem/place(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/BlockItem/place(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/InteractionResult;: place -> m_40576_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/FuzedProjectileCartridgeBlockItem/place(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/BlockItem/place(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/InteractionResult;: place -> m_40576_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedProjectileBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/BlockItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/canAddPassenger(Lnet/minecraft/world/entity/Entity;)Z from net/minecraft/world/entity/Entity/canAddPassenger(Lnet/minecraft/world/entity/Entity;)Z: canAddPassenger -> m_7310_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerItem/use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder; from net/minecraft/world/item/Item/use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;: use -> m_7203_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/setDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V from net/minecraft/world/entity/Entity/setDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V: setDeltaMovement -> m_20256_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/remove(Lnet/minecraft/world/entity/Entity$RemovalReason;)V from net/minecraft/world/entity/Entity/remove(Lnet/minecraft/world/entity/Entity$RemovalReason;)V: remove -> m_142687_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerItem/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/BlockItem/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;: useOn -> m_6225_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerItem/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu; from net/minecraft/world/inventory/MenuConstructor/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu;: createMenu -> m_7208_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/Entity/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/ammo_container/AutocannonAmmoContainerItem/getDisplayName()Lnet/minecraft/network/chat/Component; from net/minecraft/world/MenuProvider/getDisplayName()Lnet/minecraft/network/chat/Component;: getDisplayName -> m_5446_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/saveWithoutId(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/entity/Entity/saveWithoutId(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;: saveWithoutId -> m_20240_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/InertProjectileBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/getPistonPushReaction()Lnet/minecraft/world/level/material/PushReaction; from net/minecraft/world/entity/Entity/getPistonPushReaction()Lnet/minecraft/world/level/material/PushReaction;: getPistonPushReaction -> m_7752_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/hasExactlyOnePlayerPassenger()Z from net/minecraft/world/entity/Entity/hasExactlyOnePlayerPassenger()Z: hasExactlyOnePlayerPassenger -> m_146898_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/isPickable()Z from net/minecraft/world/entity/Entity/isPickable()Z: isPickable -> m_6087_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/FuzedProjectileCartridgeBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/tick()V from net/minecraft/world/entity/Entity/tick()V: tick -> m_8119_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/ProjectileCartridgeBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/removePassenger(Lnet/minecraft/world/entity/Entity;)V from net/minecraft/world/entity/Entity/removePassenger(Lnet/minecraft/world/entity/Entity;)V: removePassenger -> m_20351_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/FuzedProjectileCartridgeBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/doWaterSplashEffect()V from net/minecraft/world/entity/Entity/doWaterSplashEffect()V: doWaterSplashEffect -> m_5841_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/ProjectileCartridgeBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from rbasamoyai/createbigcannons/munitions/big_cannon/ProjectileBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/setPos(DDD)V from net/minecraft/world/entity/Entity/setPos(DDD)V: setPos -> m_6034_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/canCollideWith(Lnet/minecraft/world/entity/Entity;)Z from net/minecraft/world/entity/Entity/canCollideWith(Lnet/minecraft/world/entity/Entity;)Z: canCollideWith -> m_7337_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/onBelowWorld()V from net/minecraft/world/entity/Entity/onBelowWorld()V: onBelowWorld -> m_6088_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/getDismountLocationForPassenger(Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/phys/Vec3; from net/minecraft/world/entity/Entity/getDismountLocationForPassenger(Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/phys/Vec3;: getDismountLocationForPassenger -> m_7688_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/propellant/BigCartridgeBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/propellant/BigCartridgeBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/getAddEntityPacket()Lnet/minecraft/network/protocol/Packet; from net/minecraft/world/entity/Entity/getAddEntityPacket()Lnet/minecraft/network/protocol/Packet;: getAddEntityPacket -> m_5654_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/kill()V from net/minecraft/world/entity/Entity/kill()V: kill -> m_6074_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/defineSynchedData()V from net/minecraft/world/entity/Entity/defineSynchedData()V: defineSynchedData -> m_8097_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/Entity/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: addAdditionalSaveData -> m_7380_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/setSecondsOnFire(I)V from net/minecraft/world/entity/Entity/setSecondsOnFire(I)V: setSecondsOnFire -> m_20254_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/positionRider(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity$MoveFunction;)V from net/minecraft/world/entity/Entity/positionRider(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity$MoveFunction;)V: positionRider -> m_19956_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/ProjectileCartridgeBlockItem/place(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/BlockItem/place(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/InteractionResult;: place -> m_40576_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/move(Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V from net/minecraft/world/entity/Entity/move(Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V: move -> m_6478_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z from net/minecraft/world/entity/Entity/hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z: hurt -> m_6469_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/AbstractContraptionEntity/updateInWaterStateAndDoFluidPushing()Z from net/minecraft/world/entity/Entity/updateInWaterStateAndDoFluidPushing()Z: updateInWaterStateAndDoFluidPushing -> m_20073_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/getContainerSize()I from net/minecraft/world/Container/getContainerSize()I: getContainerSize -> m_6643_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/setItem(ILnet/minecraft/world/item/ItemStack;)V from net/minecraft/world/Container/setItem(ILnet/minecraft/world/item/ItemStack;)V: setItem -> m_6836_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/removeItem(II)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/Container/removeItem(II)Lnet/minecraft/world/item/ItemStack;: removeItem -> m_7407_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/getItem(I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/Container/getItem(I)Lnet/minecraft/world/item/ItemStack;: getItem -> m_8020_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/clearContent()V from net/minecraft/world/Clearable/clearContent()V: clearContent -> m_6211_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/isEmpty()Z from net/minecraft/world/Container/isEmpty()Z: isEmpty -> m_7983_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/OrientedContraptionEntity/saveWithoutId(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; from com/simibubi/create/content/contraptions/AbstractContraptionEntity/saveWithoutId(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;: saveWithoutId -> m_20240_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/removeItemNoUpdate(I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/Container/removeItemNoUpdate(I)Lnet/minecraft/world/item/ItemStack;: removeItemNoUpdate -> m_8016_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/OrientedContraptionEntity/onSyncedDataUpdated(Lnet/minecraft/network/syncher/EntityDataAccessor;)V from net/minecraft/world/entity/Entity/onSyncedDataUpdated(Lnet/minecraft/network/syncher/EntityDataAccessor;)V: onSyncedDataUpdated -> m_7350_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/Container/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6542_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/OrientedContraptionEntity/getViewYRot(F)F from net/minecraft/world/entity/Entity/getViewYRot(F)F: getViewYRot -> m_5675_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/OrientedContraptionEntity/stopRiding()V from net/minecraft/world/entity/Entity/stopRiding()V: stopRiding -> m_8127_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/ProjectileCartridgeBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for com/dsvv/cbcat/cartridge/ProjectileCartridgeBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/OrientedContraptionEntity/defineSynchedData()V from com/simibubi/create/content/contraptions/AbstractContraptionEntity/defineSynchedData()V: defineSynchedData -> m_8097_
+Conflicting propagated mapping for com/simibubi/create/content/contraptions/OrientedContraptionEntity/getViewXRot(F)F from net/minecraft/world/entity/Entity/getViewXRot(F)F: getViewXRot -> m_5686_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/projectile/Projectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/tick()V from net/minecraft/world/entity/projectile/Projectile/tick()V: tick -> m_8119_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity/onSyncedDataUpdated(Lnet/minecraft/network/syncher/EntityDataAccessor;)V from com/simibubi/create/content/contraptions/OrientedContraptionEntity/onSyncedDataUpdated(Lnet/minecraft/network/syncher/EntityDataAccessor;)V: onSyncedDataUpdated -> m_7350_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/getLightProbePosition(F)Lnet/minecraft/world/phys/Vec3; from net/minecraft/world/entity/Entity/getLightProbePosition(F)Lnet/minecraft/world/phys/Vec3;: getLightProbePosition -> m_7371_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity/addPassenger(Lnet/minecraft/world/entity/Entity;)V from net/minecraft/world/entity/Entity/addPassenger(Lnet/minecraft/world/entity/Entity;)V: addPassenger -> m_20348_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/makeBoundingBox()Lnet/minecraft/world/phys/AABB; from net/minecraft/world/entity/Entity/makeBoundingBox()Lnet/minecraft/world/phys/AABB;: makeBoundingBox -> m_142242_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/lerpTo(DDDFFIZ)V from net/minecraft/world/entity/Entity/lerpTo(DDDFFIZ)V: lerpTo -> m_6453_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/defineSynchedData()V from net/minecraft/world/entity/Entity/defineSynchedData()V: defineSynchedData -> m_8097_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/projectile/Projectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: addAdditionalSaveData -> m_7380_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/setOnGround(Z)V from net/minecraft/world/entity/Entity/setOnGround(Z)V: setOnGround -> m_6853_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/getEyeHeight(Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F from net/minecraft/world/entity/Entity/getEyeHeight(Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F: getEyeHeight -> m_6380_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/canHitEntity(Lnet/minecraft/world/entity/Entity;)Z from net/minecraft/world/entity/projectile/Projectile/canHitEntity(Lnet/minecraft/world/entity/Entity;)Z: canHitEntity -> m_5603_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z from net/minecraft/world/entity/Entity/hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z: hurt -> m_6469_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity/getDismountLocationForPassenger(Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/phys/Vec3; from com/simibubi/create/content/contraptions/AbstractContraptionEntity/getDismountLocationForPassenger(Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/phys/Vec3;: getDismountLocationForPassenger -> m_7688_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity/getControllingPassenger()Lnet/minecraft/world/entity/LivingEntity; from net/minecraft/world/entity/Entity/getControllingPassenger()Lnet/minecraft/world/entity/LivingEntity;: getControllingPassenger -> m_6688_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity/ignoreExplosion()Z from net/minecraft/world/entity/Entity/ignoreExplosion()Z: ignoreExplosion -> m_6128_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity/positionRider(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity$MoveFunction;)V from com/simibubi/create/content/contraptions/AbstractContraptionEntity/positionRider(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity$MoveFunction;)V: positionRider -> m_19956_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile/tick()V from rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/tick()V: tick -> m_8119_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile/defineSynchedData()V from rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/defineSynchedData()V: defineSynchedData -> m_8097_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: addAdditionalSaveData -> m_7380_
+Conflicting propagated mapping for com/tterrag/registrate/util/entry/ItemProviderEntry/asItem()Lnet/minecraft/world/item/Item; from net/minecraft/world/level/ItemLike/asItem()Lnet/minecraft/world/item/Item;: asItem -> m_5456_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBigCannonProjectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBigCannonProjectile/tick()V from rbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile/tick()V: tick -> m_8119_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBigCannonProjectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: addAdditionalSaveData -> m_7380_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/removeItem(II)Lnet/minecraft/world/item/ItemStack; from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/removeItem(II)Lnet/minecraft/world/item/ItemStack;: removeItem -> m_7407_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/getItem(I)Lnet/minecraft/world/item/ItemStack; from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/getItem(I)Lnet/minecraft/world/item/ItemStack;: getItem -> m_8020_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/isEmpty()Z from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/isEmpty()Z: isEmpty -> m_7983_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/clearContent()V from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/clearContent()V: clearContent -> m_6211_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/getContainerSize()I from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/getContainerSize()I: getContainerSize -> m_6643_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/setItem(ILnet/minecraft/world/item/ItemStack;)V from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/setItem(ILnet/minecraft/world/item/ItemStack;)V: setItem -> m_6836_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/FuzedBlockEntity/removeItemNoUpdate(I)Lnet/minecraft/world/item/ItemStack; from rbasamoyai/createbigcannons/munitions/big_cannon/BigCannonProjectileBlockEntity/removeItemNoUpdate(I)Lnet/minecraft/world/item/ItemStack;: removeItemNoUpdate -> m_8016_
+Conflicting propagated mapping for net/minecraft/world/entity/LivingEntity/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V from net/minecraft/world/entity/player/Player/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V: lambda$addAdditionalSaveData$3 -> m_219754_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/propellant/BigCartridgeBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/propellant/BigCartridgeBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/propellant/BigCartridgeBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/propellant/BigCartridgeBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/big_cannon/propellant/BigCartridgeBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/AbstractAutocannonProjectile/remove(Lnet/minecraft/world/entity/Entity$RemovalReason;)V from net/minecraft/world/entity/Entity/remove(Lnet/minecraft/world/entity/Entity$RemovalReason;)V: remove -> m_142687_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/AbstractAutocannonProjectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/AbstractAutocannonProjectile/tick()V from rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/tick()V: tick -> m_8119_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/munitions/autocannon/AbstractAutocannonProjectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from rbasamoyai/createbigcannons/munitions/AbstractCannonProjectile/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: addAdditionalSaveData -> m_7380_
+Conflicting propagated mapping for net/minecraftforge/event/BuildCreativeModeTabContentsEvent/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V from net/minecraft/world/item/CreativeModeTab$Output/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V: accept -> m_246267_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/plumes/BigCannonPlumeParticleData/writeToString()Ljava/lang/String; from net/minecraft/core/particles/ParticleOptions/writeToString()Ljava/lang/String;: writeToString -> m_5942_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/plumes/BigCannonPlumeParticleData/getType()Lnet/minecraft/core/particles/ParticleType; from net/minecraft/core/particles/ParticleOptions/getType()Lnet/minecraft/core/particles/ParticleType;: getType -> m_6012_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/plumes/BigCannonPlumeParticleData/writeToNetwork(Lnet/minecraft/network/FriendlyByteBuf;)V from net/minecraft/core/particles/ParticleOptions/writeToNetwork(Lnet/minecraft/network/FriendlyByteBuf;)V: writeToNetwork -> m_7711_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/explosions/AbstractBlastWaveEffectParticleData/writeToString()Ljava/lang/String; from net/minecraft/core/particles/ParticleOptions/writeToString()Ljava/lang/String;: writeToString -> m_5942_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/explosions/AbstractBlastWaveEffectParticleData/writeToNetwork(Lnet/minecraft/network/FriendlyByteBuf;)V from net/minecraft/core/particles/ParticleOptions/writeToNetwork(Lnet/minecraft/network/FriendlyByteBuf;)V: writeToNetwork -> m_7711_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/explosions/CannonBlastWaveEffectParticleData/getType()Lnet/minecraft/core/particles/ParticleType; from net/minecraft/core/particles/ParticleOptions/getType()Lnet/minecraft/core/particles/ParticleType;: getType -> m_6012_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/plumes/AutocannonPlumeParticleData/writeToString()Ljava/lang/String; from net/minecraft/core/particles/ParticleOptions/writeToString()Ljava/lang/String;: writeToString -> m_5942_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/plumes/AutocannonPlumeParticleData/getType()Lnet/minecraft/core/particles/ParticleType; from net/minecraft/core/particles/ParticleOptions/getType()Lnet/minecraft/core/particles/ParticleType;: getType -> m_6012_
+Conflicting propagated mapping for rbasamoyai/createbigcannons/effects/particles/plumes/AutocannonPlumeParticleData/writeToNetwork(Lnet/minecraft/network/FriendlyByteBuf;)V from net/minecraft/core/particles/ParticleOptions/writeToNetwork(Lnet/minecraft/network/FriendlyByteBuf;)V: writeToNetwork -> m_7711_
+Adding extras
+Sorting
+Writing Output: C:\Users\Daniel\Desktop\CBCAT\build\reobfJarJar\output.jar
+  META-INF/
+  META-INF/MANIFEST.MF
+  META-INF/jarjar/
+  META-INF/jarjar/metadata.json
+  META-INF/jarjar/mixinextras-forge-0.5.0-beta.4.jar
+  META-INF/mods.toml
+  assets/
+  assets/cbc_at/
+  assets/cbc_at/blockstates/
+  assets/cbc_at/blockstates/armor_piercing_cartridge.json
+  assets/cbc_at/blockstates/armor_piercing_shell_cartridge.json
+  assets/cbc_at/blockstates/bronze_fume_extractor.json
+  assets/cbc_at/blockstates/bronze_muzzle_brake.json
+  assets/cbc_at/blockstates/bronze_rifled_barrel.json
+  assets/cbc_at/blockstates/bronze_silencer.json
+  assets/cbc_at/blockstates/bronze_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/bronze_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/bronze_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/bronze_vert_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/bronze_vert_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/bronze_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/built_up_nethersteel_rifled_barrel.json
+  assets/cbc_at/blockstates/built_up_nethersteel_silencer.json
+  assets/cbc_at/blockstates/built_up_steel_rifled_barrel.json
+  assets/cbc_at/blockstates/built_up_steel_silencer.json
+  assets/cbc_at/blockstates/cast_iron_fume_extractor.json
+  assets/cbc_at/blockstates/cast_iron_muzzle_brake.json
+  assets/cbc_at/blockstates/cast_iron_rifled_barrel.json
+  assets/cbc_at/blockstates/cast_iron_silencer.json
+  assets/cbc_at/blockstates/cast_iron_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/cast_iron_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/cast_iron_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/cast_iron_vert_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/cast_iron_vert_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/cast_iron_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/fluid_shell_cartridge.json
+  assets/cbc_at/blockstates/fume_extractor_cast_mould.json
+  assets/cbc_at/blockstates/grapeshot_cartridge.json
+  assets/cbc_at/blockstates/high_explosive_cartridge.json
+  assets/cbc_at/blockstates/muzzle_brake_cast_mould.json
+  assets/cbc_at/blockstates/nethersteel_fume_extractor.json
+  assets/cbc_at/blockstates/nethersteel_muzzle_brake.json
+  assets/cbc_at/blockstates/nethersteel_rifled_barrel.json
+  assets/cbc_at/blockstates/nethersteel_silencer.json
+  assets/cbc_at/blockstates/rifled_barrel_cast_mould.json
+  assets/cbc_at/blockstates/shrapnel_cartridge.json
+  assets/cbc_at/blockstates/silencer_cast_mould.json
+  assets/cbc_at/blockstates/smoke_cartridge.json
+  assets/cbc_at/blockstates/solid_cartridge.json
+  assets/cbc_at/blockstates/steel_fume_extractor.json
+  assets/cbc_at/blockstates/steel_muzzle_brake.json
+  assets/cbc_at/blockstates/steel_rifled_barrel.json
+  assets/cbc_at/blockstates/steel_silencer.json
+  assets/cbc_at/blockstates/steel_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/steel_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/steel_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/steel_vert_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/steel_vert_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/steel_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/unbored_bronze_fume_extractor.json
+  assets/cbc_at/blockstates/unbored_bronze_muzzle_brake.json
+  assets/cbc_at/blockstates/unbored_bronze_rifled_barrel.json
+  assets/cbc_at/blockstates/unbored_bronze_silencer.json
+  assets/cbc_at/blockstates/unbored_bronze_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/unbored_bronze_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/unbored_bronze_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/unbored_bronze_vert_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/unbored_bronze_vert_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/unbored_bronze_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/unbored_built_up_nethersteel_rifled_barrel.json
+  assets/cbc_at/blockstates/unbored_built_up_nethersteel_silencer.json
+  assets/cbc_at/blockstates/unbored_built_up_steel_rifled_barrel.json
+  assets/cbc_at/blockstates/unbored_built_up_steel_silencer.json
+  assets/cbc_at/blockstates/unbored_cast_iron_fume_extractor.json
+  assets/cbc_at/blockstates/unbored_cast_iron_muzzle_brake.json
+  assets/cbc_at/blockstates/unbored_cast_iron_rifled_barrel.json
+  assets/cbc_at/blockstates/unbored_cast_iron_silencer.json
+  assets/cbc_at/blockstates/unbored_cast_iron_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/unbored_cast_iron_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/unbored_cast_iron_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/unbored_cast_iron_vert_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/unbored_cast_iron_vert_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/unbored_cast_iron_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/unbored_nethersteel_fume_extractor.json
+  assets/cbc_at/blockstates/unbored_nethersteel_muzzle_brake.json
+  assets/cbc_at/blockstates/unbored_nethersteel_rifled_barrel.json
+  assets/cbc_at/blockstates/unbored_nethersteel_silencer.json
+  assets/cbc_at/blockstates/unbored_steel_fume_extractor.json
+  assets/cbc_at/blockstates/unbored_steel_muzzle_brake.json
+  assets/cbc_at/blockstates/unbored_steel_rifled_barrel.json
+  assets/cbc_at/blockstates/unbored_steel_silencer.json
+  assets/cbc_at/blockstates/unbored_steel_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/unbored_steel_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/unbored_steel_twin_autocannon_recoil_spring.json
+  assets/cbc_at/blockstates/unbored_steel_vert_twin_autocannon_barrel.json
+  assets/cbc_at/blockstates/unbored_steel_vert_twin_autocannon_breech.json
+  assets/cbc_at/blockstates/unbored_steel_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/lang/
+  assets/cbc_at/lang/de_de.json
+  assets/cbc_at/lang/en_us.json
+  assets/cbc_at/models/
+  assets/cbc_at/models/block/
+  assets/cbc_at/models/block/bronze_fume_extractor.json
+  assets/cbc_at/models/block/bronze_muzzle_brake.json
+  assets/cbc_at/models/block/bronze_rifled_barrel.json
+  assets/cbc_at/models/block/bronze_silencer.json
+  assets/cbc_at/models/block/built_up_nethersteel_rifled_barrel.json
+  assets/cbc_at/models/block/built_up_nethersteel_silencer.json
+  assets/cbc_at/models/block/built_up_rifled_barrel.json
+  assets/cbc_at/models/block/built_up_silencer.json
+  assets/cbc_at/models/block/built_up_steel_rifled_barrel.json
+  assets/cbc_at/models/block/built_up_steel_silencer.json
+  assets/cbc_at/models/block/cast_iron_fume_extractor.json
+  assets/cbc_at/models/block/cast_iron_muzzle_brake.json
+  assets/cbc_at/models/block/cast_iron_rifled_barrel.json
+  assets/cbc_at/models/block/cast_iron_silencer.json
+  assets/cbc_at/models/block/fume_extractor.json
+  assets/cbc_at/models/block/fume_extractor_mould.json
+  assets/cbc_at/models/block/muzzle_brake.json
+  assets/cbc_at/models/block/muzzle_brake_mould.json
+  assets/cbc_at/models/block/nethersteel_fume_extractor.json
+  assets/cbc_at/models/block/nethersteel_muzzle_brake.json
+  assets/cbc_at/models/block/nethersteel_rifled_barrel.json
+  assets/cbc_at/models/block/nethersteel_silencer.json
+  assets/cbc_at/models/block/projectile_cartridge/
+  assets/cbc_at/models/block/projectile_cartridge/armor_piercing_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/armor_piercing_shell_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/fluid_shell_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/grapeshot_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/high_explosive_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/projectile_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/shrapnel_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/smoke_cartridge.json
+  assets/cbc_at/models/block/projectile_cartridge/solid_cartridge.json
+  assets/cbc_at/models/block/rifled_barrel.json
+  assets/cbc_at/models/block/rifled_barrel_mould.json
+  assets/cbc_at/models/block/silencer.json
+  assets/cbc_at/models/block/silencer_mould.json
+  assets/cbc_at/models/block/steel_fume_extractor.json
+  assets/cbc_at/models/block/steel_muzzle_brake.json
+  assets/cbc_at/models/block/steel_rifled_barrel.json
+  assets/cbc_at/models/block/steel_silencer.json
+  assets/cbc_at/models/block/twin_autocannon/
+  assets/cbc_at/models/block/twin_autocannon/bronze_assembled_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_assembled_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_vert_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/bronze_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_assembled_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_vert_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/cast_iron_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/steel_assembled_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/steel_assembled_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/steel_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/steel_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/steel_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/steel_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/steel_vert_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/steel_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/steel_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/steel_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_bronze_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_bronze_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_bronze_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_bronze_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_bronze_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_bronze_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_cast_iron_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_cast_iron_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_cast_iron_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_cast_iron_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_cast_iron_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_cast_iron_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_steel_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_steel_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_steel_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_steel_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_steel_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/unbored_steel_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/vert_recoil_spring.json
+  assets/cbc_at/models/block/twin_autocannon/vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/block/twin_autocannon/vert_twin_autocannon_breech.json
+  assets/cbc_at/models/block/twin_autocannon/vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/block/unbored/
+  assets/cbc_at/models/block/unbored/bronze_fume_extractor.json
+  assets/cbc_at/models/block/unbored/bronze_muzzle_brake.json
+  assets/cbc_at/models/block/unbored/bronze_rifled_barrel.json
+  assets/cbc_at/models/block/unbored/bronze_silencer.json
+  assets/cbc_at/models/block/unbored/built_up_nethersteel_rifled_barrel.json
+  assets/cbc_at/models/block/unbored/built_up_nethersteel_silencer.json
+  assets/cbc_at/models/block/unbored/built_up_steel_rifled_barrel.json
+  assets/cbc_at/models/block/unbored/built_up_steel_silencer.json
+  assets/cbc_at/models/block/unbored/cast_iron_fume_extractor.json
+  assets/cbc_at/models/block/unbored/cast_iron_muzzle_brake.json
+  assets/cbc_at/models/block/unbored/cast_iron_rifled_barrel.json
+  assets/cbc_at/models/block/unbored/cast_iron_silencer.json
+  assets/cbc_at/models/block/unbored/nethersteel_fume_extractor.json
+  assets/cbc_at/models/block/unbored/nethersteel_muzzle_brake.json
+  assets/cbc_at/models/block/unbored/nethersteel_rifled_barrel.json
+  assets/cbc_at/models/block/unbored/nethersteel_silencer.json
+  assets/cbc_at/models/block/unbored/steel_fume_extractor.json
+  assets/cbc_at/models/block/unbored/steel_muzzle_brake.json
+  assets/cbc_at/models/block/unbored/steel_rifled_barrel.json
+  assets/cbc_at/models/block/unbored/steel_silencer.json
+  assets/cbc_at/models/item/
+  assets/cbc_at/models/item/armor_piercing_cartridge.json
+  assets/cbc_at/models/item/armor_piercing_shell_cartridge.json
+  assets/cbc_at/models/item/base/
+  assets/cbc_at/models/item/base/twin_recoil_spring_item.json
+  assets/cbc_at/models/item/base/vert_twin_recoil_spring_item.json
+  assets/cbc_at/models/item/bronze_assembled_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/bronze_fume_extractor.json
+  assets/cbc_at/models/item/bronze_muzzle_brake.json
+  assets/cbc_at/models/item/bronze_rifled_barrel.json
+  assets/cbc_at/models/item/bronze_silencer.json
+  assets/cbc_at/models/item/bronze_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/bronze_twin_autocannon_breech.json
+  assets/cbc_at/models/item/bronze_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/bronze_vert_recoil_spring.json
+  assets/cbc_at/models/item/bronze_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/bronze_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/item/bronze_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/built_up_nethersteel_rifled_barrel.json
+  assets/cbc_at/models/item/built_up_nethersteel_silencer.json
+  assets/cbc_at/models/item/built_up_steel_rifled_barrel.json
+  assets/cbc_at/models/item/built_up_steel_silencer.json
+  assets/cbc_at/models/item/cast_iron_assembled_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/cast_iron_fume_extractor.json
+  assets/cbc_at/models/item/cast_iron_muzzle_brake.json
+  assets/cbc_at/models/item/cast_iron_rifled_barrel.json
+  assets/cbc_at/models/item/cast_iron_silencer.json
+  assets/cbc_at/models/item/cast_iron_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/cast_iron_twin_autocannon_breech.json
+  assets/cbc_at/models/item/cast_iron_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/cast_iron_vert_recoil_spring.json
+  assets/cbc_at/models/item/cast_iron_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/cast_iron_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/item/cast_iron_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/fluid_shell_cartridge.json
+  assets/cbc_at/models/item/fume_extractor_cast_mould.json
+  assets/cbc_at/models/item/grapeshot_cartridge.json
+  assets/cbc_at/models/item/high_explosive_cartridge.json
+  assets/cbc_at/models/item/muzzle_brake_cast_mould.json
+  assets/cbc_at/models/item/nethersteel_fume_extractor.json
+  assets/cbc_at/models/item/nethersteel_muzzle_brake.json
+  assets/cbc_at/models/item/nethersteel_rifled_barrel.json
+  assets/cbc_at/models/item/nethersteel_silencer.json
+  assets/cbc_at/models/item/rifled_barrel_cast_mould.json
+  assets/cbc_at/models/item/shrapnel_cartridge.json
+  assets/cbc_at/models/item/silencer_cast_mould.json
+  assets/cbc_at/models/item/smoke_cartridge.json
+  assets/cbc_at/models/item/solid_cartridge.json
+  assets/cbc_at/models/item/steel_fume_extractor.json
+  assets/cbc_at/models/item/steel_muzzle_brake.json
+  assets/cbc_at/models/item/steel_rifled_barrel.json
+  assets/cbc_at/models/item/steel_silencer.json
+  assets/cbc_at/models/item/steel_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/steel_twin_autocannon_breech.json
+  assets/cbc_at/models/item/steel_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/steel_vert_recoil_spring.json
+  assets/cbc_at/models/item/steel_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/steel_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/item/steel_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/unbored_bronze_fume_extractor.json
+  assets/cbc_at/models/item/unbored_bronze_muzzle_brake.json
+  assets/cbc_at/models/item/unbored_bronze_rifled_barrel.json
+  assets/cbc_at/models/item/unbored_bronze_silencer.json
+  assets/cbc_at/models/item/unbored_bronze_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/unbored_bronze_twin_autocannon_breech.json
+  assets/cbc_at/models/item/unbored_bronze_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/unbored_bronze_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/unbored_bronze_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/item/unbored_bronze_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/unbored_built_up_nethersteel_rifled_barrel.json
+  assets/cbc_at/models/item/unbored_built_up_nethersteel_silencer.json
+  assets/cbc_at/models/item/unbored_built_up_steel_rifled_barrel.json
+  assets/cbc_at/models/item/unbored_built_up_steel_silencer.json
+  assets/cbc_at/models/item/unbored_cast_iron_fume_extractor.json
+  assets/cbc_at/models/item/unbored_cast_iron_muzzle_brake.json
+  assets/cbc_at/models/item/unbored_cast_iron_rifled_barrel.json
+  assets/cbc_at/models/item/unbored_cast_iron_silencer.json
+  assets/cbc_at/models/item/unbored_cast_iron_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/unbored_cast_iron_twin_autocannon_breech.json
+  assets/cbc_at/models/item/unbored_cast_iron_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/unbored_cast_iron_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/unbored_cast_iron_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/item/unbored_cast_iron_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/unbored_nethersteel_fume_extractor.json
+  assets/cbc_at/models/item/unbored_nethersteel_muzzle_brake.json
+  assets/cbc_at/models/item/unbored_nethersteel_rifled_barrel.json
+  assets/cbc_at/models/item/unbored_nethersteel_silencer.json
+  assets/cbc_at/models/item/unbored_steel_fume_extractor.json
+  assets/cbc_at/models/item/unbored_steel_muzzle_brake.json
+  assets/cbc_at/models/item/unbored_steel_rifled_barrel.json
+  assets/cbc_at/models/item/unbored_steel_silencer.json
+  assets/cbc_at/models/item/unbored_steel_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/unbored_steel_twin_autocannon_breech.json
+  assets/cbc_at/models/item/unbored_steel_twin_autocannon_recoil_spring.json
+  assets/cbc_at/models/item/unbored_steel_vert_twin_autocannon_barrel.json
+  assets/cbc_at/models/item/unbored_steel_vert_twin_autocannon_breech.json
+  assets/cbc_at/models/item/unbored_steel_vert_twin_autocannon_recoil_spring.json
+  assets/cbc_at/textures/
+  assets/cbc_at/textures/block/
+  assets/cbc_at/textures/block/bronze_autocannon.png
+  assets/cbc_at/textures/block/bronze_autocannon_1.png
+  assets/cbc_at/textures/block/bronze_cannon_barrel_end.png
+  assets/cbc_at/textures/block/bronze_cannon_barrel_side.png
+  assets/cbc_at/textures/block/bronze_cannon_chamber_end.png
+  assets/cbc_at/textures/block/bronze_cannon_chamber_side.png
+  assets/cbc_at/textures/block/built_up_nethersteel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/built_up_nethersteel_cannon_barrel_side.png
+  assets/cbc_at/textures/block/built_up_steel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/built_up_steel_cannon_barrel_side.png
+  assets/cbc_at/textures/block/cartridge_bottom.png
+  assets/cbc_at/textures/block/cartridge_side.png
+  assets/cbc_at/textures/block/cast_iron_autocannon.png
+  assets/cbc_at/textures/block/cast_iron_autocannon_1.png
+  assets/cbc_at/textures/block/cast_iron_cannon_barrel_end.png
+  assets/cbc_at/textures/block/cast_iron_cannon_barrel_side.png
+  assets/cbc_at/textures/block/cast_iron_cannon_chamber_end.png
+  assets/cbc_at/textures/block/cast_iron_cannon_chamber_side.png
+  assets/cbc_at/textures/block/cast_mould.png
+  assets/cbc_at/textures/block/nethersteel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/nethersteel_cannon_barrel_side.png
+  assets/cbc_at/textures/block/nethersteel_cannon_chamber_end.png
+  assets/cbc_at/textures/block/nethersteel_cannon_chamber_side.png
+  assets/cbc_at/textures/block/projectile_cartridge/
+  assets/cbc_at/textures/block/projectile_cartridge/armor_piercing_cartridge.png
+  assets/cbc_at/textures/block/projectile_cartridge/armor_piercing_shell_cartridge.png
+  assets/cbc_at/textures/block/projectile_cartridge/fluid_shell_cartridge.png
+  assets/cbc_at/textures/block/projectile_cartridge/grapeshot_cartridge.png
+  assets/cbc_at/textures/block/projectile_cartridge/high_explosive_cartridge.png
+  assets/cbc_at/textures/block/projectile_cartridge/shrapnel_cartridge.png
+  assets/cbc_at/textures/block/projectile_cartridge/smoke_cartridge.png
+  assets/cbc_at/textures/block/projectile_cartridge/solid_cartridge.png
+  assets/cbc_at/textures/block/steel_autocannon.png
+  assets/cbc_at/textures/block/steel_autocannon_1.png
+  assets/cbc_at/textures/block/steel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/steel_cannon_barrel_side.png
+  assets/cbc_at/textures/block/steel_cannon_chamber_end.png
+  assets/cbc_at/textures/block/steel_cannon_chamber_side.png
+  assets/cbc_at/textures/block/unbored_bronze_cannon_barrel_end.png
+  assets/cbc_at/textures/block/unbored_bronze_cannon_chamber_end.png
+  assets/cbc_at/textures/block/unbored_built_up_nethersteel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/unbored_built_up_steel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/unbored_cast_iron_cannon_barrel_end.png
+  assets/cbc_at/textures/block/unbored_cast_iron_cannon_chamber_end.png
+  assets/cbc_at/textures/block/unbored_nethersteel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/unbored_nethersteel_cannon_chamber_end.png
+  assets/cbc_at/textures/block/unbored_steel_cannon_barrel_end.png
+  assets/cbc_at/textures/block/unbored_steel_cannon_chamber_end.png
+  cbc_at.mixins.json
+  cbc_at.refmap.json
+  com/
+  com/dsvv/
+  com/dsvv/cbcat/
+  com/dsvv/cbcat/Config.class
+  com/dsvv/cbcat/CreateBigCannons_AdvancedTechnology$ClientModEvents.class
+  com/dsvv/cbcat/CreateBigCannons_AdvancedTechnology.class
+  com/dsvv/cbcat/base/
+  com/dsvv/cbcat/base/IBigCannonBlockPhysics.class
+  com/dsvv/cbcat/base/PropellantContext.class
+  com/dsvv/cbcat/cannon/
+  com/dsvv/cbcat/cannon/FumeExtractorBlock.class
+  com/dsvv/cbcat/cannon/FumeExtractorBlockEntity.class
+  com/dsvv/cbcat/cannon/MuzzleBrakeBlock.class
+  com/dsvv/cbcat/cannon/MuzzleBrakeBlockEntity.class
+  com/dsvv/cbcat/cannon/RifledBarrelBlock.class
+  com/dsvv/cbcat/cannon/RifledBarrelBlockEntity.class
+  com/dsvv/cbcat/cannon/SilencerBlock.class
+  com/dsvv/cbcat/cannon/SilencerBlockEntity.class
+  com/dsvv/cbcat/cannon/twin_autocannon/
+  com/dsvv/cbcat/cannon/twin_autocannon/ITwinAutocannonBlockEntity.class
+  com/dsvv/cbcat/cannon/twin_autocannon/MovesWithTwinAutocannonRecoilSpring.class
+  com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBarrelBlock$1.class
+  com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBarrelBlock$TwinAutocannonBarrelEnd.class
+  com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBarrelBlock.class
+  com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBaseBlock.class
+  com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBlock.class
+  com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBlockEntity.class
+  com/dsvv/cbcat/cannon/twin_autocannon/TwinAutocannonBlockItem.class
+  com/dsvv/cbcat/cannon/twin_autocannon/breech/
+  com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechBlock.class
+  com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechBlockEntity.class
+  com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechInstance.class
+  com/dsvv/cbcat/cannon/twin_autocannon/breech/TwinAutocannonBreechRenderer.class
+  com/dsvv/cbcat/cannon/twin_autocannon/contraption/
+  com/dsvv/cbcat/cannon/twin_autocannon/contraption/MountedTwinAutocannonContraption.class
+  com/dsvv/cbcat/cannon/twin_autocannon/recoil_spring/
+  com/dsvv/cbcat/cannon/twin_autocannon/recoil_spring/TwinAutocannonRecoilSpringBlock.class
+  com/dsvv/cbcat/cannon/twin_autocannon/recoil_spring/TwinAutocannonRecoilSpringBlockEntity.class
+  com/dsvv/cbcat/cannon/twin_autocannon/recoil_spring/TwinAutocannonRecoilSpringInstance.class
+  com/dsvv/cbcat/cannon/twin_autocannon/recoil_spring/TwinAutocannonRecoilSpringRenderer.class
+  com/dsvv/cbcat/cartridge/
+  com/dsvv/cbcat/cartridge/FuzedProjectileCartridgeBlock.class
+  com/dsvv/cbcat/cartridge/FuzedProjectileCartridgeBlockItem.class
+  com/dsvv/cbcat/cartridge/ProjectileCartridge.class
+  com/dsvv/cbcat/cartridge/ProjectileCartridgeBlock.class
+  com/dsvv/cbcat/cartridge/ProjectileCartridgeBlockEntity.class
+  com/dsvv/cbcat/cartridge/ProjectileCartridgeBlockItem.class
+  com/dsvv/cbcat/mixin/
+  com/dsvv/cbcat/mixin/BigCannonBlockMixin.class
+  com/dsvv/cbcat/mixin/MountedBigCannonContraptionMixin.class
+  com/dsvv/cbcat/registry/
+  com/dsvv/cbcat/registry/BlockEntityRegister.class
+  com/dsvv/cbcat/registry/BlockRegister.class
+  com/dsvv/cbcat/registry/ContraptionRegister$CBCATContraptionTypes.class
+  com/dsvv/cbcat/registry/ContraptionRegister.class
+  com/dsvv/cbcat/registry/ExtraDataRegister.class
+  com/dsvv/cbcat/registry/TabRegister.class
+  data/
+  data/cbc_at/
+  data/cbc_at/recipes/
+  data/cbc_at/recipes/cannon_blocks/
+  data/cbc_at/recipes/cannon_blocks/bronze_fume_extractor.json
+  data/cbc_at/recipes/cannon_blocks/bronze_muzzle_brake.json
+  data/cbc_at/recipes/cannon_blocks/bronze_rifled_barrel.json
+  data/cbc_at/recipes/cannon_blocks/bronze_silencer.json
+  data/cbc_at/recipes/cannon_blocks/built_up_nethersteel_rifled_barrel.json
+  data/cbc_at/recipes/cannon_blocks/built_up_nethersteel_silencer.json
+  data/cbc_at/recipes/cannon_blocks/built_up_steel_rifled_barrel.json
+  data/cbc_at/recipes/cannon_blocks/built_up_steel_silencer.json
+  data/cbc_at/recipes/cannon_blocks/cast_iron_fume_extractor.json
+  data/cbc_at/recipes/cannon_blocks/cast_iron_muzzle_brake.json
+  data/cbc_at/recipes/cannon_blocks/cast_iron_rifled_barrel.json
+  data/cbc_at/recipes/cannon_blocks/cast_iron_silencer.json
+  data/cbc_at/recipes/cannon_blocks/nethersteel_fume_extractor.json
+  data/cbc_at/recipes/cannon_blocks/nethersteel_muzzle_brake.json
+  data/cbc_at/recipes/cannon_blocks/nethersteel_rifled_barrel.json
+  data/cbc_at/recipes/cannon_blocks/nethersteel_silencer.json
+  data/cbc_at/recipes/cannon_blocks/steel_fume_extractor.json
+  data/cbc_at/recipes/cannon_blocks/steel_muzzle_brake.json
+  data/cbc_at/recipes/cannon_blocks/steel_rifled_barrel.json
+  data/cbc_at/recipes/cannon_blocks/steel_silencer.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/bronze_twin_autocannon_barrel.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/bronze_twin_autocannon_breech.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/bronze_twin_autocannon_recoil_spring.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/bronze_vert_twin_autocannon_barrel.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/bronze_vert_twin_autocannon_breech.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/bronze_vert_twin_autocannon_recoil_spring.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/cast_iron_twin_autocannon_barrel.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/cast_iron_twin_autocannon_breech.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/cast_iron_twin_autocannon_recoil_spring.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/cast_iron_vert_twin_autocannon_barrel.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/cast_iron_vert_twin_autocannon_breech.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/cast_iron_vert_twin_autocannon_recoil_spring.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/steel_twin_autocannon_barrel.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/steel_twin_autocannon_breech.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/steel_twin_autocannon_recoil_spring.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/steel_vert_twin_autocannon_barrel.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/steel_vert_twin_autocannon_breech.json
+  data/cbc_at/recipes/cannon_blocks/twin_autocannon/steel_vert_twin_autocannon_recoil_spring.json
+  data/cbc_at/recipes/munition/
+  data/cbc_at/recipes/munition/ap_cartridge.json
+  data/cbc_at/recipes/munition/ap_shell_cartridge.json
+  data/cbc_at/recipes/munition/fluid_shell_cartridge.json
+  data/cbc_at/recipes/munition/grapeshot_cartridge.json
+  data/cbc_at/recipes/munition/he_shell_cartridge.json
+  data/cbc_at/recipes/munition/shrapnel_shell_cartridge.json
+  data/cbc_at/recipes/munition/smoke_shell_cartridge.json
+  data/cbc_at/recipes/munition/solid_cartridge.json
+  data/create/
+  data/create/tags/
+  data/create/tags/blocks/
+  data/create/tags/blocks/safe_nbt.json
+  pack.mcmeta

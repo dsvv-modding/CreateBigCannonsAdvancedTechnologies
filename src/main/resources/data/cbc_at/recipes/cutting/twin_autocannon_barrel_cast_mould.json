@@ -1,0 +1,13 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    }
+  ],
+  "results": [
+    {
+      "item": "cbc_at:twin_autocannon_barrel_mould"
+    }
+  ]
+}

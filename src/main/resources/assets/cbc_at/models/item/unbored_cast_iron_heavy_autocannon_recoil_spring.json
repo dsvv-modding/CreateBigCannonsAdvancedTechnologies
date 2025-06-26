@@ -1,0 +1,7 @@
+{
+  "parent": "cbc_at:block/heavy_autocannon/heavy_autocannon_recoil_spring",
+  "textures": {
+    "0": "cbc_at:block/unbored_cast_iron_heavy_autocannon",
+    "particle": "cbc_at:block/cast_iron_heavy_autocannon"
+  }
+}

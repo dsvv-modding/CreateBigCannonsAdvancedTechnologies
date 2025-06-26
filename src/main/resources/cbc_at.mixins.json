@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.dsvv.cbcat.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BigCannonBlockMixin",
+    "CannonMountPointMixin",
+    "MountedAutocannonContraptionMixin",
+    "MountedBigCannonContraptionMixin"
+  ]
+}

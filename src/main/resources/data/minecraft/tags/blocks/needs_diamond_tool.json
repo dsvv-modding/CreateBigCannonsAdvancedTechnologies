@@ -1,0 +1,14 @@
+{
+  "values": [
+    "cbc_at:nethersteel_muzzle_brake",
+    "cbc_at:nethersteel_fume_extractor",
+    "cbc_at:nethersteel_silencer",
+    "cbc_at:nethersteel_rifled_barrel",
+    "cbc_at:built_up_nethersteel_silencer",
+    "cbc_at:built_up_nethersteel_rifled_barrel",
+    "cbc_at:unbored_nethersteel_muzzle_brake",
+    "cbc_at:unbored_nethersteel_fume_extractor",
+    "cbc_at:unbored_nethersteel_silencer",
+    "cbc_at:unbored_nethersteel_rifled_barrel"
+  ]
+}

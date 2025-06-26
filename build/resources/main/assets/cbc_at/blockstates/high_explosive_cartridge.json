@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=up"    : { "model" : "cbc_at:block/projectile_cartridge/high_explosive_cartridge"},
+    "facing=down"  : { "model" : "cbc_at:block/projectile_cartridge/high_explosive_cartridge", "x": 180},
+    "facing=north" : { "model" : "cbc_at:block/projectile_cartridge/high_explosive_cartridge", "x": 90},
+    "facing=east"  : { "model" : "cbc_at:block/projectile_cartridge/high_explosive_cartridge", "y": 90, "x": 90},
+    "facing=south" : { "model" : "cbc_at:block/projectile_cartridge/high_explosive_cartridge", "x": 270},
+    "facing=west"  : { "model" : "cbc_at:block/projectile_cartridge/high_explosive_cartridge", "y": 90, "x": 270}
+  }
+}

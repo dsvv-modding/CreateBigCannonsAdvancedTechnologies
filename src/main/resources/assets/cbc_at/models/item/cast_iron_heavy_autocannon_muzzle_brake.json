@@ -1,0 +1,7 @@
+{
+  "parent": "cbc_at:block/heavy_autocannon/heavy_autocannon_barrel",
+  "textures": {
+    "0": "cbc_at:block/cast_iron_heavy_autocannon_muzzle_brake",
+    "particle": "cbc_at:block/cast_iron_heavy_autocannon_muzzle_brake"
+  }
+}

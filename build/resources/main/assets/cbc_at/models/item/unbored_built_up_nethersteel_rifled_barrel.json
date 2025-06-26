@@ -1,0 +1,8 @@
+{
+  "parent": "cbc_at:block/built_up_rifled_barrel",
+  "textures": {
+    "0": "cbc_at:block/built_up_nethersteel_cannon_barrel_side",
+    "1": "cbc_at:block/unbored_built_up_nethersteel_cannon_barrel_end",
+    "particle": "cbc_at:block/built_up_nethersteel_barrel_side"
+  }
+}

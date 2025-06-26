@@ -1,0 +1,7 @@
+{
+  "parent": "cbc_at:block/heavy_autocannon/unbored_heavy_autocannon_qfbreech",
+  "textures": {
+    "0": "cbc_at:block/unbored_steel_heavy_autocannon",
+    "particle": "cbc_at:block/steel_heavy_autocannon"
+  }
+}

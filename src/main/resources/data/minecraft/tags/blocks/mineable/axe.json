@@ -1,0 +1,24 @@
+{
+  "values": [
+    "cbc_at:muzzle_brake_cast_mould",
+    "cbc_at:fume_extractor_cast_mould",
+    "cbc_at:silencer_cast_mould",
+    "cbc_at:rifled_barrel_cast_mould",
+    "cbc_at:twin_autocannon_barrel_mould",
+    "cbc_at:twin_autocannon_recoil_spring_mould",
+    "cbc_at:twin_autocannon_breech_mould",
+    "cbc_at:twin_autocannon_silencer_mould",
+    "cbc_at:twin_autocannon_muzzle_brake_mould",
+    "cbc_at:vert_twin_autocannon_barrel_mould",
+    "cbc_at:vert_twin_autocannon_recoil_spring_mould",
+    "cbc_at:vert_twin_autocannon_breech_mould",
+    "cbc_at:vert_twin_autocannon_silencer_mould",
+    "cbc_at:vert_twin_autocannon_muzzle_brake_mould",
+    "cbc_at:autocannon_silencer_mould",
+    "cbc_at:autocannon_muzzle_brake_mould",
+    "cbc_at:heavy_autocannon_barrel_mould",
+    "cbc_at:heavy_autocannon_recoil_spring_mould",
+    "cbc_at:heavy_autocannon_breech_mould",
+    "cbc_at:heavy_autocannon_qfbreech_mould"
+  ]
+}

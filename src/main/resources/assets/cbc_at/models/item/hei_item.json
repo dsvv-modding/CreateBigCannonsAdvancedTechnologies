@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cbc_at:item/hei_autocannon_round"
+  }
+}

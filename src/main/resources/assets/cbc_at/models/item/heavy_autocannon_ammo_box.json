@@ -1,0 +1,11 @@
+{
+	"parent": "cbc_at:block/heavy_autocannon/heavy_autocannon_empty_ammo_box",
+	"overrides": [
+		{
+			"predicate": {
+				"cbc_at:ammo_box_filling": 0.5
+			},
+			"model": "cbc_at:block/heavy_autocannon/heavy_autocannon_filled_ammo_box"
+		}
+	]
+}

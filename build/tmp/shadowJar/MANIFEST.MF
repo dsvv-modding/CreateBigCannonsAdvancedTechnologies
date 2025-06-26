@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: cbc_at
+Specification-Vendor: _dsvv
+Specification-Version: 1
+Implementation-Title: CBCAT
+Implementation-Version: com.dsvv
+Implementation-Vendor: _dsvv
+Implementation-Timestamp: 2025-01-12T13:51:27+0100
+MixinConfigs: cbc_at.mixins.json
+

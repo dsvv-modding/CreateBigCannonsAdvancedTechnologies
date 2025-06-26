@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "createbigcannons:nitropowder"
+    },
+    {
+      "item": "createbigcannons:nitropowder"
+    },
+    {
+      "item": "createbigcannons:nitropowder"
+    },
+    {
+      "item": "createbigcannons:bag_of_grapeshot"
+    }
+  ],
+  "result": {
+    "item": "cbc_at:grapeshot_caseless"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "C": {
+      "tag": "createbigcannons:sheet_iron"
+    },
+    "G": {
+      "tag": "createbigcannons:gunpowder"
+    }
+  },
+  "pattern": [
+    "B",
+    "G",
+    "C"
+  ],
+  "result": {
+    "count": 2,
+    "item": "cbc_at:hei_item"
+  },
+  "show_notification": true
+}

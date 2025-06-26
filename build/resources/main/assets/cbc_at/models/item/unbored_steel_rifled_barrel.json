@@ -1,0 +1,8 @@
+{
+  "parent": "cbc_at:block/rifled_barrel",
+  "textures": {
+    "0": "cbc_at:block/steel_cannon_barrel_side",
+    "1": "cbc_at:block/unbored_steel_cannon_barrel_end",
+    "particle": "cbc_at:block/steel_cannon_barrel_side"
+  }
+}

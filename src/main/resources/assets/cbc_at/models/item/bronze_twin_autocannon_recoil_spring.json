@@ -1,0 +1,9 @@
+{
+  "parent": "cbc_at:item/base/twin_recoil_spring_item",
+  "textures": {
+    "0": "cbc_at:block/bronze_autocannon",
+    "1": "cbc_at:block/bronze_autocannon",
+    "2": "cbc_at:block/bronze_autocannon_1",
+    "particle": "cbc_at:block/bronze_autocannon"
+  }
+}

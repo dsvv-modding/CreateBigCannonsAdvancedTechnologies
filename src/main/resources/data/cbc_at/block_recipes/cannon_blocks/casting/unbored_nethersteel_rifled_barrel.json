@@ -1,0 +1,9 @@
+{
+  "type": "createbigcannons:cannon_casting",
+  "cast_shape": "cbc_at:rifeld_barrel_mould",
+  "fluid": {
+    "amount": 1,
+    "fluidTag": "forge:molten_nethersteel"
+  },
+  "result": "cbc_at:unbored_nethersteel_rifled_barrel"
+}

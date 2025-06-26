@@ -1,0 +1,134 @@
+package com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box;
+
+import com.dsvv.cbcat.registry.BlockRegister;
+import com.google.common.collect.ImmutableList;
+import com.simibubi.create.foundation.gui.AllIcons;
+import com.simibubi.create.foundation.gui.menu.AbstractSimiContainerScreen;
+import com.simibubi.create.foundation.gui.widget.IconButton;
+import com.simibubi.create.foundation.gui.widget.ScrollInput;
+import com.simibubi.create.foundation.utility.CreateLang;
+import net.createmod.catnip.gui.element.GuiGameElement;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.Rect2i;
+import net.minecraft.network.chat.Component;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.level.block.state.BlockState;
+import rbasamoyai.createbigcannons.CreateBigCannons;
+import rbasamoyai.createbigcannons.index.CBCGuiTextures;
+import rbasamoyai.createbigcannons.multiloader.NetworkPlatform;
+import rbasamoyai.createbigcannons.network.ServerboundSetContainerValuePacket;
+
+import java.util.Collections;
+import java.util.List;
+
+import static com.simibubi.create.foundation.gui.AllGuiTextures.PLAYER_INVENTORY;
+import static rbasamoyai.createbigcannons.index.CBCGuiTextures.*;
+
+public class HeavyAutocannonAmmoContainerScreen extends AbstractSimiContainerScreen<HeavyAutocannonAmmoContainerMenu> {
+    protected ScrollInput setValue;
+    protected int lastUpdated = -1;
+    protected IconButton confirmButton;
+    private List<Rect2i> extraAreas = Collections.emptyList();
+
+    public HeavyAutocannonAmmoContainerScreen(HeavyAutocannonAmmoContainerMenu container, Inventory inv, Component title) {
+        super(container, inv, title);
+    }
+
+    @Override
+    protected void init() {
+        boolean isCreative = this.menu.isCreativeContainer();
+        CBCGuiTextures bg = isCreative ? CREATIVE_AUTOCANNON_AMMO_CONTAINER_BG : AUTOCANNON_AMMO_CONTAINER_BG;
+        this.setWindowSize(bg.width, bg.height + 4 + PLAYER_INVENTORY.getHeight());
+        this.setWindowOffset(1, 0);
+        super.init();
+
+        this.setValue = this.getScrollInput();
+
+        this.setValue.onChanged();
+        this.addRenderableWidget(this.setValue);
+
+        this.confirmButton = new IconButton(this.leftPos + this.imageWidth - 33, this.topPos + 59, AllIcons.I_CONFIRM);
+        this.confirmButton.withCallback(this::onClose);
+        this.addRenderableWidget(this.confirmButton);
+
+        this.extraAreas = ImmutableList.of(new Rect2i(this.leftPos + bg.width, this.topPos + bg.height - 68, 60, 60));
+    }
+
+    @Override
+    protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
+        int invX = this.getLeftOfCentered(PLAYER_INVENTORY.getWidth());
+        int invY = this.topPos + AUTOCANNON_AMMO_CONTAINER_BG.height + 4;
+        this.renderPlayerInventory(graphics, invX, invY);
+        boolean isCreative = this.menu.isCreativeContainer();
+        int offsX = this.setValue.getState() * 8 - 8;
+
+        CBCGuiTextures bg = isCreative ? CREATIVE_AUTOCANNON_AMMO_CONTAINER_BG : AUTOCANNON_AMMO_CONTAINER_BG;
+        bg.render(graphics, this.leftPos, this.topPos);
+        if (isCreative) {
+            graphics.drawString(this.font, this.title, this.leftPos + 4, this.topPos + 3, 0x54214f, false);
+        } else {
+            graphics.drawCenteredString(this.font, this.title, this.leftPos + this.imageWidth / 2 - 4, this.topPos + 3, 0xffffff);
+        }
+        CBCGuiTextures sel = isCreative ? CREATIVE_AUTOCANNON_AMMO_CONTAINER_SELECTOR : AUTOCANNON_AMMO_CONTAINER_SELECTOR;
+        sel.render(graphics, this.leftPos + 86 + offsX, this.topPos + 23);
+
+        BlockState state = isCreative ? BlockRegister.CREATIVE_HEAVY_AUTOCANNON_AMMO_BOX.getDefaultState()
+                : BlockRegister.HEAVY_AUTOCANNON_AMMO_BOX.getDefaultState();
+        state = state.setValue(HeavyAutocannonAmmoContainerBlock.CONTAINER_STATE, HeavyAutocannonAmmoContainerBlock.State.getFromFilled(this.menu.isFilled()));
+        GuiGameElement.of(state)
+                .scale(50)
+                .rotate(30, 135, 0)
+                .at(this.leftPos + bg.width + 32, this.topPos + bg.height, 200)
+                .render(graphics);
+    }
+
+    @Override
+    protected void renderTooltip(GuiGraphics graphics, int x, int y) {
+        super.renderTooltip(graphics, x, y);
+        if (this.hoveredSlot != null && this.hoveredSlot.index == 1 && !this.hoveredSlot.hasItem()) {
+            graphics.renderTooltip(this.font, CreateLang.builder(CreateBigCannons.MOD_ID).translate("gui.autocannon_ammo_container.tracer_slot").component(), x ,y);
+        }
+    }
+
+    @Override
+    protected void containerTick() {
+        super.containerTick();
+
+        if (this.lastUpdated >= 0) {
+            this.lastUpdated++;
+        }
+        if (this.lastUpdated >= 20) {
+            this.updateServer();
+            this.lastUpdated = -1;
+        }
+    }
+
+    @Override
+    public void removed() {
+        super.removed();
+        this.updateServer();
+    }
+
+    @Override
+    public void onClose() {
+        this.updateServer();
+        super.onClose();
+    }
+
+    private void updateServer() {
+        NetworkPlatform.sendToServer(new ServerboundSetContainerValuePacket(this.setValue.getState()));
+    }
+
+    protected ScrollInput getScrollInput() {
+        return new ScrollInput(this.leftPos + 87, this.topPos + 31, 47, 6)
+                .withRange(1, 7)
+                .calling(state -> {
+                    this.lastUpdated = 0;
+                    this.setValue.titled(CreateLang.builder(CreateBigCannons.MOD_ID).translate("gui.autocannon_ammo_container.tracer_spacing", state).component());
+                })
+                .setState(Mth.clamp(this.menu.getValue(), 1, 6));
+    }
+
+    @Override public List<Rect2i> getExtraAreas() { return this.extraAreas; }
+}
