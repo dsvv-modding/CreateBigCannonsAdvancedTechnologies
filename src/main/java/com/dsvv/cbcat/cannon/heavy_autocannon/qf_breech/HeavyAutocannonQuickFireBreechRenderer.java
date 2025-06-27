@@ -2,14 +2,14 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.qf_breech;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.dsvv.cbcat.registry.ExtraDataRegister;
+import com.jozufozu.flywheel.backend.Backend;
+import com.jozufozu.flywheel.core.PartialModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import dev.engine_room.flywheel.api.visualization.VisualizationManager;
-import dev.engine_room.flywheel.lib.model.baked.PartialModel;
-import net.createmod.catnip.render.CachedBuffers;
+import com.simibubi.create.foundation.render.CachedBufferer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -31,7 +31,7 @@ public class HeavyAutocannonQuickFireBreechRenderer extends SmartBlockEntityRend
     protected void renderSafe(HeavyAutocannonQuickFireBreechBlockEntity breech, float partialTicks, PoseStack ms, MultiBufferSource buffer, int light, int overlay) {
         BlockState blockState = breech.getBlockState();
 
-        if (VisualizationManager.supportsVisualization(breech.getLevel())) return;
+        if (Backend.canUseInstancing(breech.getLevel())) return;
 
         Direction facing = blockState.getValue(BlockStateProperties.FACING);
         Direction.Axis axis = CBCClientCommon.getRotationAxis(blockState);
@@ -59,7 +59,7 @@ public class HeavyAutocannonQuickFireBreechRenderer extends SmartBlockEntityRend
         Vector3f normal = blockRotation.step();
         normal.mul(renderedBreechblockOffset);
 
-        CachedBuffers.partialFacing(getPartialModelForState(breech), blockState, blockRotation)
+        CachedBufferer.partialFacing(getPartialModelForState(breech), blockState, blockRotation)
                 .translate(normal.x(), normal.y(), normal.z())
                 .rotateCentered(qrot)
                 .light(light)
@@ -73,7 +73,7 @@ public class HeavyAutocannonQuickFireBreechRenderer extends SmartBlockEntityRend
         Vector3f normal1 = dir.step();
         Axis axis1 = Axis.of(normal1);
 
-        CachedBuffers.block(AllBlocks.SHAFT.getDefaultState().setValue(BlockStateProperties.AXIS, axis))
+        CachedBufferer.block(AllBlocks.SHAFT.getDefaultState().setValue(BlockStateProperties.AXIS, axis))
                 .rotateCentered(axis1.rotationDegrees(angle))
                 .light(light)
                 .renderInto(ms, vcons);

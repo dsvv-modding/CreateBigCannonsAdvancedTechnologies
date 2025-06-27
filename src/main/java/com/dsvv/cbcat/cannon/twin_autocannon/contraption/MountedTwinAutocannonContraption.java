@@ -15,8 +15,8 @@ import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilS
 import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilSpringBlockEntity;
 import com.dsvv.cbcat.registry.ContraptionRegister;
 import com.dsvv.cbcat.registry.ContraptionRegister.CBCATContraptionTypes;
-import com.simibubi.create.api.contraption.ContraptionType;
 import com.simibubi.create.content.contraptions.AssemblyException;
+import com.simibubi.create.content.contraptions.ContraptionType;
 import com.simibubi.create.content.contraptions.StructureTransform;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -305,7 +305,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
 
             AutocannonMaterialProperties properties = this.cannonMaterial.properties();
             AutocannonProjectilePropertiesComponent roundProperties = rounds[i].getAutocannonProperties(foundProjectiles[i]);
-            boolean canFail = !(Boolean)CBCConfigs.server().failure.disableAllFailure.get();
+            boolean canFail = !(Boolean)CBCConfigs.SERVER.failure.disableAllFailure.get();
             float speed = properties.baseSpeed();
             float spread = properties.baseSpread();
             boolean canSquib = roundProperties == null || roundProperties.canSquib();
@@ -395,7 +395,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
             firstFire = !firstFire;
             Vec3 particlePos = spawnPos;
             float recoilMagnitude = properties.baseRecoil();
-            boolean isTracer = CBCConfigs.server().munitions.allAutocannonProjectilesAreTracers.get() || rounds[i].isTracer(foundProjectiles[i]);
+            boolean isTracer = CBCConfigs.SERVER.munitions.allAutocannonProjectilesAreTracers.get() || rounds[i].isTracer(foundProjectiles[i]);
             AbstractAutocannonProjectile projectile = rounds[i].getAutocannonProjectile(foundProjectiles[i], level);
             if (projectile != null) {
                 projectile.setPos(spawnPos);
@@ -417,7 +417,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
                 }
             }
 
-            recoilMagnitude *= CBCConfigs.server().cannons.autocannonRecoilScale.getF() * 2.0F;
+            recoilMagnitude *= CBCConfigs.SERVER.cannons.autocannonRecoilScale.getF() * 2.0F;
             if (controller != null) {
                 controller.onRecoil(vec1.scale((-recoilMagnitude)), entity);
             }
@@ -436,7 +436,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
                 CBCUtils.playBlastLikeSoundOnServer(level, spawnPos.x, spawnPos.y, spawnPos.z, CBCSoundEvents.FIRE_AUTOCANNON.getMainEvent(), SoundSource.BLOCKS, 12.0F * this.volumeMultiplier, this.volumeMultiplier, 5.0F);
             }
 
-            if (projectile != null && CBCConfigs.server().munitions.projectilesCanChunkload.get()) {
+            if (projectile != null && CBCConfigs.SERVER.munitions.projectilesCanChunkload.get()) {
                 ChunkPos cpos1 = new ChunkPos(BlockPos.containing(projectile.position()));
                 RitchiesProjectileLib.queueForceLoad(level, cpos1.x, cpos1.z);
             }
@@ -597,7 +597,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
     }
 
     public ContraptionType getType() {
-        return ContraptionRegister.MOUNTED_TWIN_AUTOCANNON.get();
+        return ContraptionRegister.MOUNTED_TWIN_AUTOCANNON;
     }
 
     public float maximumDepression(@Nonnull ControlPitchContraption controller) {

@@ -2,85 +2,80 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.dsvv.cbcat.registry.ExtraDataRegister;
-import dev.engine_room.flywheel.api.instance.Instance;
-import dev.engine_room.flywheel.api.model.Model;
-import dev.engine_room.flywheel.api.visualization.VisualizationContext;
-import dev.engine_room.flywheel.lib.instance.InstanceTypes;
-import dev.engine_room.flywheel.lib.instance.OrientedInstance;
-import dev.engine_room.flywheel.lib.model.Models;
-import dev.engine_room.flywheel.lib.model.baked.PartialModel;
-import dev.engine_room.flywheel.lib.visual.AbstractBlockEntityVisual;
-import dev.engine_room.flywheel.lib.visual.SimpleDynamicVisual;
+import com.jozufozu.flywheel.api.MaterialManager;
+import com.jozufozu.flywheel.api.instance.DynamicInstance;
+import com.jozufozu.flywheel.backend.instancing.blockentity.BlockEntityInstance;
+import com.jozufozu.flywheel.core.Materials;
+import com.jozufozu.flywheel.core.PartialModel;
+import com.jozufozu.flywheel.core.materials.oriented.OrientedData;
+import com.jozufozu.flywheel.util.AnimationTickHolder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Consumer;
 
-public class HeavyAutocannonRecoilSpringInstance extends AbstractBlockEntityVisual<HeavyAutocannonRecoilSpringBlockEntity> implements SimpleDynamicVisual
+public class HeavyAutocannonRecoilSpringInstance extends BlockEntityInstance<HeavyAutocannonRecoilSpringBlockEntity> implements DynamicInstance
 {
-    private final Map<BlockPos, OrientedInstance> blocks = new HashMap<>();
+    private final Map<BlockPos, OrientedData> blocks = new HashMap<>();
 
     private boolean first = true;
 
     private Direction facing;
 
-    public HeavyAutocannonRecoilSpringInstance(VisualizationContext ctx, HeavyAutocannonRecoilSpringBlockEntity blockEntity, float partialTick) {
-        super(ctx, blockEntity, partialTick);
+    public HeavyAutocannonRecoilSpringInstance(MaterialManager manager, HeavyAutocannonRecoilSpringBlockEntity blockEntity) {
+        super(manager, blockEntity);
+    }
 
+    @Override
+    public void init() {
+        super.init();
         this.facing = this.blockState.getValue(BlockStateProperties.FACING);
 
         this.blocks.clear();
         for (Map.Entry<BlockPos, BlockState> entry : this.blockEntity.toAnimate.entrySet()) {
             if (entry.getValue() == null) continue;
-            this.blocks.put(entry.getKey(), this.instancerProvider().instancer(InstanceTypes.ORIENTED, Models.block(entry.getValue())).createInstance());
+            this.blocks.put(entry.getKey(), this.materialManager.defaultCutout().material(Materials.ORIENTED).getModel(this.getPartialModelForState()).createInstance());
         }
 
-        this.updateTransforms(partialTick);
+        this.updateTransforms();
     }
 
-    @Override public void beginFrame(Context ctx) { this.updateTransforms(ctx.partialTick()); }
+    @Override public void beginFrame() { this.updateTransforms(); }
 
-    private void updateTransforms(float partialTicks) {
-        float scale = this.blockEntity.getAnimateOffset(partialTicks);
+    private void updateTransforms() {
+        float scale = this.blockEntity.getAnimateOffset(AnimationTickHolder.getPartialTicks());
 
         Vector3f offs = this.facing.step();
         offs.mul((1 - scale) * -0.875f);
-        offs.add(this.visualPos.getX(), this.visualPos.getY(), this.visualPos.getZ());
+        offs.add(this.instancePos.getX(), this.instancePos.getY(), this.instancePos.getZ());
 
-        for (Map.Entry<BlockPos, OrientedInstance> entry : this.blocks.entrySet()) {
+        for (Map.Entry<BlockPos, OrientedData> entry : this.blocks.entrySet()) {
             BlockPos pos1 = entry.getKey();
-            entry.getValue().position(offs).translatePosition(pos1.getX(), pos1.getY(), pos1.getZ());
+            entry.getValue().setPosition(offs).nudge(pos1.getX(), pos1.getY(), pos1.getZ());
         }
     }
 
     @Override
-    public void updateLight(float partialTicks) {
+    public void updateLight() {
         this.relight(this.pos);
-        for (Map.Entry<BlockPos, OrientedInstance> entry : this.blocks.entrySet()) {
+        for (Map.Entry<BlockPos, OrientedData> entry : this.blocks.entrySet()) {
             this.relight(this.pos.offset(entry.getKey()), entry.getValue());
         }
     }
 
     @Override
-    protected void _delete() {
-        for (OrientedInstance block : this.blocks.values()) block.delete();
+    protected void remove() {
+        for (OrientedData block : this.blocks.values()) block.delete();
     }
 
     private PartialModel getPartialModelForState() {
         return this.blockState.getBlock() instanceof HeavyAutocannonBlock cBlock
                 ? ExtraDataRegister.heavyAutocannonSpringFor(cBlock.getAutocannonMaterial())
                 : ExtraDataRegister.heavyAutocannonSpringFor(CBCAutocannonMaterials.CAST_IRON);
-    }
-
-    @Override
-    public void collectCrumblingInstances(Consumer<@Nullable Instance> consumer) {
-        for (OrientedInstance block : this.blocks.values()) consumer.accept(block);
     }
 }

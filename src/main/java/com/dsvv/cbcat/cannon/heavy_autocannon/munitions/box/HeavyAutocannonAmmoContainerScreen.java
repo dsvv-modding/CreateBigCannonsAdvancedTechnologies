@@ -3,11 +3,12 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box;
 import com.dsvv.cbcat.registry.BlockRegister;
 import com.google.common.collect.ImmutableList;
 import com.simibubi.create.foundation.gui.AllIcons;
+import com.simibubi.create.foundation.gui.element.GuiGameElement;
 import com.simibubi.create.foundation.gui.menu.AbstractSimiContainerScreen;
 import com.simibubi.create.foundation.gui.widget.IconButton;
 import com.simibubi.create.foundation.gui.widget.ScrollInput;
-import com.simibubi.create.foundation.utility.CreateLang;
-import net.createmod.catnip.gui.element.GuiGameElement;
+
+import com.simibubi.create.foundation.utility.Lang;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.network.chat.Component;
@@ -39,7 +40,7 @@ public class HeavyAutocannonAmmoContainerScreen extends AbstractSimiContainerScr
     protected void init() {
         boolean isCreative = this.menu.isCreativeContainer();
         CBCGuiTextures bg = isCreative ? CREATIVE_AUTOCANNON_AMMO_CONTAINER_BG : AUTOCANNON_AMMO_CONTAINER_BG;
-        this.setWindowSize(bg.width, bg.height + 4 + PLAYER_INVENTORY.getHeight());
+        this.setWindowSize(bg.width, bg.height + 4 + PLAYER_INVENTORY.height);
         this.setWindowOffset(1, 0);
         super.init();
 
@@ -57,7 +58,7 @@ public class HeavyAutocannonAmmoContainerScreen extends AbstractSimiContainerScr
 
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
-        int invX = this.getLeftOfCentered(PLAYER_INVENTORY.getWidth());
+        int invX = this.getLeftOfCentered(PLAYER_INVENTORY.width);
         int invY = this.topPos + AUTOCANNON_AMMO_CONTAINER_BG.height + 4;
         this.renderPlayerInventory(graphics, invX, invY);
         boolean isCreative = this.menu.isCreativeContainer();
@@ -87,7 +88,7 @@ public class HeavyAutocannonAmmoContainerScreen extends AbstractSimiContainerScr
     protected void renderTooltip(GuiGraphics graphics, int x, int y) {
         super.renderTooltip(graphics, x, y);
         if (this.hoveredSlot != null && this.hoveredSlot.index == 1 && !this.hoveredSlot.hasItem()) {
-            graphics.renderTooltip(this.font, CreateLang.builder(CreateBigCannons.MOD_ID).translate("gui.autocannon_ammo_container.tracer_slot").component(), x ,y);
+            graphics.renderTooltip(this.font, Lang.builder(CreateBigCannons.MOD_ID).translate("gui.autocannon_ammo_container.tracer_slot").component(), x ,y);
         }
     }
 
@@ -125,7 +126,7 @@ public class HeavyAutocannonAmmoContainerScreen extends AbstractSimiContainerScr
                 .withRange(1, 7)
                 .calling(state -> {
                     this.lastUpdated = 0;
-                    this.setValue.titled(CreateLang.builder(CreateBigCannons.MOD_ID).translate("gui.autocannon_ammo_container.tracer_spacing", state).component());
+                    this.setValue.titled(Lang.builder(CreateBigCannons.MOD_ID).translate("gui.autocannon_ammo_container.tracer_spacing", state).component());
                 })
                 .setState(Mth.clamp(this.menu.getValue(), 1, 6));
     }

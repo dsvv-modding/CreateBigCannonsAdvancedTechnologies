@@ -158,7 +158,7 @@ public class HeavyAutocannonQuickFireBreechBlock extends HeavyAutocannonBaseBloc
                         Vec3 globalPos = entity.toGlobalVector(ejectPos, 0);
                         Vector3f direc = be.getBlockState().getValue(FACING).getOpposite().step().mul(0.125f);
                         ItemEntity ejectItem = new ItemEntity(level, globalPos.x, globalPos.y, globalPos.z, eject, direc.x, direc.y, direc.z);
-                        ejectItem.setPickUpDelay((int) Math.floor(CBCConfigs.server().munitions.quickFiringBreechItemPickupDelay.get() * 0.8));
+                        ejectItem.setPickUpDelay((int) Math.floor(CBCConfigs.SERVER.munitions.quickFiringBreechItemPickupDelay.get() * 0.8));
                         level.addFreshEntity(ejectItem);
                     }
                 }
@@ -191,7 +191,7 @@ public class HeavyAutocannonQuickFireBreechBlock extends HeavyAutocannonBaseBloc
                         Vec3 globalPos = entity.toGlobalVector(ejectPos, 0);
                         Vector3f direc = be.getBlockState().getValue(FACING).getOpposite().step().mul(0.125f);
                         ItemEntity ejectItem = new ItemEntity(level, globalPos.x, globalPos.y, globalPos.z, eject, direc.x, direc.y, direc.z);
-                        ejectItem.setPickUpDelay((int) Math.floor(CBCConfigs.server().munitions.quickFiringBreechItemPickupDelay.get() * 0.8));
+                        ejectItem.setPickUpDelay((int) Math.floor(CBCConfigs.SERVER.munitions.quickFiringBreechItemPickupDelay.get() * 0.8));
                         level.addFreshEntity(ejectItem);
                     }
                 }

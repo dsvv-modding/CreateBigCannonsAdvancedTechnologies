@@ -10,15 +10,13 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.breech.HeavyAutocannonBreechBlockE
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectile;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectileItem;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonAmmoItem;
-import com.dsvv.cbcat.cannon.heavy_autocannon.qf_breech.HeavyAutocannonQuickFireBreechBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.qf_breech.HeavyAutocannonQuickFireBreechBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoilSpringBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoilSpringBlockEntity;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.registry.ContraptionRegister;
 import com.dsvv.cbcat.registry.ContraptionRegister.CBCATContraptionTypes;
-import com.simibubi.create.api.contraption.ContraptionType;
 import com.simibubi.create.content.contraptions.AssemblyException;
+import com.simibubi.create.content.contraptions.ContraptionType;
 import com.simibubi.create.content.contraptions.StructureTransform;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -307,7 +305,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
 
         AutocannonMaterialProperties properties = this.cannonMaterial.properties();
         AutocannonProjectilePropertiesComponent roundProperties = round != null ? round.getAutocannonProperties(foundProjectile) : projectileItem.getAutocannonProperties(foundProjectile);
-        boolean canFail = !(Boolean)CBCConfigs.server().failure.disableAllFailure.get();
+        boolean canFail = !(Boolean)CBCConfigs.SERVER.failure.disableAllFailure.get();
         float speed = properties.baseSpeed();//isManual ? properties.baseSpeed() * 0.75f + qfbreech.getCharge() : properties.baseSpeed();
         float spread = properties.baseSpread();
         boolean canSquib = roundProperties == null || roundProperties.canSquib();
@@ -391,7 +389,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
         spawnPos = spawnPos.subtract(vec1.scale(1.5F));
         Vec3 particlePos = spawnPos;
         float recoilMagnitude = properties.baseRecoil();
-        boolean isTracer = CBCConfigs.server().munitions.allAutocannonProjectilesAreTracers.get() || (round != null ? round.isTracer(foundProjectile) : projectileItem.isTracer(foundProjectile));
+        boolean isTracer = CBCConfigs.SERVER.munitions.allAutocannonProjectilesAreTracers.get() || (round != null ? round.isTracer(foundProjectile) : projectileItem.isTracer(foundProjectile));
         AbstractHeavyAutocannonProjectile projectile = round != null ? round.getAutocannonProjectile(foundProjectile, level) : projectileItem.getAutocannonProjectile(foundProjectile, level);
         if (projectile != null) {
             projectile.setPos(spawnPos);
@@ -413,7 +411,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
             }
         }
 
-        recoilMagnitude *= CBCConfigs.server().cannons.autocannonRecoilScale.getF() * 2.0F;
+        recoilMagnitude *= CBCConfigs.SERVER.cannons.autocannonRecoilScale.getF() * 2.0F;
         if (controller != null) {
             controller.onRecoil(vec1.scale((-recoilMagnitude)), entity);
         }
@@ -432,7 +430,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
             CBCUtils.playBlastLikeSoundOnServer(level, spawnPos.x, spawnPos.y, spawnPos.z, CBCSoundEvents.FIRE_AUTOCANNON.getMainEvent(), SoundSource.BLOCKS, 15.0F * this.volumeMultiplier, 1.05f * this.volumeMultiplier, 3.0F);
         //}
 
-        if (projectile != null && CBCConfigs.server().munitions.projectilesCanChunkload.get()) {
+        if (projectile != null && CBCConfigs.SERVER.munitions.projectilesCanChunkload.get()) {
             ChunkPos cpos1 = new ChunkPos(BlockPos.containing(projectile.position()));
             RitchiesProjectileLib.queueForceLoad(level, cpos1.x, cpos1.z);
         }
@@ -585,7 +583,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
     }
 
     public ContraptionType getType() {
-        return ContraptionRegister.MOUNTED_HEAVY_AUTOCANNON.get();
+        return ContraptionRegister.MOUNTED_HEAVY_AUTOCANNON;
     }
 
     public float maximumDepression(@Nonnull ControlPitchContraption controller) {

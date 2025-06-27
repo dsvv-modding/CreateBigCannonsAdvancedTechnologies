@@ -3,45 +3,44 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.breech;
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
+import com.jozufozu.flywheel.api.MaterialManager;
+import com.jozufozu.flywheel.api.instance.DynamicInstance;
+import com.jozufozu.flywheel.backend.instancing.blockentity.BlockEntityInstance;
+import com.jozufozu.flywheel.core.Materials;
+import com.jozufozu.flywheel.core.PartialModel;
+import com.jozufozu.flywheel.core.materials.oriented.OrientedData;
+import com.jozufozu.flywheel.util.AnimationTickHolder;
 import com.mojang.math.Axis;
-import dev.engine_room.flywheel.api.instance.Instance;
-import dev.engine_room.flywheel.api.instance.InstanceType;
-import dev.engine_room.flywheel.api.visualization.VisualizationContext;
-import dev.engine_room.flywheel.lib.instance.InstanceTypes;
-import dev.engine_room.flywheel.lib.instance.OrientedInstance;
-import dev.engine_room.flywheel.lib.model.Models;
-import dev.engine_room.flywheel.lib.model.baked.PartialModel;
-import dev.engine_room.flywheel.lib.visual.AbstractBlockEntityVisual;
-import dev.engine_room.flywheel.lib.visual.SimpleDynamicVisual;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import org.jetbrains.annotations.Nullable;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 import rbasamoyai.createbigcannons.index.CBCBlockPartials;
 
-import java.util.function.Consumer;
 
-
-public class HeavyAutocannonBreechInstance extends AbstractBlockEntityVisual<HeavyAutocannonBreechBlockEntity> implements SimpleDynamicVisual
+public class HeavyAutocannonBreechInstance extends BlockEntityInstance<HeavyAutocannonBreechBlockEntity> implements DynamicInstance
 {
-    private OrientedInstance ammoContainer;
+    private OrientedData ammoContainer;
 
     private Direction facing;
     private boolean isFilled = false;
     private Item magazineItem = null;
 
-    public HeavyAutocannonBreechInstance(VisualizationContext ctx, HeavyAutocannonBreechBlockEntity blockEntity, float partialTick) {
-        super(ctx, blockEntity, partialTick);
+    public HeavyAutocannonBreechInstance(MaterialManager manager, HeavyAutocannonBreechBlockEntity blockEntity) {
+        super(manager, blockEntity);
+    }
 
+    @Override
+    public void init() {
+        super.init();
         this.facing = this.blockState.getValue(BlockStateProperties.FACING);
         Quaternionf q = Axis.YP.rotationDegrees(this.facing.getAxis().isVertical() ? 180 : 0);
 
-        this.ammoContainer = this.instancerProvider().instancer(InstanceTypes.ORIENTED, Models.block(this.getAmmoContainerModel())).createInstance();
+        this.ammoContainer = this.materialManager.defaultCutout().material(Materials.ORIENTED).getModel(this.getAmmoContainerModel()).createInstance();
         boolean flag = this.facing.getAxis().isVertical();
         Quaternionf q1;
         if (flag) {
@@ -57,34 +56,34 @@ public class HeavyAutocannonBreechInstance extends AbstractBlockEntityVisual<Hea
                 : this.facing.getClockWise(Direction.Axis.Y);
         Vector3f normal = this.facing == Direction.UP ? offset.getOpposite().step() : offset.step();
         normal.mul(10 / 16f);
-        this.ammoContainer.rotation(q1).position(this.getVisualPosition()).translatePosition(normal.x(), normal.y(), normal.z());
+        this.ammoContainer.setRotation(q1).setPosition(this.getInstancePosition()).nudge(normal.x(), normal.y(), normal.z());
         this.isFilled = this.isFilled();
         this.magazineItem = this.getMagazineItem();
-        this.updateTransforms(partialTick);
+        this.updateTransforms();
     }
 
-    private void updateTransforms(float partialTick) {
-        float offset = this.blockEntity.getAnimateOffset(partialTick) * 0.5f;
+    private void updateTransforms() {
+        float offset = this.blockEntity.getAnimateOffset(AnimationTickHolder.getPartialTicks()) * 0.5f;
         Vector3f normal = this.facing.getOpposite().step();
         normal.mul(offset);
         //this.ejector.setPosition(this.getInstancePosition()).nudge(normal.x(), normal.y(), normal.z()).setColor((byte) 255, (byte) 255, (byte) 255, (byte) 255);
 
         ItemStack container = this.blockEntity.getMagazine();
-        this.ammoContainer.color((byte) 255, (byte) 255, (byte) 255, (byte)(container.getItem() instanceof HeavyAutocannonAmmoContainerItem ? 255 : 0));
+        this.ammoContainer.setColor((byte) 255, (byte) 255, (byte) 255, (byte)(container.getItem() instanceof HeavyAutocannonAmmoContainerItem ? 255 : 0));
         if (this.isFilled != this.isFilled() || this.magazineItem != this.getMagazineItem()) {
             //this.remove();
             //this.init();
-            this.updateLight(partialTick);
+            this.updateLight();
         }
     }
 
     @Override
-    public void updateLight(float partialTick) {
+    public void updateLight() {
         this.relight(this.pos, this.ammoContainer);
     }
 
     @Override
-    protected void _delete() {
+    protected void remove() {
         this.ammoContainer.delete();
     }
 
@@ -114,12 +113,7 @@ public class HeavyAutocannonBreechInstance extends AbstractBlockEntityVisual<Hea
     }
 
     @Override
-    public void collectCrumblingInstances(Consumer<@Nullable Instance> consumer) {
-        consumer.accept(ammoContainer);
-    }
-
-    @Override
-    public void beginFrame(Context context) {
-        updateTransforms(context.partialTick());
+    public void beginFrame() {
+        this.updateTransforms();
     }
 }

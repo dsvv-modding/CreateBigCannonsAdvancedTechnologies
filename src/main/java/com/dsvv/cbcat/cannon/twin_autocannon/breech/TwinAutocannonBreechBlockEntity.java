@@ -2,9 +2,8 @@ package com.dsvv.cbcat.cannon.twin_autocannon;
 
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonInventoryHandler;
+import com.jozufozu.flywheel.backend.instancing.InstancedRenderDispatcher;
 import com.simibubi.create.content.contraptions.Contraption;
-import dev.engine_room.flywheel.api.visualization.VisualizationManager;
-import dev.engine_room.flywheel.lib.visualization.VisualizationHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -231,6 +230,6 @@ public class TwinAutocannonBreechBlockEntity extends TwinAutocannonBlockEntity i
     @Override
     public void requestModelDataUpdate() {
         super.requestModelDataUpdate();
-        if (!this.remove) DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> VisualizationHelper.queueUpdate(this));
+        if (!this.remove) DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> InstancedRenderDispatcher.enqueueUpdate(this));
     }
 }

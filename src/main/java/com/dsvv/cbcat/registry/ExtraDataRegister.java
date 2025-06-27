@@ -2,29 +2,18 @@ package com.dsvv.cbcat.registry;
 
 import com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutocannonProjectile;
-import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutocannonProjectileItem;
-import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
+import com.jozufozu.flywheel.core.PartialModel;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.EntityEntry;
-import com.tterrag.registrate.util.entry.ItemEntry;
-import dev.engine_room.flywheel.lib.model.baked.PartialModel;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
-import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlock;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 import rbasamoyai.createbigcannons.index.CBCBlocks;
 
 import java.util.HashMap;
-import java.util.logging.Logger;
-
-import static com.dsvv.cbcat.debugUtils.DebugUtils.displayCustomClientMessage;
 
 public class ExtraDataRegister
 {
@@ -40,21 +29,21 @@ public class ExtraDataRegister
 
     public static void register()
     {
-        RECOIL_SPRINGS.put(CBCAutocannonMaterials.CAST_IRON, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/cast_iron_recoil_spring")));
-        RECOIL_SPRINGS.put(CBCAutocannonMaterials.BRONZE, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/bronze_recoil_spring")));
-        RECOIL_SPRINGS.put(CBCAutocannonMaterials.STEEL, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/twin_autocannon/steel_recoil_spring")));
+        RECOIL_SPRINGS.put(CBCAutocannonMaterials.CAST_IRON, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/cast_iron_recoil_spring")));
+        RECOIL_SPRINGS.put(CBCAutocannonMaterials.BRONZE, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/bronze_recoil_spring")));
+        RECOIL_SPRINGS.put(CBCAutocannonMaterials.STEEL, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/twin_autocannon/steel_recoil_spring")));
 
-        VERT_RECOIL_SPRINGS.put(CBCAutocannonMaterials.CAST_IRON, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/cast_iron_vert_recoil_spring")));
-        VERT_RECOIL_SPRINGS.put(CBCAutocannonMaterials.BRONZE, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/bronze_vert_recoil_spring")));
-        VERT_RECOIL_SPRINGS.put(CBCAutocannonMaterials.STEEL, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/twin_autocannon/steel_vert_recoil_spring")));
+        VERT_RECOIL_SPRINGS.put(CBCAutocannonMaterials.CAST_IRON, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/cast_iron_vert_recoil_spring")));
+        VERT_RECOIL_SPRINGS.put(CBCAutocannonMaterials.BRONZE, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/twin_autocannon/bronze_vert_recoil_spring")));
+        VERT_RECOIL_SPRINGS.put(CBCAutocannonMaterials.STEEL, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/twin_autocannon/steel_vert_recoil_spring")));
 
-        HEAVY_RECOIL_SPRINGS.put(CBCAutocannonMaterials.CAST_IRON, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/cast_iron_recoil_spring")));
-        HEAVY_RECOIL_SPRINGS.put(CBCAutocannonMaterials.BRONZE, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/bronze_recoil_spring")));
-        HEAVY_RECOIL_SPRINGS.put(CBCAutocannonMaterials.STEEL, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/heavy_autocannon/steel_recoil_spring")));
+        HEAVY_RECOIL_SPRINGS.put(CBCAutocannonMaterials.CAST_IRON, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/cast_iron_recoil_spring")));
+        HEAVY_RECOIL_SPRINGS.put(CBCAutocannonMaterials.BRONZE, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/bronze_recoil_spring")));
+        HEAVY_RECOIL_SPRINGS.put(CBCAutocannonMaterials.STEEL, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/heavy_autocannon/steel_recoil_spring")));
 
-        HEAVY_BREECH_BLOCKS.put(CBCAutocannonMaterials.CAST_IRON, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/cast_iron_breechblock")));
-        HEAVY_BREECH_BLOCKS.put(CBCAutocannonMaterials.BRONZE, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/bronze_breechblock")));
-        HEAVY_BREECH_BLOCKS.put(CBCAutocannonMaterials.STEEL, PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/heavy_autocannon/steel_breechblock")));
+        HEAVY_BREECH_BLOCKS.put(CBCAutocannonMaterials.CAST_IRON, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/cast_iron_breechblock")));
+        HEAVY_BREECH_BLOCKS.put(CBCAutocannonMaterials.BRONZE, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/heavy_autocannon/bronze_breechblock")));
+        HEAVY_BREECH_BLOCKS.put(CBCAutocannonMaterials.STEEL, new PartialModel(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "block/heavy_autocannon/steel_breechblock")));
 
         ALL_CARTRIDGES.put("ap shot", BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK);
         ALL_CARTRIDGES.put("ap shell", BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK);

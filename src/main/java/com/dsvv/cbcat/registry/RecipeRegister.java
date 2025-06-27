@@ -6,7 +6,7 @@ import com.google.gson.JsonObject;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -43,7 +43,7 @@ public enum RecipeRegister implements IRecipeTypeInfo
     private final NonNullSupplier<RecipeType<?>> type;
 
     RecipeRegister(NonNullSupplier<RecipeSerializer<?>> serializerSupplier, NonNullSupplier<RecipeType<?>> typeSupplier, boolean registerType) {
-        String name = CreateLang.asId(name());
+        String name = Lang.asId(name());
         id = new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
         serializerObject = IndexPlatform.registerRecipeSerializer(this.id, serializerSupplier);
         if (registerType) {
@@ -57,7 +57,7 @@ public enum RecipeRegister implements IRecipeTypeInfo
     }
 
     RecipeRegister(NonNullSupplier<RecipeSerializer<?>> serializerSupplier) {
-        String name = CreateLang.asId(name());
+        String name = Lang.asId(name());
         id = CreateBigCannons.resource(name);//new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
         serializerObject = IndexPlatform.registerRecipeSerializer(this.id, serializerSupplier);
         typeObject = simpleType(id);

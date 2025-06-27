@@ -41,7 +41,7 @@ public class HA_HEATProjectile extends AbstractFuzedHeavyAutocannonProjectile {
         FlakAutocannonProjectileProperties properties = CBCMunitionPropertiesHandlers.FLAK_AUTOCANNON.getPropertiesOf(CBCEntityTypes.FLAK_AUTOCANNON.get());
         ShellExplosion explosion = new ShellExplosion(this.level(), this, this.indirectArtilleryFire(false), position.x(),
                 position.y(), position.z(), properties.explosion().explosivePower() * 1.45f, false,
-                CBCConfigs.server().munitions.damageRestriction.get().explosiveInteraction());
+                CBCConfigs.SERVER.munitions.damageRestriction.get().explosiveInteraction());
         pos = position;
         spawnCopper = true;
         CreateBigCannons.handleCustomExplosion(this.level(), explosion);

@@ -2,12 +2,12 @@ package com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring;
 
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
 import com.dsvv.cbcat.registry.ExtraDataRegister;
+import com.jozufozu.flywheel.backend.Backend;
+import com.jozufozu.flywheel.core.PartialModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import dev.engine_room.flywheel.api.visualization.VisualizationManager;
-import dev.engine_room.flywheel.lib.model.baked.PartialModel;
-import net.createmod.catnip.render.CachedBuffers;
-import net.createmod.catnip.render.SuperByteBuffer;
+import com.simibubi.create.foundation.render.CachedBufferer;
+import com.simibubi.create.foundation.render.SuperByteBuffer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -33,11 +33,11 @@ public class TwinAutocannonRecoilSpringRenderer extends SmartBlockEntityRenderer
     @Override
     protected void renderSafe(TwinAutocannonRecoilSpringBlockEntity spring, float partialTicks, PoseStack ms, MultiBufferSource buffer, int light, int overlay) {
         super.renderSafe(spring, partialTicks, ms, buffer, light, overlay);
-        if (VisualizationManager.supportsVisualization(spring.getLevel())) return;
+        if (Backend.canUseInstancing(spring.getLevel())) return;
 
         BlockState state = spring.getBlockState();
         Direction facing = state.getValue(BlockStateProperties.FACING);
-        SuperByteBuffer ejectorBuf = CachedBuffers.partialFacing(getPartialModelForState(state), state, facing);
+        SuperByteBuffer ejectorBuf = CachedBufferer.partialFacing(getPartialModelForState(state), state, facing);
 
         Direction.Axis axis = facing.getAxis();
 
@@ -51,7 +51,7 @@ public class TwinAutocannonRecoilSpringRenderer extends SmartBlockEntityRenderer
         ms.pushPose();
 
         if (facing.getAxisDirection() == Direction.AxisDirection.NEGATIVE) {
-            ejectorBuf.rotateCentered(Mth.PI, axis.isVertical() ? Direction.EAST : Direction.UP);
+            ejectorBuf.rotateCentered(axis.isVertical() ? Direction.EAST : Direction.UP, Mth.PI);
             //.translate(facing.getOpposite().step());
         }
         ejectorBuf.scale(fx, fy, fz)

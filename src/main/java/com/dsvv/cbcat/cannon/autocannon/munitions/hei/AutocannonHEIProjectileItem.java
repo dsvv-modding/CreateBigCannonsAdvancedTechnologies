@@ -1,7 +1,7 @@
 package com.dsvv.cbcat.cannon.autocannon.munitions.hei;
 
 import com.dsvv.cbcat.registry.EntityRegister;
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -34,7 +34,7 @@ public class AutocannonHEIProjectileItem extends AutocannonRoundItem implements 
         ItemStack fuze =
                 tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.of(tag.getCompound("Fuze")) : ItemStack.EMPTY;
         if (!fuze.isEmpty()) {
-            CreateLang.builder("block")
+            Lang.builder("block")
                     .translate(CreateBigCannons.MOD_ID + ".shell.tooltip.fuze")
                     .add(Component.literal(" "))
                     .add(fuze.getDisplayName().copy())

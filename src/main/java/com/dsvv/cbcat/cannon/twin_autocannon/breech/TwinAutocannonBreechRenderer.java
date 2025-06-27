@@ -2,12 +2,12 @@ package com.dsvv.cbcat.cannon.twin_autocannon.breech;
 
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
+import com.jozufozu.flywheel.backend.Backend;
+import com.jozufozu.flywheel.core.PartialModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.simibubi.create.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import dev.engine_room.flywheel.api.visualization.VisualizationManager;
-import dev.engine_room.flywheel.lib.model.baked.PartialModel;
-import net.createmod.catnip.render.CachedBuffers;
+import com.simibubi.create.foundation.render.CachedBufferer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -30,7 +30,7 @@ public class TwinAutocannonBreechRenderer extends SmartBlockEntityRenderer<TwinA
     @Override
     protected void renderSafe(TwinAutocannonBreechBlockEntity breech, float partialTicks, PoseStack ms, MultiBufferSource buffer, int light, int overlay) {
         super.renderSafe(breech, partialTicks, ms, buffer, light, overlay);
-        if (VisualizationManager.supportsVisualization(breech.getLevel())) return;
+        if (Backend.canUseInstancing(breech.getLevel())) return;
 
         BlockState state = breech.getBlockState();
         Direction facing = state.getValue(TwinAutocannonBreechBlock.FACING);
@@ -39,7 +39,7 @@ public class TwinAutocannonBreechRenderer extends SmartBlockEntityRenderer<TwinA
 
         if (state.getValue(TwinAutocannonBreechBlock.HANDLE)) {
             if (breech.getSeatColor() != null) {
-                CachedBuffers.partialFacing(CBCBlockPartials.autocannonSeatFor(breech.getSeatColor()), state, facing)
+                CachedBufferer.partialFacing(CBCBlockPartials.autocannonSeatFor(breech.getSeatColor()), state, facing)
                         .rotateCentered(Axis.YP.rotationDegrees(facing.getAxis().isVertical() ? 180 : 0))
                         .light(light)
                         .renderInto(ms, buffer.getBuffer(RenderType.cutoutMipped()));
@@ -47,7 +47,7 @@ public class TwinAutocannonBreechRenderer extends SmartBlockEntityRenderer<TwinA
         } else {
             Vector3f normal = facing.step();
             normal.mul(breech.getAnimateOffset(partialTicks) * -0.5f);
-            CachedBuffers.partialFacing(getPartialModelForState(breech), state, facing)
+            CachedBufferer.partialFacing(getPartialModelForState(breech), state, facing)
                     .translate(normal)
                     .rotateCentered(Axis.YP.rotationDegrees(facing.getAxis().isVertical() ? 180 : 0))
                     .light(light)
@@ -71,7 +71,7 @@ public class TwinAutocannonBreechRenderer extends SmartBlockEntityRenderer<TwinA
             Vector3f normal = facing == Direction.UP ? offset.getOpposite().step() : offset.step();
             normal.mul(10 / 16f);
 
-            CachedBuffers.block(getAmmoContainerModel(container))
+            CachedBufferer.block(getAmmoContainerModel(container))
                     .translate(normal)
                     .rotateCentered(q1)
                     .light(light)

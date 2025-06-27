@@ -4,8 +4,8 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
 import com.simibubi.create.content.equipment.goggles.GogglesItem;
 import com.simibubi.create.foundation.item.TooltipHelper;
-import com.simibubi.create.foundation.utility.CreateLang;
-import net.createmod.catnip.lang.FontHelper;
+import com.simibubi.create.foundation.item.TooltipHelper.Palette;
+import com.simibubi.create.foundation.utility.Lang;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -35,7 +35,7 @@ public class Tooltips {
             return;
         }
 
-        FontHelper.Palette palette = getPalette(level, stack);
+        Palette palette = getPalette(level, stack);
         AutocannonMaterial material = block.getAutocannonMaterial();
         Minecraft mc = Minecraft.getInstance();
         boolean hasGoggles = GogglesItem.isWearingGoggles(mc.player);
@@ -64,11 +64,11 @@ public class Tooltips {
     }
 
     private static void addHoldShift(boolean desc, List<Component> tooltip) {
-        String[] holdDesc = CreateLang.translateDirect("tooltip.holdForDescription", "$").getString().split("\\$");
+        String[] holdDesc = Lang.translateDirect("tooltip.holdForDescription", "$").getString().split("\\$");
         if (holdDesc.length < 2) {
             return;
         }
-        Component keyShift = CreateLang.translateDirect("tooltip.keyShift");
+        Component keyShift = Lang.translateDirect("tooltip.keyShift");
         MutableComponent tabBuilder = Component.literal("");
         tabBuilder.append(Component.literal(holdDesc[0]).withStyle(ChatFormatting.DARK_GRAY));
         tabBuilder.append(keyShift.plainCopy().withStyle(desc ? ChatFormatting.WHITE : ChatFormatting.GRAY));
@@ -84,7 +84,7 @@ public class Tooltips {
             return;
         }
 
-        FontHelper.Palette palette = getPalette(level, stack);
+        Palette palette = getPalette(level, stack);
         AutocannonMaterial material = block.getAutocannonMaterial();
         Minecraft mc = Minecraft.getInstance();
         boolean hasGoggles = GogglesItem.isWearingGoggles(mc.player);

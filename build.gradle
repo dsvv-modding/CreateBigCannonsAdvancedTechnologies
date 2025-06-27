@@ -122,11 +122,9 @@ dependencies {
     //implementation("com.gradleup.shadow:com.gradleup.shadow.gradle.plugin:8.3.0")
 
     //Create Dependency
-    implementation fg.deobf("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
-    implementation fg.deobf("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}")
-    compileOnly fg.deobf("dev.engine-room.flywheel:flywheel-forge-api-${minecraft_version}:${flywheel_version}")
-    runtimeOnly fg.deobf("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
-    implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation fg.deobf("com.simibubi.create:create-$minecraft_version:$create_version:slim") { transitive = false }
+    implementation fg.deobf("com.tterrag.registrate:Registrate:$registrate_version")
+    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-$flywheel_minecraft_version:$flywheel_version")
 
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))

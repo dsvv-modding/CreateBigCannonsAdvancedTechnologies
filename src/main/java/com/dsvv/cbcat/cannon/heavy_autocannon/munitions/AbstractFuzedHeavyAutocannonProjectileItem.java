@@ -1,6 +1,6 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.munitions;
 
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -29,7 +29,7 @@ public abstract class AbstractFuzedHeavyAutocannonProjectileItem extends Abstrac
         ItemStack fuze =
                 tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.of(tag.getCompound("Fuze")) : ItemStack.EMPTY;
         if (!fuze.isEmpty()) {
-            CreateLang.builder("block")
+            Lang.builder("block")
                     .translate(CreateBigCannons.MOD_ID + ".shell.tooltip.fuze")
                     .add(Component.literal(" "))
                     .add(fuze.getDisplayName().copy())

@@ -1,14 +1,12 @@
 package com.dsvv.cbcat.cannon.twin_autocannon.breech;
 
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
+import com.jozufozu.flywheel.api.MaterialManager;
+import com.jozufozu.flywheel.api.instance.DynamicInstance;
+import com.jozufozu.flywheel.backend.instancing.blockentity.BlockEntityInstance;
+import com.jozufozu.flywheel.core.Materials;
+import com.jozufozu.flywheel.core.materials.oriented.OrientedData;
 import com.mojang.math.Axis;
-import dev.engine_room.flywheel.api.instance.Instance;
-import dev.engine_room.flywheel.api.visualization.VisualizationContext;
-import dev.engine_room.flywheel.lib.instance.InstanceTypes;
-import dev.engine_room.flywheel.lib.instance.OrientedInstance;
-import dev.engine_room.flywheel.lib.model.Models;
-import dev.engine_room.flywheel.lib.visual.AbstractBlockEntityVisual;
-import dev.engine_room.flywheel.lib.visual.SimpleDynamicVisual;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -25,11 +23,11 @@ import rbasamoyai.createbigcannons.munitions.autocannon.ammo_container.Autocanno
 
 import java.util.function.Consumer;
 
-public class TwinAutocannonBreechInstance extends AbstractBlockEntityVisual<TwinAutocannonBreechBlockEntity> implements SimpleDynamicVisual
+public class TwinAutocannonBreechInstance extends BlockEntityInstance<TwinAutocannonBreechBlockEntity> implements DynamicInstance
 {
     //private OrientedData ejector;
-    private OrientedInstance seat;
-    private OrientedInstance ammoContainer;
+    private OrientedData seat;
+    private OrientedData ammoContainer;
     private DyeColor seatColor;
     //private final OrientedData shell;
 
@@ -37,15 +35,19 @@ public class TwinAutocannonBreechInstance extends AbstractBlockEntityVisual<Twin
     private boolean isFilled = false;
     private Item magazineItem = null;
 
-    public TwinAutocannonBreechInstance(VisualizationContext ctx, TwinAutocannonBreechBlockEntity blockEntity, float partialTicks) {
-        super(ctx, blockEntity, partialTicks);
+    public TwinAutocannonBreechInstance(MaterialManager manager, TwinAutocannonBreechBlockEntity blockEntity) {
+        super(manager, blockEntity);
+    }
 
+    @Override
+    public void init() {
+        super.init();
         this.facing = this.blockState.getValue(BlockStateProperties.FACING);
 
         this.seatColor = this.blockEntity.getSeatColor();
 
-        this.seat = this.instancerProvider().instancer(InstanceTypes.ORIENTED, Models.partial(CBCBlockPartials.autocannonSeatFor(this.seatColor))).createInstance();
-        this.ammoContainer = this.instancerProvider().instancer(InstanceTypes.ORIENTED, Models.block(getAmmoContainerModel())).createInstance();
+        this.seat = this.materialManager.defaultCutout().material(Materials.ORIENTED).getModel(CBCBlockPartials.autocannonSeatFor(this.seatColor)).createInstance();
+        this.ammoContainer = this.materialManager.defaultCutout().material(Materials.ORIENTED).getModel(this.getAmmoContainerModel()).createInstance();
 
         boolean flag = this.facing.getAxis().isVertical();
         Quaternionf q1;
@@ -61,46 +63,46 @@ public class TwinAutocannonBreechInstance extends AbstractBlockEntityVisual<Twin
                 : this.facing.getClockWise(Direction.Axis.Y);
         Vector3f normal = this.facing == Direction.UP ? offset.getOpposite().step() : offset.step();
         normal.mul(10 / 16f);
-        this.ammoContainer.rotation(q1).position(this.getVisualPosition()).translatePosition(normal.x(), normal.y(), normal.z());
+        this.ammoContainer.setRotation(q1).setPosition(this.getInstancePosition()).nudge(normal.x(), normal.y(), normal.z());
         this.isFilled = this.isFilled();
         this.magazineItem = this.getMagazineItem();
 
-        this.seat.rotation(q1.rotateY((float) Math.PI / 2f)).position(this.getVisualPosition());
+        this.seat.setRotation(q1.rotateY((float) Math.PI / 2f)).setPosition(this.getInstancePosition());
 
-        this.updateTransforms(partialTicks);
+        this.updateTransforms();
     }
 
-    @Override public void beginFrame(Context ctx) { this.updateTransforms(ctx.partialTick()); }
+    @Override public void beginFrame() { this.updateTransforms(); }
 
-    private void updateTransforms(float partialTicks) {
+    private void updateTransforms() {
         if (this.blockState.getValue(TwinAutocannonBreechBlock.HANDLE))
-            this.seat.setVisible(this.seatColor != null);
+            this.seat.setColor((byte) 255, (byte) 255, (byte) 255, (byte) (this.seatColor == null ? 0 : 255));
         else
-            this.seat.setVisible(false);
+            this.seat.setColor((byte) 255, (byte) 255, (byte) 255, (byte) 0);
 
         if (this.seatColor != this.blockEntity.getSeatColor())
             this.seatColor = this.blockEntity.getSeatColor();
 
         ItemStack container = this.blockEntity.getMagazine();
-        this.ammoContainer.setVisible(container.getItem() instanceof AutocannonAmmoContainerItem);
+        this.ammoContainer.setColor((byte) 255, (byte) 255, (byte) 255, (byte)(container.getItem() instanceof AutocannonAmmoContainerItem ? 255 : 0));
         if (this.isFilled != this.isFilled() || this.magazineItem != this.getMagazineItem() || this.seatColor != this.blockEntity.getSeatColor()) {
-            //this._delete();
-            //this.init();
-            this.updateLight(partialTicks);
+            this.remove();
+            this.init();
+            this.updateLight();
         }
 
-        seat.setChanged();
-        ammoContainer.setChanged();
+        //seat.setChanged();
+        //ammoContainer.setChanged();
     }
 
     @Override
-    public void updateLight(float partialTicks) {
+    public void updateLight() {
         this.relight(this.pos, this.seat);
         this.relight(this.pos, this.ammoContainer);
     }
 
     @Override
-    protected void _delete() {
+    protected void remove() {
         this.seat.delete();
         this.ammoContainer.delete();
     }
@@ -122,11 +124,5 @@ public class TwinAutocannonBreechInstance extends AbstractBlockEntityVisual<Twin
     private Item getMagazineItem() {
         ItemStack stack = this.blockEntity.getMagazine();
         return stack == null || stack.isEmpty() ? null : stack.getItem();
-    }
-
-    @Override
-    public void collectCrumblingInstances(Consumer<@Nullable Instance> consumer) {
-        consumer.accept(ammoContainer);
-        consumer.accept(seat);
     }
 }

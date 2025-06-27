@@ -1,7 +1,6 @@
 package com.dsvv.cbcat.config;
 
-
-import net.createmod.catnip.config.ConfigBase;
+import com.simibubi.create.foundation.config.ConfigBase;
 
 public class CBCATBigCannons extends ConfigBase
 {

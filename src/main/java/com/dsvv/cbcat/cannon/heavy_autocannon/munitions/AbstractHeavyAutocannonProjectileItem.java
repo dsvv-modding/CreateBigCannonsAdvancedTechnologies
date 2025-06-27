@@ -1,7 +1,7 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.munitions;
 
 import com.dsvv.cbcat.registry.ItemRegister;
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
@@ -42,7 +42,7 @@ public abstract class AbstractHeavyAutocannonProjectileItem extends Item
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
         super.appendHoverText(stack, level, tooltipComponents, isAdvanced);
         if (stack.getOrCreateTag().getBoolean("Tracer")) {
-            CreateLang.builder("tooltip").translate(CreateBigCannons.MOD_ID + ".tracer").addTo(tooltipComponents);
+            Lang.builder("tooltip").translate(CreateBigCannons.MOD_ID + ".tracer").addTo(tooltipComponents);
         }
     }
 

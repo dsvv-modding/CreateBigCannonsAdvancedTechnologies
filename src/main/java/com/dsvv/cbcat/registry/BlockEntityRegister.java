@@ -67,14 +67,14 @@ public class BlockEntityRegister
             .register();
 
     public static final BlockEntityEntry<TwinAutocannonRecoilSpringBlockEntity> TWIN_AUTOCANNON_RECOIL_SPRING_BLOCK_ENTITY = REGISTRATE.blockEntity("twin_autocannon_recoil_spring_be", TwinAutocannonRecoilSpringBlockEntity::new)
-            .visual(() -> TwinAutocannonRecoilSpringInstance::new)
+            .instance(() -> TwinAutocannonRecoilSpringInstance::new)
             .renderer(() -> TwinAutocannonRecoilSpringRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.BRONZE_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.STEEL_TWIN_AUTOCANNON_RECOIL_SPRING,
                     BlockRegister.CAST_IRON_VERT_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.BRONZE_VERT_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.STEEL_VERT_TWIN_AUTOCANNON_RECOIL_SPRING)
             .register();
 
     public static final BlockEntityEntry<TwinAutocannonBreechBlockEntity> TWIN_AUTOCANNON_BREECH_BLOCK_ENTITY = REGISTRATE.blockEntity("twin_autocannon_breech_be", TwinAutocannonBreechBlockEntity::new)
-            .visual(() -> TwinAutocannonBreechInstance::new)
+            .instance(() -> TwinAutocannonBreechInstance::new)
             .renderer(() -> TwinAutocannonBreechRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_TWIN_AUTOCANNON_BREECH, BlockRegister.BRONZE_TWIN_AUTOCANNON_BREECH, BlockRegister.STEEL_TWIN_AUTOCANNON_BREECH,
                     BlockRegister.CAST_IRON_VERT_TWIN_AUTOCANNON_BREECH, BlockRegister.BRONZE_VERT_TWIN_AUTOCANNON_BREECH, BlockRegister.STEEL_VERT_TWIN_AUTOCANNON_BREECH)
@@ -87,19 +87,19 @@ public class BlockEntityRegister
             .register();
 
     public static final BlockEntityEntry<HeavyAutocannonRecoilSpringBlockEntity> HEAVY_AUTOCANNON_RECOIL_SPRING_BLOCK_ENTITY = REGISTRATE.blockEntity("heavy_autocannon_recoil_spring_be", HeavyAutocannonRecoilSpringBlockEntity::new)
-            .visual(() -> HeavyAutocannonRecoilSpringInstance::new)
+            .instance(() -> HeavyAutocannonRecoilSpringInstance::new)
             .renderer(() -> HeavyAutocannonRecoilSpringRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_HEAVY_AUTOCANNON_RECOIL_SPRING, BlockRegister.BRONZE_HEAVY_AUTOCANNON_RECOIL_SPRING, BlockRegister.STEEL_HEAVY_AUTOCANNON_RECOIL_SPRING)
             .register();
 
     public static final BlockEntityEntry<HeavyAutocannonBreechBlockEntity> HEAVY_AUTOCANNON_BREECH_BLOCK_ENTITY = REGISTRATE.blockEntity("heavy_autocannon_breech_be", HeavyAutocannonBreechBlockEntity::new)
-            .visual(() -> HeavyAutocannonBreechInstance::new)
+            .instance(() -> HeavyAutocannonBreechInstance::new)
             .renderer(() -> HeavyAutocannonBreechRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_HEAVY_AUTOCANNON_BREECH, BlockRegister.BRONZE_HEAVY_AUTOCANNON_BREECH, BlockRegister.STEEL_HEAVY_AUTOCANNON_BREECH)
             .register();
 
     public static final BlockEntityEntry<HeavyAutocannonQuickFireBreechBlockEntity> HEAVY_AUTOCANNON_QFBREECH_BLOCK_ENTITY = REGISTRATE.blockEntity("heavy_autocannon_qf_breech_be", HeavyAutocannonQuickFireBreechBlockEntity::new)
-            .visual(() -> HeavyAutocannonQuickFireBreechInstance::new)
+            .instance(() -> HeavyAutocannonQuickFireBreechInstance::new)
             .renderer(() -> HeavyAutocannonQuickFireBreechRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_HEAVY_AUTOCANNON_QFBREECH, BlockRegister.BRONZE_HEAVY_AUTOCANNON_QFBREECH, BlockRegister.STEEL_HEAVY_AUTOCANNON_QFBREECH)
             .register();
