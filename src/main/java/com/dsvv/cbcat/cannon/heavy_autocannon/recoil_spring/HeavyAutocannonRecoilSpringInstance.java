@@ -1,12 +1,9 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring;
 
-import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
-import com.dsvv.cbcat.registry.ExtraDataRegister;
 import com.jozufozu.flywheel.api.MaterialManager;
 import com.jozufozu.flywheel.api.instance.DynamicInstance;
 import com.jozufozu.flywheel.backend.instancing.blockentity.BlockEntityInstance;
 import com.jozufozu.flywheel.core.Materials;
-import com.jozufozu.flywheel.core.PartialModel;
 import com.jozufozu.flywheel.core.materials.oriented.OrientedData;
 import com.jozufozu.flywheel.util.AnimationTickHolder;
 import net.minecraft.core.BlockPos;
@@ -14,7 +11,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.joml.Vector3f;
-import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,8 +18,6 @@ import java.util.Map;
 public class HeavyAutocannonRecoilSpringInstance extends BlockEntityInstance<HeavyAutocannonRecoilSpringBlockEntity> implements DynamicInstance
 {
     private final Map<BlockPos, OrientedData> blocks = new HashMap<>();
-
-    private boolean first = true;
 
     private Direction facing;
 
@@ -71,11 +65,5 @@ public class HeavyAutocannonRecoilSpringInstance extends BlockEntityInstance<Hea
     @Override
     protected void remove() {
         for (OrientedData block : this.blocks.values()) block.delete();
-    }
-
-    private PartialModel getPartialModelForState() {
-        return this.blockState.getBlock() instanceof HeavyAutocannonBlock cBlock
-                ? ExtraDataRegister.heavyAutocannonSpringFor(cBlock.getAutocannonMaterial())
-                : ExtraDataRegister.heavyAutocannonSpringFor(CBCAutocannonMaterials.CAST_IRON);
     }
 }
