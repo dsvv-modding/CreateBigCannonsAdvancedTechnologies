@@ -39,7 +39,7 @@ public class HeavyAutocannonRecoilSpringInstance extends BlockEntityInstance<Hea
         this.blocks.clear();
         for (Map.Entry<BlockPos, BlockState> entry : this.blockEntity.toAnimate.entrySet()) {
             if (entry.getValue() == null) continue;
-            this.blocks.put(entry.getKey(), this.materialManager.defaultCutout().material(Materials.ORIENTED).getModel(this.getPartialModelForState()).createInstance());
+            this.blocks.put(entry.getKey(), this.materialManager.defaultCutout().material(Materials.ORIENTED).getModel(entry.getValue()).createInstance());
         }
 
         this.updateTransforms();
@@ -62,7 +62,7 @@ public class HeavyAutocannonRecoilSpringInstance extends BlockEntityInstance<Hea
 
     @Override
     public void updateLight() {
-        this.relight(this.pos);
+        super.updateLight();
         for (Map.Entry<BlockPos, OrientedData> entry : this.blocks.entrySet()) {
             this.relight(this.pos.offset(entry.getKey()), entry.getValue());
         }
