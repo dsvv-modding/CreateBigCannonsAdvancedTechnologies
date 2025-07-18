@@ -1,125 +1,137 @@
-[27Juni2025 08:21:51.260] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\Daniel\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, -mixin.config=cbc_at.mixins.json, --mixin.config, cbc_at.mixins.json]
-[27Juni2025 08:21:51.264] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
-[27Juni2025 08:21:51.331] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[27Juni2025 08:21:51.372] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[27Juni2025 08:21:51.485] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[27Juni2025 08:21:51.540] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Daniel/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[27Juni2025 08:21:51.583] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4070/PCIe/SSE2 GL version 4.6.0 NVIDIA 572.47, NVIDIA Corporation
-[27Juni2025 08:21:51.731] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27Juni2025 08:21:51.733] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27Juni2025 08:21:51.736] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27Juni2025 08:21:51.738] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
-[27Juni2025 08:21:51.897] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: ritchiesprojectilelib. Using Mod File: C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\rbasamoyai\ritchiesprojectilelib\2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1\ritchiesprojectilelib-2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1.jar
-[27Juni2025 08:21:51.897] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[27Juni2025 08:21:52.988] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[27Juni2025 08:21:53.000] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Daniel\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
-[27Juni2025 08:21:53.234] [main/INFO] [mixin/]: Remapping refMap createbigcannons-1.20.1-refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
-[27Juni2025 08:21:53.235] [main/INFO] [mixin/]: Remapping refMap createbigcannons-forge_1.20.1-refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
-[27Juni2025 08:21:53.236] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
-[27Juni2025 08:21:53.237] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
-[27Juni2025 08:21:53.238] [main/INFO] [mixin/]: Remapping refMap ritchiesprojectilelib-common-refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
-[27Juni2025 08:21:53.365] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity)
-[27Juni2025 08:21:53.365] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.FramedAdjustableDoubleBlockEntityAccessor
-[27Juni2025 08:21:53.567] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
-[27Juni2025 08:21:55.702] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 73 milliseconds
-[27Juni2025 08:21:56.658] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[27Juni2025 08:21:56.658] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[27Juni2025 08:21:56.670] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[27Juni2025 08:21:56.673] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[27Juni2025 08:21:56.725] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[27Juni2025 08:21:56.930] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
-[27Juni2025 08:21:56.930] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
-[27Juni2025 08:21:56.933] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
-[27Juni2025 08:21:57.122] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[27Juni2025 08:21:57.124] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 1.966 ms
-[27Juni2025 08:21:59.755] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [cbc_at]
-[27Juni2025 08:21:59.892] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[27Juni2025 08:21:59.965] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[27Juni2025 08:21:59.989] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[27Juni2025 08:22:00.322] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.0 Target: 47.4.0
-[27Juni2025 08:22:00.322] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
-[27Juni2025 08:22:00.491] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: BETA Current: 0.6.11-13 Target: null
-[27Juni2025 08:22:00.835] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer' referenced from: cbc_at:cast_iron_vert_twin_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer.json
-[27Juni2025 08:22:00.835] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake' referenced from: cbc_at:cast_iron_vert_twin_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake.json
-[27Juni2025 08:22:00.837] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon_barrel_mould' referenced from: cbc_at:twin_autocannon_barrel_mould#sand=true: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon_barrel_mould.json
-[27Juni2025 08:22:00.840] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer' referenced from: cbc_at:unbored_cast_iron_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_silencer.json
-[27Juni2025 08:22:00.840] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer' referenced from: cbc_at:unbored_bronze_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_silencer.json
-[27Juni2025 08:22:00.840] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer' referenced from: cbc_at:unbored_steel_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_silencer.json
-[27Juni2025 08:22:00.840] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake' referenced from: cbc_at:unbored_cast_iron_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake.json
-[27Juni2025 08:22:00.840] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake' referenced from: cbc_at:unbored_bronze_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake.json
-[27Juni2025 08:22:00.840] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake' referenced from: cbc_at:unbored_steel_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake.json
-[27Juni2025 08:22:00.846] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/steel_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/steel_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/steel_recoil_spring.json
-[27Juni2025 08:22:00.846] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/bronze_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/bronze_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/bronze_recoil_spring.json
-[27Juni2025 08:22:00.847] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/cast_iron_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/cast_iron_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/cast_iron_recoil_spring.json
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=up:
+[18Juli2025 08:12:12.084] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\Daniel\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, -mixin.config=cbc_at.mixins.json, --mixin.config, cbc_at.mixins.json]
+[18Juli2025 08:12:12.087] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
+[18Juli2025 08:12:12.160] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[18Juli2025 08:12:12.201] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[18Juli2025 08:12:12.343] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[18Juli2025 08:12:12.400] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Daniel/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[18Juli2025 08:12:12.427] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4070/PCIe/SSE2 GL version 4.6.0 NVIDIA 572.47, NVIDIA Corporation
+[18Juli2025 08:12:12.601] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[18Juli2025 08:12:12.604] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[18Juli2025 08:12:12.606] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[18Juli2025 08:12:12.608] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
+[18Juli2025 08:12:12.757] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: ritchiesprojectilelib. Using Mod File: C:\Users\Daniel\.gradle\caches\forge_gradle\deobf_dependencies\com\rbasamoyai\ritchiesprojectilelib\2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1\ritchiesprojectilelib-2.0.0-dev+mc.1.20.1-forge-build.182_mapped_parchment_2023.09.03-1.20.1.jar
+[18Juli2025 08:12:12.757] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[18Juli2025 08:12:13.951] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[18Juli2025 08:12:13.962] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Daniel\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[18Juli2025 08:12:14.232] [main/INFO] [mixin/]: Remapping refMap createbigcannons-1.20.1-refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
+[18Juli2025 08:12:14.233] [main/INFO] [mixin/]: Remapping refMap createbigcannons-forge_1.20.1-refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
+[18Juli2025 08:12:14.234] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
+[18Juli2025 08:12:14.235] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
+[18Juli2025 08:12:14.236] [main/INFO] [mixin/]: Remapping refMap ritchiesprojectilelib-common-refmap.json using C:\Users\Daniel\Desktop\CBCAT\build\createSrgToMcp\output.srg
+[18Juli2025 08:12:14.377] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity)
+[18Juli2025 08:12:14.378] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.FramedAdjustableDoubleBlockEntityAccessor
+[18Juli2025 08:12:14.571] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[18Juli2025 08:12:16.724] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 75 milliseconds
+[18Juli2025 08:12:17.498] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[18Juli2025 08:12:17.499] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[18Juli2025 08:12:17.511] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18Juli2025 08:12:17.513] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[18Juli2025 08:12:17.562] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[18Juli2025 08:12:17.759] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
+[18Juli2025 08:12:17.759] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
+[18Juli2025 08:12:17.761] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
+[18Juli2025 08:12:17.976] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[18Juli2025 08:12:17.977] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 1.127 ms
+[18Juli2025 08:12:20.709] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [cbc_at]
+[18Juli2025 08:12:20.868] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[18Juli2025 08:12:20.898] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\create-client.toml is not correct. Correcting
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.enableRainbowDebug was corrected from null to its default, false. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.maximumContraptionLightVolume was corrected from null to its default, 16384. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.placementAssist was corrected from null to its default, SimpleCommentedConfig:{}. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.placementAssist.indicatorType was corrected from null to its default, TEXTURE. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.placementAssist.indicatorScale was corrected from null to its default, 1.0. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.ponder was corrected from null to its default, SimpleCommentedConfig:{}. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.ponder.comfyReading was corrected from null to its default, false. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.ponder.editingMode was corrected from null to its default, false. 
+[18Juli2025 08:12:20.899] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.trains.showTrainMapOverlay was corrected from true to its default, null. 
+[18Juli2025 08:12:20.900] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.trains.trainMapColorTheme was corrected from RED to its default, null. 
+[18Juli2025 08:12:20.900] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.jeiIntegration was corrected from SimpleCommentedConfig:{syncJeiSearch=true} to its default, null. 
+[18Juli2025 08:12:20.954] [Worker-Main-2/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[18Juli2025 08:12:20.967] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[18Juli2025 08:12:21.303] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.0 Target: 47.4.0
+[18Juli2025 08:12:21.303] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
+[18Juli2025 08:12:21.488] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: BETA Current: 0.6.11-13 Target: null
+[18Juli2025 08:12:21.729] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer' referenced from: cbc_at:cast_iron_vert_twin_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer.json
+[18Juli2025 08:12:21.730] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake' referenced from: cbc_at:cast_iron_vert_twin_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake.json
+[18Juli2025 08:12:21.732] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon_barrel_mould' referenced from: cbc_at:twin_autocannon_barrel_mould#sand=true: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon_barrel_mould.json
+[18Juli2025 08:12:21.734] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer' referenced from: cbc_at:unbored_cast_iron_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_silencer.json
+[18Juli2025 08:12:21.735] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer' referenced from: cbc_at:unbored_bronze_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_silencer.json
+[18Juli2025 08:12:21.735] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer' referenced from: cbc_at:unbored_steel_autocannon_silencer#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_silencer.json
+[18Juli2025 08:12:21.735] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake' referenced from: cbc_at:unbored_cast_iron_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake.json
+[18Juli2025 08:12:21.735] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake' referenced from: cbc_at:unbored_bronze_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake.json
+[18Juli2025 08:12:21.735] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake' referenced from: cbc_at:unbored_steel_autocannon_muzzle_brake#assembled=true,end=nothing,facing=north,waterlogged=true: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake.json
+[18Juli2025 08:12:21.741] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/steel_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/steel_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/steel_recoil_spring.json
+[18Juli2025 08:12:21.742] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/bronze_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/bronze_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/bronze_recoil_spring.json
+[18Juli2025 08:12:21.742] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/cast_iron_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/cast_iron_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/cast_iron_recoil_spring.json
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=up:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=up:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=up:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#inventory:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=west:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=west:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=south:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=south:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_vert_recoil_spring:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_vert_recoil_spring:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=down:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=down:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=east:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=east:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_empty_cartridge#inventory:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_empty_cartridge#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:cartridge_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=north:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=north:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=down:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=down:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_fume_extractor#inventory:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_fume_extractor#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.356] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=south:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=south:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_vert_recoil_spring:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_vert_recoil_spring:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=west:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=west:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_recoil_spring:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_recoil_spring:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=north:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=north:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_qfbreech_mould#inventory:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_qfbreech_mould#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:cast_mould
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_recoil_spring:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_recoil_spring:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=east:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=east:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[27Juni2025 08:22:01.357] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#inventory:
+[18Juli2025 08:12:22.231] [Worker-Main-13/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[27Juni2025 08:22:01.516] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
-[27Juni2025 08:22:03.742] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[27Juni2025 08:22:03.742] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[27Juni2025 08:22:03.769] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Realtek HD Audio 2nd output (Realtek(R) Audio)
-[27Juni2025 08:22:03.770] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[27Juni2025 08:22:03.844] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[27Juni2025 08:22:03.851] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[27Juni2025 08:22:03.853] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[27Juni2025 08:22:03.853] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[27Juni2025 08:22:03.854] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[27Juni2025 08:22:03.855] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[27Juni2025 08:22:03.857] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[27Juni2025 08:22:03.857] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[27Juni2025 08:22:03.857] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[27Juni2025 08:22:03.913] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[27Juni2025 08:22:03.945] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[27Juni2025 08:22:03.947] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[27Juni2025 08:22:03.947] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[27Juni2025 08:22:03.960] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 51 train hat configurations.
-[27Juni2025 08:22:03.960] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
-[27Juni2025 08:22:04.424] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
-[27Juni2025 08:22:06.808] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[27Juni2025 08:22:08.430] [Worker-Main-10/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag minecraft:needs_iron_tool as it is missing following references: cbc_at:heavy_autocannon_barrel_cast_mould (from main), 
+[18Juli2025 08:12:22.350] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
+[18Juli2025 08:12:24.589] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[18Juli2025 08:12:24.589] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[18Juli2025 08:12:24.622] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Realtek HD Audio 2nd output (Realtek(R) Audio)
+[18Juli2025 08:12:24.622] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[18Juli2025 08:12:24.722] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[18Juli2025 08:12:24.729] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[18Juli2025 08:12:24.731] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18Juli2025 08:12:24.732] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18Juli2025 08:12:24.732] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[18Juli2025 08:12:24.733] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18Juli2025 08:12:24.735] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[18Juli2025 08:12:24.735] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18Juli2025 08:12:24.735] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18Juli2025 08:12:24.792] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[18Juli2025 08:12:24.821] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[18Juli2025 08:12:24.822] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18Juli2025 08:12:24.822] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18Juli2025 08:12:24.836] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 51 train hat configurations.
+[18Juli2025 08:12:24.837] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[18Juli2025 08:12:25.300] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[18Juli2025 08:14:13.793] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[18Juli2025 08:14:15.426] [Worker-Main-4/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag minecraft:needs_iron_tool as it is missing following references: cbc_at:heavy_autocannon_barrel_cast_mould (from main), 
 	cbc_at:heavy_autocannon_recoil_spring_cast_mould (from main), 
 	cbc_at:heavy_autocannon_breech_cast_mould (from main), 
 	cbc_at:heavy_autocannon_qfbreech_cast_mould (from main)
-[27Juni2025 08:22:08.646] [Worker-Main-8/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:cbc_at:blocks/heavy_autocannon_barrel_cast_mould
+[18Juli2025 08:14:15.635] [Worker-Main-1/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:cbc_at:blocks/heavy_autocannon_barrel_cast_mould
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'cbc_at:heavy_autocannon_barrel_cast_mould'
 	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:143) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -171,7 +183,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27Juni2025 08:22:08.700] [Worker-Main-8/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:cbc_at:blocks/heavy_autocannon_recoil_spring_cast_mould
+[18Juli2025 08:14:15.690] [Worker-Main-1/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:cbc_at:blocks/heavy_autocannon_recoil_spring_cast_mould
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'cbc_at:heavy_autocannon_recoil_spring_cast_mould'
 	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:143) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -223,7 +235,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27Juni2025 08:22:08.795] [Worker-Main-8/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:cbc_at:blocks/heavy_autocannon_breech_cast_mould
+[18Juli2025 08:14:15.791] [Worker-Main-1/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:cbc_at:blocks/heavy_autocannon_breech_cast_mould
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'cbc_at:heavy_autocannon_breech_cast_mould'
 	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:143) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -275,145 +287,162 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27Juni2025 08:22:08.864] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 28 recipes
-[27Juni2025 08:22:08.900] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2309 advancements
-[27Juni2025 08:22:09.992] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[27Juni2025 08:22:09.992] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[27Juni2025 08:22:10.544] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[27Juni2025 08:22:11.585] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Juni2025 08:22:11.585] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Juni2025 08:22:11.585] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Juni2025 08:22:12.083] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Juni2025 08:22:12.294] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[27Juni2025 08:22:12.331] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 1778 ms
-[27Juni2025 08:22:12.405] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[27Juni2025 08:22:12.406] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 32, from 0
-[27Juni2025 08:22:12.515] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[27Juni2025 08:22:12.576] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=56, y=68, z=-245} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=down,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=35, y=63, z=-264} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-268} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-266} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=36, y=63, z=-264} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=37, y=63, z=-264} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.577] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-266} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.578] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.578] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.578] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-268} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.578] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.578] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-266} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.578] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.578] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-268} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:12.579] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:twin_autocannon_be @ BlockPos{x=22, y=65, z=-245} state Block{cbc_at:steel_vert_twin_autocannon_silencer}[assembled=false,end=nothing,facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:13.076] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[27Juni2025 08:22:13.116] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:aac0e700] logged in with entity id 246 at (27.290766871157935, 65.8126001, -250.4668646030032)
-[27Juni2025 08:22:13.154] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[27Juni2025 08:22:13.458] [Render thread/INFO] [BatchExecutor/]: Started 10 worker threads
-[27Juni2025 08:22:13.478] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
-[27Juni2025 08:22:13.478] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
-[27Juni2025 08:22:13.635] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
-[27Juni2025 08:22:13.645] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
-[27Juni2025 08:22:13.645] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
-[27Juni2025 08:22:13.646] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
-[27Juni2025 08:22:13.651] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
-[27Juni2025 08:22:13.654] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 2.849 ms
-[27Juni2025 08:22:13.654] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
-[27Juni2025 08:22:13.655] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 1.133 ms
-[27Juni2025 08:22:13.656] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
-[27Juni2025 08:22:13.687] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: Item Group has no display items and no search tab display items. Items from this group will be missing from the JEI ingredient list. Operator Utilities
-[27Juni2025 08:22:13.688] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 2 duplicate items were found in 'Create Big Cannons' creative tab's: displayItems
+[18Juli2025 08:14:15.860] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 28 recipes
+[18Juli2025 08:14:15.905] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2309 advancements
+[18Juli2025 08:14:17.026] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[18Juli2025 08:14:17.026] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\Tests\serverconfig\createbigcannons-server.toml is not correct. Correcting
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues was corrected from null to its default, SimpleCommentedConfig:{}. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2 was corrected from null to its default, SimpleCommentedConfig:{}. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact was corrected from null to its default, SimpleCommentedConfig:{}. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.bronze_sliding_breech was corrected from null to its default, 12.0. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cannon_loader was corrected from null to its default, 4.0. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.steel_screw_breech was corrected from null to its default, 16.0. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cannon_drill was corrected from null to its default, 8.0. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cast_iron_sliding_breech was corrected from null to its default, 16.0. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.steel_sliding_breech was corrected from null to its default, 32.0. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.nethersteel_screw_breech was corrected from null to its default, 40.0. 
+[18Juli2025 08:14:17.051] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cannon_builder was corrected from null to its default, 8.0. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\Tests\serverconfig\create-server.toml is not correct. Correcting
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.allowWoodcuttingOnSaw was corrected from null to its default, true. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxDataSize was corrected from null to its default, 2000000. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.syncPlayerPickupHitboxWithContraptionHitbox was corrected from false to its default, null. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.chain_conveyor was corrected from 1.0 to its default, null. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxChainConveyorLength was corrected from 32 to its default, null. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxChainConveyorConnections was corrected from 4 to its default, null. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.packagePortRange was corrected from 5 to its default, null. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.chainConveyorCapacity was corrected from 20 to its default, null. 
+[18Juli2025 08:14:17.054] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.factoryGaugeTimer was corrected from 100 to its default, null. 
+[18Juli2025 08:14:17.563] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[18Juli2025 08:14:18.530] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Juli2025 08:14:18.549] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Juli2025 08:14:18.568] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Juli2025 08:14:19.078] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 31%
+[18Juli2025 08:14:19.215] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 1647 ms
+[18Juli2025 08:14:19.215] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[18Juli2025 08:14:19.315] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[18Juli2025 08:14:19.317] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 32, from 0
+[18Juli2025 08:14:19.375] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=56, y=68, z=-245} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=down,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=35, y=63, z=-264} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-268} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-266} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=36, y=63, z=-264} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=37, y=63, z=-264} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-266} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.454] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.455] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-268} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.455] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.455] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-266} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.455] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.455] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-268} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.456] [Server thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:twin_autocannon_be @ BlockPos{x=22, y=65, z=-245} state Block{cbc_at:steel_vert_twin_autocannon_silencer}[assembled=false,end=nothing,facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:19.988] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[18Juli2025 08:14:20.022] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:2c20ce43] logged in with entity id 247 at (28.568925094053007, 64.31753408055302, -250.1916456474598)
+[18Juli2025 08:14:20.062] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[18Juli2025 08:14:20.246] [Render thread/INFO] [BatchExecutor/]: Started 10 worker threads
+[18Juli2025 08:14:20.290] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
+[18Juli2025 08:14:20.290] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
+[18Juli2025 08:14:20.463] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
+[18Juli2025 08:14:20.470] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
+[18Juli2025 08:14:20.470] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
+[18Juli2025 08:14:20.470] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[18Juli2025 08:14:20.475] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[18Juli2025 08:14:20.477] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 2.165 ms
+[18Juli2025 08:14:20.478] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[18Juli2025 08:14:20.479] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 1.137 ms
+[18Juli2025 08:14:20.480] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[18Juli2025 08:14:20.510] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: Item Group has no display items and no search tab display items. Items from this group will be missing from the JEI ingredient list. Operator Utilities
+[18Juli2025 08:14:20.511] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 2 duplicate items were found in 'Create Big Cannons' creative tab's: displayItems
 This may indicate that these types of item need a subtype interpreter added to JEI:
 [big_cartridge, autocannon_cartridge]
-[27Juni2025 08:22:13.702] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 22 duplicate items were found in 'CBC: Advanced Technologies' creative tab's: displayItems
+[18Juli2025 08:14:20.523] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 22 duplicate items were found in 'CBC: Advanced Technologies' creative tab's: displayItems
 This may indicate that these types of item need a subtype interpreter added to JEI:
-[cluster, heavy_autocannon_cartridge, cluster_caseless, cluster_cartridge]
-[27Juni2025 08:22:13.716] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 59.13 milliseconds
-[27Juni2025 08:22:13.717] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 59.62 ms
-[27Juni2025 08:22:13.717] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
-[27Juni2025 08:22:13.717] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 344.5 μs
-[27Juni2025 08:22:13.718] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
-[27Juni2025 08:22:13.720] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 1.251 ms
-[27Juni2025 08:22:13.733] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
-[27Juni2025 08:22:13.746] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 12.04 milliseconds
-[27Juni2025 08:22:13.771] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create:jei_plugin took 16.17 milliseconds
-[27Juni2025 08:22:13.775] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 41.06 ms
-[27Juni2025 08:22:13.775] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
-[27Juni2025 08:22:13.777] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 1.759 ms
-[27Juni2025 08:22:13.777] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
-[27Juni2025 08:22:13.779] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.518 ms
-[27Juni2025 08:22:13.779] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
-[27Juni2025 08:22:13.787] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 7.807 ms
-[27Juni2025 08:22:13.788] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
-[27Juni2025 08:22:13.788] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 341.1 μs
-[27Juni2025 08:22:13.789] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
-[27Juni2025 08:22:13.937] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 148.0 milliseconds
-[27Juni2025 08:22:13.955] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: createbigcannons:jei_plugin took 17.38 milliseconds
-[27Juni2025 08:22:14.039] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: create:jei_plugin took 84.37 milliseconds
-[27Juni2025 08:22:14.108] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 65.09 milliseconds
-[27Juni2025 08:22:14.109] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 319.7 ms
-[27Juni2025 08:22:14.117] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
-[27Juni2025 08:22:14.120] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 2.677 ms
-[27Juni2025 08:22:14.126] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
-[27Juni2025 08:22:14.131] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
-[27Juni2025 08:22:14.139] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 8.022 ms
-[27Juni2025 08:22:14.144] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
-[27Juni2025 08:22:14.145] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[27Juni2025 08:22:14.146] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
-[27Juni2025 08:22:14.167] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 21.33 ms
-[27Juni2025 08:22:14.167] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
-[27Juni2025 08:22:14.190] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2530 ingredients
-[27Juni2025 08:22:14.354] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2530 ingredients
-[27Juni2025 08:22:14.355] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 187.7 ms
-[27Juni2025 08:22:14.417] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 272.0 milliseconds
-[27Juni2025 08:22:14.417] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 272.6 ms
-[27Juni2025 08:22:14.418] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 290.6 ms
-[27Juni2025 08:22:14.418] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
-[27Juni2025 08:22:14.418] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 256.5 μs
-[27Juni2025 08:22:14.418] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 771.5 ms
-[27Juni2025 08:22:14.553] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 340 advancements
-[27Juni2025 08:22:14.642] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:twin_autocannon_be @ BlockPos{x=22, y=65, z=-245} state Block{cbc_at:steel_vert_twin_autocannon_silencer}[assembled=false,end=nothing,facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=35, y=63, z=-264} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-268} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-266} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=36, y=63, z=-264} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=37, y=63, z=-264} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-266} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-268} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-266} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.643] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-268} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.644] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=56, y=68, z=-245} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=down,waterlogged=false] invalid for ticking:
-[27Juni2025 08:22:14.997] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[27Juni2025 08:22:15.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
-[27Juni2025 08:22:15.283] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
-[27Juni2025 08:22:15.286] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
-[27Juni2025 08:22:23.695] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[27Juni2025 08:22:23.708] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
-[27Juni2025 08:22:23.714] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
-[27Juni2025 08:22:23.716] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
-[27Juni2025 08:22:24.220] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
-[27Juni2025 08:22:24.220] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
-[27Juni2025 08:22:24.220] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
-[27Juni2025 08:22:24.220] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
-[27Juni2025 08:22:24.221] [Render thread/INFO] [mezz.jei.forge.plugins.forge.ForgeGuiPlugin/]: Stopping JEI GUI
-[27Juni2025 08:22:24.221] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 800.2 μs
-[27Juni2025 08:22:24.251] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[27Juni2025 08:22:24.251] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[27Juni2025 08:22:24.266] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[27Juni2025 08:22:24.295] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[27Juni2025 08:22:24.295] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[27Juni2025 08:22:24.295] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[27Juni2025 08:22:24.394] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
-[27Juni2025 08:22:24.438] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
-[27Juni2025 08:22:24.439] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
-[27Juni2025 08:22:24.453] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Tests): All chunks are saved
-[27Juni2025 08:22:24.453] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[27Juni2025 08:22:24.453] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[27Juni2025 08:22:24.453] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[27Juni2025 08:22:25.845] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[cluster_caseless, heavy_autocannon_cartridge, cluster_cartridge, cluster]
+[18Juli2025 08:14:20.536] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 55.74 milliseconds
+[18Juli2025 08:14:20.536] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 56.24 ms
+[18Juli2025 08:14:20.536] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
+[18Juli2025 08:14:20.537] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 335.4 μs
+[18Juli2025 08:14:20.537] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
+[18Juli2025 08:14:20.538] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 766.8 μs
+[18Juli2025 08:14:20.548] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[18Juli2025 08:14:20.600] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create:jei_plugin took 32.28 milliseconds
+[18Juli2025 08:14:20.607] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 58.35 ms
+[18Juli2025 08:14:20.608] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[18Juli2025 08:14:20.612] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 3.728 ms
+[18Juli2025 08:14:20.613] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[18Juli2025 08:14:20.616] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 2.665 ms
+[18Juli2025 08:14:20.616] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[18Juli2025 08:14:20.625] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 8.516 ms
+[18Juli2025 08:14:20.625] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[18Juli2025 08:14:20.626] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 318.7 μs
+[18Juli2025 08:14:20.626] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[18Juli2025 08:14:20.750] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 123.2 milliseconds
+[18Juli2025 08:14:20.766] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: createbigcannons:jei_plugin took 15.90 milliseconds
+[18Juli2025 08:14:20.836] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: create:jei_plugin took 69.72 milliseconds
+[18Juli2025 08:14:20.893] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 52.21 milliseconds
+[18Juli2025 08:14:20.893] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 265.6 ms
+[18Juli2025 08:14:20.899] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[18Juli2025 08:14:20.902] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 2.828 ms
+[18Juli2025 08:14:20.910] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[18Juli2025 08:14:20.913] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[18Juli2025 08:14:20.924] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 10.62 ms
+[18Juli2025 08:14:20.926] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[18Juli2025 08:14:20.927] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[18Juli2025 08:14:20.927] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[18Juli2025 08:14:20.950] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 22.81 ms
+[18Juli2025 08:14:20.950] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[18Juli2025 08:14:20.969] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2530 ingredients
+[18Juli2025 08:14:21.111] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2530 ingredients
+[18Juli2025 08:14:21.111] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 161.7 ms
+[18Juli2025 08:14:21.168] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 242.2 milliseconds
+[18Juli2025 08:14:21.168] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 242.7 ms
+[18Juli2025 08:14:21.168] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 259.2 ms
+[18Juli2025 08:14:21.168] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[18Juli2025 08:14:21.169] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 308.3 μs
+[18Juli2025 08:14:21.169] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 698.3 ms
+[18Juli2025 08:14:21.236] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 27 advancements
+[18Juli2025 08:14:21.332] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:twin_autocannon_be @ BlockPos{x=22, y=65, z=-245} state Block{cbc_at:steel_vert_twin_autocannon_silencer}[assembled=false,end=nothing,facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.332] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=35, y=63, z=-264} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-268} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-266} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=36, y=63, z=-264} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=37, y=63, z=-264} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=63, z=-266} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=63, z=-267} state Block{cbc_at:unbored_cast_iron_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=65, z=-267} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=65, z=-268} state Block{cbc_at:unbored_bronze_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=40, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=east,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-266} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=south,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=38, y=64, z=-267} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=west,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.333] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=39, y=64, z=-268} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=north,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:21.334] [Render thread/WARN] [net.minecraft.world.level.chunk.LevelChunk/]: Block entity cbc_at:heavy_autocannon_breech_be @ BlockPos{x=56, y=68, z=-245} state Block{cbc_at:unbored_steel_heavy_autocannon_qfbreech}[facing=down,waterlogged=false] invalid for ticking:
+[18Juli2025 08:14:30.967] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[18Juli2025 08:14:30.974] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[18Juli2025 08:14:30.984] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[18Juli2025 08:14:30.985] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[18Juli2025 08:14:31.381] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
+[18Juli2025 08:14:31.381] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
+[18Juli2025 08:14:31.381] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
+[18Juli2025 08:14:31.381] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
+[18Juli2025 08:14:31.381] [Render thread/INFO] [mezz.jei.forge.plugins.forge.ForgeGuiPlugin/]: Stopping JEI GUI
+[18Juli2025 08:14:31.382] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 827.1 μs
+[18Juli2025 08:14:31.420] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[18Juli2025 08:14:31.420] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[18Juli2025 08:14:31.428] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[18Juli2025 08:14:31.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[18Juli2025 08:14:31.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[18Juli2025 08:14:31.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[18Juli2025 08:14:31.569] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[18Juli2025 08:14:31.616] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[18Juli2025 08:14:31.617] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[18Juli2025 08:14:31.634] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Tests): All chunks are saved
+[18Juli2025 08:14:31.635] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18Juli2025 08:14:31.635] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18Juli2025 08:14:31.635] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[18Juli2025 08:14:32.995] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

@@ -249,6 +249,26 @@
 	#When enabled, Cannon Loaders will not break if another contraption is placed on them. Enables legacy behavior.
 	enableIntersectionLoading = false
 
+	[kinetics.stressValues]
+
+		#.
+		#These values affect the stress of Create Big Cannons' mechanical blocks.
+		[kinetics.stressValues.v2]
+
+			#.
+			#
+			#[in Stress Units]
+			#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
+			[kinetics.stressValues.v2.impact]
+				bronze_sliding_breech = 12.0
+				cannon_loader = 4.0
+				steel_screw_breech = 16.0
+				cannon_drill = 8.0
+				cast_iron_sliding_breech = 16.0
+				steel_sliding_breech = 32.0
+				nethersteel_screw_breech = 40.0
+				cannon_builder = 8.0
+
 #.
 #These values affect cannon crafting properties.
 [crafting]
