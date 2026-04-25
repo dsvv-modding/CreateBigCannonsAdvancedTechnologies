@@ -72,4 +72,25 @@ public abstract class TwinAutocannonBaseBlock extends DirectionalBlock implement
     public boolean isComplete(BlockState state) {
         return isComplete;
     }
+
+    @Override
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        BlockEntity be = level.getBlockEntity(pos);
+        if (!(be instanceof LeavesCannonBlockEntity leavesBE))
+            return super.useItemOn(stack, state, level, pos, player, hand, hit);
+        if (stack.is(Tags.Items.TOOLS_SHEAR) && !leavesBE.getLeavesItemStack().isEmpty()) {
+            ItemStack leaves = leavesBE.getLeavesItemStack();
+            leaves.setCount(1);
+            ItemEntity dropEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), leaves);
+            level.addFreshEntity(dropEntity);
+            leavesBE.setLeavesItemStack(ItemStack.EMPTY);
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        } else if (leavesBE.getLeavesItemStack().isEmpty() && stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof LeavesBlock) {
+            leavesBE.setLeavesItemStack(stack.copy());
+            stack.setCount(stack.getCount() - 1);
+            player.setItemInHand(hand, stack);
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        }
+        return super.useItemOn(stack, state, level, pos, player, hand, hit);
+    }
 }

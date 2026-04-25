@@ -2,6 +2,7 @@ package com.dsvv.cbcat.mixin;
 
 import com.dsvv.cbcat.cannon.autocannon.SpecialAutocannonBarrel;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -9,7 +10,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,22 +19,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import rbasamoyai.createbigcannons.cannon_control.contraption.AbstractMountedCannonContraption;
 import rbasamoyai.createbigcannons.cannon_control.contraption.MountedAutocannonContraption;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlock;
-import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 import rbasamoyai.createbigcannons.utils.CBCUtils;
-
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 @Mixin(MountedAutocannonContraption.class)
 public abstract class MountedAutocannonContraptionMixin extends AbstractMountedCannonContraption
 {
-    @Shadow(remap = false)
-    private AutocannonMaterial cannonMaterial;
-    @Shadow(remap = false)
-    private final Set<BlockPos> recoilSpringPositions = new LinkedHashSet<>();
-    @Shadow(remap = false)
-    private boolean isHandle = false;
-
     @Unique
     private float volumeMultiplier = 1;
 
@@ -46,18 +35,18 @@ public abstract class MountedAutocannonContraptionMixin extends AbstractMountedC
         return barrel.isComplete(state);
     }
 
-    @Redirect( method = "Lrbasamoyai/createbigcannons/cannon_control/contraption/MountedAutocannonContraption;fireShot(Lnet/minecraft/server/level/ServerLevel;Lrbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity;)V",
+    @Redirect( method = "fireShot(Lnet/minecraft/server/level/ServerLevel;Lrbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity;)V",
         at = @At( value = "INVOKE", target = "Lrbasamoyai/createbigcannons/utils/CBCUtils;playBlastLikeSoundOnServer(Lnet/minecraft/server/level/ServerLevel;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFF)V"), remap = false)
     public void playSoundRedirect(ServerLevel level, double x, double y, double z, SoundEvent event, SoundSource source, float volume, float pitch, float airAbsorption) {
         CBCUtils.playBlastLikeSoundOnServer(level, x, y, z, event, source, volume * volumeMultiplier, pitch * volumeMultiplier, airAbsorption);
     }
 
-    @Inject(method = "Lrbasamoyai/createbigcannons/cannon_control/contraption/MountedAutocannonContraption;writeNBT(Z)Lnet/minecraft/nbt/CompoundTag;", at = @At("TAIL"), remap = false)
-    public void writeAdditionalNBT(boolean clientData, CallbackInfoReturnable<CompoundTag> cir) {
+    @Inject(method = "writeNBT(Lnet/minecraft/core/HolderLookup$Provider;Z)Lnet/minecraft/nbt/CompoundTag;", at = @At("TAIL"), remap = false)
+    public void writeAdditionalNBT(HolderLookup.Provider registries, boolean spawnPacket, CallbackInfoReturnable<CompoundTag> cir) {
         cir.getReturnValue().putFloat("volumeMultiplier", volumeMultiplier);
     }
 
-    @Inject(method = "Lrbasamoyai/createbigcannons/cannon_control/contraption/MountedAutocannonContraption;readNBT(Lnet/minecraft/world/level/Level;Lnet/minecraft/nbt/CompoundTag;Z)V", at = @At("TAIL"), remap = false)
+    @Inject(method = "readNBT(Lnet/minecraft/world/level/Level;Lnet/minecraft/nbt/CompoundTag;Z)V", at = @At("TAIL"), remap = false)
     public void readAdditionalNBT(Level level, CompoundTag tag, boolean clientData, CallbackInfo ci) {
         volumeMultiplier = tag.getFloat("volumeMultiplier");
     }

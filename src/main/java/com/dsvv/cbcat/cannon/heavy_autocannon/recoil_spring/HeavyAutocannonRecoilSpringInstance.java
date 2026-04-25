@@ -45,7 +45,7 @@ public class HeavyAutocannonRecoilSpringInstance extends AbstractBlockEntityVisu
         this.updateTransforms(partialTick);
     }
 
-    @Override public void beginFrame(Context ctx) { this.updateTransforms(ctx.partialTick()); }
+    @Override public void beginFrame(DynamicVisual.Context ctx) { this.updateTransforms(ctx.partialTick()); }
 
     private void updateTransforms(float partialTicks) {
         float scale = this.blockEntity.getAnimateOffset(partialTicks);
@@ -56,7 +56,7 @@ public class HeavyAutocannonRecoilSpringInstance extends AbstractBlockEntityVisu
 
         for (Map.Entry<BlockPos, OrientedInstance> entry : this.blocks.entrySet()) {
             BlockPos pos1 = entry.getKey();
-            entry.getValue().position(offs).translatePosition(pos1.getX(), pos1.getY(), pos1.getZ());
+            entry.getValue().position(offs).translatePosition(pos1.getX(), pos1.getY(), pos1.getZ()).setChanged();
         }
     }
 

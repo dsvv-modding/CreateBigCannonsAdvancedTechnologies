@@ -3,6 +3,7 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.qf_breech;
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.dsvv.cbcat.registry.ExtraDataRegister;
 import dev.engine_room.flywheel.api.instance.Instance;
+import dev.engine_room.flywheel.api.visual.DynamicVisual;
 import dev.engine_room.flywheel.api.visualization.VisualizationContext;
 import dev.engine_room.flywheel.lib.instance.InstanceTypes;
 import dev.engine_room.flywheel.lib.instance.OrientedInstance;
@@ -82,7 +83,7 @@ public class HeavyAutocannonQuickFireBreechInstance extends AbstractBlockEntityV
     }
 
     @Override
-    public void beginFrame(Context context) {
+    public void beginFrame(DynamicVisual.Context context) {
         this.transformModels(context.partialTick());
     }
 

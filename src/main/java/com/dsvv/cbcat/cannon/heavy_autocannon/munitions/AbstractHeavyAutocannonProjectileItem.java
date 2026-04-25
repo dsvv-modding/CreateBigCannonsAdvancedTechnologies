@@ -44,6 +44,14 @@ public abstract class AbstractHeavyAutocannonProjectileItem extends Item
         if (stack.getOrCreateTag().getBoolean("Tracer")) {
             CreateLang.builder("tooltip").translate(CreateBigCannons.MOD_ID + ".tracer").addTo(tooltipComponents);
         }
+        if (stack.has(DataComponentRegistry.HA_STRONG_ROUND)) {
+            LangBuilder builder = CreateLang.builder("tooltip").translate(CreateBigCannons_AdvancedTechnology.MOD_ID + ".heavy_autocannon.charged");
+            if (stack.get(DataComponentRegistry.HA_STRONG_ROUND))
+                builder.add(CreateLang.builder("tooltip").translate(CreateBigCannons_AdvancedTechnology.MOD_ID + "heavy_autocannon.charged.strong"));
+            else
+                builder.add(CreateLang.builder("tooltip").translate(CreateBigCannons_AdvancedTechnology.MOD_ID + "heavy_autocannon.charged.weak"));
+            builder.addTo(tooltipComponents);
+        }
     }
 
     public ItemStack getFuze(ItemStack stack) {
