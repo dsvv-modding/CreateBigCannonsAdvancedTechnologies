@@ -146,6 +146,7 @@ public class TwinAutocannonBarrelBlock extends TwinAutocannonBaseBlock implement
             if (autocannon1 != null) {
                 boolean previouslyConnected = autocannon.cannonBehavior().isConnectedTo(facing.getOpposite());
                 autocannon1.cannonBehavior().setConnectedFace(facing.getOpposite(), previouslyConnected);
+                autocannon1.setLeavesItemStack(autocannon.getLeavesItemStack());
                 if (level.getBlockEntity(pos.relative(facing.getOpposite())) instanceof TwinAutocannonBlockEntity autocannon2) {
                     autocannon2.cannonBehavior().setConnectedFace(facing, previouslyConnected);
                 }

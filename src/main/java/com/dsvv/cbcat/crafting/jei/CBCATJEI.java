@@ -51,6 +51,8 @@ public class CBCATJEI implements IModPlugin {
         registration.addRecipes(RecipeTypes.CRAFTING, getMunitionAssemblyRecipes());
         registration.addRecipes(RecipeTypes.CRAFTING, getClusterMunitionAssemblyRecipes());
         registration.addRecipes(RecipeTypes.CRAFTING, getCaselessMunitionAssemblyRecipes());
+        registration.addRecipes(RecipeTypes.CRAFTING, getRocketAssemblyRecipes());
+        registration.addRecipes(RecipeTypes.CRAFTING, getMediumRocketAssemblyRecipes());
     }
 
     public List<CraftingRecipe> getMunitionAssemblyRecipes() {

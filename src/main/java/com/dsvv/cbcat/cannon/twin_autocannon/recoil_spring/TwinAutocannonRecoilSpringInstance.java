@@ -30,6 +30,7 @@ import java.util.function.Consumer;
 public class TwinAutocannonRecoilSpringInstance extends AbstractBlockEntityVisual<TwinAutocannonRecoilSpringBlockEntity> implements SimpleDynamicVisual
 {
     private TransformedInstance spring;
+    private TransformedInstance leavesInstance;
     private final Map<BlockPos, OrientedInstance> blocks1 = new HashMap<>();
     private final Map<BlockPos, OrientedInstance> blocks2 = new HashMap<>();
 
@@ -55,15 +56,23 @@ public class TwinAutocannonRecoilSpringInstance extends AbstractBlockEntityVisua
             this.blocks2.put(entry.getKey(), this.instancerProvider().instancer(InstanceTypes.ORIENTED, Models.block(entry.getValue())).createInstance());
         }
 
+        if (blockEntity.getLeavesItemStack().getItem() instanceof BlockItem blockItem)
+            leavesInstance = this.instancerProvider().instancer(InstanceTypes.TRANSFORMED, Models.block(blockItem.getBlock().defaultBlockState()))
+                    .createInstance();
+        else
+            leavesInstance = this.instancerProvider().instancer(InstanceTypes.TRANSFORMED, Models.block(Blocks.AIR.defaultBlockState()))
+                    .createInstance();
+        leavesInstance.setChanged();
+
         this.updateTransforms(partialTicks);
     }
 
-    @Override public void beginFrame(Context ctx) { this.updateTransforms(ctx.partialTick()); }
+    @Override public void beginFrame(DynamicVisual.Context ctx) { this.updateTransforms(ctx.partialTick()); }
 
     private void updateTransforms(float partialTicks) {
         firstFire = blockEntity.firstFire;
         boolean flag = this.facing.getAxisDirection() == Direction.AxisDirection.NEGATIVE;
-        BlockPos pos = this.visualPos.relative(this.facing.getOpposite(), flag ? 1 : 0);
+        BlockPos pos = this.getVisualPosition().relative(this.facing.getOpposite(), flag ? 1 : 0);
         Vec3 pivot = Vec3.atLowerCornerOf(pos);
         Map.Entry<Float, Boolean> beValues = this.blockEntity.getAnimateOffset(partialTicks);
         float scale = beValues.getKey();
@@ -80,17 +89,18 @@ public class TwinAutocannonRecoilSpringInstance extends AbstractBlockEntityVisua
             this.spring.rotateCentered(Mth.PI, axis.isVertical() ? Direction.EAST : Direction.UP)
                     .translate(this.facing.getOpposite().step());
         }
-        this.spring.scale(fx, fy, fz);
+        this.spring.scale(fx, fy, fz).setChanged();
+
 
         Vector3f offs = this.facing.step();
         //offs.mul((1 - scale) * -0.5f);
-        offs.add(this.visualPos.getX(), this.visualPos.getY(), this.visualPos.getZ());
+        offs.add(this.getVisualPosition().getX(), this.getVisualPosition().getY(), this.getVisualPosition().getZ());
         offs.sub(facing.step());
         offs.sub(facing.step());
 
         Vector3f offsFiring = this.facing.step();
         offsFiring.mul((1 - scale) * -0.5f);
-        offsFiring.add(this.visualPos.getX(), this.visualPos.getY(), this.visualPos.getZ());
+        offsFiring.add(this.getVisualPosition().getX(), this.getVisualPosition().getY(), this.getVisualPosition().getZ());
         offsFiring.sub(facing.step());
 
         Vector3f offs2 = vertical ? new Vector3f(0, 0.25f, 0) : new Vector3f((facing.getAxis() == Direction.Axis.Z ? -0.25f : 0), 0, (facing.getAxis() == Direction.Axis.X ? -0.25f : 0));
@@ -114,12 +124,38 @@ public class TwinAutocannonRecoilSpringInstance extends AbstractBlockEntityVisua
                 entry.getValue().translatePosition(offsFiring.x, offsFiring.y, offsFiring.z);
             else
                 entry.getValue().translatePosition(offs.x, offs.y, offs.z);
+            entry.getValue().setChanged();
         }
+
+        if (blockEntity.getUpdateInstance()) {
+            ItemStack leavesStack = blockEntity.getLeavesItemStack();
+            if (leavesStack.isEmpty()) {
+                leavesInstance.setVisible(false);
+                leavesInstance.setChanged();
+            } else if (leavesStack.getItem() instanceof BlockItem leavesBlockItem) {
+                leavesInstance.delete();
+                leavesInstance = this.instancerProvider().instancer(InstanceTypes.TRANSFORMED, Models.block(leavesBlockItem.getBlock().defaultBlockState()))
+                        .createInstance();
+                leavesInstance.setVisible(true);
+            }
+            blockEntity.setUpdateInstance(false);
+        }
+        float x = axis == Direction.Axis.X ? -0.005f : 0;
+        float y = axis == Direction.Axis.Y ? -0.005f : 0;
+        float z = axis == Direction.Axis.Z ? -0.005f : 0;
+        Vec3 leavesOffset = new Vec3(x, y, z).scale(facing.getAxisDirection() == Direction.AxisDirection.NEGATIVE ? -1 : 1);
+        Vec3 leavesPivot = Vec3.atLowerCornerOf(this.getVisualPosition()).add(leavesOffset);
+        if (Math.abs(leavesInstance.pose.get(3, 0) - leavesPivot.x) < 0.01 && Math.abs(leavesInstance.pose.get(3, 1) - leavesPivot.y) < 0.01 && Math.abs(leavesInstance.pose.get(3, 2) - leavesPivot.z) < 0.01)
+            return;
+        leavesInstance.setIdentityTransform().translate(leavesPivot);
+        leavesInstance.setChanged();
+        updateLight(partialTicks);
     }
 
     @Override
     public void updateLight(float partialTicks) {
         this.relight(this.pos, this.spring);
+        this.relight(this.pos, this.leavesInstance);
         for (Map.Entry<BlockPos, OrientedInstance> entry : this.blocks1.entrySet()) {
             this.relight(this.pos.offset(entry.getKey()), entry.getValue());
         }
@@ -131,6 +167,7 @@ public class TwinAutocannonRecoilSpringInstance extends AbstractBlockEntityVisua
     @Override
     protected void _delete() {
         this.spring.delete();
+        leavesInstance.delete();
         for (OrientedInstance block : this.blocks1.values()) block.delete();
         for (OrientedInstance block : this.blocks2.values()) block.delete();
     }
@@ -144,7 +181,8 @@ public class TwinAutocannonRecoilSpringInstance extends AbstractBlockEntityVisua
     @Override
     public void collectCrumblingInstances(Consumer<@Nullable Instance> consumer) {
         consumer.accept(spring);
-        for (OrientedInstance block : this.blocks1.values()) consumer.accept(block);
-        for (OrientedInstance block : this.blocks2.values()) consumer.accept(block);
+        consumer.accept(leavesInstance);
+        //for (OrientedInstance block : this.blocks1.values()) consumer.accept(block);
+        //for (OrientedInstance block : this.blocks2.values()) consumer.accept(block);
     }
 }

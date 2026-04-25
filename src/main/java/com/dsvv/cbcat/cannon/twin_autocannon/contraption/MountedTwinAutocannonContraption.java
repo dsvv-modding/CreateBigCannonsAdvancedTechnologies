@@ -452,6 +452,12 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
                 spring.handleFiring();
             }
         }
+        if (this.getBlockEntityClientSide(this.startPos) instanceof TwinAutocannonBreechBlockEntity breech)
+            breech.handleFiring();
+        for (BlockPos pos : this.recoilSpringPositions) {
+            if (this.getBlockEntityClientSide(pos) instanceof TwinAutocannonRecoilSpringBlockEntity spring)
+                spring.handleFiring();
+        }
     }
 
     public void tick(Level level, PitchOrientedContraptionEntity entity) {
@@ -521,6 +527,15 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
     public void onRedstoneUpdate(ServerLevel level, PitchOrientedContraptionEntity entity, boolean togglePower, int firePower, ControlPitchContraption controller) {
         if (this.presentBlockEntities.get(this.startPos) instanceof TwinAutocannonBreechBlockEntity breech) {
             breech.setFireRate(firePower);
+            writeAndSyncSingleBlockData(breech, this.blocks.get(this.startPos), entity, this);
+        }
+    }
+
+    public void trySettingFireRateCarriage(int fireRateAdjustment) {
+        if (this.presentBlockEntities.get(this.startPos) instanceof TwinAutocannonBreechBlockEntity breech
+                && (fireRateAdjustment > 0 || breech.getFireRate() > 1)) {
+            // > 0 because can't turn off carriage autocannon
+            breech.setFireRate(breech.getFireRate() + fireRateAdjustment);
             writeAndSyncSingleBlockData(breech, this.blocks.get(this.startPos), entity, this);
         }
     }
@@ -610,19 +625,21 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
 
     @Override
     public ItemStack insertItemIntoCannon(ItemStack stack, boolean simulate) {
-        return this.getItemStorage().map(h -> h.insertItem(1, stack, simulate)).orElse(stack);
+        if (this.getItemStorage() == null)
+            return stack;
+        return this.getItemStorage().insertItem(1, stack, simulate);
     }
 
     @Override
     public ItemStack extractItemFromCannon(boolean simulate) {
-        return this.getItemStorage().map(h -> h.extractItem(0, 1, simulate)).orElse(ItemStack.EMPTY);
+        if (this.getItemStorage() == null)
+            return ItemStack.EMPTY;
+        return this.getItemStorage().extractItem(0, 1, simulate);
     }
 
-    @Nonnull
+    @Nullable
     @Override
-    public LazyOptional<IItemHandler> getItemStorage() {
-        return this.presentBlockEntities.get(this.startPos) instanceof TwinAutocannonBreechBlockEntity breech
-                ? LazyOptional.of(breech::createItemHandler)
-                : LazyOptional.empty();
+    public IItemHandler getItemStorage() {
+        return this.presentBlockEntities.get(this.startPos) instanceof TwinAutocannonBreechBlockEntity breech ? breech.createItemHandler() : null;
     }
 }

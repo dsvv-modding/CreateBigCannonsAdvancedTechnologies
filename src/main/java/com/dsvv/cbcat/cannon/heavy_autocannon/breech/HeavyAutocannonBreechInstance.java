@@ -5,7 +5,7 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoC
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
 import com.mojang.math.Axis;
 import dev.engine_room.flywheel.api.instance.Instance;
-import dev.engine_room.flywheel.api.instance.InstanceType;
+import dev.engine_room.flywheel.api.visual.DynamicVisual;
 import dev.engine_room.flywheel.api.visualization.VisualizationContext;
 import dev.engine_room.flywheel.lib.instance.InstanceTypes;
 import dev.engine_room.flywheel.lib.instance.OrientedInstance;
@@ -67,13 +67,10 @@ public class HeavyAutocannonBreechInstance extends AbstractBlockEntityVisual<Hea
         float offset = this.blockEntity.getAnimateOffset(partialTick) * 0.5f;
         Vector3f normal = this.facing.getOpposite().step();
         normal.mul(offset);
-        //this.ejector.setPosition(this.getInstancePosition()).nudge(normal.x(), normal.y(), normal.z()).setColor((byte) 255, (byte) 255, (byte) 255, (byte) 255);
 
         ItemStack container = this.blockEntity.getMagazine();
         this.ammoContainer.color((byte) 255, (byte) 255, (byte) 255, (byte)(container.getItem() instanceof HeavyAutocannonAmmoContainerItem ? 255 : 0));
         if (this.isFilled != this.isFilled() || this.magazineItem != this.getMagazineItem()) {
-            //this.remove();
-            //this.init();
             this.updateLight(partialTick);
         }
     }
@@ -86,12 +83,6 @@ public class HeavyAutocannonBreechInstance extends AbstractBlockEntityVisual<Hea
     @Override
     protected void _delete() {
         this.ammoContainer.delete();
-    }
-
-    private PartialModel getPartialModelForState() {
-        return this.blockState.getBlock() instanceof HeavyAutocannonBlock cBlock
-                ? CBCBlockPartials.autocannonEjectorFor(cBlock.getAutocannonMaterial())
-                : CBCBlockPartials.CAST_IRON_AUTOCANNON_EJECTOR;
     }
 
     private BlockState getAmmoContainerModel() {
@@ -119,7 +110,7 @@ public class HeavyAutocannonBreechInstance extends AbstractBlockEntityVisual<Hea
     }
 
     @Override
-    public void beginFrame(Context context) {
+    public void beginFrame(DynamicVisual.Context context) {
         updateTransforms(context.partialTick());
     }
 }
