@@ -1,0 +1,9 @@
+{
+  "type": "createbigcannons:drill_boring",
+  "input": {
+    "type": "block",
+    "block": "cbc_at:unbored_cast_iron_rocket_pod_rail"
+  },
+  "result": "cbc_at:cast_iron_rocket_pod_rail",
+  "obey_facing_or_axis": true
+}

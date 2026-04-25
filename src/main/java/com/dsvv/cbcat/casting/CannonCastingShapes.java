@@ -40,6 +40,10 @@ public class CannonCastingShapes
         HEAVY_AUTOCANNON_QFBREECH = register("heavy_autocannon_qfbreech_mould", new CannonCastShape(6 * INGOT_SIZE_MB, 4, BlockRegister.HEAVY_AUTOCANNON_QFBREECH_MOULD));
 
     public static final CannonCastShape
+        ROCKET_POD_RAIL = register("rocket_pod_rail_mould", new CannonCastShape(10 * INGOT_SIZE_MB, 10, BlockRegister.ROCKET_POD_RAIL_MOULD)),
+        ROCKET_POD_BREECH = register("rocket_pod_breech_mould", new CannonCastShape(10 * INGOT_SIZE_MB, 10, BlockRegister.ROCKET_POD_BREECH_MOULD));
+
+    public static final CannonCastShape
         AUTOCANNON_SILENCER = register("autocannon_silencer_mould", new CannonCastShape(3 * INGOT_SIZE_MB, 3, BlockRegister.AUTOCANNON_SILENCER_MOULD)),
         AUTOCANNON_MUZZLE_BRAKE = register("autocannon_muzzle_brake_mould", new CannonCastShape(3 * INGOT_SIZE_MB, 2, BlockRegister.AUTOCANNON_MUZZLE_BRAKE_MOULD));
 

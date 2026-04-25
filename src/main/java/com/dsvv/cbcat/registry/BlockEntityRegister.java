@@ -12,8 +12,14 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoC
 import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoilSpringBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoilSpringInstance;
 import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoilSpringRenderer;
+import com.dsvv.cbcat.cannon.medium_rocketpod.MediumRocketPodBlockEntity;
+import com.dsvv.cbcat.cannon.medium_rocketpod.breech.MediumRocketPodBreechBlockEntity;
+import com.dsvv.cbcat.cannon.medium_rocketpod.breech.MediumRocketPodBreechInstance;
+import com.dsvv.cbcat.cannon.rocketpod.RocketPodBlockEntity;
+import com.dsvv.cbcat.cannon.rocketpod.breech.RocketPodBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlockEntity;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
+import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonInstance;
+import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechInstance;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechRenderer;
 import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilSpringBlockEntity;
@@ -22,8 +28,7 @@ import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilS
 import com.dsvv.cbcat.cartridge.ProjectileCartridgeBlockEntity;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlockEntity;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
-import rbasamoyai.createbigcannons.forge.munitions.fluid_shell.FluidShellBlockEntity;
-import rbasamoyai.createbigcannons.munitions.big_cannon.FuzedBlockEntityRenderer;
+import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlockEntity;
 
 import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
 
@@ -47,6 +52,24 @@ public class BlockEntityRegister
                     BlockRegister.BUILT_UP_STEEL_RIFLED_BARREL, BlockRegister.BUILT_UP_NETHERSTEEL_RIFLED_BARREL)
             .register();
 
+    public static final BlockEntityEntry<RocketPodBlockEntity> ROCKET_POD_BARREL_BLOCK_ENTITY = REGISTRATE.blockEntity("rocket_pod_barrel_be", RocketPodBlockEntity::new)
+            .validBlocks(BlockRegister.CAST_IRON_ROCKET_POD_BARREL, BlockRegister.BRONZE_ROCKET_POD_BARREL, BlockRegister.STEEL_ROCKET_POD_BARREL)
+            .register();
+
+    public static final BlockEntityEntry<RocketPodBreechBlockEntity> ROCKET_POD_BREECH_BLOCK_ENTITY = REGISTRATE.blockEntity("rocket_pod_breech_be", RocketPodBreechBlockEntity::new)
+            .validBlocks(BlockRegister.CAST_IRON_ROCKET_POD_BREECH, BlockRegister.BRONZE_ROCKET_POD_BREECH, BlockRegister.STEEL_ROCKET_POD_BREECH)
+            .register();
+
+    public static final BlockEntityEntry<MediumRocketPodBlockEntity> MEDIUM_ROCKET_POD_BARREL_BLOCK_ENTITY = REGISTRATE.blockEntity("medium_rocket_rail_be", MediumRocketPodBlockEntity::new)
+            .validBlocks(/*BlockRegister.CAST_IRON_MEDIUM_ROCKET_POD_BARREL, BlockRegister.BRONZE_MEDIUM_ROCKET_POD_BARREL, BlockRegister.STEEL_MEDIUM_ROCKET_POD_BARREL*/ BlockRegister.WROUGHT_IRON_MEDIUM_ROCKET_RAIL)
+            .register();
+
+    public static final BlockEntityEntry<MediumRocketPodBreechBlockEntity> MEDIUM_ROCKET_POD_BREECH_BLOCK_ENTITY = REGISTRATE.blockEntity("medium_rocket_rail_breech_be", MediumRocketPodBreechBlockEntity::new)
+            .visual(() -> MediumRocketPodBreechInstance::new)
+            //.renderer(() -> MediumRocketPodBreechRenderer::new)
+            .validBlocks(/*BlockRegister.CAST_IRON_MEDIUM_ROCKET_POD_BREECH, BlockRegister.BRONZE_MEDIUM_ROCKET_POD_BREECH, BlockRegister.STEEL_MEDIUM_ROCKET_POD_BREECH*/ BlockRegister.WROUGHT_IRON_MEDIUM_ROCKET_RAIL_BREECH)
+            .register();
+
     public static final BlockEntityEntry<ProjectileCartridgeBlockEntity> PROJECTILE_CARTRIDGE_BLOCK_ENTITY = REGISTRATE.blockEntity("projectile_cartridge_be", ProjectileCartridgeBlockEntity::new)
             .validBlocks(BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK, BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK, BlockRegister.FLUID_SHELL_CARTRIDGE_BLOCK,
                     BlockRegister.GRAPESHOT_CARTRIDGE_BLOCK, BlockRegister.HIGH_EXPLOSIVE_CARTRIDGE_BLOCK, BlockRegister.SHRAPNEL_CARTRIDGE_BLOCK, BlockRegister.SMOKE_CARTRIDGE_BLOCK,
@@ -60,13 +83,17 @@ public class BlockEntityRegister
             .register();
 
     public static final BlockEntityEntry<TwinAutocannonBlockEntity> TWIN_AUTOCANNON_BLOCK_ENTITY = REGISTRATE.blockEntity("twin_autocannon_be", TwinAutocannonBlockEntity::new)
+            .visual(() -> TwinAutocannonInstance::new)
             .validBlocks(BlockRegister.CAST_IRON_TWIN_AUTOCANNON_BARREL, BlockRegister.BRONZE_TWIN_AUTOCANNON_BARREL, BlockRegister.STEEL_TWIN_AUTOCANNON_BARREL,
                     BlockRegister.CAST_IRON_VERT_TWIN_AUTOCANNON_BARREL, BlockRegister.BRONZE_VERT_TWIN_AUTOCANNON_BARREL, BlockRegister.STEEL_VERT_TWIN_AUTOCANNON_BARREL,
                     BlockRegister.CAST_IRON_TWIN_AUTOCANNON_SILENCER, BlockRegister.BRONZE_TWIN_AUTOCANNON_SILENCER, BlockRegister.STEEL_TWIN_AUTOCANNON_SILENCER,
-                    BlockRegister.CAST_IRON_TWIN_AUTOCANNON_MUZZLE_BRAKE, BlockRegister.BRONZE_TWIN_AUTOCANNON_MUZZLE_BRAKE, BlockRegister.STEEL_TWIN_AUTOCANNON_MUZZLE_BRAKE)
+                    BlockRegister.CAST_IRON_VERT_TWIN_AUTOCANNON_SILENCER, BlockRegister.BRONZE_VERT_TWIN_AUTOCANNON_SILENCER, BlockRegister.STEEL_VERT_TWIN_AUTOCANNON_SILENCER,
+                    BlockRegister.CAST_IRON_TWIN_AUTOCANNON_MUZZLE_BRAKE, BlockRegister.BRONZE_TWIN_AUTOCANNON_MUZZLE_BRAKE, BlockRegister.STEEL_TWIN_AUTOCANNON_MUZZLE_BRAKE,
+                    BlockRegister.CAST_IRON_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE, BlockRegister.BRONZE_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE, BlockRegister.STEEL_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE)
             .register();
 
     public static final BlockEntityEntry<TwinAutocannonRecoilSpringBlockEntity> TWIN_AUTOCANNON_RECOIL_SPRING_BLOCK_ENTITY = REGISTRATE.blockEntity("twin_autocannon_recoil_spring_be", TwinAutocannonRecoilSpringBlockEntity::new)
+            .visual(() -> TwinAutocannonInstance::new)
             .visual(() -> TwinAutocannonRecoilSpringInstance::new)
             .renderer(() -> TwinAutocannonRecoilSpringRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.BRONZE_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.STEEL_TWIN_AUTOCANNON_RECOIL_SPRING,
@@ -118,7 +145,7 @@ public class BlockEntityRegister
             .register();*/
 
     public static final BlockEntityEntry<FuzedClusterProjectileBlockEntity> FUZED_CLUSTER_PROJECTILE_BLOCK_ENTITY = REGISTRATE.blockEntity("fuzed_cluster_be", FuzedClusterProjectileBlockEntity::new)
-            .validBlocks(BlockRegister.CLUSTER_BLOCK)
+            .validBlocks(BlockRegister.CLUSTER_BLOCK, BlockRegister.CLUSTER_CASELESS_BLOCK, BlockRegister.CLUSTER_CARTRIDGE_BLOCK)
             .register();
 
     public static void register() {}
