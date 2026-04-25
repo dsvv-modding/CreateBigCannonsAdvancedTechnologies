@@ -48,8 +48,7 @@ import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import net.minecraft.world.level.storage.loot.functions.CopyNameFunction;
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import org.openjdk.nashorn.api.tree.BreakTree;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import rbasamoyai.createbigcannons.CBCTags;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBarrelBlock;
@@ -226,222 +225,222 @@ public class BlockRegister
             .register();*/
 
     public static final BlockEntry<ProjectileCartridgeBlock> ARMOR_PIERCING_CARTRIDGE_BLOCK = REGISTRATE.block("armor_piercing_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHOT, "ap shot"))
-            .item(ProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK = REGISTRATE.block("armor_piercing_shell_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHELL, "ap shell"))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FluidProjectileCartridgeBlock> FLUID_SHELL_CARTRIDGE_BLOCK = REGISTRATE.block("fluid_shell_cartridge", p -> new FluidProjectileCartridgeBlock(p, "fluid shell"))
-            .item(FluidShellBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FluidShellBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CARTRIDGE_BLOCK = REGISTRATE.block("grapeshot_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot"))
-            .item(ProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> HIGH_EXPLOSIVE_CARTRIDGE_BLOCK = REGISTRATE.block("high_explosive_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.HE_SHELL, "he shell"))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SHRAPNEL_CARTRIDGE_BLOCK = REGISTRATE.block("shrapnel_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SHRAPNEL_SHELL, "shrapnel shell"))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SMOKE_CARTRIDGE_BLOCK = REGISTRATE.block("smoke_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SMOKE_SHELL, "smoke shell"))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> SOLID_CARTRIDGE_BLOCK = REGISTRATE.block("solid_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.SHOT, "solid shot"))
-            .item(ProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ClusterProjectileCartridgeBlock> CLUSTER_CARTRIDGE_BLOCK = REGISTRATE.block("cluster_cartridge", p -> new ClusterProjectileCartridgeBlock(p, "cluster shell", true))
             .item(FuzedClusterProjectileBlockItem::new).build()///*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
 
     public static final BlockEntry<ProjectileCartridgeBlock> ARMOR_PIERCING_CASELESS_BLOCK = REGISTRATE.block("armor_piercing_caseless", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHOT, "ap shot caseless", false))
-            .item(ProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> ARMOR_PIERCING_SHELL_CASELESS_BLOCK = REGISTRATE.block("armor_piercing_shell_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHELL, "ap shell caseless", false))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FluidProjectileCartridgeBlock> FLUID_SHELL_CASELESS_BLOCK = REGISTRATE.block("fluid_shell_caseless", p -> new FluidProjectileCartridgeBlock(p, "fluid shell caseless", false))
-            .item(FluidShellBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FluidShellBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CASELESS_BLOCK = REGISTRATE.block("grapeshot_caseless", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot caseless", false))
-            .item(ProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> HIGH_EXPLOSIVE_CASELESS_BLOCK = REGISTRATE.block("high_explosive_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.HE_SHELL, "he shell caseless", false))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SHRAPNEL_CASELESS_BLOCK = REGISTRATE.block("shrapnel_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SHRAPNEL_SHELL, "shrapnel shell caseless", false))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SMOKE_CASELESS_BLOCK = REGISTRATE.block("smoke_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SMOKE_SHELL, "smoke shell caseless", false))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> SOLID_CASELESS_BLOCK = REGISTRATE.block("solid_caseless", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.SHOT, "solid shot caseless", false))
-            .item(ProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ClusterProjectileCartridgeBlock> CLUSTER_CASELESS_BLOCK = REGISTRATE.block("cluster_caseless", p -> new ClusterProjectileCartridgeBlock(p, "cluster shell caseless", false))
-            .item(FuzedClusterProjectileBlockItem::new).build()//.tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedClusterProjectileBlockItem::new).build()///*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
 
     public static final BlockEntry<FuzedClusterProjectileBlock> CLUSTER_BLOCK = REGISTRATE.block("cluster", p -> new FuzedClusterProjectileBlock(p))
-            .item(FuzedClusterProjectileBlockItem::new).build()//.tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedClusterProjectileBlockItem::new).build()///*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
 
     public static final BlockEntry<TwinAutocannonBarrelBlock> CAST_IRON_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("cast_iron_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::getCastIronBarrel, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> BRONZE_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("bronze_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::getBronzeBarrel, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> STEEL_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("steel_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::getSteelBarrel, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> CAST_IRON_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("cast_iron_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::castIronTwinAutocannonBarrel, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> BRONZE_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("bronze_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::bronzeTwinAutocannonBarrel, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> STEEL_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("steel_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::steelTwinAutocannonBarrel, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> CAST_IRON_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("cast_iron_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> BRONZE_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("bronze_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> STEEL_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("steel_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> CAST_IRON_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("cast_iron_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::getCastIronSilencer, false, 0.5f))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> BRONZE_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("bronze_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::getBronzeSilencer, false, 0.5f))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> STEEL_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("steel_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::getSteelSilencer, false, 0.5f))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> CAST_IRON_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("cast_iron_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::getCastIronMuzzleBrake, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> BRONZE_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("bronze_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::getBronzeMuzzleBrake, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> STEEL_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("steel_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::getSteelMuzzleBrake, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
 
     public static final BlockEntry<TwinAutocannonBarrelBlock> CAST_IRON_VERT_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("cast_iron_vert_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::getCastIronBarrel, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> BRONZE_VERT_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("bronze_vert_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::getBronzeBarrel, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> STEEL_VERT_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("steel_vert_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::getSteelBarrel, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> CAST_IRON_VERT_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("cast_iron_vert_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::castIronVertTwinAutocannonBarrel, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> BRONZE_VERT_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("bronze_vert_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::bronzeVertTwinAutocannonBarrel, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> STEEL_VERT_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("steel_vert_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::steelVertTwinAutocannonBarrel, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> CAST_IRON_VERT_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("cast_iron_vert_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> BRONZE_VERT_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("bronze_vert_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> STEEL_VERT_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("steel_vert_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> CAST_IRON_VERT_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("cast_iron_vert_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::getCastIronSilencer, true, 0.5f))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> BRONZE_VERT_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("bronze_vert_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::getBronzeSilencer, true, 0.5f))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> STEEL_VERT_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("steel_vert_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::getSteelSilencer, true, 0.5f))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> CAST_IRON_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("cast_iron_vert_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::getCastIronMuzzleBrake, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> BRONZE_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("bronze_vert_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::getBronzeMuzzleBrake, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> STEEL_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("steel_vert_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::getSteelMuzzleBrake, true))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
 
     public static final BlockEntry<SpecialAutocannonBarrel> CAST_IRON_AUTOCANNON_SILENCER = REGISTRATE.block("cast_iron_autocannon_silencer", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.CAST_IRON, 0.5f))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> BRONZE_AUTOCANNON_SILENCER = REGISTRATE.block("bronze_autocannon_silencer", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.BRONZE, 0.5f))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> STEEL_AUTOCANNON_SILENCER = REGISTRATE.block("steel_autocannon_silencer", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.STEEL, 0.5f))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> CAST_IRON_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("cast_iron_autocannon_muzzle_brake", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.CAST_IRON))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> BRONZE_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("bronze_autocannon_muzzle_brake", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.BRONZE))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> STEEL_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("steel_autocannon_muzzle_brake", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.STEEL))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
 
     public static final BlockEntry<HeavyAutocannonBarrelBlock> CAST_IRON_HEAVY_AUTOCANNON_BARREL = REGISTRATE.block("cast_iron_heavy_autocannon_barrel", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> BRONZE_HEAVY_AUTOCANNON_BARREL = REGISTRATE.block("bronze_heavy_autocannon_barrel", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> STEEL_HEAVY_AUTOCANNON_BARREL = REGISTRATE.block("steel_heavy_autocannon_barrel", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     /*public static final BlockEntry<HeavyAutocannonBarrelBlock> CAST_IRON_HEAVY_AUTOCANNON_CHAMBER = REGISTRATE.block("cast_iron_heavy_autocannon_chamber", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, true))
@@ -457,68 +456,68 @@ public class BlockRegister
             .transform(cannonBlock())
             .register();*/
     public static final BlockEntry<HeavyAutocannonRecoilSpringBlock> CAST_IRON_HEAVY_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("cast_iron_heavy_autocannon_recoil_spring", p -> new HeavyAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::castIronHeavyAutocannonBarrel))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonRecoilSpringBlock> BRONZE_HEAVY_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("bronze_heavy_autocannon_recoil_spring", p -> new HeavyAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::bronzeHeavyAutocannonBarrel))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonRecoilSpringBlock> STEEL_HEAVY_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("steel_heavy_autocannon_recoil_spring", p -> new HeavyAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::steelHeavyAutocannonBarrel))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> CAST_IRON_HEAVY_AUTOCANNON_BREECH = REGISTRATE.block("cast_iron_heavy_autocannon_breech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> BRONZE_HEAVY_AUTOCANNON_BREECH = REGISTRATE.block("bronze_heavy_autocannon_breech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> STEEL_HEAVY_AUTOCANNON_BREECH = REGISTRATE.block("steel_heavy_autocannon_breech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonQuickFireBreechBlock> CAST_IRON_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("cast_iron_heavy_autocannon_qfbreech", p -> new HeavyAutocannonQuickFireBreechBlock(p, CBCAutocannonMaterials.CAST_IRON))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonQuickFireBreechBlock> BRONZE_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("bronze_heavy_autocannon_qfbreech", p -> new HeavyAutocannonQuickFireBreechBlock(p, CBCAutocannonMaterials.BRONZE))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonQuickFireBreechBlock> STEEL_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("steel_heavy_autocannon_qfbreech", p -> new HeavyAutocannonQuickFireBreechBlock(p, CBCAutocannonMaterials.STEEL))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> CAST_IRON_HEAVY_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("cast_iron_heavy_autocannon_muzzle_brake", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> BRONZE_HEAVY_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("bronze_heavy_autocannon_muzzle_brake", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> STEEL_HEAVY_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("steel_heavy_autocannon_muzzle_brake", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> CAST_IRON_HEAVY_AUTOCANNON_SILENCER = REGISTRATE.block("cast_iron_heavy_autocannon_silencer", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false, 0.6f))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> BRONZE_HEAVY_AUTOCANNON_SILENCER = REGISTRATE.block("bronze_heavy_autocannon_silencer", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false, 0.6f))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> STEEL_HEAVY_AUTOCANNON_SILENCER = REGISTRATE.block("steel_heavy_autocannon_silencer", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false, 0.6f))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
 
     public static final BlockEntry<HeavyAutocannonAmmoContainerBlock> HEAVY_AUTOCANNON_AMMO_BOX = REGISTRATE.block("heavy_autocannon_ammo_box", HeavyAutocannonAmmoContainerBlock::new)
-            //.item(HeavyAutocannonAmmoContainerItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(HeavyAutocannonAmmoContainerItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .properties(p -> p.mapColor(MapColor.COLOR_GREEN))
             .properties(p -> p.strength(0.0f, 2.5f))
             .properties(p -> p.sound(SoundType.CHAIN))
@@ -526,7 +525,7 @@ public class BlockRegister
             .transform(autocannonAmmoContainer(false))
             .register();
     public static final BlockEntry<HeavyAutocannonAmmoContainerBlock> CREATIVE_HEAVY_AUTOCANNON_AMMO_BOX = REGISTRATE.block("creative_heavy_autocannon_ammo_box", HeavyAutocannonAmmoContainerBlock::new)
-            //.item(HeavyAutocannonAmmoContainerItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(HeavyAutocannonAmmoContainerItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .properties(p -> p.mapColor(MapColor.COLOR_MAGENTA))
             .properties(p -> p.strength(0.0f, 2.5f))
             .properties(p -> p.sound(SoundType.CHAIN))
@@ -535,67 +534,67 @@ public class BlockRegister
             .register();
 
     public static final BlockEntry<CannonCastMouldBlock> MUZZLE_BRAKE_MOULD = REGISTRATE.block("muzzle_brake_cast_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(2, 0, 2, 14, 12, 14), Block.box(1, 2, 1, 15, 16, 15)), () -> CannonCastingShapes.MUZZLE_BRAKE))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("muzzle_brake"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> FUME_EXTRACTOR_MOULD = REGISTRATE.block("fume_extractor_cast_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(2, 0, 2, 14, 16, 14), Block.box(1.5f, 2, 1.5f, 14.5, 14, 14.5f), Block.box(1, 2.5, 1, 15, 13.5f, 15)), () -> CannonCastingShapes.FUME_EXTRACTOR))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("fume_extractor"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> SILENCER_MOULD = REGISTRATE.block("silencer_cast_mould", p -> new CannonCastMouldBlock(p, Block.box(2, 0, 2, 14, 16, 14), () -> CannonCastingShapes.SILENCER))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("silencer"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> RIFLED_BARREL_MOULD = REGISTRATE.block("rifled_barrel_cast_mould", p -> new CannonCastMouldBlock(p, Block.box(2, 0, 2, 14, 16, 14), () -> CannonCastingShapes.RIFLED_BARREL))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("rifled_barrel"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> TWIN_AUTOCANNON_BARREL_MOULD = REGISTRATE.block("twin_autocannon_barrel_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(2, 0, 6, 6, 16, 10), Block.box(10, 0, 6, 14, 16, 10)), () -> CannonCastingShapes.TWIN_AUTOCANNON_BARREL))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("twin_autocannon_barrel"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> TWIN_AUTOCANNON_RECOIL_SPRING_MOULD = REGISTRATE.block("twin_autocannon_recoil_spring_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(1, 0, 5, 7, 16, 11), Block.box(9, 0, 5, 15, 16, 11)), () -> CannonCastingShapes.TWIN_AUTOCANNON_RECOIL_SPRING))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("twin_autocannon_recoil_spring"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> TWIN_AUTOCANNON_BREECH_MOULD = REGISTRATE.block("twin_autocannon_breech_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(8, 0, 4, 16, 16, 12), Block.box(0, 0, 4, 8, 16, 12)), () -> CannonCastingShapes.TWIN_AUTOCANNON_BREECH))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("twin_autocannon_breech"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> TWIN_AUTOCANNON_SILENCER_MOULD = REGISTRATE.block("twin_autocannon_silencer_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(1, 0, 5, 7, 16, 11), Block.box(9, 0, 5, 15, 16, 11)), () -> CannonCastingShapes.TWIN_AUTOCANNON_SILENCER))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("twin_autocannon_silencer"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> TWIN_AUTOCANNON_MUZZLE_BRAKE_MOULD = REGISTRATE.block("twin_autocannon_muzzle_brake_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(2, 0, 6, 6, 16, 10), Block.box(10, 0, 6, 14, 16, 10)), () -> CannonCastingShapes.TWIN_AUTOCANNON_MUZZLE_BRAKE))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("twin_autocannon_muzzle_brake"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> VERT_TWIN_AUTOCANNON_BARREL_MOULD = REGISTRATE.block("vert_twin_autocannon_barrel_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(6, 0, 2, 10, 16, 6), Block.box(6, 0, 10, 10, 16, 14)), () -> CannonCastingShapes.VERT_TWIN_AUTOCANNON_BARREL))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("vert_twin_autocannon_barrel"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> VERT_TWIN_AUTOCANNON_RECOIL_SPRING_MOULD = REGISTRATE.block("vert_twin_autocannon_recoil_spring_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(5, 0, 1, 11, 16, 7), Block.box(5, 0, 9, 11, 16, 15)), () -> CannonCastingShapes.VERT_TWIN_AUTOCANNON_RECOIL_SPRING))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("vert_twin_autocannon_recoil_spring"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> VERT_TWIN_AUTOCANNON_BREECH_MOULD = REGISTRATE.block("vert_twin_autocannon_breech_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(4, 0, 8, 12, 16, 16), Block.box(4, 0, 0, 12, 16, 8)), () -> CannonCastingShapes.VERT_TWIN_AUTOCANNON_BREECH))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("vert_twin_autocannon_breech"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> VERT_TWIN_AUTOCANNON_SILENCER_MOULD = REGISTRATE.block("vert_twin_autocannon_silencer_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(5, 0, 1, 11, 16, 7), Block.box(5, 0, 9, 11, 16, 15)), () -> CannonCastingShapes.VERT_TWIN_AUTOCANNON_SILENCER))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("vert_twin_autocannon_silencer"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE_MOULD = REGISTRATE.block("vert_twin_autocannon_muzzle_brake_mould", p -> new CannonCastMouldBlock(p, Shapes.or(Block.box(6, 0, 2, 10, 16, 6), Block.box(6, 0, 10, 10, 16, 14)), () -> CannonCastingShapes.VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("vert_twin_autocannon_muzzle_brake"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> AUTOCANNON_SILENCER_MOULD = REGISTRATE.block("autocannon_silencer_mould", p -> new CannonCastMouldBlock(p, Block.box(5, 0, 5, 11, 16, 11), () -> CannonCastingShapes.AUTOCANNON_SILENCER))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("autocannon_silencer"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> AUTOCANNON_MUZZLE_BRAKE_MOULD = REGISTRATE.block("autocannon_muzzle_brake_mould", p -> new CannonCastMouldBlock(p, Block.box(6, 0, 6, 10, 16, 10), () -> CannonCastingShapes.AUTOCANNON_MUZZLE_BRAKE))
-            //.item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            //.item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(castMould("autocannon_muzzle_brake"))
             .register();
     public static final BlockEntry<CannonCastMouldBlock> ROCKET_POD_RAIL_MOULD = REGISTRATE.block("rocket_pod_rail_mould", p -> new CannonCastMouldBlock(p, Block.box(0, 0, 3, 16, 16, 13), () -> CannonCastingShapes.ROCKET_POD_RAIL))
@@ -624,66 +623,66 @@ public class BlockRegister
             .register();
 
     public static final BlockEntry<MuzzleBrakeBlock> UNBORED_CAST_IRON_MUZZLE_BRAKE = REGISTRATE.block("unbored_cast_iron_muzzle_brake", p -> new MuzzleBrakeBlock(p, CBCBigCannonMaterials.CAST_IRON, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<MuzzleBrakeBlock> UNBORED_BRONZE_MUZZLE_BRAKE = REGISTRATE.block("unbored_bronze_muzzle_brake", p -> new MuzzleBrakeBlock(p, CBCBigCannonMaterials.BRONZE, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<MuzzleBrakeBlock> UNBORED_STEEL_MUZZLE_BRAKE = REGISTRATE.block("unbored_steel_muzzle_brake", p -> new MuzzleBrakeBlock(p, CBCBigCannonMaterials.STEEL, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(strongCannonBlock(false))
             .register();
     public static final BlockEntry<MuzzleBrakeBlock> UNBORED_NETHERSTEEL_MUZZLE_BRAKE = REGISTRATE.block("unbored_nethersteel_muzzle_brake", p -> new MuzzleBrakeBlock(p, CBCBigCannonMaterials.NETHERSTEEL, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(strongCannonBlock(false))
             .register();
 
     public static final BlockEntry<FumeExtractorBlock> UNBORED_CAST_IRON_FUME_EXTRACTOR = REGISTRATE.block("unbored_cast_iron_fume_extractor", p -> new FumeExtractorBlock(p, CBCBigCannonMaterials.CAST_IRON, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<FumeExtractorBlock> UNBORED_BRONZE_FUME_EXTRACTOR = REGISTRATE.block("unbored_bronze_fume_extractor", p -> new FumeExtractorBlock(p, CBCBigCannonMaterials.BRONZE, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<FumeExtractorBlock> UNBORED_STEEL_FUME_EXTRACTOR = REGISTRATE.block("unbored_steel_fume_extractor", p -> new FumeExtractorBlock(p, CBCBigCannonMaterials.STEEL, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(strongCannonBlock(false))
             .register();
     public static final BlockEntry<FumeExtractorBlock> UNBORED_NETHERSTEEL_FUME_EXTRACTOR = REGISTRATE.block("unbored_nethersteel_fume_extractor", p -> new FumeExtractorBlock(p, CBCBigCannonMaterials.NETHERSTEEL, false))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(strongCannonBlock(false))
             .register();
 
     public static final BlockEntry<SilencerBlock> UNBORED_CAST_IRON_SILENCER = REGISTRATE.block("unbored_cast_iron_silencer", p -> new SilencerBlock(p, CBCBigCannonMaterials.CAST_IRON, false, new boolean[]{false}))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<SilencerBlock> UNBORED_BRONZE_SILENCER = REGISTRATE.block("unbored_bronze_silencer", p -> new SilencerBlock(p, CBCBigCannonMaterials.BRONZE, false, new boolean[]{false}))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<SilencerBlock> UNBORED_STEEL_SILENCER = REGISTRATE.block("unbored_steel_silencer", p -> new SilencerBlock(p, CBCBigCannonMaterials.STEEL, false, new boolean[]{false}))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(strongCannonBlock(false))
             .register();
     public static final BlockEntry<SilencerBlock> UNBORED_NETHERSTEEL_SILENCER = REGISTRATE.block("unbored_nethersteel_silencer", p -> new SilencerBlock(p, CBCBigCannonMaterials.NETHERSTEEL, false, new boolean[]{false}))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(strongCannonBlock(false))
             .register();
 
     public static final BlockEntry<RifledBarrelBlock> UNBORED_CAST_IRON_RIFLED_BARREL = REGISTRATE.block("unbored_cast_iron_rifled_barrel", p -> new RifledBarrelBlock(p, CBCBigCannonMaterials.CAST_IRON, false, new boolean[]{false}))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<RifledBarrelBlock> UNBORED_BRONZE_RIFLED_BARREL = REGISTRATE.block("unbored_bronze_rifled_barrel", p -> new RifledBarrelBlock(p, CBCBigCannonMaterials.BRONZE, false, new boolean[]{false}))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<RifledBarrelBlock> UNBORED_STEEL_RIFLED_BARREL = REGISTRATE.block("unbored_steel_rifled_barrel", p -> new RifledBarrelBlock(p, CBCBigCannonMaterials.STEEL, false, new boolean[]{false}))
-            .item(BlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(BlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(strongCannonBlock(false))
             .register();
     public static final BlockEntry<RifledBarrelBlock> UNBORED_NETHERSTEEL_RIFLED_BARREL = REGISTRATE.block("unbored_nethersteel_rifled_barrel", p -> new RifledBarrelBlock(p, CBCBigCannonMaterials.NETHERSTEEL, false, new boolean[]{false}))
@@ -742,162 +741,162 @@ public class BlockRegister
             .register();*/
 
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_CAST_IRON_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("unbored_cast_iron_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_BRONZE_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("unbored_bronze_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_STEEL_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("unbored_steel_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> UNBORED_CAST_IRON_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_cast_iron_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::castIronTwinAutocannonBarrel, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> UNBORED_BRONZE_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_bronze_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::bronzeTwinAutocannonBarrel, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> UNBORED_STEEL_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_steel_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::steelTwinAutocannonBarrel, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> UNBORED_CAST_IRON_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("unbored_cast_iron_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> UNBORED_BRONZE_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("unbored_bronze_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> UNBORED_STEEL_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("unbored_steel_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
 
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_CAST_IRON_VERT_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("unbored_cast_iron_vert_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_BRONZE_VERT_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("unbored_bronze_vert_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_STEEL_VERT_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("unbored_steel_vert_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> UNBORED_CAST_IRON_VERT_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_cast_iron_vert_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::castIronVertTwinAutocannonBarrel, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> UNBORED_BRONZE_VERT_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_bronze_vert_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::bronzeVertTwinAutocannonBarrel, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonRecoilSpringBlock> UNBORED_STEEL_VERT_TWIN_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_steel_vert_twin_autocannon_recoil_spring", p -> new TwinAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::steelVertTwinAutocannonBarrel, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> UNBORED_CAST_IRON_VERT_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("unbored_cast_iron_vert_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> UNBORED_BRONZE_VERT_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("unbored_bronze_vert_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBreechBlock> UNBORED_STEEL_VERT_TWIN_AUTOCANNON_BREECH = REGISTRATE.block("unbored_steel_vert_twin_autocannon_breech", p -> new TwinAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_CAST_IRON_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_cast_iron_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false, 5))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_BRONZE_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_bronze_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false, 5))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_STEEL_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_steel_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false, 5))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_CAST_IRON_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_cast_iron_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_BRONZE_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_bronze_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_STEEL_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_steel_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_CAST_IRON_VERT_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_cast_iron_vert_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, true, 5))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_BRONZE_VERT_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_bronze_vert_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, true, 5))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_STEEL_VERT_TWIN_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_steel_vert_twin_autocannon_silencer", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, true, 5f))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_CAST_IRON_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_cast_iron_vert_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_BRONZE_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_bronze_vert_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<TwinAutocannonBarrelBlock> UNBORED_STEEL_VERT_TWIN_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_steel_vert_twin_autocannon_muzzle_brake", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, true, false))
-            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(TwinAutocannonBlockItem<TwinAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
 
     public static final BlockEntry<SpecialAutocannonBarrel> UNBORED_CAST_IRON_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_cast_iron_autocannon_silencer", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.CAST_IRON, 5))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> UNBORED_BRONZE_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_bronze_autocannon_silencer", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.BRONZE, 5))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> UNBORED_STEEL_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_steel_autocannon_silencer", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.STEEL, 5))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> UNBORED_CAST_IRON_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_cast_iron_autocannon_muzzle_brake", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.CAST_IRON, false))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> UNBORED_BRONZE_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_bronze_autocannon_muzzle_brake", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.BRONZE, false))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<SpecialAutocannonBarrel> UNBORED_STEEL_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_steel_autocannon_muzzle_brake", p -> new SpecialAutocannonBarrel(p, CBCAutocannonMaterials.STEEL, false))
-            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(AutocannonBlockItem<SpecialAutocannonBarrel>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
 
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_BARREL = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_barrel", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_BARREL = REGISTRATE.block("unbored_bronze_heavy_autocannon_barrel", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_BARREL = REGISTRATE.block("unbored_steel_heavy_autocannon_barrel", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     /*public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_CHAMBER = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_chamber", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, true, false))
@@ -913,63 +912,63 @@ public class BlockRegister
             .transform(cannonBlock(false))
             .register();*/
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_muzzle_brake", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_bronze_heavy_autocannon_muzzle_brake", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_MUZZLE_BRAKE = REGISTRATE.block("unbored_steel_heavy_autocannon_muzzle_brake", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_silencer", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, false, 5))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_bronze_heavy_autocannon_silencer", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.BRONZE, false, 5))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonBarrelBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_SILENCER = REGISTRATE.block("unbored_steel_heavy_autocannon_silencer", p -> new HeavyAutocannonBarrelBlock(p, CBCAutocannonMaterials.STEEL, false, 5))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBarrelBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock())
             .register();
     public static final BlockEntry<HeavyAutocannonRecoilSpringBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_recoil_spring", p -> new HeavyAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::castIronVertTwinAutocannonBarrel, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonRecoilSpringBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_bronze_heavy_autocannon_recoil_spring", p -> new HeavyAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.BRONZE, BlockRegister::bronzeHeavyAutocannonBarrel, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonRecoilSpringBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_RECOIL_SPRING = REGISTRATE.block("unbored_steel_heavy_autocannon_recoil_spring", p -> new HeavyAutocannonRecoilSpringBlock(p, CBCAutocannonMaterials.STEEL, BlockRegister::steelHeavyAutocannonBarrel, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonRecoilSpringBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_BREECH = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_breech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_BREECH = REGISTRATE.block("unbored_bronze_heavy_autocannon_breech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_BREECH = REGISTRATE.block("unbored_steel_heavy_autocannon_breech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_qfbreech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_bronze_heavy_autocannon_qfbreech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
     public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_steel_heavy_autocannon_qfbreech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
 
@@ -1047,7 +1046,7 @@ public class BlockRegister
                         .condition(CannonCastMouldBlock.SAND, true)
                         .end())
                 .item()
-                .tab(TabRegister.SIMPLE_TAB.getKey())
+                /*.tab(TabRegister.SIMPLE_TAB.getKey())*/
                 .model((c, p) -> p.getBuilder(c.getName()).parent(p.getExistingFile(baseLoc)))
                 .build();
     }
@@ -1088,7 +1087,7 @@ public class BlockRegister
                 .properties(p -> isCreative ? p.rarity(Rarity.EPIC) : p)
                 .tag(CBCTags.CBCItemTags.AUTOCANNON_AMMO_CONTAINERS)
                 .model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/autocannon_ammo_containers/" + root)))
-                .tab(TabRegister.SIMPLE_TAB.getKey())
+                /*.tab(TabRegister.SIMPLE_TAB.getKey())*/
                 .build();
     }
 }

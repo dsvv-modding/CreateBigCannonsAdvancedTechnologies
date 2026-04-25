@@ -1,16 +1,15 @@
 package com.dsvv.cbcat.cartridge;
 
-import com.dsvv.cbcat.registry.ExtraDataRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.foundation.block.IBE;
 import com.tterrag.registrate.util.entry.EntityEntry;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
@@ -22,7 +21,7 @@ import rbasamoyai.createbigcannons.munitions.big_cannon.*;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ProjectileCartridgeBlock extends InertProjectileBlock implements ProjectileCartridge, IBE<BigCannonProjectileBlockEntity>, BigCannonMunitionBlock
+public class ProjectileCartridgeBlock extends InertProjectileBlock implements IProjectileCartridgeBlock, IBE<BigCannonProjectileBlockEntity>, BigCannonMunitionBlock
 {
     private boolean used;
     private boolean multipleCharges = true;
@@ -38,6 +37,7 @@ public class ProjectileCartridgeBlock extends InertProjectileBlock implements Pr
         used = false;
         projectileEntityEntry = entityType;
         this.name = name;
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public ProjectileCartridgeBlock(Properties properties, EntityEntry<? extends AbstractBigCannonProjectile> entityType, String name, boolean multipleCharges)
@@ -45,6 +45,14 @@ public class ProjectileCartridgeBlock extends InertProjectileBlock implements Pr
         this(properties, entityType, name);
         this.multipleCharges = multipleCharges;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private ProjectileCartridgeBlock fromSelf(Properties properties) {
+        return new ProjectileCartridgeBlock(properties, this.projectileEntityEntry, name);
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
@@ -80,7 +88,7 @@ public class ProjectileCartridgeBlock extends InertProjectileBlock implements Pr
         return data.state().getValue(FACING) == dir;
     }
 
-    public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
+    /*public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
     {
         BlockState state = this.defaultBlockState().setValue(FACING, cannonOrientation);
         CompoundTag tag = new CompoundTag();
@@ -105,7 +113,7 @@ public class ProjectileCartridgeBlock extends InertProjectileBlock implements Pr
         }
         System.out.println(stack.isEmpty());
         return stack;
-    }
+    }*/
 
     public int getMaximumPowerLevels()
     {

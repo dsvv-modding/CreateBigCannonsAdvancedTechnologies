@@ -6,9 +6,9 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/6d1c8bf4c28e697f472a83bd6add76ec4951734/mixin-0.8.5-processor.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-common/0.5.0-rc.3/247922815d51788605ba93aa1efbf87f0352627c/mixinextras-common-0.5.0-rc.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-common/0.5.4/626e00b72e3879a07e6653d8015cd3466ff5b75/mixinextras-common-0.5.4.jar" />
         </processorPath>
-        <module name="0.1.2b-1.20.1.CBCAT.main" />
+        <module name="0.1.4-1.21.1.CBCAT.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

@@ -1,0 +1,13 @@
+{
+  "type": "createbigcannons:built_up_heating",
+  "layers": [
+    { "type": "block",
+      "block": "cbc_at:nethersteel_rifled_barrel"
+    },
+    {
+      "type": "block",
+      "block": "createbigcannons:small_nethersteel_cannon_layer"
+    }
+  ],
+  "result": "cbc_at:built_up_nethersteel_rifled_barrel"
+}

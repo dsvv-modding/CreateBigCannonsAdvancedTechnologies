@@ -4,12 +4,9 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.IHeavyAutocannonBreechBE;
 import com.dsvv.cbcat.cannon.heavy_autocannon.breech.HeavyAutocannonBreechBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonCartridgeItem;
-import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
-import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.charges.HeavyAutocannonPowderCharge;
-import com.dsvv.cbcat.registry.ItemRegister;
-import com.simibubi.create.content.contraptions.Contraption;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
@@ -20,17 +17,14 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.AnimatedAutocannon;
-import rbasamoyai.createbigcannons.config.CBCConfigs;
 
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.dsvv.cbcat.debugUtils.DebugUtils.displayCustomClientMessage;
 import static rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock.writeAndSyncSingleBlockData;
 
 public class HeavyAutocannonQuickFireBreechBlockEntity extends HeavyAutocannonBlockEntity implements AnimatedAutocannon, IHeavyAutocannonBreechBE
@@ -43,48 +37,35 @@ public class HeavyAutocannonQuickFireBreechBlockEntity extends HeavyAutocannonBl
     private float openProgress = 0;
     private final int openLimit = 3;
 
-    private final Deque<ItemStack> inputBuffer = new LinkedList<>();
-    private ItemStack outputBuffer = ItemStack.EMPTY;
-
     private ItemStack cartridge = ItemStack.EMPTY;
-    //private ItemStack projectile = ItemStack.EMPTY;
-    //private int charges = 0;
-    //private int saveCharges = 0;
 
     public HeavyAutocannonQuickFireBreechBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 
-    public int getQueueLimit() { return 5; }
-
-    public Deque<ItemStack> getInputBuffer() { return this.inputBuffer; }
-    public ItemStack getOutputBuffer() { return this.outputBuffer; }
-    public void setOutputBuffer(ItemStack stack) { this.outputBuffer = stack; }
-
     @Override
     public void tick() {
         super.tick();
-        this.allTick(this.getLevel());
+        this.allTick();
     }
 
     @Override
     public void tickFromContraption(Level level, PitchOrientedContraptionEntity poce, BlockPos localPos) {
         super.tickFromContraption(level, poce, localPos);
-        this.allTick(level);
+        this.allTick();
 
         if (openProgress < openLimit && isOpen)
             openProgress++;
         else if (openProgress > 0 && !isOpen)
             openProgress--;
 
-        if (!level.isClientSide && this.updateInstance) {
-            this.updateInstance = false;
-            Contraption contraption = poce.getContraption();
-            writeAndSyncSingleBlockData(this, contraption.getBlocks().get(localPos), poce, contraption);
+        if (level.isClientSide && poce.getContraption().getBlockEntityClientSide(localPos) instanceof HeavyAutocannonQuickFireBreechBlockEntity cbe) {
+            cbe.allTick();
+            cbe.openProgress = this.openProgress;
         }
     }
 
-    private void allTick(Level level) {
+    private void allTick() {
         if (this.fireRate < 0 || this.fireRate > 15) this.fireRate = 0;
 
         if (this.animateTicks < 5) ++this.animateTicks;
@@ -124,26 +105,6 @@ public class HeavyAutocannonQuickFireBreechBlockEntity extends HeavyAutocannonBl
     @Override public void incrementAnimationTicks() { ++this.animateTicks; }
     @Override public int getAnimationTicks() { return this.animateTicks; }
 
-    /*public void setMaxCharges(int maxCharges) {
-        this.saveCharges = maxCharges;
-    }
-
-    public void addCharge() {
-        this.charges++;
-    }
-
-    public boolean isSaveLoad() {
-        return (saveCharges >= charges && cartridge.isEmpty() ^ projectile.isEmpty());
-    }
-
-    public void setProjectile(ItemStack projectile) {
-        this.projectile = projectile;
-    }
-
-    public float getCharge() {
-        return charges;
-    }*/
-
     public void setCartridge(ItemStack cartridge) {
         this.cartridge = cartridge;
     }
@@ -156,91 +117,46 @@ public class HeavyAutocannonQuickFireBreechBlockEntity extends HeavyAutocannonBl
 
     public void shoot(ItemStack eject) {
         this.cartridge = eject;
-        //this.projectile = ItemStack.EMPTY;
-        //this.charges = 0;
     }
 
     @Override
-    protected void read(CompoundTag tag, boolean clientPacket) {
-        super.read(tag, clientPacket);
+    protected void read(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
+        super.read(tag, provider, clientPacket);
         this.fireRate = tag.getInt("FiringRate");
         this.firingCooldown = tag.getInt("Cooldown");
         this.animateTicks = tag.getInt("AnimateTicks");
-        this.outputBuffer = tag.contains("Output") ? ItemStack.of(tag.getCompound("Output")) : ItemStack.EMPTY;
         this.isOpen = tag.getBoolean("Open");
         this.openProgress = tag.getFloat("OpenProgress");
-        this.cartridge = ItemStack.of(tag.getCompound("Cartridge"));
-
-        this.inputBuffer.clear();
-        ListTag inputTag = tag.getList("Input", Tag.TAG_COMPOUND);
-        for (int i = 0; i < inputTag.size(); ++i) {
-            this.inputBuffer.add(ItemStack.of(inputTag.getCompound(i)));
-        }
-        //this.projectile = ItemStack.of(tag.getCompound("Projectile"));
-        //this.saveCharges = tag.getInt("SaveCharges");
-        //his.charges = tag.getInt("Charges");
+        this.cartridge = ItemStack.parseOptional(provider, tag.getCompound("Cartridge"));
 
         if (!clientPacket) return;
         this.updateInstance = tag.contains("UpdateInstance");
     }
 
     @Override
-    protected void write(CompoundTag tag, boolean clientPacket) {
-        super.write(tag, clientPacket);
+    protected void write(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
+        super.write(tag, provider, clientPacket);
         tag.putInt("FiringRate", this.fireRate);
         tag.putInt("Cooldown", this.firingCooldown);
         tag.putInt("AnimateTicks", this.animateTicks);
-        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(new CompoundTag()));
         tag.putBoolean("Open", isOpen);
         tag.putFloat("OpenProgress", openProgress);
-        tag.put("Cartridge", this.cartridge.save(new CompoundTag()));
-
-        if (!this.inputBuffer.isEmpty()) {
-            tag.put("Input", this.inputBuffer.stream()
-                    .map(s -> s.save(new CompoundTag()))
-                    .collect(Collectors.toCollection(ListTag::new)));
-        }
-        //tag.put("Projectile", projectile.getOrCreateTag());
-        //tag.putInt("SaveCharges", saveCharges);
-        //tag.putInt("Charges", charges);
+        tag.put("Cartridge", this.cartridge.saveOptional(provider));
 
         if (!clientPacket) return;
         if (this.updateInstance) tag.putBoolean("UpdateInstance", true);
     }
 
-    /*public boolean isInputFull() { return this.inputBuffer.size() >= this.getQueueLimit() || !this.magazine.isEmpty(); }
-    public boolean isOutputFull() { return !this.outputBuffer.isEmpty(); }
-
-    public ItemStack insertOutput(ItemStack stack) {
-        if (stack.isEmpty()) return ItemStack.EMPTY;
-        if (this.isOutputFull()) return stack;
-        this.outputBuffer = stack;
-        return ItemStack.EMPTY;
-    }*/
-
     public ItemStack extractNextInput() {
-        //displayCustomClientMessage(cartridge.toString());
         ItemStack cart = cartridge.copy();
         cartridge = ItemStack.EMPTY;
-        return cart;//!projectile.isEmpty() ? projectile : cartridge;
-        /*if (!this.inputBuffer.isEmpty()) return this.inputBuffer.poll();
-        if (this.magazine.isEmpty()) return ItemStack.EMPTY;
-        int totalCount = HeavyAutocannonAmmoContainerItem.getTotalAmmoCount(this.magazine);
-        if (totalCount == 0) return ItemStack.EMPTY;
-        if (totalCount == 1) this.updateInstance = true;
-        return HeavyAutocannonAmmoContainerItem.pollItemFromContainer(this.magazine);*/
+        return cart;
     }
 
     @Override
     public List<ItemStack> getDrops() {
         List<ItemStack> list = super.getDrops();
-        for (ItemStack s : this.inputBuffer) {
-            if (!s.isEmpty()) list.add(s.copy());
-        }
-        if (!this.outputBuffer.isEmpty()) list.add(this.outputBuffer.copy());
         if (this.cartridge != ItemStack.EMPTY) list.add(this.cartridge.copy());
-        //if (this.projectile != ItemStack.EMPTY) list.add(projectile);
-        //if (charges > 0) list.add(new ItemStack(ItemRegister.HEAVY_AUTOCANNON_POWDER_CHARGE, charges));
         return list;
     }
 

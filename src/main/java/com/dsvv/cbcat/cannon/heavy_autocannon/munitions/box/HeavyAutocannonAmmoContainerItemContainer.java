@@ -1,10 +1,13 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box;
 
+import com.google.common.collect.Lists;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemContainerContents;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 
 public class HeavyAutocannonAmmoContainerItemContainer implements IHeavyAutocannonAmmoContainerContainer {
     private final ItemStack stack;
@@ -22,7 +25,7 @@ public class HeavyAutocannonAmmoContainerItemContainer implements IHeavyAutocann
         ItemStack ammo = this.getItem(slot);
         if (ammo.isEmpty()) return ItemStack.EMPTY;
         ItemStack split = ammo.split(amount);
-        this.stack.getOrCreateTag().put(slot == AMMO_SLOT ? "Ammo" : "Tracers", ammo.save(new CompoundTag()));
+        this.stack.set(slot == AMMO_SLOT ? CBCDataComponents.AMMO : CBCDataComponents.TRACERS, ItemContainerContents.fromItems(Lists.newArrayList(ammo)));
         this.setChanged();
         return split;
     }
@@ -31,14 +34,14 @@ public class HeavyAutocannonAmmoContainerItemContainer implements IHeavyAutocann
     public ItemStack removeItemNoUpdate(int slot) {
         if (slot != 0 && slot != 1) return ItemStack.EMPTY;
         ItemStack ret = this.getItem(slot);
-        this.stack.getOrCreateTag().put(slot == AMMO_SLOT ? "Ammo" : "Tracers", ItemStack.EMPTY.save(new CompoundTag()));
+        this.stack.set(slot == AMMO_SLOT ? CBCDataComponents.AMMO : CBCDataComponents.TRACERS, ItemContainerContents.EMPTY);
         return ret;
     }
 
     @Override
     public void setItem(int slot, ItemStack stack) {
         if (slot != 0 && slot != 1) return;
-        this.stack.getOrCreateTag().put(slot == AMMO_SLOT ? "Ammo" : "Tracers", stack.save(new CompoundTag()));
+        this.stack.set(slot == AMMO_SLOT ? CBCDataComponents.AMMO : CBCDataComponents.TRACERS, ItemContainerContents.fromItems(Lists.newArrayList(stack)));
         this.setChanged();
     }
 
@@ -51,9 +54,8 @@ public class HeavyAutocannonAmmoContainerItemContainer implements IHeavyAutocann
 
     @Override
     public void clearContent() {
-        CompoundTag tag = this.stack.getOrCreateTag();
-        tag.put("Ammo", ItemStack.EMPTY.save(new CompoundTag()));
-        tag.put("Tracers", ItemStack.EMPTY.save(new CompoundTag()));
+        this.stack.set(CBCDataComponents.AMMO, ItemContainerContents.EMPTY);
+        this.stack.set(CBCDataComponents.TRACERS, ItemContainerContents.EMPTY);
     }
 
     @Override

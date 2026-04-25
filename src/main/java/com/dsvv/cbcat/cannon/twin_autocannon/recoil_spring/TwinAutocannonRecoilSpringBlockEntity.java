@@ -2,6 +2,7 @@ package com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring;
 
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.NbtUtils;
@@ -39,6 +40,9 @@ public class TwinAutocannonRecoilSpringBlockEntity extends TwinAutocannonBlockEn
     public void tickFromContraption(Level level, PitchOrientedContraptionEntity poce, BlockPos localPos) {
         super.tickFromContraption(level, poce, localPos);
         this.allTick();
+        if (level.isClientSide && poce.getContraption().getBlockEntityClientSide(localPos) instanceof TwinAutocannonRecoilSpringBlockEntity cbe) {
+            cbe.allTick();
+        }
     }
 
     private void allTick() {
@@ -59,8 +63,8 @@ public class TwinAutocannonRecoilSpringBlockEntity extends TwinAutocannonBlockEn
     }
 
     @Override
-    protected void write(CompoundTag tag, boolean clientPacket) {
-        super.write(tag, clientPacket);
+    protected void write(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
+        super.write(tag, provider, clientPacket);
 
         tag.putInt("AnimateTicks", this.animateTicks);
 
@@ -76,8 +80,8 @@ public class TwinAutocannonRecoilSpringBlockEntity extends TwinAutocannonBlockEn
     }
 
     @Override
-    protected void read(CompoundTag tag, boolean clientPacket) {
-        super.read(tag, clientPacket);
+    protected void read(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
+        super.read(tag, provider, clientPacket);
 
         this.animateTicks = tag.getInt("AnimateTicks");
 
@@ -85,7 +89,7 @@ public class TwinAutocannonRecoilSpringBlockEntity extends TwinAutocannonBlockEn
         ListTag renderedList = tag.getList("RenderedBlocks", Tag.TAG_COMPOUND);
         for (int i = 0; i < renderedList.size(); ++i) {
             CompoundTag block = renderedList.getCompound(i);
-            this.toAnimate.put(NbtUtils.readBlockPos(block.getCompound("Pos")),
+            this.toAnimate.put(NbtUtils.readBlockPos(block, "Pos").get(),
                     NbtUtils.readBlockState(this.blockHolderGetter(), block.getCompound("Block")));
         }
     }

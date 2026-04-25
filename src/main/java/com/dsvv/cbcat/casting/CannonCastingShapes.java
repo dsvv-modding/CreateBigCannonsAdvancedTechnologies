@@ -49,7 +49,7 @@ public class CannonCastingShapes
 
     private static CannonCastShape register(String name, CannonCastShape shape)
     {
-        return Registry.register(CBCRegistries.cannonCastShapes(), new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name), shape);
+        return Registry.register(CBCRegistries.cannonCastShapes(), ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, name), shape);
     }
 
     public static void register(){

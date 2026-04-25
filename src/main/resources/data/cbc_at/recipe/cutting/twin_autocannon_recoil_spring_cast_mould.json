@@ -1,0 +1,13 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    }
+  ],
+  "results": [
+    {
+      "id": "cbc_at:twin_autocannon_recoil_spring_mould"
+    }
+  ]
+}

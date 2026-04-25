@@ -3,10 +3,9 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.breech;
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.IHeavyAutocannonBreechBE;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
-import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonInventoryHandler;
-import com.simibubi.create.content.contraptions.Contraption;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
@@ -17,17 +16,14 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.AnimatedAutocannon;
-//import rbasamoyai.createbigcannons.munitions.autocannon.ammo_container.AutocannonAmmoContainerItem;
 
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock.writeAndSyncSingleBlockData;
 
 public class HeavyAutocannonBreechBlockEntity extends HeavyAutocannonBlockEntity implements AnimatedAutocannon, IHeavyAutocannonBreechBE
 {
@@ -79,21 +75,19 @@ public class HeavyAutocannonBreechBlockEntity extends HeavyAutocannonBlockEntity
     @Override
     public void tick() {
         super.tick();
-        this.allTick(this.getLevel());
+        this.allTick();
     }
 
     @Override
     public void tickFromContraption(Level level, PitchOrientedContraptionEntity poce, BlockPos localPos) {
         super.tickFromContraption(level, poce, localPos);
-        this.allTick(level);
-        if (!level.isClientSide && this.updateInstance) {
-            this.updateInstance = false;
-            Contraption contraption = poce.getContraption();
-            writeAndSyncSingleBlockData(this, contraption.getBlocks().get(localPos), poce, contraption);
+        this.allTick();
+        if (level.isClientSide && poce.getContraption().getBlockEntityClientSide(localPos) instanceof HeavyAutocannonBreechBlockEntity cbe) {
+            cbe.allTick();
         }
     }
 
-    private void allTick(Level level) {
+    private void allTick() {
         if (this.fireRate < 0 || this.fireRate > 15) this.fireRate = 0;
         if (this.firingCooldown < 0) this.firingCooldown = 0;
         if (this.firingCooldown > 0) this.firingCooldown--;
@@ -133,38 +127,38 @@ public class HeavyAutocannonBreechBlockEntity extends HeavyAutocannonBlockEntity
     @Override public int getAnimationTicks() { return this.animateTicks; }
 
     @Override
-    protected void read(CompoundTag tag, boolean clientPacket) {
-        super.read(tag, clientPacket);
+    protected void read(CompoundTag tag, HolderLookup.Provider registry, boolean clientPacket) {
+        super.read(tag, registry, clientPacket);
         this.fireRate = tag.getInt("FiringRate");
         this.firingCooldown = tag.getInt("Cooldown");
         this.animateTicks = tag.getInt("AnimateTicks");
-        this.outputBuffer = tag.contains("Output") ? ItemStack.of(tag.getCompound("Output")) : ItemStack.EMPTY;
+        this.outputBuffer = tag.contains("Output") ? ItemStack.parseOptional(registry, tag.getCompound("Output")) : ItemStack.EMPTY;
 
         this.inputBuffer.clear();
         ListTag inputTag = tag.getList("Input", Tag.TAG_COMPOUND);
         for (int i = 0; i < inputTag.size(); ++i) {
-            this.inputBuffer.add(ItemStack.of(inputTag.getCompound(i)));
+            this.inputBuffer.add(ItemStack.parseOptional(registry, inputTag.getCompound(i)));
         }
-        this.magazine = tag.contains("Magazine") ? ItemStack.of(tag.getCompound("Magazine")) : ItemStack.EMPTY;
+        this.magazine = tag.contains("Magazine") ? ItemStack.parseOptional(registry, tag.getCompound("Magazine")) : ItemStack.EMPTY;
 
         if (!clientPacket) return;
         this.updateInstance = tag.contains("UpdateInstance");
     }
 
     @Override
-    protected void write(CompoundTag tag, boolean clientPacket) {
-        super.write(tag, clientPacket);
+    protected void write(CompoundTag tag, HolderLookup.Provider registry, boolean clientPacket) {
+        super.write(tag, registry, clientPacket);
         tag.putInt("FiringRate", this.fireRate);
         tag.putInt("Cooldown", this.firingCooldown);
         tag.putInt("AnimateTicks", this.animateTicks);
-        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(new CompoundTag()));
+        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.saveOptional(registry));
 
         if (!this.inputBuffer.isEmpty()) {
             tag.put("Input", this.inputBuffer.stream()
-                    .map(s -> s.save(new CompoundTag()))
+                    .map(s -> s.save(registry))
                     .collect(Collectors.toCollection(ListTag::new)));
         }
-        if (this.magazine != null && !this.magazine.isEmpty()) tag.put("Magazine", this.magazine.save(new CompoundTag()));
+        if (this.magazine != null && !this.magazine.isEmpty()) tag.put("Magazine", this.magazine.save(registry));
 
         if (!clientPacket) return;
         if (this.updateInstance) tag.putBoolean("UpdateInstance", true);

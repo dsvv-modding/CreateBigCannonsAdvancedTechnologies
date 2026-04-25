@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:ingots/cast_iron"
+    },
+    "D": {
+      "tag": "c:nuggets/iron"
+    },
+    "F": {
+      "tag": "c:nuggets/cast_iron"
+    }
+  },
+  "pattern": [
+    "DCD",
+    "DCD",
+    "FCF"
+  ],
+  "result": {
+    "count": 2,
+    "id": "cbc_at:ha_apdsfs_item"
+  },
+  "show_notification": true
+}

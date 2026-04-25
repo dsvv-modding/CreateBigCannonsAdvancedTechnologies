@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "c:ingots/brass"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "I I",
+    "III"
+  ],
+  "result": {
+    "id": "cbc_at:heavy_autocannon_ammo_box"
+  },
+  "show_notification": true
+}

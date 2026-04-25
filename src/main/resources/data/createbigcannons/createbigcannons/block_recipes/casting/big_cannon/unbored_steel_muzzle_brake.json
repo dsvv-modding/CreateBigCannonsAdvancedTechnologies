@@ -1,0 +1,8 @@
+{
+  "type": "createbigcannons:cannon_casting",
+  "cast_shape": "cbc_at:muzzle_brake_mould",
+  "fluid": {
+    "tag": "c:molten_steel"
+  },
+  "result": "cbc_at:unbored_steel_muzzle_brake"
+}

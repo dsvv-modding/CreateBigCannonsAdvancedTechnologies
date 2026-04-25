@@ -11,7 +11,6 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import rbasamoyai.createbigcannons.CreateBigCannons;
-import rbasamoyai.createbigcannons.cannon_control.cannon_types.CBCCannonContraptionTypes;
 import rbasamoyai.createbigcannons.cannon_control.cannon_types.CannonContraptionTypeRegistry;
 import rbasamoyai.createbigcannons.cannon_control.cannon_types.ICannonContraptionType;
 

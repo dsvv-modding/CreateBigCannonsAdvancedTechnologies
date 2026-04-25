@@ -17,6 +17,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -47,14 +48,14 @@ public class TwinAutocannonBarrelBlock extends TwinAutocannonBaseBlock implement
     protected TwinAutocannonBarrelBlock(Properties properties, AutocannonMaterial material, boolean vertical) {
         super(properties, material, vertical);
         this.registerDefaultState(this.defaultBlockState().setValue(BARREL_END, AutocannonBarrelBlock.AutocannonBarrelEnd.NOTHING).setValue(ASSEMBLED, false));
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public TwinAutocannonBarrelBlock(Properties properties, AutocannonMaterial material, boolean vertical, float volumeMultiplier) {
-        super(properties, material, vertical);
+        this(properties, material, vertical);
         this.volumeMultiplier = volumeMultiplier > 0 ? volumeMultiplier : 1;
         if (volumeMultiplier > 1)
             isComplete = false;
-        this.registerDefaultState(this.defaultBlockState().setValue(BARREL_END, AutocannonBarrelBlock.AutocannonBarrelEnd.NOTHING).setValue(ASSEMBLED, false));
     }
 
     public TwinAutocannonBarrelBlock(Properties properties, AutocannonMaterial material, BiFunction<Direction, AutocannonBarrelBlock.AutocannonBarrelEnd, BlockState> instance, boolean vertical) {
@@ -73,6 +74,15 @@ public class TwinAutocannonBarrelBlock extends TwinAutocannonBaseBlock implement
         this.isComplete = isComplete;
     }
 
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private TwinAutocannonBarrelBlock fromSelf(Properties properties) {
+        return new TwinAutocannonBarrelBlock(properties, this.getAutocannonMaterial(), this.vertical);
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(ASSEMBLED).add(BARREL_END);
         super.createBlockStateDefinition(builder);
@@ -163,7 +173,7 @@ public class TwinAutocannonBarrelBlock extends TwinAutocannonBaseBlock implement
 
     @Override public BlockState getMovingState(BlockState original) {
         BlockState instance = instanceFunc.apply(this.getFacing(original), original.getValue(BARREL_END));
-        instance.setValue(ASSEMBLED, false).setValue(AutocannonBarrelBlock.BARREL_END, original.getValue(BARREL_END));
+        instance.setValue(AutocannonBarrelBlock.ASSEMBLED, false).setValue(AutocannonBarrelBlock.BARREL_END, original.getValue(BARREL_END));
         return instance;
     }
     @Override public BlockState getStationaryState(BlockState original) { return original.setValue(ASSEMBLED, true); }

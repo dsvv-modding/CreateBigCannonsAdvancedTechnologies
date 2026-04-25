@@ -1,6 +1,0 @@
-{
-  "type": "createbigcannons:drill_boring",
-  "input": "cbc_at:unbored_bronze_silencer",
-  "result": "cbc_at:bronze_silencer",
-  "obey_facing_or_axis": true
-}

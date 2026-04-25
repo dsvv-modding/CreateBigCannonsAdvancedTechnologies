@@ -5,12 +5,14 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBaseBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.block.IBE;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -30,6 +32,7 @@ public class HeavyAutocannonRecoilSpringBlock extends HeavyAutocannonBaseBlock i
     public HeavyAutocannonRecoilSpringBlock(Properties properties, AutocannonMaterial material, NonNullFunction<Direction, BlockState> movingBlockFunction) {
         super(properties, material);
         this.movingBlockFunction = movingBlockFunction;
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public HeavyAutocannonRecoilSpringBlock(Properties properties, AutocannonMaterial material, NonNullFunction<Direction, BlockState> movingBlockFunction, boolean isComplete)
@@ -37,6 +40,14 @@ public class HeavyAutocannonRecoilSpringBlock extends HeavyAutocannonBaseBlock i
         this(properties, material, movingBlockFunction);
         this.isComplete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private HeavyAutocannonRecoilSpringBlock fromSelf(Properties properties) {
+        return new HeavyAutocannonRecoilSpringBlock(properties, this.getAutocannonMaterial(), this.movingBlockFunction);
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     @Override
     public Class<HeavyAutocannonRecoilSpringBlockEntity> getBlockEntityClass() {

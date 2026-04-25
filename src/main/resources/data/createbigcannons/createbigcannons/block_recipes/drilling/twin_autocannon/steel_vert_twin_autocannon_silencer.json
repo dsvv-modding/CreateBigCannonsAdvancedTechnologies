@@ -1,0 +1,8 @@
+{
+  "type": "createbigcannons:drill_boring",
+  "input": {
+    "type": "block",
+    "block": "cbc_at:unbored_steel_vert_twin_autocannon_silencer"
+  },
+  "result": "cbc_at:steel_vert_twin_autocannon_silencer"
+}

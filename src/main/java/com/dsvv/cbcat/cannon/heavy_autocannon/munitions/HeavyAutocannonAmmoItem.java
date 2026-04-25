@@ -1,5 +1,6 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.munitions;
 
+import com.dsvv.cbcat.registry.DataComponentRegistry;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -22,8 +23,8 @@ public interface HeavyAutocannonAmmoItem {
     HeavyAutocannonAmmoType getType();
 
     default boolean isStrong(ItemStack stack) {
-        if (stack.getOrCreateTag().contains("Strong"))
-            return stack.getTag().getBoolean("Strong");
+        if (stack.has(DataComponentRegistry.HA_STRONG_ROUND))
+            return stack.get(DataComponentRegistry.HA_STRONG_ROUND);
         return false;
     }
 }

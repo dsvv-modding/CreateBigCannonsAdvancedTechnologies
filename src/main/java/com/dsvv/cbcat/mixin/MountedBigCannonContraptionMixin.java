@@ -2,22 +2,18 @@ package com.dsvv.cbcat.mixin;
 
 import com.dsvv.cbcat.base.CustomPropellantContext;
 import com.dsvv.cbcat.base.IBigCannonBlockPhysics;
-import com.dsvv.cbcat.base.SaveAssemble;
-import com.dsvv.cbcat.cartridge.ProjectileCartridge;
+import com.dsvv.cbcat.cartridge.IProjectileCartridgeBlock;
 import com.dsvv.cbcat.config.CBCATConfigs;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import org.jetbrains.annotations.Nullable;
 import org.objectweb.asm.Opcodes;
@@ -27,14 +23,13 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import rbasamoyai.createbigcannons.cannon_control.contraption.AbstractMountedCannonContraption;
 import rbasamoyai.createbigcannons.cannon_control.contraption.MountedBigCannonContraption;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBehavior;
-import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock;
 import rbasamoyai.createbigcannons.cannons.big_cannons.IBigCannonBlockEntity;
 import rbasamoyai.createbigcannons.cannons.big_cannons.material.BigCannonMaterial;
+import rbasamoyai.createbigcannons.config.CBCConfigs;
 import rbasamoyai.createbigcannons.effects.particles.explosions.CannonBlastWaveEffectParticleData;
 import rbasamoyai.createbigcannons.munitions.big_cannon.AbstractBigCannonProjectile;
 import rbasamoyai.createbigcannons.munitions.big_cannon.ProjectileBlock;
@@ -42,8 +37,6 @@ import rbasamoyai.createbigcannons.munitions.big_cannon.propellant.BigCannonProp
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.dsvv.cbcat.debugUtils.DebugUtils.displayCustomClientMessage;
 
 @Mixin(MountedBigCannonContraption.class)
 public abstract class MountedBigCannonContraptionMixin extends AbstractMountedCannonContraption
@@ -77,7 +70,7 @@ public abstract class MountedBigCannonContraptionMixin extends AbstractMountedCa
             Block block = containedBlockInfo.state().getBlock();
 
             if (containedBlockInfo.state().isAir()) {
-            } else if (block instanceof ProjectileCartridge projCart) {
+            } else if (block instanceof IProjectileCartridgeBlock projCart) {
                 allowsMultipleCharges = projCart.allowsMultipleCharges();
                 if(!allowsMultipleCharges && propelCtx.chargesUsed > 0)
                     propelCtx.isDoomedToFail();
@@ -153,14 +146,6 @@ public abstract class MountedBigCannonContraptionMixin extends AbstractMountedCa
         }
         else {
             return new CannonBlastWaveEffectParticleData(blastRadius, soundEvent, soundSource, volume, pitch, airAbsorption, power);
-        }
-    }
-
-    @Inject(method = "isConnectedToCannon(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lrbasamoyai/createbigcannons/cannons/big_cannons/material/BigCannonMaterial;)Z",
-    at = @At("HEAD"), cancellable = true, remap = false)
-    private void canConnect(LevelAccessor level, BlockState state, BlockPos pos, Direction connection, BigCannonMaterial material, CallbackInfoReturnable<Boolean> cir) {
-        if (state.getBlock() instanceof SaveAssemble && state.getBlock() instanceof BigCannonBlock cannonBlock) {
-            cir.setReturnValue(cannonBlock.canConnectToSide(state, connection));
         }
     }
 }

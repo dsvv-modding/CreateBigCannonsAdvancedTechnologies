@@ -1,6 +1,5 @@
 package com.dsvv.cbcat.cannon.twin_autocannon.breech;
 
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
 import com.mojang.math.Axis;
 import dev.engine_room.flywheel.api.instance.Instance;
 import dev.engine_room.flywheel.api.visualization.VisualizationContext;
@@ -16,13 +15,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import org.jetbrains.annotations.Nullable;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 import rbasamoyai.createbigcannons.index.CBCBlockPartials;
 import rbasamoyai.createbigcannons.munitions.autocannon.ammo_container.AutocannonAmmoContainerBlock;
 import rbasamoyai.createbigcannons.munitions.autocannon.ammo_container.AutocannonAmmoContainerItem;
 
+import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
 public class TwinAutocannonBreechInstance extends AbstractBlockEntityVisual<TwinAutocannonBreechBlockEntity> implements SimpleDynamicVisual
@@ -125,7 +124,7 @@ public class TwinAutocannonBreechInstance extends AbstractBlockEntityVisual<Twin
     }
 
     @Override
-    public void collectCrumblingInstances(Consumer<@Nullable Instance> consumer) {
+    public void collectCrumblingInstances(Consumer<Instance> consumer) {
         consumer.accept(ammoContainer);
         consumer.accept(seat);
     }

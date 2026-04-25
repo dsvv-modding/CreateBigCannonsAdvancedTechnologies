@@ -1,29 +1,27 @@
 package com.dsvv.cbcat.cartridge;
 
-import com.dsvv.cbcat.registry.ExtraDataRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.foundation.block.IBE;
 import com.tterrag.registrate.util.entry.EntityEntry;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBehavior;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock;
-import rbasamoyai.createbigcannons.index.CBCBlocks;
 import rbasamoyai.createbigcannons.index.CBCMunitionPropertiesHandlers;
 import rbasamoyai.createbigcannons.munitions.big_cannon.*;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> extends SimpleShellBlock<T> implements ProjectileCartridge, IBE<FuzedBlockEntity>, BigCannonMunitionBlock
+public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> extends SimpleShellBlock<T> implements IProjectileCartridgeBlock, IBE<FuzedBlockEntity>, BigCannonMunitionBlock
 {
     private boolean used;
     private boolean multipleCharges = true;
@@ -39,6 +37,7 @@ public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> e
         used = false;
         projectileEntityEntry = entityType;
         this.name = name;
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public FuzedProjectileCartridgeBlock(Properties properties, EntityEntry<? extends T> entityType, String name, boolean multipleCharges)
@@ -46,6 +45,14 @@ public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> e
         this(properties, entityType, name);
         this.multipleCharges = multipleCharges;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private FuzedProjectileCartridgeBlock<T> fromSelf(Properties properties) {
+        return new FuzedProjectileCartridgeBlock<T>(properties, this.projectileEntityEntry, name);
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
@@ -81,7 +88,7 @@ public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> e
         return data.state().getValue(FACING) == dir;
     }
 
-    public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
+    /*public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
     {
         BlockState state = this.defaultBlockState().setValue(FACING, cannonOrientation);
         CompoundTag tag = new CompoundTag();
@@ -112,7 +119,7 @@ public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> e
         }
         System.out.println(stack.isEmpty());
         return stack;
-    }
+    }*/
 
     public int getMaximumPowerLevels()
     {

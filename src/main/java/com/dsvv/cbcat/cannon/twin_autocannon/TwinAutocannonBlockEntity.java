@@ -1,16 +1,24 @@
 package com.dsvv.cbcat.cannon.twin_autocannon;
 
+import com.dsvv.cbcat.base.LeavesCannonBlockEntity;
+import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlock;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.Tag;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import rbasamoyai.createbigcannons.cannons.ItemCannonBehavior;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwinAutocannonBlockEntity
+public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwinAutocannonBlockEntity, LeavesCannonBlockEntity
 {
     private ItemCannonBehavior behavior;
 
@@ -26,6 +34,7 @@ public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwin
     @Override
     public void addBehaviours(List<BlockEntityBehaviour> behaviours) {
         behaviours.add(this.behavior = this.makeBehavior());
+        updateInstance = true;
     }
 
     protected ItemCannonBehavior makeBehavior() {

@@ -1,9 +1,11 @@
 package com.dsvv.cbcat.cannon;
 
 import com.dsvv.cbcat.base.CustomPropellantContext;
+import com.dsvv.cbcat.base.IBigCannonBlockPhysics;
 import com.dsvv.cbcat.base.SaveAssemble;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.block.IBE;
 import net.createmod.catnip.math.VoxelShaper;
@@ -11,6 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -18,11 +21,12 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBaseBlock;
+import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonTubeBlock;
 import rbasamoyai.createbigcannons.cannons.big_cannons.cannon_end.BigCannonEnd;
 import rbasamoyai.createbigcannons.cannons.big_cannons.material.BigCannonMaterial;
 import rbasamoyai.createbigcannons.crafting.casting.CannonCastShape;
 
-public class MuzzleBrakeBlock extends BigCannonBaseBlock implements IBE<MuzzleBrakeBlockEntity>, SaveAssemble
+public class MuzzleBrakeBlock extends BigCannonBaseBlock implements IBE<MuzzleBrakeBlockEntity>, IBigCannonBlockPhysics
 {
     public boolean complete = true;
     VoxelShaper shaper;
@@ -30,6 +34,7 @@ public class MuzzleBrakeBlock extends BigCannonBaseBlock implements IBE<MuzzleBr
     {
         super(properties, material);
         shaper = new AllShapes.Builder(makeShape()).forDirectional();
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public MuzzleBrakeBlock(Properties properties, BigCannonMaterial material, boolean isComplete)
@@ -37,6 +42,14 @@ public class MuzzleBrakeBlock extends BigCannonBaseBlock implements IBE<MuzzleBr
         this(properties, material);
         complete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private MuzzleBrakeBlock fromSelf(Properties properties) {
+        return new MuzzleBrakeBlock(properties, this.getCannonMaterial());
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {
@@ -54,8 +67,14 @@ public class MuzzleBrakeBlock extends BigCannonBaseBlock implements IBE<MuzzleBr
         return shape;
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context)
     {
+        return shaper.get(getFacing(state));
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return shaper.get(getFacing(state));
     }
 
@@ -87,11 +106,6 @@ public class MuzzleBrakeBlock extends BigCannonBaseBlock implements IBE<MuzzleBr
         return BlockEntityRegister.MUZZLE_BRAKE_BLOCK_ENTITY.get();
     }
 
-    public Direction getFacing()
-    {
-        return this.getFacing(defaultBlockState());
-    }
-
     public CustomPropellantContext applyBarrelPhysic(CustomPropellantContext propCtx)
     {
         CustomPropellantContext newCtx = new CustomPropellantContext();
@@ -105,5 +119,7 @@ public class MuzzleBrakeBlock extends BigCannonBaseBlock implements IBE<MuzzleBr
         return newCtx;
     }
 
-    public boolean canConnectToSide(BlockState state, Direction face) { return this.getFacing(state).getAxis() == face.getAxis(); }// || this.getFacing(state) == face.getOpposite(); }
+    public boolean canConnectToSide(BlockState state, Direction face) {
+        return this.getFacing(state).getAxis() == face.getAxis();
+    }
 }

@@ -7,17 +7,15 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonCartridge
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.IQFBreechLoadable;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.Contraption;
 import com.simibubi.create.content.kinetics.base.DirectionalAxisKineticBlock;
-import com.simibubi.create.content.kinetics.base.HorizontalAxisKineticBlock;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Vec3i;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -25,6 +23,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -53,12 +52,21 @@ public class HeavyAutocannonQuickFireBreechBlock extends HeavyAutocannonBaseBloc
 
     public HeavyAutocannonQuickFireBreechBlock(Properties properties, AutocannonMaterial material) {
         super(properties, material);
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public HeavyAutocannonQuickFireBreechBlock(Properties properties, AutocannonMaterial material, boolean isComplete) {
         this(properties, material);
         this.isComplete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private HeavyAutocannonQuickFireBreechBlock fromSelf(Properties properties) {
+        return new HeavyAutocannonQuickFireBreechBlock(properties, this.getAutocannonMaterial());
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
@@ -101,46 +109,9 @@ public class HeavyAutocannonQuickFireBreechBlock extends HeavyAutocannonBaseBloc
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
-        ItemStack stack = player.getItemInHand(hand);
-        if (level.getBlockEntity(pos) instanceof HeavyAutocannonQuickFireBreechBlockEntity breech) {
-
-            /*ItemStack container = breech.getMagazine();
-            boolean changed = false;
-            boolean tryAdd = false;
-            if (!container.isEmpty()) {
-                if (!level.isClientSide) {
-                    tryAdd = true;
-                    //breech.setMagazine(ItemStack.EMPTY);
-                }
-                changed = true;
-            }
-            if (stack.getItem() instanceof HeavyAutocannonAmmoContainerItem) {
-                if (!level.isClientSide) {
-                    breech.setMagazine(stack);
-                    player.setItemInHand(hand, ItemStack.EMPTY);
-                    CBCSoundEvents.PLACE_AUTOCANNON_AMMO_CONTAINER.playOnServer(level, pos);
-                }
-                changed = true;
-            }
-
-            if (tryAdd && !player.addItem(container)) {
-                Vec3 spawnLoc = Vec3.atCenterOf(pos);
-                ItemEntity dropEntity = new ItemEntity(level, spawnLoc.x, spawnLoc.y, spawnLoc.z, container);
-                level.addFreshEntity(dropEntity);
-            }
-            if (changed) {
-                breech.notifyUpdate();
-                return InteractionResult.sidedSuccess(level.isClientSide);
-            }*/
-        }
-        return super.use(state, level, pos, player, hand, result);
-    }
-
-    @Override
     public boolean onInteractWhileAssembled(Player player, BlockPos localPos, Direction side, InteractionHand interactionHand,
-                                            Level level, Contraption contraption, BlockEntity be, StructureTemplate.StructureBlockInfo info,
-                                            PitchOrientedContraptionEntity entity) {
+                                            Level level, Contraption contraption, BlockEntity be,
+                                            StructureTemplate.StructureBlockInfo info, PitchOrientedContraptionEntity entity) {
         if (!(be instanceof HeavyAutocannonQuickFireBreechBlockEntity breech)) return false;
 
         ItemStack stack = player.getItemInHand(interactionHand);
@@ -202,10 +173,4 @@ public class HeavyAutocannonQuickFireBreechBlock extends HeavyAutocannonBaseBloc
     }
 
     public boolean canConnectToSide(BlockState state, Direction face) { return this.getFacing(state) == face; }
-
-    /*public void setSaveCharges(Level level, BlockPos pos, int saveCharges) {
-        if (level.getBlockEntity(pos) instanceof HeavyAutocannonQuickFireBreechBlockEntity be) {
-            be.setMaxCharges(saveCharges);
-        }
-    }*/
 }

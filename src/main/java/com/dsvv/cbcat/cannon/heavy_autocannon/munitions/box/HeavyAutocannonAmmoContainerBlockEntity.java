@@ -2,6 +2,7 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box;
 
 import com.dsvv.cbcat.registry.BlockRegister;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
@@ -72,35 +73,35 @@ public class HeavyAutocannonAmmoContainerBlockEntity extends BlockEntity impleme
     public boolean canDropInCreative() { return !this.getMainAmmoStack().isEmpty() || !this.getTracerStack().isEmpty(); }
 
     @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
-        if (this.ammo != null && !this.ammo.isEmpty()) tag.put("Ammo", this.ammo.save(new CompoundTag()));
-        if (this.tracers != null && !this.tracers.isEmpty()) tag.put("Tracers", this.tracers.save(new CompoundTag()));
-        if (this.name != null) tag.putString("CustomName", Component.Serializer.toJson(this.name));
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider provider) {
+        super.saveAdditional(tag, provider);
+        if (this.ammo != null && !this.ammo.isEmpty()) tag.put("Ammo", this.ammo.save(provider));
+        if (this.tracers != null && !this.tracers.isEmpty()) tag.put("Tracers", this.tracers.save(provider));
+        if (this.name != null) tag.putString("CustomName", Component.Serializer.toJson(this.name, provider));
         if (this.isCreativeContainer()) tag.putInt("CurrentIndex", this.currentIndex);
         tag.putInt("TracerSpacing", this.spacing);
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
-        this.ammo = tag.contains("Ammo") ? ItemStack.of(tag.getCompound("Ammo")) : ItemStack.EMPTY;
-        this.tracers = tag.contains("Tracers") ? ItemStack.of(tag.getCompound("Tracers")) : ItemStack.EMPTY;
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider provider) {
+        super.loadAdditional(tag, provider);
+        this.ammo = tag.contains("Ammo") ? ItemStack.parseOptional(provider, tag.getCompound("Ammo")) : ItemStack.EMPTY;
+        this.tracers = tag.contains("Tracers") ? ItemStack.parseOptional(provider, tag.getCompound("Tracers")) : ItemStack.EMPTY;
         this.spacing = tag.contains("TracerSpacing") ? Mth.clamp(tag.getInt("TracerSpacing"), 1, 6) : 1;
-        this.name = tag.contains("CustomName", Tag.TAG_STRING) ? Component.Serializer.fromJson(tag.getString("CustomName")) : null;
+        this.name = tag.contains("CustomName", Tag.TAG_STRING) ? Component.Serializer.fromJson(tag.getString("CustomName"), provider) : null;
         this.currentIndex = tag.contains("CurrentIndex", Tag.TAG_INT) ? tag.getInt("CurrentIndex") : 0;
     }
 
-    @Override
-    public void saveToItem(ItemStack stack) {
+    /*@Override
+    public void saveToItem(ItemStack stack, HolderLookup.Provider provider) {
         CompoundTag tag = stack.getOrCreateTag();
-        if (this.ammo != null && !this.ammo.isEmpty()) tag.put("Ammo", this.ammo.save(new CompoundTag()));
-        if (this.tracers != null && !this.tracers.isEmpty()) tag.put("Tracers", this.tracers.save(new CompoundTag()));
+        if (this.ammo != null && !this.ammo.isEmpty()) tag.put("Ammo", this.ammo.save(provider));
+        if (this.tracers != null && !this.tracers.isEmpty()) tag.put("Tracers", this.tracers.save(provider));
         if (this.isCreativeContainer()) tag.putInt("CurrentIndex", this.currentIndex);
         tag.putInt("TracerSpacing", this.spacing);
-    }
+    }*/
 
-    @Override public CompoundTag getUpdateTag() { return this.saveWithFullMetadata(); }
+    @Override public CompoundTag getUpdateTag(HolderLookup.Provider provider) { return this.saveWithFullMetadata(provider); }
 
     @Nullable
     @Override

@@ -1,0 +1,9 @@
+{
+  "type": "createbigcannons:drill_boring",
+  "input": {
+    "type": "block",
+    "block": "cbc_at:unbored_cast_iron_twin_autocannon_recoil_spring"
+  },
+  "result": "cbc_at:cast_iron_twin_autocannon_recoil_spring",
+  "obey_facing_or_axis": true
+}

@@ -2,21 +2,23 @@ package com.dsvv.cbcat.registry;
 
 import com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology;
 import com.dsvv.cbcat.cartridge.ClusterProjectileCartridgeBlock;
+import com.dsvv.cbcat.cartridge.ProjectileCartridgeBlockItem;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 public class TabRegister
 {
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateBigCannons_AdvancedTechnology.MOD_ID);
-    public static final RegistryObject<CreativeModeTab> SIMPLE_TAB = TABS
+    public static final Supplier<CreativeModeTab> SIMPLE_TAB = TABS
             .register("simple_tab", ()-> CreativeModeTab.builder()
             .title(Component.translatable("tab.cbc_at.simple"))
             .icon(() -> BlockRegister.SOLID_CARTRIDGE_BLOCK.asStack())
@@ -45,22 +47,22 @@ public class TabRegister
                     FuzedClusterProjectileBlock.getHighExplosiveFragmentationWithImpactFuze(),
                     FuzedClusterProjectileBlock.getHighExplosiveAntiTankWithImpactFuze(),
                     FuzedClusterProjectileBlock.getSmokeWithImpactFuze(),
-                    BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.ARMOR_PIERCING_CASELESS_BLOCK.asStack(),
-                    BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.ARMOR_PIERCING_SHELL_CASELESS_BLOCK.asStack(),
-                    BlockRegister.GRAPESHOT_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.GRAPESHOT_CASELESS_BLOCK.asStack(),
-                    BlockRegister.FLUID_SHELL_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.FLUID_SHELL_CASELESS_BLOCK.asStack(),
-                    BlockRegister.HIGH_EXPLOSIVE_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.HIGH_EXPLOSIVE_CASELESS_BLOCK.asStack(),
-                    BlockRegister.SHRAPNEL_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.SHRAPNEL_CASELESS_BLOCK.asStack(),
-                    BlockRegister.SMOKE_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.SMOKE_CASELESS_BLOCK.asStack(),
-                    BlockRegister.SOLID_CARTRIDGE_BLOCK.asStack(),
-                    BlockRegister.SOLID_CASELESS_BLOCK.asStack(),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_CASELESS_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_SHELL_CASELESS_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.GRAPESHOT_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.GRAPESHOT_CASELESS_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.FLUID_SHELL_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.FLUID_SHELL_CASELESS_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.HIGH_EXPLOSIVE_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.HIGH_EXPLOSIVE_CASELESS_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SHRAPNEL_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SHRAPNEL_CASELESS_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SMOKE_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SMOKE_CASELESS_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SOLID_CARTRIDGE_BLOCK),
+                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SOLID_CASELESS_BLOCK),
                     ClusterProjectileCartridgeBlock.getChargedHighExplosiveWithImpactFuze(),
                     ClusterProjectileCartridgeBlock.getCaselessHighExplosiveWithImpactFuze(),
                     ClusterProjectileCartridgeBlock.getChargedHighExplosiveFragmentationWithImpactFuze(),
@@ -286,5 +288,8 @@ public class TabRegister
             })))
             .build());
 
-    public static void register(IEventBus eventBus) { TABS.register(eventBus); }
+    public static void register(IEventBus eventBus) {
+        TABS.register(eventBus);
+        CreateBigCannons_AdvancedTechnology.REGISTRATE.defaultCreativeTab((ResourceKey<CreativeModeTab>)null);
+    }
 }

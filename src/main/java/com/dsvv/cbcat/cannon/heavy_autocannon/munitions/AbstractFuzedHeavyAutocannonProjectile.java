@@ -67,13 +67,14 @@ public abstract class AbstractFuzedHeavyAutocannonProjectile extends AbstractHea
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
-        if (this.fuze != null && !this.fuze.isEmpty()) tag.put("Fuze", this.fuze.save(new CompoundTag()));
+        if (this.fuze != null)
+            tag.put("Fuze", this.fuze.saveOptional(this.level().registryAccess()));
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
-        this.fuze = tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.of(tag.getCompound("Fuze")) : ItemStack.EMPTY;
+        this.fuze = ItemStack.parseOptional(this.level().registryAccess(), tag.getCompound("Fuze"));
     }
 
     protected final boolean canDetonate(Predicate<FuzeItem> cons) {

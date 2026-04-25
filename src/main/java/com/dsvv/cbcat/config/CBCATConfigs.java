@@ -1,8 +1,8 @@
 package com.dsvv.cbcat.config;
 
 import net.createmod.catnip.config.ConfigBase;
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.config.ModConfig;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.EnumMap;
@@ -16,7 +16,7 @@ public class CBCATConfigs
 
     public static CBCATServerConfig SERVER;
 
-    public static void registerConfigs(BiConsumer<ModConfig.Type, ForgeConfigSpec> cons)
+    public static void registerConfigs(BiConsumer<ModConfig.Type, ModConfigSpec> cons)
     {
         SERVER = register(CBCATServerConfig::new, ModConfig.Type.SERVER);
 
@@ -24,7 +24,7 @@ public class CBCATConfigs
     }
 
     private static <T extends ConfigBase> T register(Supplier<T> factory, ModConfig.Type side) {
-        Pair<T, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(builder -> {
+        Pair<T, ModConfigSpec> specPair = new ModConfigSpec.Builder().configure(builder -> {
             T config = factory.get();
             config.registerAll(builder);
             return config;

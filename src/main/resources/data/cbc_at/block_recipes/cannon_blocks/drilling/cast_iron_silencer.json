@@ -1,6 +1,0 @@
-{
-  "type": "createbigcannons:drill_boring",
-  "input": "cbc_at:unbored_cast_iron_silencer",
-  "result": "cbc_at:cast_iron_silencer",
-  "obey_facing_or_axis": true
-}

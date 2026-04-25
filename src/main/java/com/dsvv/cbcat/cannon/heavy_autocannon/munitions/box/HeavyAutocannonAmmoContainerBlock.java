@@ -7,6 +7,7 @@ import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -21,6 +22,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -35,6 +37,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 
 import javax.annotation.Nullable;
 import java.util.Locale;
@@ -75,7 +78,7 @@ public class HeavyAutocannonAmmoContainerBlock extends Block implements IWrencha
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         if (level.getBlockEntity(pos) instanceof HeavyAutocannonAmmoContainerBlockEntity be) {
-            if (stack.hasCustomHoverName()) be.setCustomName(stack.getHoverName());
+            if (stack.has(DataComponents.CUSTOM_NAME)) be.setCustomName(stack.getHoverName());
             be.setMainAmmoDirect(HeavyAutocannonAmmoContainerItem.getMainAmmoStack(stack));
             be.setTracersDirect(HeavyAutocannonAmmoContainerItem.getTracerAmmoStack(stack));
             be.setSpacing(HeavyAutocannonAmmoContainerItem.getTracerSpacing(stack));
@@ -83,17 +86,18 @@ public class HeavyAutocannonAmmoContainerBlock extends Block implements IWrencha
     }
 
     @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide && level.getBlockEntity(pos) instanceof HeavyAutocannonAmmoContainerBlockEntity be && player.isCreative() && be.canDropInCreative()) {
             ItemStack stack = new ItemStack(this.asItem());
-            be.saveToItem(stack);
-            if (be.hasCustomName()) stack.setHoverName(be.getCustomName());
+            be.saveToItem(stack, level.registryAccess());
+            if (be.hasCustomName()) stack.set(DataComponents.CUSTOM_NAME, be.getCustomName());
 
             ItemEntity itemEntity = new ItemEntity(level, (double) pos.getX() + 0.5, (double) pos.getY() + 0.5, (double) pos.getZ() + 0.5, stack);
             itemEntity.setDefaultPickUpDelay();
             level.addFreshEntity(itemEntity);
         }
         super.playerWillDestroy(level, pos, state, player);
+        return state;
     }
 
     @Override
@@ -107,14 +111,14 @@ public class HeavyAutocannonAmmoContainerBlock extends Block implements IWrencha
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
         ItemStack itemStack = super.getCloneItemStack(level, pos, state);
-        if (level.getBlockEntity(pos) instanceof HeavyAutocannonAmmoContainerBlockEntity be) be.saveToItem(itemStack);
+        if (level.getBlockEntity(pos) instanceof HeavyAutocannonAmmoContainerBlockEntity be) be.saveToItem(itemStack, level.registryAccess());
         return itemStack;
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.getBlockEntity(pos) instanceof HeavyAutocannonAmmoContainerBlockEntity be) {
             if (player instanceof ServerPlayer sPlayer) {
                 MenuRegister.HEAVY_AUTOCANNON_AMMO_BOX.open(sPlayer, be.getDisplayName(), be, buf -> {
@@ -126,7 +130,7 @@ public class HeavyAutocannonAmmoContainerBlock extends Block implements IWrencha
             }
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        return super.use(state, level, pos, player, hand, hit);
+        return super.useWithoutItem(state, level, pos, player, hit);
     }
 
     @Override

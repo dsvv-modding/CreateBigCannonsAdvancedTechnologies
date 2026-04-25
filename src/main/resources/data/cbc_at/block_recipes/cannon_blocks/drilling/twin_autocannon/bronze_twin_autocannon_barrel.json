@@ -1,6 +1,0 @@
-{
-  "type": "createbigcannons:drill_boring",
-  "input": "cbc_at:unbored_bronze_twin_autocannon_barrel",
-  "result": "cbc_at:bronze_twin_autocannon_barrel",
-  "obey_facing_or_axis": true
-}

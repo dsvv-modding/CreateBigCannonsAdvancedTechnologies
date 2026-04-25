@@ -3,7 +3,7 @@ package com.dsvv.cbcat.mixin;
 import com.dsvv.cbcat.cannon.heavy_autocannon.breech.HeavyAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.contraption.MountedHeavyAutocannonContraption;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
+import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.contraption.MountedTwinAutocannonContraption;
 import com.simibubi.create.content.kinetics.mechanicalArm.AllArmInteractionPointTypes;
 import com.simibubi.create.content.kinetics.mechanicalArm.ArmInteractionPointType;

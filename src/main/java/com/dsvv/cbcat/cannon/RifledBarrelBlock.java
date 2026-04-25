@@ -4,6 +4,7 @@ import com.dsvv.cbcat.base.CustomPropellantContext;
 import com.dsvv.cbcat.base.SaveAssemble;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.block.IBE;
 import net.createmod.catnip.math.VoxelShaper;
@@ -11,11 +12,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBaseBlock;
 import rbasamoyai.createbigcannons.cannons.big_cannons.cannon_end.BigCannonEnd;
 import rbasamoyai.createbigcannons.cannons.big_cannons.material.BigCannonMaterial;
@@ -32,12 +33,21 @@ public class RifledBarrelBlock extends BigCannonBaseBlock implements IBE<RifledB
     {
         super(properties, material);
         this.builtUp = builtUp.length > 0 && builtUp[0];
+        this.codec = simpleCodec(this::fromSelf);
     }
     public RifledBarrelBlock(Properties properties, BigCannonMaterial material, boolean isComplete, boolean... builtUp)
     {
         this(properties, material, builtUp);
         complete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private RifledBarrelBlock fromSelf(Properties properties) {
+        return new RifledBarrelBlock(properties, this.getCannonMaterial());
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {
@@ -74,7 +84,7 @@ public class RifledBarrelBlock extends BigCannonBaseBlock implements IBE<RifledB
         return BlockEntityRegister.RIFLED_BARREL_BLOCK_ENTITY.get();
     }
 
-    public CustomPropellantContext applyBarrelPhysic(@NotNull CustomPropellantContext propCtx)
+    public CustomPropellantContext applyBarrelPhysic(CustomPropellantContext propCtx)
     {
         CustomPropellantContext newCtx = new CustomPropellantContext();
         newCtx.explosionGas = propCtx.explosionGas - 0.35f;

@@ -1,9 +1,0 @@
-{
-  "type": "createbigcannons:cannon_casting",
-  "cast_shape": "cbc_at:twin_autocannon_recoil_spring_mould",
-  "fluid": {
-    "amount": 1,
-    "fluidTag": "forge:molten_steel"
-  },
-  "result": "cbc_at:unbored_steel_twin_autocannon_recoil_spring"
-}

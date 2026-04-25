@@ -2,23 +2,23 @@ package com.dsvv.cbcat.cannon.heavy_autocannon;
 
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -40,6 +40,7 @@ public class HeavyAutocannonBarrelBlock extends HeavyAutocannonBaseBlock impleme
         super(properties, material);
         this.chamber = isChamber;
         this.registerDefaultState(this.defaultBlockState().setValue(ASSEMBLED, false));
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public HeavyAutocannonBarrelBlock(Properties properties, AutocannonMaterial material, boolean isChamber, boolean isComplete)
@@ -54,6 +55,14 @@ public class HeavyAutocannonBarrelBlock extends HeavyAutocannonBaseBlock impleme
         if (this.volumeMultiplier > 1)
             isComplete = false;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private HeavyAutocannonBarrelBlock fromSelf(Properties properties) {
+        return new HeavyAutocannonBarrelBlock(properties, this.getAutocannonMaterial(), this.chamber);
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(ASSEMBLED);

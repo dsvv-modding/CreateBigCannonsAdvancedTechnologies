@@ -2,26 +2,25 @@ package com.dsvv.cbcat.registry;
 
 import com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology;
 import com.dsvv.cbcat.crafting.*;
-import com.google.gson.JsonObject;
-import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
-import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
+import com.mojang.serialization.MapCodec;
+import com.simibubi.create.content.processing.recipe.StandardProcessingRecipe;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.CreateLang;
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.SpecialRecipeBuilder;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.multiloader.IndexPlatform;
 
 import javax.annotation.Nullable;
-import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
@@ -47,8 +46,6 @@ public enum RecipeRegister implements IRecipeTypeInfo
 
     RecipeRegister(NonNullSupplier<RecipeSerializer<?>> serializerSupplier, NonNullSupplier<RecipeType<?>> typeSupplier, boolean registerType) {
         String name = CreateLang.asId(name());
-        id = new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
-        serializerObject = IndexPlatform.registerRecipeSerializer(this.id, serializerSupplier);
         id = ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
         serializerObject = CreateBigCannons_AdvancedTechnology.RECIPE_SERIALIZER_REGISTER.register(this.id.getPath(), serializerSupplier);
         if (registerType) {
@@ -70,8 +67,8 @@ public enum RecipeRegister implements IRecipeTypeInfo
         CreateBigCannons_AdvancedTechnology.RECIPE_TYPE_REGISTER.register(this.id.getPath(), this.type);
     }
 
-    RecipeRegister(ProcessingRecipeBuilder.ProcessingRecipeFactory<?> processingFactory) {
-        this(() -> new ProcessingRecipeSerializer<>(processingFactory));
+    RecipeRegister(StandardProcessingRecipe.Factory<?> processingFactory) {
+        this(() -> new StandardProcessingRecipe.Serializer<>(processingFactory));
     }
 
     public static <T extends Recipe<?>> RecipeType<T> simpleType(ResourceLocation id) {
@@ -92,45 +89,42 @@ public enum RecipeRegister implements IRecipeTypeInfo
 
     @SuppressWarnings("unchecked")
     @Override
-    public <T extends RecipeType<?>> T getType() { return (T) this.type.get(); }
+    public <I extends RecipeInput, R extends Recipe<I>> RecipeType<R> getType() {
+        return (RecipeType<R>) this.type.get();
+    }
 
     public static void register() {
-        REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeRegister::buildRecipe);
+        //CreateBigCannons_AdvancedTechnology.REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeRegister::buildRecipe);
     }
 
-    public static void buildRecipe(Consumer<FinishedRecipe> cons) {
-        SpecialRecipeBuilder.special(HA_MUNITION_ASSEMBLY.getSerializer()).save(cons, "ha_munition_assembly");
-        SpecialRecipeBuilder.special(HA_MUNITION_FUZING.getSerializer()).save(cons, "ha_munition_fuzing");
-        SpecialRecipeBuilder.special(HA_MUNITION_UNFUZING.getSerializer()).save(cons, "ha_munition_unfuzing");
-        SpecialRecipeBuilder.special(HA_MUNITION_TRACER.getSerializer()).save(cons, "ha_munition_tracer");
-        SpecialRecipeBuilder.special(HA_MUNITION_TRACER_REMOVAL.getSerializer()).save(cons, "ha_munition_tracer_removal");
-        SpecialRecipeBuilder.special(CLUSTER_MUNITION_ASSEMBLY.getSerializer()).save(cons, "cluster_munition_assembly");
-        SpecialRecipeBuilder.special(CASELESS_MUNITION_ASSEMBLY.getSerializer()).save(cons, "caseless_munition_assembly");
+    public static void buildRecipe(RecipeOutput recipeOutput) {
+        SpecialRecipeBuilder.special(ROCKET_FUZING.getSerializer()).save(recipeOutput, "cbc_at:rocket_munition_fuzing");
+        SpecialRecipeBuilder.special(ROCKET_ASSEMBLY.getSerializer()).save(recipeOutput, "cbc_at:rocket_assembly");
+        SpecialRecipeBuilder.special(MEDIUM_ROCKET_ASSEMBLY.getSerializer()).save(recipeOutput, "cbc_at:medium_rocket_assembly");
+
+        SpecialRecipeBuilder.special(HA_MUNITION_ASSEMBLY.getSerializer()).save(recipeOutput, "cbc_at:ha_munition_assembly");
+        SpecialRecipeBuilder.special(HA_MUNITION_FUZING.getSerializer()).save(recipeOutput, "cbc_at:ha_munition_fuzing");
+        SpecialRecipeBuilder.special(HA_MUNITION_UNFUZING.getSerializer()).save(recipeOutput, "cbc_at:ha_munition_unfuzing");
+        SpecialRecipeBuilder.special(HA_MUNITION_TRACER.getSerializer()).save(recipeOutput, "cbc_at:ha_munition_tracer");
+        SpecialRecipeBuilder.special(HA_MUNITION_TRACER_REMOVAL.getSerializer()).save(recipeOutput, "cbc_at:ha_munition_tracer_removal");
+        SpecialRecipeBuilder.special(CLUSTER_MUNITION_ASSEMBLY.getSerializer()).save(recipeOutput, "cbc_at:cluster_munition_assembly");
+        SpecialRecipeBuilder.special(CASELESS_MUNITION_ASSEMBLY.getSerializer()).save(recipeOutput, "cbc_at:caseless_munition_assembly");
     }
 
-    private static <T extends Recipe<?>> NonNullSupplier<RecipeSerializer<?>> noSerializer(Function<ResourceLocation, T> prov) {
+    private static <T extends Recipe<?>> NonNullSupplier<RecipeSerializer<?>> noSerializer(Supplier<T> prov) {
         return () -> new SimpleRecipeSerializer<>(prov);
     }
 
     private static class SimpleRecipeSerializer<T extends Recipe<?>> implements RecipeSerializer<T> {
-        private final Function<ResourceLocation, T> constructor;
+        private final MapCodec<T> codec;
+        private final StreamCodec<RegistryFriendlyByteBuf, T> streamCodec;
 
-        public SimpleRecipeSerializer(Function<ResourceLocation, T> constructor) {
-            this.constructor = constructor;
+        public SimpleRecipeSerializer(Supplier<T> constructor) {
+            this.codec = MapCodec.unit(constructor);
+            this.streamCodec = StreamCodec.of((buf, r) -> {}, buf -> constructor.get());
         }
 
-        @Override
-        public T fromJson(ResourceLocation recipeId, JsonObject serializedRecipe) {
-            return this.constructor.apply(recipeId);
-        }
-
-        @Override
-        public T fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
-            return this.constructor.apply(recipeId);
-        }
-
-        @Override
-        public void toNetwork(FriendlyByteBuf buffer, T recipe) {
-        }
+        @Override public MapCodec<T> codec() { return this.codec; }
+        @Override public StreamCodec<RegistryFriendlyByteBuf, T> streamCodec() { return this.streamCodec; }
     }
 }

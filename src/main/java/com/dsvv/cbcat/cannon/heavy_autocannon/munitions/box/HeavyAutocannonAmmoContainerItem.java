@@ -3,6 +3,8 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonAmmoType;
 import com.dsvv.cbcat.registry.BlockRegister;
 import com.dsvv.cbcat.registry.MenuRegister;
+import com.google.common.collect.Lists;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -18,9 +20,11 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCMenuTypes;
 
 import javax.annotation.Nullable;
@@ -45,13 +49,13 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
             ItemStack stack = player.getItemInHand(hand);
             if (player instanceof ServerPlayer splayer) {
                 int spacing = getTracerSpacing(stack);
-                Component screenName = stack.hasCustomHoverName() ? stack.getHoverName() : this.getDisplayName();
+                Component screenName = stack.has(DataComponents.CUSTOM_NAME) ? stack.getHoverName() : this.getDisplayName();
 
                 MenuRegister.HEAVY_AUTOCANNON_AMMO_BOX.open(splayer, screenName, this, buf -> {
                     buf.writeBoolean(this.isCreative());
                     buf.writeVarInt(spacing);
                     buf.writeBoolean(false);
-                    buf.writeItem(new ItemStack(this));
+                    ItemStack.STREAM_CODEC.encode(buf, new ItemStack(this));
                 });
             }
             return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
@@ -67,25 +71,23 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
     }
 
     public static ItemStack getMainAmmoStack(ItemStack container) {
-        CompoundTag tag = container.getOrCreateTag();
-        return tag.contains("Ammo") ? ItemStack.of(tag.getCompound("Ammo")) : ItemStack.EMPTY;
+        ItemContainerContents items = container.getOrDefault(CBCDataComponents.AMMO, ItemContainerContents.EMPTY);
+        return items.copyOne();
     }
 
     public static ItemStack getTracerAmmoStack(ItemStack container) {
-        CompoundTag tag = container.getOrCreateTag();
-        return tag.contains("Tracers") ? ItemStack.of(tag.getCompound("Tracers")) : ItemStack.EMPTY;
+        ItemContainerContents items = container.getOrDefault(CBCDataComponents.TRACERS, ItemContainerContents.EMPTY);
+        return items.copyOne();
     }
 
     public static int getTracerSpacing(ItemStack container) {
-        CompoundTag tag = container.getOrCreateTag();
-        return tag.contains("TracerSpacing") ? Mth.clamp(tag.getInt("TracerSpacing"), 1, 6) : 1;
+        return Math.max(container.getOrDefault(CBCDataComponents.TRACER_SPACING, 1), 1);
     }
 
     public static boolean shouldPullTracer(ItemStack container) {
-        CompoundTag tag = container.getOrCreateTag();
-        if (!tag.contains("CurrentIndex", CompoundTag.TAG_INT)) tag.putInt("CurrentIndex", 0);
-        int currentCount = Math.max(tag.getInt("CurrentIndex"), 0);
-        tag.putInt("CurrentIndex", currentCount >= getTracerSpacing(container) ? 0 : currentCount + 1);
+        if (!container.has(CBCDataComponents.CURRENT_INDEX)) container.set(CBCDataComponents.CURRENT_INDEX, 0);
+        int currentCount = Math.max(container.getOrDefault(CBCDataComponents.CURRENT_INDEX, 0), 0);
+        container.set(CBCDataComponents.CURRENT_INDEX, currentCount >= getTracerSpacing(container) ? 0 : currentCount + 1);
         return currentCount == 0;
     }
 
@@ -113,7 +115,9 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
                     ret.setCount(1);
                 } else {
                     ret = tracerAmmo.split(1);
-                    container.getOrCreateTag().put("Tracers", tracerAmmo.isEmpty() ? new CompoundTag() : tracerAmmo.save(new CompoundTag()));
+                    ItemContainerContents tracerData = tracerAmmo.isEmpty() ? ItemContainerContents.EMPTY
+                            : ItemContainerContents.fromItems(Lists.newArrayList(tracerAmmo));
+                    container.set(CBCDataComponents.TRACERS, tracerData);
                 }
             } else if (!mainAmmo.isEmpty()) {
                 if (isCreative) {
@@ -121,7 +125,9 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
                     ret.setCount(1);
                 } else {
                     ret = mainAmmo.split(1);
-                    container.getOrCreateTag().put("Ammo", mainAmmo.isEmpty() ? new CompoundTag() : mainAmmo.save(new CompoundTag()));
+                    ItemContainerContents ammoData = mainAmmo.isEmpty() ? ItemContainerContents.EMPTY
+                            : ItemContainerContents.fromItems(Lists.newArrayList(mainAmmo));
+                    container.set(CBCDataComponents.AMMO, ammoData);
                 }
             }
         } else {
@@ -131,7 +137,9 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
                     ret.setCount(1);
                 } else {
                     ret = mainAmmo.split(1);
-                    container.getOrCreateTag().put("Ammo", mainAmmo.isEmpty() ? new CompoundTag() : mainAmmo.save(new CompoundTag()));
+                    ItemContainerContents ammoData = mainAmmo.isEmpty() ? ItemContainerContents.EMPTY
+                            : ItemContainerContents.fromItems(Lists.newArrayList(mainAmmo));
+                    container.set(CBCDataComponents.AMMO, ammoData);
                 }
             } else if (!tracerAmmo.isEmpty()) {
                 if (isCreative) {
@@ -139,7 +147,9 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
                     ret.setCount(1);
                 } else {
                     ret = tracerAmmo.split(1);
-                    container.getOrCreateTag().put("Tracers", tracerAmmo.isEmpty() ? new CompoundTag() : tracerAmmo.save(new CompoundTag()));
+                    ItemContainerContents ammoData = mainAmmo.isEmpty() ? ItemContainerContents.EMPTY
+                            : ItemContainerContents.fromItems(Lists.newArrayList(mainAmmo));
+                    container.set(CBCDataComponents.AMMO, ammoData);
                 }
             }
         }
@@ -147,8 +157,8 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
-        super.appendHoverText(stack, level, tooltipComponents, isAdvanced);
+    public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
+        super.appendHoverText(stack, ctx, tooltipComponents, isAdvanced);
         String infinity = "\u221E";
 
         ItemStack mainAmmo = getMainAmmoStack(stack);

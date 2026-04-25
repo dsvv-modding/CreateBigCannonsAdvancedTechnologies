@@ -5,12 +5,11 @@
 
 package com.dsvv.cbcat.cannon.twin_autocannon.contraption;
 
-import com.dsvv.cbcat.cannon.twin_autocannon.ITwinAutocannonBlockEntity;
-import com.dsvv.cbcat.cannon.twin_autocannon.MovesWithTwinAutocannonRecoilSpring;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBarrelBlock;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
+import com.dsvv.cbcat.base.ICarriageAdjustableFireRate;
+import com.dsvv.cbcat.cannon.heavy_autocannon.breech.HeavyAutocannonBreechBlockEntity;
+import com.dsvv.cbcat.cannon.twin_autocannon.*;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlock;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
+import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilSpringBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilSpringBlockEntity;
 import com.dsvv.cbcat.registry.ContraptionRegister;
@@ -21,9 +20,11 @@ import com.simibubi.create.content.contraptions.StructureTransform;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.AxisDirection;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.NbtUtils;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -44,8 +45,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.cannon_control.ControlPitchContraption;
 import rbasamoyai.createbigcannons.cannon_control.cannon_mount.CannonMountBlockEntity;
@@ -59,7 +59,6 @@ import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMateria
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterialProperties;
 import rbasamoyai.createbigcannons.config.CBCConfigs;
 import rbasamoyai.createbigcannons.effects.particles.plumes.AutocannonPlumeParticleData;
-import rbasamoyai.createbigcannons.forge.mixin_interface.GetItemStorage;
 import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 import rbasamoyai.createbigcannons.index.CBCEntityTypes;
 import rbasamoyai.createbigcannons.index.CBCSoundEvents;
@@ -69,16 +68,19 @@ import rbasamoyai.createbigcannons.munitions.autocannon.AutocannonAmmoItem;
 import rbasamoyai.createbigcannons.munitions.autocannon.AutocannonAmmoType;
 import rbasamoyai.createbigcannons.munitions.autocannon.config.AutocannonProjectilePropertiesComponent;
 import rbasamoyai.createbigcannons.network.ClientboundAnimateCannonContraptionPacket;
+import rbasamoyai.createbigcannons.remix.GetItemStorage;
 import rbasamoyai.createbigcannons.utils.CBCUtils;
 import rbasamoyai.ritchiesprojectilelib.RitchiesProjectileLib;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.*;
 
 import static com.dsvv.cbcat.debugUtils.DebugUtils.displayCustomClientMessage;
 import static rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock.writeAndSyncSingleBlockData;
 
-public class MountedTwinAutocannonContraption extends AbstractMountedCannonContraption implements ItemCannon, GetItemStorage{
+public class MountedTwinAutocannonContraption extends AbstractMountedCannonContraption implements ItemCannon, GetItemStorage, ICarriageAdjustableFireRate
+{
     private AutocannonMaterial cannonMaterial;
     private final Set<BlockPos> recoilSpringPositions = new LinkedHashSet();
     private boolean vertical;
@@ -181,7 +183,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
             StructureBlockInfo localBlockInfo = new StructureBlockInfo(localPos, blockInfo.state(), blockInfo.nbt());
             this.blocks.put(localPos, localBlockInfo);
             if (blockInfo.nbt() != null) {
-                BlockEntity be = BlockEntity.loadStatic(localPos, blockInfo.state(), blockInfo.nbt());
+                BlockEntity be = BlockEntity.loadStatic(localPos, blockInfo.state(), blockInfo.nbt(), level.registryAccess());
                 this.presentBlockEntities.put(localPos, be);
                 if (blockInfo.state().getBlock() instanceof TwinAutocannonRecoilSpringBlock) {
                     this.recoilSpringPositions.add(localPos);
@@ -210,7 +212,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
                     springBE.toAnimate.put(pos1.subtract(mainRecoilSpringPos), springed.getMovingState(blockInfo.state()));
                     this.blocks.put(pos1, new StructureBlockInfo(pos1, springed.getStationaryState(blockInfo.state()), blockInfo.nbt()));
                 }
-                CompoundTag newTag = springBE.saveWithFullMetadata();
+                CompoundTag newTag = springBE.saveWithFullMetadata(level.registryAccess());
                 newTag.remove("x");
                 newTag.remove("y");
                 newTag.remove("z");
@@ -337,7 +339,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
                         }
 
                         behavior.tryLoadingItem(foundProjectiles[i]);
-                        CompoundTag tag = (this.presentBlockEntities.get(currentPos)).saveWithFullMetadata();
+                        CompoundTag tag = (this.presentBlockEntities.get(currentPos)).saveWithFullMetadata(level.registryAccess());
                         tag.remove("x");
                         tag.remove("y");
                         tag.remove("z");
@@ -383,7 +385,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
                 }
             }
 
-            NetworkPlatform.sendToClientTracking(new ClientboundAnimateCannonContraptionPacket(entity), entity);
+            NetworkPlatform.sendToClientTracking(ClientboundAnimateCannonContraptionPacket.entity(entity), entity);
             Vec3 spawnPos = entity.toGlobalVector(Vec3.atCenterOf(currentPos.relative(this.initialOrientation)), 0.0F);
             Vec3 vec1 = spawnPos.subtract(centerPos).normalize();
             spawnPos = spawnPos.subtract(vec1.scale(1.5F));
@@ -443,6 +445,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
         }
     }
 
+    @Override
     public void animate() {
         super.animate();
         if (this.presentBlockEntities.get(this.startPos) instanceof TwinAutocannonBreechBlockEntity breech)
@@ -564,8 +567,8 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
         return isHandle ? CBCATContraptionTypes.MANUAL_TWIN_AUTOCANNON : CBCATContraptionTypes.TWIN_AUTOCANNON;
     }
 
-    public CompoundTag writeNBT(boolean clientData) {
-        CompoundTag tag = super.writeNBT(clientData);
+    public CompoundTag writeNBT(HolderLookup.Provider registry, boolean clientData) {
+        CompoundTag tag = super.writeNBT(registry, clientData);
         tag.putString("AutocannonMaterial", this.cannonMaterial == null ? CBCAutocannonMaterials.CAST_IRON.name().toString() : this.cannonMaterial.name().toString());
         if (this.startPos != null) {
             tag.put("StartPos", NbtUtils.writeBlockPos(this.startPos));
@@ -594,14 +597,16 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
             this.cannonMaterial = CBCAutocannonMaterials.CAST_IRON;
         }
 
-        this.startPos = tag.contains("StartPos") ? NbtUtils.readBlockPos(tag.getCompound("StartPos")) : null;
+        this.startPos = tag.contains("StartPos") ? NbtUtils.readBlockPos(tag, "StartPos").get() : null;
         this.recoilSpringPositions.clear();
         if (tag.contains("RecoilSpringPositions")) {
-            ListTag positionTags = tag.getList("RecoilSpringPositions", 10);
+            ListTag positionTags = tag.getList("RecoilSpringPositions", Tag.TAG_INT_ARRAY);
             int sz = positionTags.size();
 
             for(int i = 0; i < sz; ++i) {
-                this.recoilSpringPositions.add(NbtUtils.readBlockPos(positionTags.getCompound(i)));
+                int[] is = positionTags.getIntArray(i);
+                if (is.length == 3)
+                    this.recoilSpringPositions.add(new BlockPos(is[0], is[1], is[2]));
             }
 
             this.vertical = tag.getBoolean("vertical");
@@ -612,7 +617,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
     }
 
     public ContraptionType getType() {
-        return ContraptionRegister.MOUNTED_TWIN_AUTOCANNON.get();
+        return ContraptionRegister.MOUNTED_TWIN_AUTOCANNON.value();
     }
 
     public float maximumDepression(@Nonnull ControlPitchContraption controller) {

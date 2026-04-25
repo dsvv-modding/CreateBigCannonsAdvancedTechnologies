@@ -1,11 +1,10 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.munitions;
 
-import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.mojang.math.Constants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -20,7 +19,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.NotNull;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.block_armor_properties.BlockArmorPropertiesHandler;
 import rbasamoyai.createbigcannons.block_armor_properties.BlockArmorPropertiesProvider;
@@ -29,7 +27,6 @@ import rbasamoyai.createbigcannons.config.CBCConfigs;
 import rbasamoyai.createbigcannons.effects.particles.smoke.TrailSmokeParticleData;
 import rbasamoyai.createbigcannons.index.CBCSoundEvents;
 import rbasamoyai.createbigcannons.munitions.AbstractCannonProjectile;
-import rbasamoyai.createbigcannons.munitions.ImpactExplosion;
 import rbasamoyai.createbigcannons.munitions.ProjectileContext;
 import rbasamoyai.createbigcannons.munitions.autocannon.AbstractAutocannonProjectile.TrailType;
 import rbasamoyai.createbigcannons.munitions.big_cannon.ProjectileBlock;
@@ -72,7 +69,6 @@ public abstract class AbstractHeavyAutocannonProjectile extends AbstractCannonPr
 
     @Override
     public void tick() {
-        //displayCustomClientMessage("Super Tick");
         Vec3 prevPos = this.position();
         ChunkPos cpos = new ChunkPos(this.blockPosition());
         Vec3 nextVelocity = this.nextVelocity;
@@ -128,9 +124,8 @@ public abstract class AbstractHeavyAutocannonProjectile extends AbstractCannonPr
                             entry.setValue(v - 1);
                         }
                     }
-                    SoundEvent soundEvent = /*this.getAutocannonRoundType() == AutocannonAmmoType.MACHINE_GUN
-                            ? CBCSoundEvents.MACHINE_GUN_ROUND_FLYBY.getMainEvent()
-                            : CBCSoundEvents.AUTOCANNON_ROUND_FLYBY.getMainEvent();*/ CBCSoundEvents.AUTOCANNON_ROUND_FLYBY.getMainEvent();
+                    SoundEvent soundEvent = CBCSoundEvents.AUTOCANNON_ROUND_FLYBY.getMainEvent();
+
                     Vec3 curPos = this.position();
                     Vec3 displacementVec = curPos.subtract(prevPos);
                     AABB path = this.getBoundingBox().expandTowards(displacementVec.reverse()).inflate(3);
@@ -187,33 +182,24 @@ public abstract class AbstractHeavyAutocannonProjectile extends AbstractCannonPr
         double mass = this.getProjectileMass();
         double bonusMomentum = 1 + Math.max(0, (velMag - CBCConfigs.server().munitions.minVelocityForPenetrationBonus.getF())
                 * CBCConfigs.server().munitions.penetrationBonusScale.getF());
-        double incidentVel = velMag * incidence;
-        double momentum = mass * incidentVel * bonusMomentum;
+        double momentum = mass * velMag * incidence * bonusMomentum;
 
-        double toughness = blockArmor.toughness(this.level(), state, pos, true);
-        double toughnessPenalty = toughness - momentum;
-        double hardnessPenalty = blockArmor.hardness(this.level(), state, pos, true) - ballistics.penetration();
-        double bounceBonus = Math.max(1 - hardnessPenalty, 0);
+        double hardnessPenalty = Math.max(blockArmor.hardness(this.level(), state, pos, true) - ballistics.penetration(), 0);
 
         double projectileDeflection = ballistics.deflection();
         double baseChance = CBCConfigs.server().munitions.baseProjectileBounceChance.getF();
-        double bounceChance = projectileDeflection < 1e-2d || incidence > projectileDeflection ? 0 : Math.max(baseChance, 1 - incidence / projectileDeflection) * bounceBonus;
+        double bounceChance = projectileDeflection < 1e-2d || incidence > projectileDeflection ? 0 : Math.max(baseChance, 1 - incidence / projectileDeflection);
 
-        boolean surfaceImpact = this.canHitSurface();
+        boolean surfaceImpact = this.lastPenetratedBlock.isAir();
         boolean canBounce = CBCConfigs.server().munitions.projectilesCanBounce.get();
-        boolean blockBroken = toughnessPenalty < 1e-2d && !unbreakable;
         ImpactResult.KinematicOutcome outcome;
         if (surfaceImpact && canBounce && this.level().getRandom().nextDouble() < bounceChance) {
             outcome = ImpactResult.KinematicOutcome.BOUNCE;
-        } else if (blockBroken && !this.level().isClientSide) {
-            outcome = ImpactResult.KinematicOutcome.PENETRATE;
         } else {
             outcome = ImpactResult.KinematicOutcome.STOP;
         }
         boolean shatter = surfaceImpact && outcome != ImpactResult.KinematicOutcome.BOUNCE && hardnessPenalty > ballistics.toughness();
-        float durabilityPenalty = ((float) Math.max(0, hardnessPenalty) + 1) * (float) toughness / (float) incidentVel;
 
-        state.onProjectileHit(this.level(), state, blockHitResult, this);
         if (!this.level().isClientSide) {
             boolean bounced = outcome == ImpactResult.KinematicOutcome.BOUNCE;
             Vec3 effectNormal;
@@ -227,27 +213,18 @@ public abstract class AbstractHeavyAutocannonProjectile extends AbstractCannonPr
                 projectileContext.addPlayedEffect(new ClientboundPlayBlockHitEffectPacket(state1, this.getType(), bounced, true,
                         hitLoc.x, hitLoc.y, hitLoc.z, (float) effectNormal.x, (float) effectNormal.y, (float) effectNormal.z));
             }
-        }
-        if (blockBroken) {
-            this.setProjectileMass(incidentVel < 1e-4d ? 0 : Math.max(this.getProjectileMass() - durabilityPenalty, 0));
-            this.level().setBlock(pos, Blocks.AIR.defaultBlockState(), ProjectileBlock.UPDATE_ALL_IMMEDIATE);
-        } else {
-            if (outcome == ImpactResult.KinematicOutcome.STOP) {
-                CreateBigCannons.BLOCK_DAMAGE.damageBlock(pos.immutable(), Math.max(Mth.ceil(momentum), 0), state, this.level());
-                this.setProjectileMass(0);
-            } else {
-                this.setProjectileMass(incidentVel < 1e-4d ? 0 : Math.max(this.getProjectileMass() - durabilityPenalty / 2f, 0));
+            if (hardnessPenalty > 1e-2d) {
+                if (ballistics.toughness() < 1e-2d){
+                    momentum = 0;
+                } else{
+                    momentum *= Math.max(0.25, 1 - hardnessPenalty / ballistics.toughness());
+                }
             }
-            Vec3 spallLoc = hitLoc.add(curVel.normalize().scale(2));
-            SoundType sound = state.getSoundType();
-            if (!this.level().isClientSide)
-                this.level().playSound(null, spallLoc.x, spallLoc.y, spallLoc.z, sound.getBreakSound(), SoundSource.BLOCKS,
-                        sound.getVolume(), sound.getPitch());
+            if (!unbreakable)
+                CreateBigCannons.BLOCK_DAMAGE.damageBlock(pos.immutable(), Math.max(Mth.ceil(momentum), 0), state, this.level());
         }
-        shatter |= this.onImpact(blockHitResult, new ImpactResult(outcome, shatter), projectileContext);
-        if (getProjectileMass() == 0)
-            removeNextTick = true;
-        return new ImpactResult(outcome, shatter);
+        this.onImpact(blockHitResult, new ImpactResult(outcome, shatter), projectileContext);
+        return new ImpactResult(outcome, !this.level().isClientSide && (shatter || outcome != ImpactResult.KinematicOutcome.BOUNCE));
     }
 
     public boolean isTracer() { return (this.entityData.get(ID_FLAGS) & 2) != 0; }
@@ -272,13 +249,13 @@ public abstract class AbstractHeavyAutocannonProjectile extends AbstractCannonPr
     }
 
     @Override
-    public void baseWriteSpawnData(FriendlyByteBuf buf) {
+    public void baseWriteSpawnData(RegistryFriendlyByteBuf buf) {
         super.baseWriteSpawnData(buf);
         buf.writeDouble(this.displacement);
     }
 
     @Override
-    public void baseReadSpawnData(FriendlyByteBuf buf) {
+    public void baseReadSpawnData(RegistryFriendlyByteBuf buf) {
         super.baseReadSpawnData(buf);
         this.displacement = buf.readDouble();
     }

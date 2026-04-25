@@ -1,9 +1,0 @@
-{
-  "type": "createbigcannons:cannon_casting",
-  "cast_shape": "cbc_at:heavy_autocannon_silencer_mould",
-  "fluid": {
-    "amount": 1,
-    "fluidTag": "forge:molten_steel"
-  },
-  "result": "cbc_at:unbored_steel_heavy_autocannon_silencer"
-}

@@ -1,6 +1,0 @@
-{
-  "type": "createbigcannons:drill_boring",
-  "input": "cbc_at:unbored_steel_fume_extractor",
-  "result": "cbc_at:steel_fume_extractor",
-  "obey_facing_or_axis": true
-}

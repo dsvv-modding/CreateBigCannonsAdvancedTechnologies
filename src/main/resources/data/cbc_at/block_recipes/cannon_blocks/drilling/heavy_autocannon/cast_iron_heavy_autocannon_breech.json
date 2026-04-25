@@ -1,6 +1,0 @@
-{
-  "type": "createbigcannons:drill_boring",
-  "input": "cbc_at:unbored_cast_iron_heavy_autocannon_breech",
-  "result": "cbc_at:cast_iron_heavy_autocannon_breech",
-  "obey_facing_or_axis": true
-}

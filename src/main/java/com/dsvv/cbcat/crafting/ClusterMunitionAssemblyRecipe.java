@@ -2,52 +2,41 @@ package com.dsvv.cbcat.crafting;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutocannonProjectileItem;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectileItem;
-import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonCartridgeItem;
-import com.dsvv.cbcat.registry.BlockRegister;
-import com.dsvv.cbcat.registry.ExtraDataRegister;
-import com.dsvv.cbcat.registry.ItemRegister;
-import com.dsvv.cbcat.registry.RecipeRegister;
+import com.dsvv.cbcat.registry.*;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistryAccess;
-import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagEntry;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.tags.ITagManager;
-import rbasamoyai.createbigcannons.index.CBCItems;
-import rbasamoyai.createbigcannons.munitions.FuzedItemMunition;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClusterMunitionAssemblyRecipe extends CustomRecipe
 {
-    public ClusterMunitionAssemblyRecipe(ResourceLocation location) { super(location, CraftingBookCategory.MISC); }
+    public ClusterMunitionAssemblyRecipe() { super(CraftingBookCategory.MISC); }
 
     @Override
-    public boolean matches(CraftingContainer container, Level level) {
+    public boolean matches(CraftingInput input, Level level) {
         ItemStack slab = ItemStack.EMPTY;
         ItemStack powder = ItemStack.EMPTY;
         List<ItemStack> clusterParts = new ArrayList<>();
 
-        for (int i = 0; i < container.getContainerSize(); ++i) {
-            ItemStack stack = container.getItem(i);
+        for (int i = 0; i < input.size(); ++i) {
+            ItemStack stack = input.getItem(i);
             if (stack.isEmpty()) continue;
 
             if (stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof SlabBlock slabBlock && new ItemStack(slabBlock).is(ItemTags.WOODEN_SLABS)) {
@@ -67,13 +56,13 @@ public class ClusterMunitionAssemblyRecipe extends CustomRecipe
     }
 
     @Override
-    public ItemStack assemble(CraftingContainer container, RegistryAccess access) {
+    public ItemStack assemble(CraftingInput input, HolderLookup.Provider access) {
         ItemStack slab = ItemStack.EMPTY;
         ItemStack powder = ItemStack.EMPTY;
         List<ItemStack> clusterParts = new ArrayList<>();
 
-        for (int i = 0; i < container.getContainerSize(); ++i) {
-            ItemStack stack = container.getItem(i);
+        for (int i = 0; i < input.size(); ++i) {
+            ItemStack stack = input.getItem(i);
             if (stack.isEmpty())
                 continue;
 
@@ -98,31 +87,10 @@ public class ClusterMunitionAssemblyRecipe extends CustomRecipe
             if (!clusterParts.get(i).getItem().equals(reference))
                 return ItemStack.EMPTY;
 
-        ItemStack result = BlockRegister.CLUSTER_BLOCK.asStack(1);//ItemStack.EMPTY;
-        /*if (reference == ItemRegister.HA_HE_ITEM.asItem())
-            result = BlockRegister.HIGH_EXPLOSIVE_CLUSTER_BLOCK.asStack(1);
-        else if (reference == ItemRegister.HA_SMOKE_ITEM.asItem())
-            result = BlockRegister.SMOKE_CLUSTER_BLOCK.asStack(1);
-        else*/
-            //return result;
+        ItemStack result = BlockRegister.CLUSTER_BLOCK.asStack(1);
 
-        ListTag fuzes = new ListTag();
-        for (int i = 0; i < clusterParts.size(); i++)
-            fuzes.add(((AbstractFuzedHeavyAutocannonProjectileItem) clusterParts.get(0).getItem()).getFuze(clusterParts.get(i)).save(new CompoundTag()));
-
-        CompoundTag baseTag = result.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag resultTag = baseTag.getCompound("BlockEntityTag");
-        resultTag.put("SecondaryFuzes", fuzes);
-        resultTag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(reference.getEntityType(ItemStack.EMPTY)));
-        /*CompoundTag tag = new CompoundTag();//result.getOrCreateTag();
-        if (result.getItem() instanceof FuzedItemMunition && !fuzeCopy.isEmpty()) {
-            CompoundTag projectileTag = round.getOrCreateTag();
-            projectileTag.put("Fuze", fuzeCopy.save(new CompoundTag()));
-        }
-        tag.put("Projectile", round.save(new CompoundTag()));
-        tag.putBoolean("Strong", strong);*/
+        ItemContainerContents fuzeContainer = ItemContainerContents.fromItems(clusterParts);
+        result.set(DataComponentRegistry.CLUSTER_FUZES, fuzeContainer);
         return result;
     }
 

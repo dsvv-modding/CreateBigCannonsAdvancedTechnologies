@@ -3,27 +3,30 @@ package com.dsvv.cbcat.crafting;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectileItem;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonCartridgeItem;
 import com.dsvv.cbcat.registry.RecipeRegister;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCItems;
 
 public class HAMunitionTracerRemovalRecipe extends CustomRecipe {
-    public HAMunitionTracerRemovalRecipe(ResourceLocation id) {
-        super(id, CraftingBookCategory.MISC);
+    public HAMunitionTracerRemovalRecipe() {
+        super(CraftingBookCategory.MISC);
     }
 
     @Override
-    public boolean matches(CraftingContainer container, Level level) {
+    public boolean matches(CraftingInput container, Level level) {
         ItemStack target = ItemStack.EMPTY;
 
-        for (int i = 0; i < container.getContainerSize(); ++i) {
+        for (int i = 0; i < container.size(); ++i) {
             ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
             if (!target.isEmpty()) return false;
@@ -31,7 +34,7 @@ public class HAMunitionTracerRemovalRecipe extends CustomRecipe {
             if (stack.getItem() instanceof HeavyAutocannonCartridgeItem)
                 stack = HeavyAutocannonCartridgeItem.getProjectileStack(stack);
             if (stack.getItem() instanceof AbstractHeavyAutocannonProjectileItem) {
-                if (!stack.getOrCreateTag().getBoolean("Tracer")) return false;
+                if (!stack.has(CBCDataComponents.AUTOCANNON_TRACER) || !stack.get(CBCDataComponents.AUTOCANNON_TRACER)) return false;
                 target = stack;
             } else if (stack.getItem() instanceof AbstractHeavyAutocannonProjectileItem item) {
                 if (!item.isTracer(stack)) return false;
@@ -44,14 +47,14 @@ public class HAMunitionTracerRemovalRecipe extends CustomRecipe {
     }
 
     @Override
-    public ItemStack assemble(CraftingContainer container, RegistryAccess registryAccess) {
+    public ItemStack assemble(CraftingInput container, HolderLookup.Provider registryAccess) {
         return new ItemStack(CBCItems.TRACER_TIP.get());
     }
 
     @Override
-    public NonNullList<ItemStack> getRemainingItems(CraftingContainer container) {
+    public NonNullList<ItemStack> getRemainingItems(CraftingInput container) {
         NonNullList<ItemStack> result = super.getRemainingItems(container);
-        int sz = container.getContainerSize();
+        int sz = container.size();
 
         for (int i = 0; i < sz; ++i) {
             ItemStack stack = container.getItem(i);
@@ -61,10 +64,10 @@ public class HAMunitionTracerRemovalRecipe extends CustomRecipe {
             if (isCartridge)
                 stack = HeavyAutocannonCartridgeItem.getProjectileStack(stack);
             if (stack.getItem() instanceof AbstractHeavyAutocannonProjectileItem) {
-                if (stack.getOrCreateTag().getBoolean("Tracer")) {
+                if (stack.get(CBCDataComponents.AUTOCANNON_TRACER)) {
                     ItemStack copy = stack.copy();
                     copy.setCount(1);
-                    copy.getOrCreateTag().remove("Tracer");
+                    copy.set(CBCDataComponents.AUTOCANNON_TRACER, false);
                     if (isCartridge) {
                         ItemStack cartridge = new ItemStack(originalStack.getItem());
                         HeavyAutocannonCartridgeItem.writeProjectile(copy, cartridge);

@@ -8,9 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.Nullable;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 
 import java.util.List;
@@ -35,8 +33,8 @@ public class TwinAutocannonBlockItem <T extends Block & TwinAutocannonBlock> ext
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
-        super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
-        Tooltips.appendTextTwinAutocannon(pStack, pLevel, pTooltip, pFlag, this.twinAutocannonBlock);
+    public void appendHoverText(ItemStack pStack, TooltipContext ctx, List<Component> pTooltip, TooltipFlag pFlag) {
+        super.appendHoverText(pStack, ctx, pTooltip, pFlag);
+        Tooltips.appendTextTwinAutocannon(pStack, pTooltip, pFlag, this.twinAutocannonBlock);
     }
 }

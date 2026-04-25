@@ -1,0 +1,9 @@
+{
+  "type": "createbigcannons:drill_boring",
+  "input": {
+    "type": "block",
+    "block": "cbc_at:unbored_bronze_rifled_barrel"
+  },
+  "result": "cbc_at:bronze_rifled_barrel",
+  "obey_facing_or_axis": true
+}

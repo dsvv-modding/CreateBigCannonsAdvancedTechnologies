@@ -1,12 +1,12 @@
-package com.dsvv.cbcat.cannon.twin_autocannon;
+package com.dsvv.cbcat.cannon.twin_autocannon.breech;
 
-import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlock;
-import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonInventoryHandler;
+import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlockEntity;
 import com.simibubi.create.content.contraptions.Contraption;
-import dev.engine_room.flywheel.api.visualization.VisualizationManager;
+
 import dev.engine_room.flywheel.lib.visualization.VisualizationHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
@@ -18,12 +18,11 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.AnimatedAutocannon;
 import rbasamoyai.createbigcannons.munitions.autocannon.ammo_container.AutocannonAmmoContainerItem;
+import rbasamoyai.ritchiesprojectilelib.EnvExecute;
 
 import javax.annotation.Nullable;
 import java.util.Deque;
@@ -136,43 +135,43 @@ public class TwinAutocannonBreechBlockEntity extends TwinAutocannonBlockEntity i
     @Override public int getAnimationTicks() { return this.animateTicks; }
 
     @Override
-    protected void read(CompoundTag tag, boolean clientPacket) {
-        super.read(tag, clientPacket);
+    protected void read(CompoundTag tag, HolderLookup.Provider registry, boolean clientPacket) {
+        super.read(tag, registry, clientPacket);
         getBlockState().setValue(TwinAutocannonBreechBlock.HANDLE, tag.getBoolean("Handle"));
         this.fireRate = tag.getInt("FiringRate");
         this.firingCooldown = tag.getInt("Cooldown");
         this.animateTicks = tag.getInt("AnimateTicks");
-        this.outputBuffer = tag.contains("Output") ? ItemStack.of(tag.getCompound("Output")) : ItemStack.EMPTY;
+        this.outputBuffer = tag.contains("Output") ? ItemStack.parseOptional(registry, tag.getCompound("Output")) : ItemStack.EMPTY;
         this.seat = DyeColor.byName(tag.getString("Seat"), null);
 
         this.inputBuffer.clear();
         ListTag inputTag = tag.getList("Input", Tag.TAG_COMPOUND);
         for (int i = 0; i < inputTag.size(); ++i) {
-            this.inputBuffer.add(ItemStack.of(inputTag.getCompound(i)));
+            this.inputBuffer.add(ItemStack.parseOptional(registry, inputTag.getCompound(i)));
         }
-        this.magazine = tag.contains("Magazine") ? ItemStack.of(tag.getCompound("Magazine")) : ItemStack.EMPTY;
+        this.magazine = tag.contains("Magazine") ? ItemStack.parseOptional(registry, tag.getCompound("Magazine")) : ItemStack.EMPTY;
 
         if (!clientPacket) return;
         this.updateInstance = tag.contains("UpdateInstance");
-        if (clientPacket && !this.isVirtual()) this.requestModelDataUpdate();
+        if (!this.isVirtual()) this.requestModelDataUpdate();
     }
 
     @Override
-    protected void write(CompoundTag tag, boolean clientPacket) {
-        super.write(tag, clientPacket);
+    protected void write(CompoundTag tag, HolderLookup.Provider registry, boolean clientPacket) {
+        super.write(tag, registry, clientPacket);
         tag.putBoolean("Handle", getBlockState().getValue(TwinAutocannonBreechBlock.HANDLE).booleanValue());
         tag.putInt("FiringRate", this.fireRate);
         tag.putInt("Cooldown", this.firingCooldown);
         tag.putInt("AnimateTicks", this.animateTicks);
-        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(new CompoundTag()));
+        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(registry));
         if (this.seat != null) tag.putString("Seat", this.seat.getSerializedName());
 
         if (!this.inputBuffer.isEmpty()) {
             tag.put("Input", this.inputBuffer.stream()
-                    .map(s -> s.save(new CompoundTag()))
+                    .map(s -> s.save(registry))
                     .collect(Collectors.toCollection(ListTag::new)));
         }
-        if (this.magazine != null && !this.magazine.isEmpty()) tag.put("Magazine", this.magazine.save(new CompoundTag()));
+        if (this.magazine != null && !this.magazine.isEmpty()) tag.put("Magazine", this.magazine.save(registry));
 
         if (!clientPacket) return;
         if (this.updateInstance) tag.putBoolean("UpdateInstance", true);
@@ -231,6 +230,7 @@ public class TwinAutocannonBreechBlockEntity extends TwinAutocannonBlockEntity i
     @Override
     public void requestModelDataUpdate() {
         super.requestModelDataUpdate();
-        if (!this.remove) DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> VisualizationHelper.queueUpdate(this));
+        if (!this.remove)
+            EnvExecute.executeOnClient(() -> () -> VisualizationHelper.queueUpdate(this));
     }
 }

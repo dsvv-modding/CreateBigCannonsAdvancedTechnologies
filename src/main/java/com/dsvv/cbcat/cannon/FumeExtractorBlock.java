@@ -4,13 +4,14 @@ import com.dsvv.cbcat.base.CustomPropellantContext;
 import com.dsvv.cbcat.base.SaveAssemble;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.block.IBE;
 import net.createmod.catnip.math.VoxelShaper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -26,10 +27,12 @@ public class FumeExtractorBlock extends BigCannonBaseBlock implements IBE<FumeEx
 {
     public boolean complete = true;
     VoxelShaper shaper;
+
     public FumeExtractorBlock(Properties properties, BigCannonMaterial material)
     {
         super(properties, material);
         shaper = new AllShapes.Builder(makeShape()).forDirectional();
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public FumeExtractorBlock(Properties properties, BigCannonMaterial material, boolean isComplete)
@@ -37,6 +40,14 @@ public class FumeExtractorBlock extends BigCannonBaseBlock implements IBE<FumeEx
         this(properties, material);
         complete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private FumeExtractorBlock fromSelf(Properties properties) {
+        return new FumeExtractorBlock(properties, this.getCannonMaterial());
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     public VoxelShape makeShape(){
         VoxelShape shape = Shapes.empty();

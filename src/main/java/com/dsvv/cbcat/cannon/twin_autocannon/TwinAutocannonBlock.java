@@ -14,6 +14,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import net.minecraft.world.phys.Vec3;
 import rbasamoyai.createbigcannons.cannon_control.contraption.AbstractMountedCannonContraption;
@@ -135,8 +136,8 @@ public interface TwinAutocannonBlock  extends WeldableBlock, CannonContraptionPr
 
     @Override
     default boolean onInteractWhileAssembled(Player player, BlockPos localPos, Direction side, InteractionHand interactionHand,
-                                             Level level, Contraption contraption, BlockEntity be, StructureBlockInfo info,
-                                             PitchOrientedContraptionEntity entity) {
+                                             Level level, Contraption abstractMountedCannonContraption, BlockEntity be,
+                                             StructureTemplate.StructureBlockInfo structureBlockInfo, PitchOrientedContraptionEntity entity) {
         return false;
     }
 

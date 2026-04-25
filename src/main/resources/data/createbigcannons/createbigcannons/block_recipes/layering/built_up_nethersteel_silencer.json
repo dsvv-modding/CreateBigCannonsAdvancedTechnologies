@@ -1,0 +1,14 @@
+{
+  "type": "createbigcannons:built_up_heating",
+  "layers": [
+    {
+      "type": "block",
+      "block": "cbc_at:nethersteel_silencer"
+    },
+    {
+      "type": "block",
+      "block": "createbigcannons:small_nethersteel_cannon_layer"
+    }
+  ],
+  "result": "cbc_at:built_up_nethersteel_silencer"
+}

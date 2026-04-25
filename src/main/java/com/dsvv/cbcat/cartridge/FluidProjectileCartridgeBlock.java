@@ -1,11 +1,7 @@
 package com.dsvv.cbcat.cartridge;
 
-import com.dsvv.cbcat.registry.ExtraDataRegister;
 import com.simibubi.create.foundation.block.IBE;
-import com.tterrag.registrate.util.entry.EntityEntry;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -16,8 +12,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBehavior;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock;
-import rbasamoyai.createbigcannons.forge.munitions.fluid_shell.FluidShellBlockEntity;
-import rbasamoyai.createbigcannons.index.CBCBlocks;
 import rbasamoyai.createbigcannons.index.CBCEntityTypes;
 import rbasamoyai.createbigcannons.index.CBCMunitionPropertiesHandlers;
 import rbasamoyai.createbigcannons.munitions.big_cannon.*;
@@ -29,7 +23,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 
-public class FluidProjectileCartridgeBlock extends FluidShellBlock implements ProjectileCartridge, IBE<AbstractFluidShellBlockEntity>, BigCannonMunitionBlock
+public class FluidProjectileCartridgeBlock extends FluidShellBlock implements IProjectileCartridgeBlock, IBE<AbstractFluidShellBlockEntity>, BigCannonMunitionBlock
 {
     private boolean used;
     private boolean multipleCharges = true;
@@ -84,7 +78,7 @@ public class FluidProjectileCartridgeBlock extends FluidShellBlock implements Pr
         return data.state().getValue(FACING) == dir;
     }
 
-    public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
+    /*public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
     {
         BlockState state = this.defaultBlockState().setValue(FACING, cannonOrientation);
         CompoundTag tag = new CompoundTag();
@@ -110,7 +104,7 @@ public class FluidProjectileCartridgeBlock extends FluidShellBlock implements Pr
             stack.setTag(info.nbt());
         }
         return stack;
-    }
+    }*/
 
     public int getMaximumPowerLevels()
     {

@@ -6,6 +6,7 @@ import com.dsvv.cbcat.registry.MenuRegister;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.base.ItemStackServerData;
 import rbasamoyai.createbigcannons.base.SimpleValueContainer;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 
 import javax.annotation.Nullable;
 
@@ -23,14 +25,14 @@ public class HeavyAutocannonAmmoContainerMenu extends AbstractContainerMenu impl
 
     public static HeavyAutocannonAmmoContainerMenu getServerMenuForItemStack(int id, Inventory playerInv, ItemStack stack, boolean isCreative) {
         IHeavyAutocannonAmmoContainerContainer ct = new HeavyAutocannonAmmoContainerItemContainer(stack);
-        return new HeavyAutocannonAmmoContainerMenu(MenuRegister.HEAVY_AUTOCANNON_AMMO_BOX.get(), id, playerInv, ct, new ItemStackServerData(stack, "TracerSpacing"), isCreative, true);
+        return new HeavyAutocannonAmmoContainerMenu(MenuRegister.HEAVY_AUTOCANNON_AMMO_BOX.get(), id, playerInv, ct, new ItemStackServerData(stack, CBCDataComponents.TRACER_SPACING), isCreative, true);
     }
 
     public static HeavyAutocannonAmmoContainerMenu getServerMenuForBlockEntity(int id, Inventory playerInv, HeavyAutocannonAmmoContainerBlockEntity be, boolean isCreative) {
         return new HeavyAutocannonAmmoContainerMenu(MenuRegister.HEAVY_AUTOCANNON_AMMO_BOX.get(), id, playerInv, be, new HeavyAutocannonAmmoContainerServerData(be), isCreative, false);
     }
 
-    public static HeavyAutocannonAmmoContainerMenu getClientMenu(MenuType<HeavyAutocannonAmmoContainerMenu> type, int id, Inventory playerInv, FriendlyByteBuf buf) {
+    public static HeavyAutocannonAmmoContainerMenu getClientMenu(MenuType<HeavyAutocannonAmmoContainerMenu> type, int id, Inventory playerInv, RegistryFriendlyByteBuf buf) {
         boolean isCreative = buf.readBoolean();
         ContainerData data = new SimpleContainerData(1);
         data.set(0, buf.readVarInt());
@@ -41,7 +43,7 @@ public class HeavyAutocannonAmmoContainerMenu extends AbstractContainerMenu impl
             BlockEntity be = playerInv.player.level().getBlockEntity(pos);
             ct = new HeavyAutocannonAmmoContainerBlockEntityContainerWrapper(be instanceof HeavyAutocannonAmmoContainerBlockEntity abe ? abe : null, pos);
         } else {
-            ct = new HeavyAutocannonAmmoContainerItemContainer(buf.readItem());
+            ct = new HeavyAutocannonAmmoContainerItemContainer(ItemStack.STREAM_CODEC.decode(buf));
         }
         return new HeavyAutocannonAmmoContainerMenu(type, id, playerInv, ct, data, isCreative, !isBlock);
     }

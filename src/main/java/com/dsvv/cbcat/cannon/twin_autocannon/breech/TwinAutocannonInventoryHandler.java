@@ -1,9 +1,7 @@
 package com.dsvv.cbcat.cannon.twin_autocannon.breech;
 
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.munitions.autocannon.AutocannonAmmoItem;
 
 import javax.annotation.Nonnull;
@@ -33,10 +31,10 @@ public record TwinAutocannonInventoryHandler(TwinAutocannonBreechBlockEntity bre
         int maxCount = Math.min(breech.getQueueLimit() - breech.getInputBuffer().size(), stack.getCount());
         if (!simulate) {
             for (int i = 0; i < maxCount; ++i) {
-                breech.getInputBuffer().add(ItemHandlerHelper.copyStackWithSize(stack, 1));
+                breech.getInputBuffer().add(stack.copyWithCount(1));
             }
         }
-        return stack.getCount() == maxCount ? ItemStack.EMPTY : ItemHandlerHelper.copyStackWithSize(stack, stack.getCount() - maxCount);
+        return stack.getCount() == maxCount ? ItemStack.EMPTY : stack.copyWithCount(stack.getCount() - maxCount);
     }
 
     @Nonnull
@@ -45,7 +43,7 @@ public record TwinAutocannonInventoryHandler(TwinAutocannonBreechBlockEntity bre
         if (amount <= 0) return ItemStack.EMPTY;
         return switch (slot) {
             case 0 ->
-                    simulate ? ItemHandlerHelper.copyStackWithSize(breech.getOutputBuffer(), 1) : breech.getOutputBuffer().split(1);
+                    simulate ? breech.getOutputBuffer().copyWithCount(1) : breech.getOutputBuffer().split(1);
             default -> ItemStack.EMPTY;
         };
     }

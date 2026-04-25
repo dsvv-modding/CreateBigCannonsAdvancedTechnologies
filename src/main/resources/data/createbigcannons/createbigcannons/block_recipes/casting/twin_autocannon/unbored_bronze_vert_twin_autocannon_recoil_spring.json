@@ -1,0 +1,8 @@
+{
+  "type": "createbigcannons:cannon_casting",
+  "cast_shape": "cbc_at:vert_twin_autocannon_recoil_spring_mould",
+  "fluid": {
+    "tag": "c:molten_bronze"
+  },
+  "result": "cbc_at:unbored_bronze_vert_twin_autocannon_recoil_spring"
+}

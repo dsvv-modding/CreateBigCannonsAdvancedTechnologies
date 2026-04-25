@@ -4,29 +4,31 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonP
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonAmmoItem;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonCartridgeItem;
 import com.dsvv.cbcat.registry.RecipeRegister;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistryAccess;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCItems;
 
 public class HAMunitionTracerRecipe extends CustomRecipe {
-    public HAMunitionTracerRecipe(ResourceLocation location) { super(location, CraftingBookCategory.MISC); }
+    public HAMunitionTracerRecipe() { super(CraftingBookCategory.MISC); }
 
     @Override
-    public boolean matches(CraftingContainer container, Level level) {
+    public boolean matches(CraftingInput container, Level level) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack tracer = ItemStack.EMPTY;
 
-        for (int i = 0; i < container.getContainerSize(); ++i) {
+        for (int i = 0; i < container.size(); ++i) {
             ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
             if (stack.getItem() instanceof AbstractHeavyAutocannonProjectileItem) {
-                if (!round.isEmpty() || stack.getOrCreateTag().getBoolean("Tracer")) return false;
+                if (!round.isEmpty() || stack.has(CBCDataComponents.AUTOCANNON_TRACER)) return false;
                 round = stack;
             } else if (stack.getItem() instanceof HeavyAutocannonCartridgeItem item) {
                 if (!round.isEmpty() || item.isTracer(stack)) return false;
@@ -43,11 +45,11 @@ public class HAMunitionTracerRecipe extends CustomRecipe {
     }
 
     @Override
-    public ItemStack assemble(CraftingContainer container, RegistryAccess access) {
+    public ItemStack assemble(CraftingInput container, HolderLookup.Provider access) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack tracer = ItemStack.EMPTY;
 
-        for (int i = 0; i < container.getContainerSize(); ++i) {
+        for (int i = 0; i < container.size(); ++i) {
             ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
             if (stack.getItem() instanceof AbstractHeavyAutocannonProjectileItem || stack.getItem() instanceof HeavyAutocannonAmmoItem) {
@@ -64,11 +66,11 @@ public class HAMunitionTracerRecipe extends CustomRecipe {
         if (round.isEmpty() || tracer.isEmpty()) return ItemStack.EMPTY;
         ItemStack result = round.copy();
         result.setCount(1);
-        if (result.getItem() instanceof AbstractHeavyAutocannonProjectileItem) {
+        /*if (result.getItem() instanceof AbstractHeavyAutocannonProjectileItem) {
             result.getOrCreateTag().putBoolean("Tracer", true);
         } else if (result.getItem() instanceof HeavyAutocannonAmmoItem item) {
             item.setTracer(result, true);
-        }
+        }*/
         return result;
     }
 

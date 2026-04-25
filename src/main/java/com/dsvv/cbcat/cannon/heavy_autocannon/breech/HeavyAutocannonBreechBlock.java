@@ -2,31 +2,30 @@ package com.dsvv.cbcat.cannon.heavy_autocannon.breech;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBaseBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
-import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.IHeavyAutocannonBreech;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.Contraption;
-import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -37,7 +36,6 @@ import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContr
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 import rbasamoyai.createbigcannons.crafting.casting.CannonCastShape;
 import rbasamoyai.createbigcannons.index.CBCSoundEvents;
-import rbasamoyai.createbigcannons.munitions.autocannon.ammo_container.AutocannonAmmoContainerItem;
 
 import static rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock.writeAndSyncSingleBlockData;
 
@@ -46,12 +44,21 @@ public class HeavyAutocannonBreechBlock extends HeavyAutocannonBaseBlock impleme
     public static final DirectionProperty FACING = HeavyAutocannonBaseBlock.FACING;
     public HeavyAutocannonBreechBlock(Properties properties, AutocannonMaterial material) {
         super(properties, material);
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public HeavyAutocannonBreechBlock(Properties properties, AutocannonMaterial material, boolean isComplete) {
         this(properties, material);
         this.isComplete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private HeavyAutocannonBreechBlock fromSelf(Properties properties) {
+        return new HeavyAutocannonBreechBlock(properties, this.getAutocannonMaterial());
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     @Override
     public Class<HeavyAutocannonBreechBlockEntity> getBlockEntityClass() {
@@ -87,8 +94,7 @@ public class HeavyAutocannonBreechBlock extends HeavyAutocannonBaseBlock impleme
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
-        ItemStack stack = player.getItemInHand(hand);
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
         if (level.getBlockEntity(pos) instanceof HeavyAutocannonBreechBlockEntity breech) {
 
             ItemStack container = breech.getMagazine();
@@ -117,16 +123,16 @@ public class HeavyAutocannonBreechBlock extends HeavyAutocannonBaseBlock impleme
             }
             if (changed) {
                 breech.notifyUpdate();
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return ItemInteractionResult.sidedSuccess(level.isClientSide);
             }
         }
-        return super.use(state, level, pos, player, hand, result);
+        return super.useItemOn(stack, state, level, pos, player, hand, result);
     }
 
     @Override
     public boolean onInteractWhileAssembled(Player player, BlockPos localPos, Direction side, InteractionHand interactionHand,
-                                            Level level, Contraption contraption, BlockEntity be, StructureBlockInfo info,
-                                            PitchOrientedContraptionEntity entity) {
+                                            Level level, Contraption contraption, BlockEntity be,
+                                            StructureTemplate.StructureBlockInfo info, PitchOrientedContraptionEntity entity) {
         if (!(be instanceof HeavyAutocannonBreechBlockEntity breech)) return false;
 
         ItemStack stack = player.getItemInHand(interactionHand);

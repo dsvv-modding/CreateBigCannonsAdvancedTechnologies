@@ -5,6 +5,7 @@ import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBaseBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.block.IBE;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
@@ -13,6 +14,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -34,6 +36,7 @@ public class TwinAutocannonRecoilSpringBlock extends TwinAutocannonBaseBlock imp
     public TwinAutocannonRecoilSpringBlock(Properties properties, AutocannonMaterial material, NonNullFunction<Direction, BlockState> movingBlockFunction, boolean vertical) {
         super(properties, material, vertical);
         this.movingBlockFunction = movingBlockFunction;
+        this.codec = simpleCodec(this::fromSelf);
     }
 
     public TwinAutocannonRecoilSpringBlock(Properties properties, AutocannonMaterial material, NonNullFunction<Direction, BlockState> movingBlockFunction, boolean vertical, boolean isComplete)
@@ -41,6 +44,14 @@ public class TwinAutocannonRecoilSpringBlock extends TwinAutocannonBaseBlock imp
         this(properties, material, movingBlockFunction, vertical);
         this.isComplete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private TwinAutocannonRecoilSpringBlock fromSelf(Properties properties) {
+        return new TwinAutocannonRecoilSpringBlock(properties, this.getAutocannonMaterial(), this.movingBlockFunction, this.vertical);
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     @Override
     public Class<TwinAutocannonRecoilSpringBlockEntity> getBlockEntityClass() {

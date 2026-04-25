@@ -3,9 +3,9 @@ package com.dsvv.cbcat.cannon.twin_autocannon.breech;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBaseBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlockEntity;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.Contraption;
@@ -18,6 +18,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
@@ -28,6 +29,8 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -35,13 +38,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.common.Tags;
+import rbasamoyai.createbigcannons.cannon_control.contraption.AbstractMountedCannonContraption;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 import rbasamoyai.createbigcannons.crafting.casting.CannonCastShape;
@@ -55,19 +60,29 @@ public class TwinAutocannonBreechBlock extends TwinAutocannonBaseBlock implement
     public static final DirectionProperty FACING = TwinAutocannonBaseBlock.FACING;
     public static final BooleanProperty HANDLE = BooleanProperty.create("handle");
 
+    private final MapCodec<? extends DirectionalBlock> codec;
+
     public TwinAutocannonBreechBlock(Properties properties, AutocannonMaterial material, boolean vertical) {
         super(properties, material, vertical);
         this.registerDefaultState(this.defaultBlockState().setValue(HANDLE, false));
+        this.codec = simpleCodec(this::fromSelf);
     }
+
+    public TwinAutocannonBreechBlock(Properties properties, AutocannonMaterial material, boolean vertical, boolean isComplete) {
+        this(properties, material, vertical);
+        this.isComplete = isComplete;
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
+
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(HANDLE);
     }
 
-    public TwinAutocannonBreechBlock(Properties properties, AutocannonMaterial material, boolean vertical, boolean isComplete) {
-        this(properties, material, vertical);
-        this.isComplete = isComplete;
+    private TwinAutocannonBreechBlock fromSelf(Properties properties) {
+        return new TwinAutocannonBreechBlock(properties, this.getAutocannonMaterial(), this.vertical);
     }
 
     @Override
@@ -150,8 +165,7 @@ public class TwinAutocannonBreechBlock extends TwinAutocannonBaseBlock implement
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
-        ItemStack stack = player.getItemInHand(hand);
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
         if (level.getBlockEntity(pos) instanceof TwinAutocannonBreechBlockEntity breech) {
             if (breech.getSeatColor() == null
                     && state.getValue(HANDLE)
@@ -163,7 +177,7 @@ public class TwinAutocannonBreechBlock extends TwinAutocannonBaseBlock implement
                     level.playSound(null, pos, soundType.getPlaceSound(), SoundSource.BLOCKS, (soundType.getVolume() + 1.0F) / 2.0F, soundType.getPitch() * 0.8F);
                     if (!player.isCreative()) stack.shrink(1);
                 }
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return ItemInteractionResult.sidedSuccess(level.isClientSide);
             } else if (stack.isEmpty() && breech.getSeatColor() != null) {
                 if (!level.isClientSide) {
                     DyeColor seat = breech.getSeatColor();
@@ -178,7 +192,7 @@ public class TwinAutocannonBreechBlock extends TwinAutocannonBaseBlock implement
                     breech.setSeatColor(null);
                     level.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0f, 1.0f);
                 }
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return ItemInteractionResult.sidedSuccess(level.isClientSide);
             }
 
             ItemStack container = breech.getMagazine();
@@ -207,16 +221,18 @@ public class TwinAutocannonBreechBlock extends TwinAutocannonBaseBlock implement
             }
             if (changed) {
                 breech.notifyUpdate();
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return ItemInteractionResult.sidedSuccess(level.isClientSide);
             }
+            if (stack.is(Tags.Items.TOOLS_SHEAR) || stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof LeavesBlock)
+                return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
-        return super.use(state, level, pos, player, hand, result);
+        return super.useItemOn(stack, state, level, pos, player, hand, result);
     }
 
     @Override
     public boolean onInteractWhileAssembled(Player player, BlockPos localPos, Direction side, InteractionHand interactionHand,
-                                            Level level, Contraption contraption, BlockEntity be, StructureBlockInfo info,
-                                            PitchOrientedContraptionEntity entity) {
+                                            Level level, Contraption contraption, BlockEntity be,
+                                            StructureTemplate.StructureBlockInfo info, PitchOrientedContraptionEntity entity) {
         if (!(be instanceof TwinAutocannonBreechBlockEntity breech)) return false;
 
         ItemStack stack = player.getItemInHand(interactionHand);

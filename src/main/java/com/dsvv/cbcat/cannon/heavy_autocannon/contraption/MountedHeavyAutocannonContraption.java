@@ -1,10 +1,6 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package com.dsvv.cbcat.cannon.heavy_autocannon.contraption;
 
+import com.dsvv.cbcat.base.ICarriageAdjustableFireRate;
 import com.dsvv.cbcat.cannon.heavy_autocannon.*;
 import com.dsvv.cbcat.cannon.heavy_autocannon.breech.HeavyAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectile;
@@ -14,7 +10,6 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.qf_breech.HeavyAutocannonQuickFire
 import com.dsvv.cbcat.cannon.heavy_autocannon.qf_breech.HeavyAutocannonQuickFireBreechBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoilSpringBlock;
 import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoilSpringBlockEntity;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.registry.ContraptionRegister;
 import com.dsvv.cbcat.registry.ContraptionRegister.CBCATContraptionTypes;
 import com.simibubi.create.api.contraption.ContraptionType;
@@ -24,9 +19,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.Direction.AxisDirection;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.NbtUtils;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -46,8 +43,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.cannon_control.ControlPitchContraption;
 import rbasamoyai.createbigcannons.cannon_control.cannon_mount.CannonMountBlockEntity;
@@ -61,23 +57,23 @@ import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMateria
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterialProperties;
 import rbasamoyai.createbigcannons.config.CBCConfigs;
 import rbasamoyai.createbigcannons.effects.particles.plumes.AutocannonPlumeParticleData;
-import rbasamoyai.createbigcannons.forge.mixin_interface.GetItemStorage;
 import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 import rbasamoyai.createbigcannons.index.CBCEntityTypes;
 import rbasamoyai.createbigcannons.index.CBCSoundEvents;
 import rbasamoyai.createbigcannons.multiloader.NetworkPlatform;
 import rbasamoyai.createbigcannons.munitions.autocannon.config.AutocannonProjectilePropertiesComponent;
 import rbasamoyai.createbigcannons.network.ClientboundAnimateCannonContraptionPacket;
+import rbasamoyai.createbigcannons.remix.GetItemStorage;
 import rbasamoyai.createbigcannons.utils.CBCUtils;
 import rbasamoyai.ritchiesprojectilelib.RitchiesProjectileLib;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.*;
 
-import static com.dsvv.cbcat.debugUtils.DebugUtils.displayCustomClientMessage;
 import static rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock.writeAndSyncSingleBlockData;
 
-public class MountedHeavyAutocannonContraption extends AbstractMountedCannonContraption implements ItemCannon, GetItemStorage {
+public class MountedHeavyAutocannonContraption extends AbstractMountedCannonContraption implements ItemCannon, GetItemStorage, ICarriageAdjustableFireRate {
     private AutocannonMaterial cannonMaterial;
     private final Set<BlockPos> recoilSpringPositions = new LinkedHashSet();
     private float volumeMultiplier = 1.0F;
@@ -114,7 +110,6 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
         BlockPos start = pos;
         BlockState nextState = level.getBlockState(pos.relative(positive));
         boolean positiveBreech = false;
-        int chamberCount = 0;
 
         while (nextState.getBlock() instanceof HeavyAutocannonBlock cBlock && this.isConnectedToCannon(level, nextState, start.relative(positive), positive, material)) {
             start = start.relative(positive);
@@ -135,8 +130,6 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
                 break;
             if (cBlock instanceof HeavyAutocannonBarrelBlock barrel) {
                 volumeMultiplier *= barrel.getVolumeMultiplier();
-                if (barrel.isChamber())
-                    chamberCount++;
             }
         }
 
@@ -163,8 +156,6 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
                 break;
             if (cBlock instanceof HeavyAutocannonBarrelBlock barrel) {
                 volumeMultiplier *= barrel.getVolumeMultiplier();
-                if (barrel.isChamber())
-                    chamberCount++;
             }
         }
 
@@ -176,9 +167,6 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
         if (!(breechState.getBlock() instanceof IHeavyAutocannonBreech))
             throw invalidCannon();
 
-        //if (breechState.getBlock() instanceof HeavyAutocannonQuickFireBreechBlock qfBreech)
-        //    qfBreech.setSaveCharges(level, pos, chamberCount);
-
         this.initialOrientation = breechState.getValue(BlockStateProperties.FACING);
         this.anchor = pos;
         this.startPos = this.startPos.subtract(pos);
@@ -188,15 +176,13 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
             StructureBlockInfo localBlockInfo = new StructureBlockInfo(localPos, blockInfo.state(), blockInfo.nbt());
             this.blocks.put(localPos, localBlockInfo);
             if (blockInfo.nbt() != null) {
-                BlockEntity be = BlockEntity.loadStatic(localPos, blockInfo.state(), blockInfo.nbt());
+                BlockEntity be = BlockEntity.loadStatic(localPos, blockInfo.state(), blockInfo.nbt(), level.registryAccess());
                 this.presentBlockEntities.put(localPos, be);
                 if (blockInfo.state().getBlock() instanceof HeavyAutocannonRecoilSpringBlock) {
                     this.recoilSpringPositions.add(localPos);
                 }
             }
         }
-
-        StructureBlockInfo startInfo = this.blocks.get(this.startPos);
 
         StructureBlockInfo possibleSpring = this.blocks.get(this.startPos.relative(this.initialOrientation));
         if (possibleSpring != null
@@ -212,7 +198,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
                     springBE.toAnimate.put(pos1.subtract(mainRecoilSpringPos), springed.getMovingState(blockInfo.state()));
                     this.blocks.put(pos1, new StructureBlockInfo(pos1, springed.getStationaryState(blockInfo.state()), blockInfo.nbt()));
                 }
-                CompoundTag newTag = springBE.saveWithFullMetadata();
+                CompoundTag newTag = springBE.saveWithFullMetadata(level.registryAccess());
                 newTag.remove("x");
                 newTag.remove("y");
                 newTag.remove("z");
@@ -232,10 +218,6 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
                 && level.getBlockEntity(pos.relative(connection.getOpposite())) instanceof IHeavyAutocannonBlockEntity cbe1
                 && cbe.cannonBehavior().isConnectedTo(connection.getOpposite())
                 && cbe1.cannonBehavior().isConnectedTo(connection);
-    }
-
-    public static AssemblyException noAutocannonBreech() {
-        return new AssemblyException(Component.translatable("exception.cbc_at.cannon_mount.noHeavyAutocannonBreech"));
     }
 
     public void addBlocksToWorld(Level world, StructureTransform transform) {
@@ -275,22 +257,16 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
     public void fireShot(ServerLevel level, PitchOrientedContraptionEntity entity) {
         if (this.startPos == null || this.cannonMaterial == null || !(this.presentBlockEntities.get(this.startPos) instanceof IHeavyAutocannonBreechBE breech) || !breech.canFire())
             return;
-        boolean isManual = breech.isManual();
-        HeavyAutocannonQuickFireBreechBlockEntity qfbreech = null;
-        if (isManual)
-            qfbreech = (HeavyAutocannonQuickFireBreechBlockEntity) breech;
         ItemStack foundProjectile = breech.extractNextInput();
         HeavyAutocannonAmmoItem round = null;
         AbstractHeavyAutocannonProjectileItem projectileItem = null;
         if (foundProjectile.getItem() instanceof HeavyAutocannonAmmoItem)
             round = (HeavyAutocannonAmmoItem) foundProjectile.getItem();
         else if (foundProjectile.getItem() instanceof AbstractHeavyAutocannonProjectileItem) {
-            //displayCustomClientMessage("Up to this point");
             projectileItem = (AbstractHeavyAutocannonProjectileItem) foundProjectile.getItem();
         }
         else
             return;
-        //displayCustomClientMessage("Ammo Accepted");
         ControlPitchContraption controller = entity.getController();
         Vec3 ejectPos = entity.toGlobalVector(Vec3.atCenterOf(this.startPos.relative(Direction.DOWN)), 0.0F);
         Vec3 centerPos = entity.toGlobalVector(Vec3.atCenterOf(BlockPos.ZERO), 0.0F);
@@ -308,7 +284,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
         AutocannonMaterialProperties properties = this.cannonMaterial.properties();
         AutocannonProjectilePropertiesComponent roundProperties = round != null ? round.getAutocannonProperties(foundProjectile) : projectileItem.getAutocannonProperties(foundProjectile);
         boolean canFail = !(Boolean)CBCConfigs.server().failure.disableAllFailure.get();
-        float speed = properties.baseSpeed();//isManual ? properties.baseSpeed() * 0.75f + qfbreech.getCharge() : properties.baseSpeed();
+        float speed = properties.baseSpeed();
         float spread = properties.baseSpread();
         boolean canSquib = roundProperties == null || roundProperties.canSquib();
         canSquib |= canFail;
@@ -339,7 +315,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
                     }
 
                     behavior.tryLoadingItem(foundProjectile);
-                    CompoundTag tag = (this.presentBlockEntities.get(currentPos)).saveWithFullMetadata();
+                    CompoundTag tag = (this.presentBlockEntities.get(currentPos)).saveWithFullMetadata(level.registryAccess());
                     tag.remove("x");
                     tag.remove("y");
                     tag.remove("z");
@@ -385,7 +361,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
             }
         }
 
-        NetworkPlatform.sendToClientTracking(new ClientboundAnimateCannonContraptionPacket(entity), entity);
+        NetworkPlatform.sendToClientTracking(ClientboundAnimateCannonContraptionPacket.entity(entity), entity);
         Vec3 spawnPos = entity.toGlobalVector(Vec3.atCenterOf(currentPos.relative(this.initialOrientation)), 0.0F);
         Vec3 vec1 = spawnPos.subtract(centerPos).normalize();
         spawnPos = spawnPos.subtract(vec1.scale(1.5F));
@@ -426,11 +402,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
             }
         }
 
-        /*if (round.getType() == AutocannonAmmoType.MACHINE_GUN) {
-            CBCUtils.playBlastLikeSoundOnServer(level, spawnPos.x, spawnPos.y, spawnPos.z, CBCSoundEvents.FIRE_MACHINE_GUN.getMainEvent(), SoundSource.BLOCKS, 10.0F * this.volumeMultiplier, 0.75F * this.volumeMultiplier, 3.0F);
-        } else {*/
-            CBCUtils.playBlastLikeSoundOnServer(level, spawnPos.x, spawnPos.y, spawnPos.z, CBCSoundEvents.FIRE_AUTOCANNON.getMainEvent(), SoundSource.BLOCKS, 15.0F * this.volumeMultiplier, 1.05f * this.volumeMultiplier, 3.0F);
-        //}
+        CBCUtils.playBlastLikeSoundOnServer(level, spawnPos.x, spawnPos.y, spawnPos.z, CBCSoundEvents.FIRE_AUTOCANNON.getMainEvent(), SoundSource.BLOCKS, 15.0F * this.volumeMultiplier, 1.05f * this.volumeMultiplier, 3.0F);
 
         if (projectile != null && CBCConfigs.server().munitions.projectilesCanChunkload.get()) {
             ChunkPos cpos1 = new ChunkPos(BlockPos.containing(projectile.position()));
@@ -495,7 +467,6 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
                 autocannon.tickFromContraption(level, entity, entry.getKey());
             }
         }
-
     }
 
     @Override
@@ -555,8 +526,8 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
         return CBCATContraptionTypes.HEAVY_AUTOCANNON;
     }
 
-    public CompoundTag writeNBT(boolean clientData) {
-        CompoundTag tag = super.writeNBT(clientData);
+    public CompoundTag writeNBT(HolderLookup.Provider registries, boolean clientData) {
+        CompoundTag tag = super.writeNBT(registries, clientData);
         tag.putString("AutocannonMaterial", this.cannonMaterial == null ? CBCAutocannonMaterials.CAST_IRON.name().toString() : this.cannonMaterial.name().toString());
         if (this.startPos != null) {
             tag.put("StartPos", NbtUtils.writeBlockPos(this.startPos));
@@ -583,14 +554,17 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
             this.cannonMaterial = CBCAutocannonMaterials.CAST_IRON;
         }
 
-        this.startPos = tag.contains("StartPos") ? NbtUtils.readBlockPos(tag.getCompound("StartPos")) : null;
+        this.startPos = tag.contains("StartPos") ? NbtUtils.readBlockPos(tag, "StartPos").get() : null;
         this.recoilSpringPositions.clear();
         if (tag.contains("RecoilSpringPositions")) {
-            ListTag positionTags = tag.getList("RecoilSpringPositions", 10);
+            ListTag positionTags = tag.getList("RecoilSpringPositions", Tag.TAG_INT_ARRAY);
             int sz = positionTags.size();
 
             for(int i = 0; i < sz; ++i) {
-                this.recoilSpringPositions.add(NbtUtils.readBlockPos(positionTags.getCompound(i)));
+                int[] is = positionTags.getIntArray(i);
+                if (is.length == 3)
+                    this.recoilSpringPositions.add(new BlockPos(is[0], is[1], is[2]));
+
             }
 
             this.volumeMultiplier = tag.getFloat("volumeMultiplier");
@@ -599,7 +573,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
     }
 
     public ContraptionType getType() {
-        return ContraptionRegister.MOUNTED_HEAVY_AUTOCANNON.get();
+        return ContraptionRegister.MOUNTED_HEAVY_AUTOCANNON.value();
     }
 
     public float maximumDepression(@Nonnull ControlPitchContraption controller) {

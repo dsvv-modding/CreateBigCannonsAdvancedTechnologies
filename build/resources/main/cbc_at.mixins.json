@@ -2,11 +2,13 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.dsvv.cbcat.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AbstractAutocannonProjectileMixin",
     "BigCannonBlockMixin",
     "CannonMountPointMixin",
     "MountedAutocannonContraptionMixin",
-    "MountedBigCannonContraptionMixin"
+    "MountedBigCannonContraptionMixin",
+    "CannonCarriageEntityMixin"
   ]
 }

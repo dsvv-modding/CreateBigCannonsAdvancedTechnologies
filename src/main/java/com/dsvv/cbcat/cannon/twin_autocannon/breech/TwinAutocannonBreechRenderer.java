@@ -1,7 +1,6 @@
 package com.dsvv.cbcat.cannon.twin_autocannon.breech;
 
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
-import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.simibubi.create.foundation.blockEntity.renderer.SmartBlockEntityRenderer;

@@ -2,38 +2,38 @@ package com.dsvv.cbcat.crafting;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonCartridgeItem;
 import com.dsvv.cbcat.registry.RecipeRegister;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.inventory.CraftingContainer;
+import com.google.common.collect.Lists;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.munitions.FuzedItemMunition;
 import rbasamoyai.createbigcannons.munitions.fuzes.FuzeItem;
 
 public class HAMunitionFuzingRecipe extends CustomRecipe
 {
-    public HAMunitionFuzingRecipe(ResourceLocation location) { super(location, CraftingBookCategory.MISC); }
+    public HAMunitionFuzingRecipe() { super(CraftingBookCategory.MISC); }
 
     @Override
-    public boolean matches(CraftingContainer container, Level level) {
+    public boolean matches(CraftingInput input, Level level) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack fuze = ItemStack.EMPTY;
 
-        for (int i = 0; i < container.getContainerSize(); ++i) {
-            ItemStack stack = container.getItem(i);
+        for (int i = 0; i < input.size(); ++i) {
+            ItemStack stack = input.getItem(i);
             if (stack.isEmpty()) continue;
 
             if (stack.getItem() instanceof HeavyAutocannonCartridgeItem) {
-                if (!round.isEmpty() || stack.getOrCreateTag().contains("Fuze", Tag.TAG_COMPOUND)) return false;
+                if (!round.isEmpty()) return false;
                 stack = HeavyAutocannonCartridgeItem.getProjectileStack(stack);
             }
             if (stack.getItem() instanceof FuzedItemMunition) {
-                if (!round.isEmpty() || stack.getOrCreateTag().contains("Fuze", Tag.TAG_COMPOUND)) return false;
+                if (!round.isEmpty() || (stack.has(CBCDataComponents.FUZE) && stack.get(CBCDataComponents.FUZE).getSlots() > 0)) return false;
                 round = stack;
             } else if (stack.getItem() instanceof FuzeItem) {
                 if (!fuze.isEmpty()) return false;
@@ -46,11 +46,11 @@ public class HAMunitionFuzingRecipe extends CustomRecipe
     }
 
     @Override
-    public ItemStack assemble(CraftingContainer container, RegistryAccess access) {
+    public ItemStack assemble(CraftingInput container, HolderLookup.Provider access) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack fuze = ItemStack.EMPTY;
 
-        for (int i = 0; i < container.getContainerSize(); ++i) {
+        for (int i = 0; i < container.size(); ++i) {
             ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
             if (stack.getItem() instanceof FuzedItemMunition || stack.getItem() instanceof HeavyAutocannonCartridgeItem) {
@@ -69,13 +69,15 @@ public class HAMunitionFuzingRecipe extends CustomRecipe
         result.setCount(1);
         ItemStack fuzeCopy = fuze.copy();
         fuzeCopy.setCount(1);
-        CompoundTag tag = result.getOrCreateTag();
         if (result.getItem() instanceof FuzedItemMunition) {
-            tag.put("Fuze", fuzeCopy.save(new CompoundTag()));
+            result.set(CBCDataComponents.FUZE, ItemContainerContents.fromItems(Lists.newArrayList(fuzeCopy)));
         } else if (result.getItem() instanceof HeavyAutocannonCartridgeItem) {
-            CompoundTag projectileTag = tag.getCompound("Projectile").getCompound("tag");
-            projectileTag.put("Fuze", fuzeCopy.save(new CompoundTag()));
-            tag.getCompound("Projectile").put("tag", projectileTag);
+            ItemContainerContents itemContainer = result.getOrDefault(CBCDataComponents.PROJECTILE, ItemContainerContents.EMPTY);
+            ItemStack projectile = itemContainer.copyOne();
+            if (!projectile.isEmpty()) {
+                projectile.set(CBCDataComponents.FUZE, ItemContainerContents.fromItems(Lists.newArrayList(fuzeCopy)));
+                result.set(CBCDataComponents.PROJECTILE, ItemContainerContents.fromItems(Lists.newArrayList(projectile)));
+            }
         }
         return result;
     }

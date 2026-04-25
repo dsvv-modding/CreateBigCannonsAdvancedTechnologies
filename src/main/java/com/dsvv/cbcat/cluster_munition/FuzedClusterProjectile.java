@@ -1,11 +1,15 @@
 package com.dsvv.cbcat.cluster_munition;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutocannonProjectile;
+import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutocannonProjectileItem;
+import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectile;
 import com.dsvv.cbcat.registry.BlockRegister;
 import com.dsvv.cbcat.registry.ExtraDataRegister;
 import com.tterrag.registrate.util.entry.EntityEntry;
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -13,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
+import rbasamoyai.createbigcannons.index.CBCEntityTypes;
 import rbasamoyai.createbigcannons.munitions.big_cannon.FuzedBigCannonProjectile;
 import rbasamoyai.createbigcannons.munitions.big_cannon.config.BigCannonFuzePropertiesComponent;
 import rbasamoyai.createbigcannons.munitions.big_cannon.config.BigCannonProjectilePropertiesComponent;
@@ -77,7 +82,7 @@ public class FuzedClusterProjectile extends FuzedBigCannonProjectile {
         );
     }
 
-    protected void spawnClusterParts(EntityEntry<? extends AbstractFuzedHeavyAutocannonProjectile> projectiles) {
+    protected void spawnClusterParts(ItemEntry<? extends AbstractFuzedHeavyAutocannonProjectileItem> projectiles) {
         if (projectiles == null)
             return;
         Vec3[] directions = new Vec3[secondaryFuzes.length];
@@ -85,13 +90,15 @@ public class FuzedClusterProjectile extends FuzedBigCannonProjectile {
             directions[i] = this.orientation.normalize().scale(2).add(i % 2 == 0 ? 1 : -1, 0, i % 4 > 1 ? 1 : -1);
 
         for (int i = 0; i < directions.length; i++) {
-            AbstractFuzedHeavyAutocannonProjectile entity = projectiles.create(level());
+            AbstractFuzedHeavyAutocannonProjectile entity = (AbstractFuzedHeavyAutocannonProjectile) projectiles.get().getAutocannonProjectile(projectiles.asStack(), level());
+
             entity.setPos(position());
             Vec3 direction = directions[i];
-            entity.shoot(direction.x, direction.y, direction.z, (float) getDeltaMovement().length(), 35f);
             entity.setTracer(false);
             entity.setFuze(secondaryFuzes[i]);
             entity.setLifetime(50);
+            entity.setOwner(this.getOwner());
+            entity.shoot(direction.x, direction.y, direction.z, (float) getDeltaMovement().length(), 25f);
             level().addFreshEntity(entity);
         }
     }

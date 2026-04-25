@@ -1,21 +1,18 @@
 package com.dsvv.cbcat.cartridge;
 
-import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutocannonProjectile;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectile;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlock;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlockEntity;
 import com.dsvv.cbcat.registry.BlockRegister;
+import com.dsvv.cbcat.registry.DataComponentRegistry;
 import com.dsvv.cbcat.registry.EntityRegister;
 import com.dsvv.cbcat.registry.ExtraDataRegister;
 import com.simibubi.create.foundation.block.IBE;
-import com.tterrag.registrate.util.entry.EntityEntry;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,20 +20,18 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBehavior;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock;
-import rbasamoyai.createbigcannons.index.CBCEntityTypes;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCItems;
 import rbasamoyai.createbigcannons.index.CBCMunitionPropertiesHandlers;
 import rbasamoyai.createbigcannons.munitions.big_cannon.BigCannonMunitionBlock;
 import rbasamoyai.createbigcannons.munitions.big_cannon.ProjectileBlock;
-import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.AbstractFluidShellBlockEntity;
-import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlock;
-import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellProjectile;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 
 
-public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock implements ProjectileCartridge, IBE<FuzedClusterProjectileBlockEntity>, BigCannonMunitionBlock
+public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock implements IProjectileCartridgeBlock, IBE<FuzedClusterProjectileBlockEntity>, BigCannonMunitionBlock
 {
     private boolean used;
     private boolean multipleCharges = true;
@@ -91,7 +86,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         return data.state().getValue(FACING) == dir;
     }
 
-    public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
+    /*public StructureBlockInfo getHandloadingInfo(ItemStack stack, BlockPos localPos, Direction cannonOrientation)
     {
         BlockState state = this.defaultBlockState().setValue(FACING, cannonOrientation);
         CompoundTag tag = new CompoundTag();
@@ -106,7 +101,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         }
         tag.putInt("Power", stack.getOrCreateTag().getInt("Power"));
         return new StructureBlockInfo(localPos, state, tag);
-    }
+    }*/
 
     public int getMaximumPowerLevels()
     {
@@ -161,154 +156,114 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
     public boolean allowsMultipleCharges() { return multipleCharges; }
 
     public static ItemStack getChargedHighExplosiveWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HE_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 1);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HE_PROJECTILE.get()));
+        return stack;
     }
 
     public static ItemStack getChargedHighExplosiveFragmentationWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEF_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 1);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEF_PROJECTILE.get()));
+        return stack;
     }
 
     public static ItemStack getChargedHighExplosiveAntiTankWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEAT_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 1);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEAT_PROJECTILE.get()));
+        return stack;
     }
 
     public static ItemStack getChargedSmokeWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_SMOKE_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 1);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_SMOKE_PROJECTILE.get()));
+        return stack;
     }
 
     public static ItemStack getCaselessHighExplosiveWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HE_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 3);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HE_PROJECTILE.get()));
+        return stack;
     }
 
     public static ItemStack getCaselessHighExplosiveFragmentationWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEF_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 3);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEF_PROJECTILE.get()));
+        return stack;
     }
 
     public static ItemStack getCaselessHighExplosiveAntiTankWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEAT_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 3);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEAT_PROJECTILE.get()));
+        return stack;
     }
 
     public static ItemStack getCaselessSmokeWithImpactFuze() {
-        ListTag fuzes = new ListTag();
-        CompoundTag fuze = CBCItems.IMPACT_FUZE.asStack().save(new CompoundTag());
+        ArrayList<ItemStack> fuzes = new ArrayList();
+        ItemStack fuze = CBCItems.IMPACT_FUZE.asStack();
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
         fuzes.add(fuze.copy());
-        ItemStack cluster = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
-        CompoundTag baseTag = cluster.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            baseTag.put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (tag.contains("SecondaryFuzes"))
-            tag.remove("SecondaryFuzes");
-        tag.put("SecondaryFuzes", fuzes);
-        tag.putString("Projectile", ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_SMOKE_PROJECTILE.get()));
-        return cluster;
+        ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
+        stack.set(CBCDataComponents.POWER, 3);
+        stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_SMOKE_PROJECTILE.get()));
+        return stack;
     }
 }

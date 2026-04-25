@@ -4,6 +4,7 @@ import com.dsvv.cbcat.base.CustomPropellantContext;
 import com.dsvv.cbcat.base.SaveAssemble;
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.block.IBE;
 import net.createmod.catnip.math.VoxelShaper;
@@ -11,6 +12,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -32,12 +34,21 @@ public class SilencerBlock extends BigCannonBaseBlock implements IBE<SilencerBlo
     {
         super(properties, material);
         this.builtUp = builtUp.length > 0 && builtUp[0];
+        this.codec = simpleCodec(this::fromSelf);
     }
     public SilencerBlock(Properties properties, BigCannonMaterial material, boolean isComplete, boolean... builtUp)
     {
         this(properties, material, builtUp);
         complete = isComplete;
     }
+
+    private final MapCodec<? extends DirectionalBlock> codec;
+
+    private SilencerBlock fromSelf(Properties properties) {
+        return new SilencerBlock(properties, this.getCannonMaterial());
+    }
+
+    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {

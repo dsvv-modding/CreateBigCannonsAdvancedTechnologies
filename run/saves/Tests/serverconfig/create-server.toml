@@ -1,4 +1,3 @@
-
 #.
 #The Backbone of Create
 [infrastructure]
@@ -6,7 +5,8 @@
 	#[in Ticks]
 	#The amount of time a server waits before sending out tickrate synchronization packets.
 	#These packets help animations to be more accurate when tps is below 20.
-	#Range: > 5
+	# Default: 20
+	# Range: > 5
 	tickrateSyncTimer = 20
 
 #.
@@ -33,7 +33,8 @@
 	allowRegularCraftingInCrafter = true
 	#.
 	#The Maximum amount of ingredients that can be used to craft Firework Rockets using Mechanical Crafters.
-	#Range: > 1
+	# Default: 9
+	# Range: > 1
 	maxFireworkIngredientsInCrafter = 9
 	#.
 	#Allow any stonecutting recipes to be processed by a Mechanical Saw.
@@ -46,7 +47,8 @@
 	displayLogStrippingRecipes = true
 	#.
 	#The amount of Light sources destroyed before Chromatic Compound turns into Refined Radiance.
-	#Range: > 1
+	# Default: 10
+	# Range: > 1
 	lightSourceCountForRefinedRadiance = 10
 	#.
 	#Allow the standard in-world Refined Radiance recipes.
@@ -64,16 +66,19 @@
 	disableStress = false
 	#.
 	#Maximum length in blocks of mechanical belts.
-	#Range: > 5
+	# Default: 20
+	# Range: > 5
 	maxBeltLength = 20
 	#.
 	#Damage dealt by active Crushing Wheels.
-	#Range: > 0
+	# Default: 4
+	# Range: > 0
 	crushingDamage = 4
 	#.
 	#[in Revolutions per Minute]
 	#Maximum allowed rotation speed for any Kinetic Block.
-	#Range: > 64
+	# Default: 256
+	# Range: > 64
 	maxRotationSpeed = 256
 	#.
 	#Select what mobs should ignore Deployers when attacked by them.
@@ -81,35 +86,43 @@
 	ignoreDeployerAttacks = "CREEPERS"
 	#.
 	#Game ticks between Kinetic Blocks checking whether their source is still valid.
-	#Range: > 5
+	# Default: 60
+	# Range: > 5
 	kineticValidationFrequency = 60
 	#.
 	#multiplier used for calculating exhaustion from speed when a crank is turned.
-	#Range: 0.0 ~ 1.0
+	# Default: 0.009999999776482582
+	# Range: 0.0 ~ 1.0
 	crankHungerMultiplier = 0.009999999776482582
 	#.
 	#Amount of sail-type blocks required for a windmill to assemble successfully.
-	#Range: > 0
+	# Default: 8
+	# Range: > 0
 	minimumWindmillSails = 8
 	#.
 	#Number of sail-type blocks required to increase windmill speed by 1RPM.
-	#Range: > 1
+	# Default: 8
+	# Range: > 1
 	windmillSailsPerRPM = 8
 	#.
 	#Max Distance in blocks a Weighted Ejector can throw
-	#Range: > 0
+	# Default: 32
+	# Range: > 0
 	maxEjectorDistance = 32
 	#.
 	#Time in ticks until the next item launched by an ejector scans blocks for potential collisions
-	#Range: > 10
+	# Default: 120
+	# Range: > 10
 	ejectorScanInterval = 120
 	#.
 	#Maximum length in blocks of chain conveyor connections.
-	#Range: > 5
+	# Default: 32
+	# Range: > 5
 	maxChainConveyorLength = 32
 	#.
 	#Maximum amount of connections each chain conveyor can have.
-	#Range: > 1
+	# Default: 4
+	# Range: > 1
 	maxChainConveyorConnections = 4
 
 	#.
@@ -117,24 +130,29 @@
 	[kinetics.encasedFan]
 		#.
 		#Maximum distance in blocks Fans can push entities.
-		#Range: > 5
+		# Default: 20
+		# Range: > 5
 		fanPushDistance = 20
 		#.
 		#Maximum distance in blocks from where Fans can pull entities.
-		#Range: > 5
+		# Default: 20
+		# Range: > 5
 		fanPullDistance = 20
 		#.
 		#Game ticks between Fans checking for anything blocking their air flow.
-		#Range: > 10
+		# Default: 30
+		# Range: > 10
 		fanBlockCheckRate = 30
 		#.
 		#[in Revolutions per Minute]
 		#Rotation speed at which the maximum stats of fans are reached.
-		#Range: > 64
+		# Default: 256
+		# Range: > 64
 		fanRotationArgmax = 256
 		#.
 		#Game ticks required for a Fan-based processing recipe to take effect.
-		#Range: > 0
+		# Default: 150
+		# Range: > 0
 		fanProcessingTime = 150
 
 	#.
@@ -142,27 +160,33 @@
 	[kinetics.contraptions]
 		#.
 		#Maximum amount of blocks in a structure movable by Pistons, Bearings or other means.
-		#Range: > 1
+		# Default: 2048
+		# Range: > 1
 		maxBlocksMoved = 2048
 		#.
 		#Maximum value of a chassis attachment range.
-		#Range: > 1
+		# Default: 16
+		# Range: > 1
 		maxChassisRange = 16
 		#.
 		#Maximum amount of extension poles behind a Mechanical Piston.
-		#Range: > 1
+		# Default: 64
+		# Range: > 1
 		maxPistonPoles = 64
 		#.
 		#Max length of rope available off a Rope Pulley.
-		#Range: > 1
+		# Default: 384
+		# Range: > 1
 		maxRopeLength = 256
 		#.
 		#Maximum allowed distance of two coupled minecarts.
-		#Range: > 1
+		# Default: 32
+		# Range: > 1
 		maxCartCouplingLength = 32
 		#.
 		#Maximum depth of blocks filled in using a Mechanical Roller.
-		#Range: > 1
+		# Default: 12
+		# Range: > 1
 		rollerFillDepth = 12
 		#.
 		#Whether minecart contraptions can be picked up in survival mode.
@@ -203,6 +227,9 @@
 		#Whether the players hitbox should be expanded to the size of the contraption hitbox.
 		#[Technical]
 		syncPlayerPickupHitboxWithContraptionHitbox = false
+		#.
+		#Whether to prevent block dropping when contraption is placed inside in-world blocks.
+		noDropWhenContraptionReplaceBlocks = false
 
 	#.
 	#Configure speed/capacity levels for requirements and indicators.
@@ -210,35 +237,39 @@
 		#.
 		#[in Revolutions per Minute]
 		#Minimum speed of rotation to be considered 'medium'
-		#Range: 0.0 ~ 4096.0
+		# Default: 30.0
+		# Range: 0.0 ~ 4096.0
 		mediumSpeed = 30.0
 		#.
 		#[in Revolutions per Minute]
 		#Minimum speed of rotation to be considered 'fast'
-		#Range: 0.0 ~ 65535.0
+		# Default: 100.0
+		# Range: 0.0 ~ 65535.0
 		fastSpeed = 100.0
 		#.
 		#[in Stress Units]
 		#Minimum stress impact to be considered 'medium'
-		#Range: 0.0 ~ 4096.0
+		# Default: 4.0
+		# Range: 0.0 ~ 4096.0
 		mediumStressImpact = 4.0
 		#.
 		#[in Stress Units]
 		#Minimum stress impact to be considered 'high'
-		#Range: 0.0 ~ 65535.0
+		# Default: 8.0
+		# Range: 0.0 ~ 65535.0
 		highStressImpact = 8.0
 		#.
 		#[in Stress Units]
 		#Minimum added Capacity by sources to be considered 'medium'
-		#Range: 0.0 ~ 4096.0
+		# Default: 256.0
+		# Range: 0.0 ~ 4096.0
 		mediumCapacity = 256.0
 		#.
 		#[in Stress Units]
 		#Minimum added Capacity by sources to be considered 'high'
-		#Range: 0.0 ~ 65535.0
+		# Default: 1024.0
+		# Range: 0.0 ~ 65535.0
 		highCapacity = 1024.0
-
-	[kinetics.stressValues]
 
 		#.
 		#Fine tune the kinetic stats of individual components
@@ -316,28 +347,33 @@
 	#.
 	#[in Buckets]
 	#The amount of liquid a tank can hold per block.
-	#Range: > 1
+	# Default: 8
+	# Range: > 1
 	fluidTankCapacity = 8
 	#.
 	#[in Blocks]
 	#The maximum height a fluid tank can reach.
-	#Range: > 1
+	# Default: 32
+	# Range: > 1
 	fluidTankMaxHeight = 32
 	#.
 	#[in Blocks]
 	#The maximum distance a mechanical pump can push or pull liquids on either side.
-	#Range: > 1
+	# Default: 16
+	# Range: > 1
 	mechanicalPumpRange = 16
 	#.
 	#[in Blocks]
 	#The maximum distance a hose pulley can draw fluid blocks from.
-	#Range: > 1
+	# Default: 128
+	# Range: > 1
 	hosePulleyRange = 128
 	#.
 	#[in Blocks]
 	#[-1 to disable this behaviour]
 	#The minimum amount of fluid blocks the hose pulley needs to find before deeming it an infinite source.
-	#Range: > -1
+	# Default: 10000
+	# Range: > -1
 	hosePulleyBlockThreshold = 10000
 	#.
 	#Whether hose pulleys should continue filling up above-threshold sources.
@@ -359,46 +395,56 @@
 	#.
 	#.
 	#The amount of ticks a funnel waits between item transferrals, when it is not re-activated by redstone.
-	#Range: > 1
+	# Default: 8
+	# Range: > 1
 	defaultExtractionTimer = 8
 	#.
 	#The amount of ticks a portable storage interface waits for transfers until letting contraptions move along.
-	#Range: > 1
+	# Default: 60
+	# Range: > 1
 	psiTimeout = 60
 	#.
 	#Maximum distance in blocks a Mechanical Arm can reach across.
-	#Range: > 1
+	# Default: 5
+	# Range: > 1
 	mechanicalArmRange = 5
 	#.
 	#Maximum possible range in blocks of redstone link connections.
-	#Range: > 1
+	# Default: 256
+	# Range: > 1
 	linkRange = 256
 	#.
 	#Maximum possible distance in blocks between display links and their target.
-	#Range: > 1
+	# Default: 64
+	# Range: > 1
 	displayLinkRange = 64
 	#.
 	#The total amount of stacks a vault can hold per block in size.
-	#Range: 1 ~ 2048
+	# Default: 20
+	# Range: 1 ~ 2048
 	vaultCapacity = 20
 	#.
 	#The amount of ticks a brass tunnel waits between distributions.
-	#Range: 1 ~ 10
+	# Default: 10
+	# Range: 1 ~ 10
 	brassTunnelTimer = 10
 	#.
 	#Whether hostile mobs walking near a seat will start riding it.
 	seatHostileMobs = true
 	#.
 	#Maximum distance in blocks a Package Port can be placed at from its target.
-	#Range: > 1
+	# Default: 5
+	# Range: > 1
 	packagePortRange = 5
 	#.
 	#The amount of packages a chain conveyor can carry at a time.
-	#Range: > 1
+	# Default: 20
+	# Range: > 1
 	chainConveyorCapacity = 20
 	#.
 	#The amount of ticks a factory gauge waits between requests.
-	#Range: > 5
+	# Default: 100
+	# Range: > 5
 	factoryGaugeTimer = 100
 
 #.
@@ -410,21 +456,25 @@
 	creativePrintIncludesAir = false
 	#.
 	#The amount of Schematics a player can upload until previous ones are overwritten.
-	#Range: > 1
+	# Default: 10
+	# Range: > 1
 	maxSchematics = 10
 	#.
 	#[in KiloBytes]
 	#The maximum allowed file size of uploaded Schematics.
-	#Range: > 16
+	# Default: 256
+	# Range: > 16
 	maxTotalSchematicSize = 256
 	#.
 	#[in Bytes]
 	#The maximum packet size uploaded Schematics are split into.
-	#Range: 256 ~ 32767
+	# Default: 1024
+	# Range: 256 ~ 32767
 	maxSchematicPacketSize = 1024
 	#.
 	#Amount of game ticks without new packets arriving until an active schematic upload process is discarded.
-	#Range: > 100
+	# Default: 600
+	# Range: > 100
 	schematicIdleTimeout = 600
 
 	#.
@@ -432,11 +482,13 @@
 	[schematics.schematicannon]
 		#.
 		#Amount of game ticks between shots of the cannon. Higher => Slower
-		#Range: > 1
+		# Default: 10
+		# Range: > 1
 		schematicannonDelay = 10
 		#.
 		#Amount of blocks a Schematicannon can print per Gunpowder item provided.
-		#Range: > 1
+		# Default: 400
+		# Range: > 1
 		schematicannonShotsPerGunpowder = 400
 
 #.
@@ -445,31 +497,38 @@
 	#.
 	#.
 	#The Maximum Distance to an active mirror for the symmetry wand to trigger.
-	#Range: > 10
+	# Default: 50
+	# Range: > 10
 	maxSymmetryWandRange = 50
 	#.
 	#The Maximum Distance a Block placed by Create's placement assist will have to its interaction point.
-	#Range: > 3
+	# Default: 12
+	# Range: > 3
 	placementAssistRange = 12
 	#.
 	#The Maximum Distance at which a Toolbox can interact with Players' Inventories.
-	#Range: > 1
+	# Default: 10
+	# Range: > 1
 	toolboxRange = 10
 	#.
 	#The Maximum volume of Air that can be stored in a backtank = Seconds of underwater breathing
-	#Range: > 1
+	# Default: 900
+	# Range: > 1
 	airInBacktank = 900
 	#.
 	#The volume of Air added by each level of the backtanks Capacity Enchantment
-	#Range: > 1
+	# Default: 300
+	# Range: > 1
 	enchantedBacktankCapacity = 300
 	#.
 	#Amount of free Extendo Grip actions provided by one filled Copper Backtank. Set to 0 makes Extendo Grips unbreakable
-	#Range: > 0
+	# Default: 1000
+	# Range: > 0
 	maxExtendoGripActions = 1000
 	#.
 	#Amount of free Potato Cannon shots provided by one filled Copper Backtank. Set to 0 makes Potato Cannons unbreakable
-	#Range: > 0
+	# Default: 200
+	# Range: > 0
 	maxPotatoCannonShots = 200
 
 #.
@@ -481,19 +540,23 @@
 	trainsCauseDamage = true
 	#.
 	#Maximum length of track that can be placed as one batch or turn.
-	#Range: 16 ~ 128
+	# Default: 32
+	# Range: 16 ~ 128
 	maxTrackPlacementLength = 32
 	#.
 	#Maximum length of a Train Stations' assembly track.
-	#Range: > 5
+	# Default: 128
+	# Range: > 5
 	maxAssemblyLength = 128
 	#.
 	#Maximum amount of bogeys assembled as a single Train.
-	#Range: > 1
+	# Default: 20
+	# Range: > 1
 	maxBogeyCount = 20
 	#.
 	#Relative speed of a manually controlled Train compared to a Scheduled one.
-	#Range: 0.0 ~ 3.4028234663852886E38
+	# Default: 0.75
+	# Range: 0.0 ~ 3.4028234663852886E38
 	manualTrainSpeedModifier = 0.75
 
 	#.
@@ -502,17 +565,20 @@
 		#.
 		#[in Blocks/Second]
 		#The top speed of any assembled Train.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 28.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		trainTopSpeed = 28.0
 		#.
 		#[in Blocks/Second]
 		#The top speed of Trains during a turn.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 14.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		trainTurningTopSpeed = 14.0
 		#.
 		#[in Blocks/Second²]
 		#The acceleration of any assembled Train.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 3.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		trainAcceleration = 3.0
 
 	#.
@@ -521,16 +587,18 @@
 		#.
 		#[in Blocks/Second]
 		#The top speed of powered Trains.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 40.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		poweredTrainTopSpeed = 40.0
 		#.
 		#[in Blocks/Second]
 		#The top speed of powered Trains during a turn.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 20.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		poweredTrainTurningTopSpeed = 20.0
 		#.
 		#[in Blocks/Second²]
 		#The acceleration of powered Trains.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 3.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		poweredTrainAcceleration = 3.0
-

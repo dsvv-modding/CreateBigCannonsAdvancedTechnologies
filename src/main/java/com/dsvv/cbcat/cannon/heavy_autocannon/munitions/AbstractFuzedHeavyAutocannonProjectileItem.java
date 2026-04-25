@@ -7,8 +7,10 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.level.Level;
 import rbasamoyai.createbigcannons.CreateBigCannons;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.munitions.FuzedItemMunition;
 import rbasamoyai.createbigcannons.munitions.fuzes.FuzeItem;
 
@@ -23,11 +25,10 @@ public abstract class AbstractFuzedHeavyAutocannonProjectileItem extends Abstrac
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, level, tooltip, flag);
-        CompoundTag tag = stack.getOrCreateTag();
-        ItemStack fuze =
-                tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.of(tag.getCompound("Fuze")) : ItemStack.EMPTY;
+    public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, ctx, tooltip, flag);
+        ItemContainerContents items = stack.getOrDefault(CBCDataComponents.FUZE, ItemContainerContents.EMPTY);
+        ItemStack fuze = items.copyOne();
         if (!fuze.isEmpty()) {
             CreateLang.builder("block")
                     .translate(CreateBigCannons.MOD_ID + ".shell.tooltip.fuze")
@@ -36,7 +37,7 @@ public abstract class AbstractFuzedHeavyAutocannonProjectileItem extends Abstrac
                     .addTo(tooltip);
             if (fuze.getItem() instanceof FuzeItem) {
                 List<Component> subTooltip = new ArrayList<>();
-                fuze.getItem().appendHoverText(fuze, level, subTooltip, flag);
+                fuze.getItem().appendHoverText(fuze, ctx, subTooltip, flag);
                 subTooltip.replaceAll(sibling -> Component.literal("  ").append(sibling).withStyle(ChatFormatting.GRAY));
                 tooltip.addAll(subTooltip);
             }
@@ -44,8 +45,9 @@ public abstract class AbstractFuzedHeavyAutocannonProjectileItem extends Abstrac
     }
 
     public ItemStack getFuze(ItemStack stack) {
-        if (stack.getOrCreateTag().contains("Fuze"))
-            return ItemStack.of(stack.getTag().getCompound("Fuze"));
+        ItemContainerContents items = stack.getOrDefault(CBCDataComponents.FUZE, ItemContainerContents.EMPTY);
+        if (!items.equals(ItemContainerContents.EMPTY))
+            return items.copyOne();
         return ItemStack.EMPTY;
     }
 }

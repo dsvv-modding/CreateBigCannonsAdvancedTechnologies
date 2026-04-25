@@ -8,7 +8,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.NotNull;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.config.CBCConfigs;
 import rbasamoyai.createbigcannons.index.CBCEntityTypes;
@@ -22,6 +21,7 @@ import rbasamoyai.createbigcannons.munitions.config.components.BallisticProperti
 import rbasamoyai.createbigcannons.munitions.config.components.EntityDamagePropertiesComponent;
 import rbasamoyai.createbigcannons.munitions.fuzes.FuzeItem;
 
+import javax.annotation.Nonnull;
 import java.util.function.Predicate;
 
 public class AutocannonHEProjectile extends AbstractAutocannonProjectile
@@ -33,7 +33,8 @@ public class AutocannonHEProjectile extends AbstractAutocannonProjectile
     }
 
     @Override
-    public @NotNull EntityDamagePropertiesComponent getDamageProperties() {
+    @Nonnull
+    public EntityDamagePropertiesComponent getDamageProperties() {
         return new EntityDamagePropertiesComponent(
                 9,
                 false,
@@ -44,7 +45,8 @@ public class AutocannonHEProjectile extends AbstractAutocannonProjectile
     }
 
     @Override
-    protected @NotNull BallisticPropertiesComponent getBallisticProperties() {
+    @Nonnull
+    protected BallisticPropertiesComponent getBallisticProperties() {
         return new BallisticPropertiesComponent(
                 -0.025,
                 0.01,
@@ -106,13 +108,13 @@ public class AutocannonHEProjectile extends AbstractAutocannonProjectile
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
-        if (this.fuze != null && !this.fuze.isEmpty()) tag.put("Fuze", this.fuze.save(new CompoundTag()));
+        if (this.fuze != null && !this.fuze.isEmpty()) tag.put("Fuze", this.fuze.saveOptional(this.level().registryAccess()));
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
-        this.fuze = tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.of(tag.getCompound("Fuze")) : ItemStack.EMPTY;
+        this.fuze = tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.parseOptional(this.level().registryAccess(), tag.getCompound("Fuze")) : ItemStack.EMPTY;
     }
 
     protected final boolean canDetonate(Predicate<FuzeItem> cons) {

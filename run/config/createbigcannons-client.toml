@@ -1,4 +1,3 @@
-
 #.
 #Client-side config for Create Big Cannons.
 [client]
@@ -10,11 +9,13 @@
 	showMortarStoneClouds = true
 	#.
 	#How many particles are in a Fluid Blob of any size.
-	#Range: 0 ~ 1000
+	# Default: 20
+	# Range: 0 ~ 1000
 	fluidBlobParticleCount = 20
 	#.
 	#How many digits are after the angle decimal point on a block armor info tooltip.
-	#Range: 0 ~ 4
+	# Default: 2
+	# Range: 0 ~ 4
 	blockArmorInfoPrecision = 2
 	#.
 	#If true, some graphics will be changed to support shaders, such as those loaded with Iris/Oculus.
@@ -24,10 +25,16 @@
 	useShaderCompatibleGraphics = false
 	#.
 	#[in Meters per Second]
-	#Range: 0.0 ~ 1000.0
+	# Default: 320.0
+	# Range: 0.0 ~ 1000.0
 	blastEffectDelaySpeed = 320.0
 	#.
 	highlightFuzeInputOnShellBlocks = true
+	#.
+	#The vision range though molten metal will be multiplied by this factor.
+	# Default: 1.0
+	# Range: 0.125 ~ 256.0
+	moltenMetalTransparency = 1.0
 
 	#.
 	#Projectile Flyby Sounds
@@ -42,7 +49,8 @@
 	[client.cannonMountGoggleTooltip]
 		#.
 		#How many digits are after the angle decimal point on a cannon mount goggle tooltip.
-		#Range: 0 ~ 4
+		# Default: 2
+		# Range: 0 ~ 4
 		anglePrecision = 2
 		#.
 		#If true, the yaw angle on goggles ranges from +180 to -180º. If false, it ranges from 0 to +360º.
@@ -52,13 +60,16 @@
 	#Screen Shake
 	[client.screenShake]
 		#.
-		#Range: 0.0 ~ 2.0
+		# Default: 1.2999999523162842
+		# Range: 0.0 ~ 2.0
 		cannonScreenShakeIntensity = 1.2999999523162842
 		#.
-		#Range: 0.009999999776482582 ~ 2.0
+		# Default: 0.07999999821186066
+		# Range: 0.009999999776482582 ~ 2.0
 		cannonScreenShakeSpringiness = 0.07999999821186066
 		#.
-		#Range: 0.009999999776482582 ~ 2.0
+		# Default: 0.30000001192092896
+		# Range: 0.009999999776482582 ~ 2.0
 		cannonScreenShakeDecay = 0.30000001192092896
 
 	#.
@@ -71,11 +82,13 @@
 		#.
 		showExtraFlames = true
 		#.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 6.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		screenShakePowerMultiplier = 6.0
 		#.
 		#[in Degrees]
-		#Range: 0.0 ~ 90.0
+		# Default: 45.0
+		# Range: 0.0 ~ 90.0
 		screenShakePowerLimit = 45.0
 
 	#.
@@ -136,11 +149,13 @@
 		#.
 		showExtraTrails = true
 		#.
-		#Range: 0.0 ~ 3.4028234663852886E38
+		# Default: 6.0
+		# Range: 0.0 ~ 3.4028234663852886E38
 		screenShakePowerMultiplier = 6.0
 		#.
 		#[in Degrees]
-		#Range: 0.0 ~ 90.0
+		# Default: 45.0
+		# Range: 0.0 ~ 90.0
 		screenShakePowerLimit = 45.0
 
 	#.
@@ -148,10 +163,11 @@
 	[client.particleWindEffect]
 		#.
 		#[in Meters per second]
-		#Range: 0.0 ~ 10.0
+		# Default: 1.25
+		# Range: 0.0 ~ 10.0
 		maximumWindSpeed = 1.25
 		#.
 		#[in Degrees per tick]
-		#Range: 0.0 ~ 90.0
+		# Default: 8.0
+		# Range: 0.0 ~ 90.0
 		maximumWindBearingChangeSpeed = 8.0
-
