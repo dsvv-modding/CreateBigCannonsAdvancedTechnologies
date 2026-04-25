@@ -13,6 +13,16 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.heat_shell.HA_CopperRay;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.heat_shell.HA_HEATProjectile;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.hef_shell.HA_HEFProjectile;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.smoke_shell.HA_SmokeProjectile;
+import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.MediumRocketRenderer;
+import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.medium_ap_rocket.MediumAPRocket;
+import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.medium_he_rocket.MediumHERocket;
+import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.medium_heat_rocket.MediumHEATRocket;
+import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.medium_hef_rocket.MediumHEFRocket;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.RocketRenderer;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.ap_rocket.AP_Rocket;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.flak_rocket.Flak_Rocket;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.he_rocket.HE_Rocket;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.hei_rocket.HEI_Rocket;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectile;
 import com.tterrag.registrate.util.entry.EntityEntry;
 import net.minecraft.world.entity.MobCategory;
@@ -24,6 +34,49 @@ import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
 
 public class EntityRegister
 {
+    public static final EntityEntry<AP_Rocket> AP_ROCKET = REGISTRATE.entity("ap_rocket", AP_Rocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> RocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+    public static final EntityEntry<Flak_Rocket> FLAK_ROCKET = REGISTRATE.entity("flak_rocket", Flak_Rocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> RocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+    public static final EntityEntry<HE_Rocket> HE_ROCKET = REGISTRATE.entity("he_rocket", HE_Rocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> RocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+    public static final EntityEntry<HEI_Rocket> HEI_ROCKET = REGISTRATE.entity("hei_rocket", HEI_Rocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> RocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+
+    public static final EntityEntry<MediumAPRocket> MEDIUM_AP_ROCKET = REGISTRATE.entity("medium_ap_rocket", MediumAPRocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> MediumRocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+    public static final EntityEntry<MediumHERocket> MEDIUM_HE_ROCKET = REGISTRATE.entity("medium_he_rocket", MediumHERocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> MediumRocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+    public static final EntityEntry<MediumHEFRocket> MEDIUM_HEF_ROCKET = REGISTRATE.entity("medium_hef_rocket", MediumHEFRocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> MediumRocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+    public static final EntityEntry<MediumHEATRocket> MEDIUM_HEAT_ROCKET = REGISTRATE.entity("medium_heat_rocket", MediumHEATRocket::new, MobCategory.MISC)
+            .properties(c -> c.sized(0.2f, 0.2f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
+            .renderer(() -> MediumRocketRenderer::new)
+            .tag(RPLTags.PRECISE_MOTION)
+            .register();
+
+
     public static final EntityEntry<HA_APProjectile> HA_AP_PROJECTILE = REGISTRATE.entity("ha_ap_projectile", HA_APProjectile::new, MobCategory.MISC)
             .properties(c -> c.sized(0.4f, 0.4f).fireImmune().updateInterval(1).setShouldReceiveVelocityUpdates(false).setTrackingRange(16))
             .renderer(() -> HeavyAutocannonProjectileRenderer::new)

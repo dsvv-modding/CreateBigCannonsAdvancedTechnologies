@@ -36,7 +36,10 @@ public class ExtraDataRegister
 
     private static final HashMap<String, BlockEntry<?>> ALL_CARTRIDGES = new HashMap<>();
     private static final HashMap<BlockEntry<?>, String> ALL_PROJECTILE_BLOCKS = new HashMap<>();
-    private static final HashMap<String, EntityEntry<? extends AbstractFuzedHeavyAutocannonProjectile>> CLUSTER_PROJECTILES = new HashMap<>();
+    private static final HashMap<String, ItemEntry<? extends AbstractFuzedHeavyAutocannonProjectileItem>> CLUSTER_PROJECTILES = new HashMap<>();
+    private static PartialModel MEDIUM_ROCKET;
+    private static final HashMap<ItemEntry<?>, ItemEntry<?>> PROJECTILE_MEDIUM_ROCKET = new HashMap<>();
+    private static final HashMap<ItemEntry<?>, ItemEntry<?>> PROJECTILE_ROCKET = new HashMap<>();
 
     public static void register()
     {
@@ -86,10 +89,22 @@ public class ExtraDataRegister
         ALL_PROJECTILE_BLOCKS.put(BlockRegister.CLUSTER_BLOCK, "cluster shell");
 
         //CLUSTER_PROJECTILES.put("", null);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_smoke", EntityRegister.HA_SMOKE_PROJECTILE);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_he", EntityRegister.HA_HE_PROJECTILE);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_hef", EntityRegister.HA_HEF_PROJECTILE);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_heat", EntityRegister.HA_HEAT_PROJECTILE);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_smoke", ItemRegister.HA_SMOKE_ITEM);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_he", ItemRegister.HA_HE_ITEM);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_hef", ItemRegister.HA_HEF_ITEM);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_heat", ItemRegister.HA_HEAT_ITEM);
+
+        MEDIUM_ROCKET = PartialModel.of(ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, "item/base/medium_rocket_item"));
+
+        PROJECTILE_MEDIUM_ROCKET.put(ItemRegister.HA_AP_ITEM, ItemRegister.MEDIUM_AP_ROCKET_ITEM);
+        PROJECTILE_MEDIUM_ROCKET.put(ItemRegister.HA_HE_ITEM, ItemRegister.MEDIUM_HE_ROCKET_ITEM);
+        PROJECTILE_MEDIUM_ROCKET.put(ItemRegister.HA_HEF_ITEM, ItemRegister.MEDIUM_HEF_ROCKET_ITEM);
+        PROJECTILE_MEDIUM_ROCKET.put(ItemRegister.HA_HEAT_ITEM, ItemRegister.MEDIUM_HEAT_ROCKET_ITEM);
+
+        PROJECTILE_ROCKET.put(CBCItems.AP_AUTOCANNON_ROUND, ItemRegister.AP_ROCKET_ITEM);
+        PROJECTILE_ROCKET.put(CBCItems.FLAK_AUTOCANNON_ROUND, ItemRegister.FLAK_ROCKET_ITEM);
+        PROJECTILE_ROCKET.put(ItemRegister.HE_ROCKET_ITEM, ItemRegister.HE_ROCKET_ITEM);
+        PROJECTILE_ROCKET.put(ItemRegister.HEI_ROCKET_ITEM, ItemRegister.HEI_ROCKET_ITEM);
     }
 
     public static PartialModel twinAutocannonSpringFor(AutocannonMaterial mat, boolean vertical)
@@ -143,5 +158,23 @@ public class ExtraDataRegister
             if (CLUSTER_PROJECTILES.get(key).is(entity))
                 return key;
         return "";
+    }
+
+    public static PartialModel mediumRocketModel() {
+        return MEDIUM_ROCKET;
+    }
+
+    public static Item getMediumRocketForProjectile(Item haProjectile) {
+        for (ItemEntry<?> itemEntry :  PROJECTILE_MEDIUM_ROCKET.keySet())
+            if (itemEntry.is(haProjectile))
+                return PROJECTILE_MEDIUM_ROCKET.get(itemEntry).get();
+        return Items.AIR;
+    }
+
+    public static Item getRocketForProjectile(Item haProjectile) {
+        for (ItemEntry<?> itemEntry :  PROJECTILE_ROCKET.keySet())
+            if (itemEntry.is(haProjectile))
+                return PROJECTILE_ROCKET.get(itemEntry).get();
+        return Items.AIR;
     }
 }

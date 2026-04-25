@@ -1,7 +1,8 @@
 package com.dsvv.cbcat.registry;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.contraption.MountedHeavyAutocannonContraption;
-//import com.dsvv.cbcat.cannon.rockets.contraptionA.MountedRocketContraption;
+import com.dsvv.cbcat.cannon.medium_rocketpod.contraption.MountedMediumRocketRailContraption;
+import com.dsvv.cbcat.cannon.rocketpod.contraption.MountedRocketPodContraption;
 import com.dsvv.cbcat.cannon.twin_autocannon.contraption.MountedTwinAutocannonContraption;
 import com.simibubi.create.api.contraption.ContraptionType;
 import com.simibubi.create.api.registry.CreateBuiltInRegistries;
@@ -28,6 +29,8 @@ public class ContraptionRegister
 {
     public static final Holder.Reference<ContraptionType> MOUNTED_TWIN_AUTOCANNON = register("cbc_at.mounted_twin_autocannon", MountedTwinAutocannonContraption::new);
     public static final Holder.Reference<ContraptionType> MOUNTED_HEAVY_AUTOCANNON = register("cbc_at.mounted_heavy_autocannon", MountedHeavyAutocannonContraption::new);
+    public static final Holder.Reference<ContraptionType> MOUNTED_ROCKET_POD = register("cbc_at.mounted_rocket_pod", MountedRocketPodContraption::new);
+    public static final Holder.Reference<ContraptionType> MOUNTED_MEDIUM_ROCKET_POD = register("cbc_at.mounted_medium_rocket_pod", MountedMediumRocketRailContraption::new);
     //public static final ContraptionType MOUNTED_ROCKET = ContraptionType.register("cbc_at.mounted_rocket", MountedRocketContraption::new);
 
     private static Holder.Reference<ContraptionType> register(String name, Supplier<? extends Contraption> factory) {
@@ -42,7 +45,8 @@ public class ContraptionRegister
         TWIN_AUTOCANNON,
         MANUAL_TWIN_AUTOCANNON,
         HEAVY_AUTOCANNON,
-        ROCKET;
+        ROCKET_POD,
+        MEDIUM_ROCKET_POD;
         private static final Map<ResourceLocation, CBCATContraptionTypes> BY_ID =
                 Arrays.stream(values()).collect(Collectors.toMap(CBCATContraptionTypes::getId, Function.identity()));
 

@@ -78,6 +78,42 @@ public class Tooltips {
 
     public static <T extends Block & HeavyAutocannonBlock> void appendTextHeavyAutocannon(ItemStack stack, @Nullable Level level,
                                                                                           List<Component> tooltip, TooltipFlag flag, T block) {
+    public static <T extends Block & RocketPodBlock> void appendTextRocketPod(ItemStack stack, List<Component> tooltip, TooltipFlag flag, T block) {
+        boolean desc = Screen.hasShiftDown();
+        addHoldShift(desc, tooltip);
+        if (!desc) {
+            return;
+        }
+
+        FontHelper.Palette palette = getPalette();
+        AutocannonMaterial material = block.getAutocannonMaterial();
+        Minecraft mc = Minecraft.getInstance();
+        boolean hasGoggles = GogglesItem.isWearingGoggles(mc.player);
+        String rootKey = "block." + CreateBigCannons.MOD_ID + ".autocannon.tooltip";
+        tooltip.add(Component.literal(I18n.get(rootKey + ".materialProperties")).withStyle(ChatFormatting.GRAY));
+
+        int maxLength = material.properties().maxBarrelLength();
+        tooltip.add(Component.literal(" " + I18n.get(rootKey + ".maxBarrelLength")).withStyle(ChatFormatting.GRAY));
+        if (hasGoggles) {
+            tooltip.addAll(
+                    TooltipHelper.cutStringTextComponent(I18n.get(rootKey + ".maxBarrelLength.goggles", Math.floor(maxLength * 1.5f) + 1),
+                            palette.primary(), palette.highlight(), 2));
+        } else {
+            tooltip.add(getNoGogglesMeter(maxLength == 0 ? 0 : (maxLength - 1) / 2 + 1, false, true));
+        }
+
+        tooltip.add(Component.literal(" " + I18n.get(rootKey + ".weightImpact")).withStyle(ChatFormatting.GRAY));
+        float weightImpact = material.properties().weight() * 2;
+        if (hasGoggles) {
+            tooltip.addAll(TooltipHelper.cutStringTextComponent(
+                    I18n.get(rootKey + ".weightImpact.goggles", String.format("%.2f", weightImpact)), palette.primary(),
+                    palette.highlight(), 2));
+        } else {
+            tooltip.add(getNoGogglesMeter(weightImpact < 1d ? 0 : Mth.ceil(weightImpact), true, true));
+        }
+    }
+
+    public static <T extends Block & MediumRocketPodBlock> void appendTextMediumRocketPod(ItemStack stack, List<Component> tooltip, TooltipFlag flag, T block) {
         boolean desc = Screen.hasShiftDown();
         addHoldShift(desc, tooltip);
         if (!desc) {
@@ -98,7 +134,7 @@ public class Tooltips {
                     TooltipHelper.cutStringTextComponent(I18n.get(rootKey + ".maxBarrelLength.goggles", Math.floor(maxLength * 1.5f) + 1),
                             palette.primary(), palette.highlight(), 2));
         } else {
-            tooltip.add(getNoGogglesMeter(maxLength == 0 ? 0 : ((int)Math.floor(maxLength * 1.5f) - 1) / 3 + 1, false, true));
+            tooltip.add(getNoGogglesMeter(maxLength == 0 ? 0 : (maxLength - 1) / 2 + 1, false, true));
         }
 
         tooltip.add(Component.literal(" " + I18n.get(rootKey + ".weightImpact")).withStyle(ChatFormatting.GRAY));

@@ -28,6 +28,9 @@ import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
 
 public enum RecipeRegister implements IRecipeTypeInfo
 {
+    ROCKET_FUZING(noSerializer(RocketFuzingRecipe::new)),
+    ROCKET_ASSEMBLY(noSerializer(RocketRecipe::new)),
+    MEDIUM_ROCKET_ASSEMBLY(noSerializer(MediumRocketRecipe::new)),
     HA_MUNITION_ASSEMBLY(noSerializer(HAMunitionAssemblyRecipe::new)),
     HA_MUNITION_FUZING(noSerializer(HAMunitionFuzingRecipe::new)),
     HA_MUNITION_UNFUZING(noSerializer(HAMunitionUnfuzingRecipe::new)),
@@ -46,9 +49,11 @@ public enum RecipeRegister implements IRecipeTypeInfo
         String name = CreateLang.asId(name());
         id = new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
         serializerObject = IndexPlatform.registerRecipeSerializer(this.id, serializerSupplier);
+        id = ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
+        serializerObject = CreateBigCannons_AdvancedTechnology.RECIPE_SERIALIZER_REGISTER.register(this.id.getPath(), serializerSupplier);
         if (registerType) {
             typeObject = typeSupplier.get();
-            IndexPlatform.registerRecipeType(this.id, typeSupplier);
+            CreateBigCannons_AdvancedTechnology.RECIPE_TYPE_REGISTER.register(this.id.getPath(), typeSupplier);
             type = typeSupplier;
         } else {
             typeObject = null;
@@ -58,11 +63,11 @@ public enum RecipeRegister implements IRecipeTypeInfo
 
     RecipeRegister(NonNullSupplier<RecipeSerializer<?>> serializerSupplier) {
         String name = CreateLang.asId(name());
-        id = CreateBigCannons.resource(name);//new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
-        serializerObject = IndexPlatform.registerRecipeSerializer(this.id, serializerSupplier);
+        id = ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
+        serializerObject = CreateBigCannons_AdvancedTechnology.RECIPE_SERIALIZER_REGISTER.register(this.id.getPath(), serializerSupplier);
         typeObject = simpleType(id);
         type = () -> typeObject;
-        IndexPlatform.registerRecipeType(this.id, this.type);
+        CreateBigCannons_AdvancedTechnology.RECIPE_TYPE_REGISTER.register(this.id.getPath(), this.type);
     }
 
     RecipeRegister(ProcessingRecipeBuilder.ProcessingRecipeFactory<?> processingFactory) {
