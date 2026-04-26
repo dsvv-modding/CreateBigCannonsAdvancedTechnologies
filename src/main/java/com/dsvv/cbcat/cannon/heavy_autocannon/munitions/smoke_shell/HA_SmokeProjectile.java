@@ -52,8 +52,8 @@ public class HA_SmokeProjectile extends AbstractFuzedHeavyAutocannonProjectile {
                 0.005,
                 true,
                 0.75f,
-                0.33f,
-                0.33f,
+                0.5f,
+                0.8f,
                 0.7f
         );
     }

@@ -24,24 +24,24 @@ public class HA_HEProjectile extends AbstractFuzedHeavyAutocannonProjectile {
     @Override
     public @NotNull EntityDamagePropertiesComponent getDamageProperties() {
         return new EntityDamagePropertiesComponent(
-                35,
+                27,
                 false,
                 true,
                 false,
-                1.5f
+                1.825f
         );
     }
 
     @Override
     protected @NotNull BallisticPropertiesComponent getBallisticProperties() {
         return new BallisticPropertiesComponent(
-                -0.035,
-                0.005,
+                -0.03,
+                0.013,
                 true,
-                0.75f,
-                0.4f,
-                0.33f,
-                0.7f
+                1.6f,
+                2.3f,
+                0.8f,
+                0.66f
         );
     }
 

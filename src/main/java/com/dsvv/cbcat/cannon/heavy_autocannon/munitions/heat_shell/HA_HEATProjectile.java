@@ -50,11 +50,11 @@ public class HA_HEATProjectile extends AbstractFuzedHeavyAutocannonProjectile {
     @Override
     public @NotNull EntityDamagePropertiesComponent getDamageProperties() {
         return new EntityDamagePropertiesComponent(
-                35,
+                28,
                 false,
                 true,
                 false,
-                1.5f
+                1.75f
         );
     }
 
@@ -62,12 +62,12 @@ public class HA_HEATProjectile extends AbstractFuzedHeavyAutocannonProjectile {
     protected @NotNull BallisticPropertiesComponent getBallisticProperties() {
         return new BallisticPropertiesComponent(
                 -0.035,
-                0.005,
+                0.012,
                 true,
-                0.75f,
-                0.4f,
-                0.33f,
-                0.7f
+                1.55f,
+                2.2f,
+                0.85f,
+                0.66f
         );
     }
 

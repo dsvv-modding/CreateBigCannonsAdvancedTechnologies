@@ -27,12 +27,12 @@ public class AutocannonAPDSFSProjectile extends AbstractAutocannonProjectile {
     @Override
     protected @NotNull BallisticPropertiesComponent getBallisticProperties() {
         return new BallisticPropertiesComponent(
-                -0.018,
-                0.00875,
+                -0.016,
+                0.00825,
                 false,
-                2.75f,
-                2.625f,
-                2f,
+                1.66f,
+                2.77f,
+                1.3f,
                 0.7f
         );
     }

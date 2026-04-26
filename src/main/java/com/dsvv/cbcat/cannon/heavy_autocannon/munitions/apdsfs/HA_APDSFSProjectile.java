@@ -18,11 +18,11 @@ public class HA_APDSFSProjectile extends AbstractHeavyAutocannonProjectile
     @Override
     public EntityDamagePropertiesComponent getDamageProperties() {
         return new EntityDamagePropertiesComponent(
-                26,
+                24.5f,
                 false,
                 true,
                 false,
-                1.25f
+                1.2f
         );
     }
 
@@ -31,12 +31,12 @@ public class HA_APDSFSProjectile extends AbstractHeavyAutocannonProjectile
     protected BallisticPropertiesComponent getBallisticProperties() {
         return new BallisticPropertiesComponent(
                 -0.0175,
-                0.00325,
+                0.008,
                 true,
-                1.33f,
-                1f,
-                0.95f,
-                0.7f
+                2.67f,
+                3.33f,
+                1.5f,
+                0.66f
         );
 
     }
