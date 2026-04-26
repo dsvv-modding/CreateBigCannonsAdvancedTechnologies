@@ -2,7 +2,7 @@ package com.dsvv.cbcat.registry;
 
 import com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology;
 import com.dsvv.cbcat.cartridge.ClusterProjectileCartridgeBlock;
-import com.dsvv.cbcat.cartridge.ProjectileCartridgeBlockItem;
+import com.dsvv.cbcat.cartridge.IProjectileCartridgeBlockItem;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -47,22 +47,22 @@ public class TabRegister
                     FuzedClusterProjectileBlock.getHighExplosiveFragmentationWithImpactFuze(),
                     FuzedClusterProjectileBlock.getHighExplosiveAntiTankWithImpactFuze(),
                     FuzedClusterProjectileBlock.getSmokeWithImpactFuze(),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_CASELESS_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_SHELL_CASELESS_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.GRAPESHOT_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.GRAPESHOT_CASELESS_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.FLUID_SHELL_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.FLUID_SHELL_CASELESS_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.HIGH_EXPLOSIVE_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.HIGH_EXPLOSIVE_CASELESS_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SHRAPNEL_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SHRAPNEL_CASELESS_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SMOKE_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SMOKE_CASELESS_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SOLID_CARTRIDGE_BLOCK),
-                    ProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SOLID_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.ARMOR_PIERCING_SHELL_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.GRAPESHOT_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.GRAPESHOT_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.FLUID_SHELL_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.FLUID_SHELL_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.HIGH_EXPLOSIVE_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.HIGH_EXPLOSIVE_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SHRAPNEL_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SHRAPNEL_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SMOKE_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SMOKE_CASELESS_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SOLID_CARTRIDGE_BLOCK),
+                    IProjectileCartridgeBlockItem.getWithPower(1, BlockRegister.SOLID_CASELESS_BLOCK),
                     ClusterProjectileCartridgeBlock.getChargedHighExplosiveWithImpactFuze(),
                     ClusterProjectileCartridgeBlock.getCaselessHighExplosiveWithImpactFuze(),
                     ClusterProjectileCartridgeBlock.getChargedHighExplosiveFragmentationWithImpactFuze(),

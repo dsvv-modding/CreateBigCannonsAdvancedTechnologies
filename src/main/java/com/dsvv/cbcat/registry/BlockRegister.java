@@ -231,7 +231,7 @@ public class BlockRegister
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FluidProjectileCartridgeBlock> FLUID_SHELL_CARTRIDGE_BLOCK = REGISTRATE.block("fluid_shell_cartridge", p -> new FluidProjectileCartridgeBlock(p, "fluid shell"))
-            .item(FluidShellBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .item(FluidProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CARTRIDGE_BLOCK = REGISTRATE.block("grapeshot_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot"))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
@@ -259,7 +259,7 @@ public class BlockRegister
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FluidProjectileCartridgeBlock> FLUID_SHELL_CASELESS_BLOCK = REGISTRATE.block("fluid_shell_caseless", p -> new FluidProjectileCartridgeBlock(p, "fluid shell caseless", false))
-            .item(FluidShellBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .item(FluidProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CASELESS_BLOCK = REGISTRATE.block("grapeshot_caseless", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot caseless", false))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
