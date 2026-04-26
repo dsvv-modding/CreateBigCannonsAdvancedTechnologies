@@ -1,5 +1,6 @@
 package com.dsvv.cbcat.cartridge;
 
+import com.dsvv.cbcat.registry.BlockEntityRegister;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
@@ -7,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
@@ -17,6 +19,7 @@ import rbasamoyai.createbigcannons.index.CBCMunitionPropertiesHandlers;
 import rbasamoyai.createbigcannons.munitions.big_cannon.*;
 import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.AbstractFluidShellBlockEntity;
 import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlock;
+import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlockEntity;
 import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellProjectile;
 
 import javax.annotation.Nullable;
@@ -43,6 +46,8 @@ public class FluidProjectileCartridgeBlock extends FluidShellBlock implements IP
         this(properties, name);
         this.multipleCharges = multipleCharges;
     }
+
+    @Override public BlockEntityType<? extends FluidShellBlockEntity> getBlockEntityType() { return BlockEntityRegister.FLUID_SHELL_CARTRIDGE_BLOCK_ENTITY.get(); }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);

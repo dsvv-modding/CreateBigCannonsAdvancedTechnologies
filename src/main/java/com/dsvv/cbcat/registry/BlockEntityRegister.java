@@ -67,15 +67,17 @@ public class BlockEntityRegister
     public static final BlockEntityEntry<MediumRocketPodBreechBlockEntity> MEDIUM_ROCKET_POD_BREECH_BLOCK_ENTITY = REGISTRATE.blockEntity("medium_rocket_rail_breech_be", MediumRocketPodBreechBlockEntity::new)
             .visual(() -> MediumRocketPodBreechInstance::new)
             //.renderer(() -> MediumRocketPodBreechRenderer::new)
-            .validBlocks(/*BlockRegister.CAST_IRON_MEDIUM_ROCKET_POD_BREECH, BlockRegister.BRONZE_MEDIUM_ROCKET_POD_BREECH, BlockRegister.STEEL_MEDIUM_ROCKET_POD_BREECH*/ BlockRegister.WROUGHT_IRON_MEDIUM_ROCKET_RAIL_BREECH)
+            .validBlocks(BlockRegister.WROUGHT_IRON_MEDIUM_ROCKET_RAIL_BREECH)
             .register();
 
-    public static final BlockEntityEntry<ProjectileCartridgeBlockEntity> PROJECTILE_CARTRIDGE_BLOCK_ENTITY = REGISTRATE.blockEntity("projectile_cartridge_be", ProjectileCartridgeBlockEntity::new)
-            .validBlocks(BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK, BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK, BlockRegister.FLUID_SHELL_CARTRIDGE_BLOCK,
-                    BlockRegister.GRAPESHOT_CARTRIDGE_BLOCK, BlockRegister.HIGH_EXPLOSIVE_CARTRIDGE_BLOCK, BlockRegister.SHRAPNEL_CARTRIDGE_BLOCK, BlockRegister.SMOKE_CARTRIDGE_BLOCK,
-                    BlockRegister.SOLID_CARTRIDGE_BLOCK, BlockRegister.ARMOR_PIERCING_CASELESS_BLOCK, BlockRegister.ARMOR_PIERCING_SHELL_CASELESS_BLOCK,
-                    BlockRegister.FLUID_SHELL_CASELESS_BLOCK, BlockRegister.GRAPESHOT_CASELESS_BLOCK, BlockRegister.HIGH_EXPLOSIVE_CASELESS_BLOCK, BlockRegister.SHRAPNEL_CASELESS_BLOCK,
-                    BlockRegister.SMOKE_CASELESS_BLOCK, BlockRegister.SOLID_CASELESS_BLOCK)
+    public static final BlockEntityEntry<BigCannonProjectileBlockEntity> PROJECTILE_CARTRIDGE_BLOCK_ENTITY = REGISTRATE.blockEntity("projectile_cartridge_be", BigCannonProjectileBlockEntity::new)
+            .validBlocks(BlockRegister.ARMOR_PIERCING_CARTRIDGE_BLOCK, BlockRegister.GRAPESHOT_CARTRIDGE_BLOCK, BlockRegister.SOLID_CARTRIDGE_BLOCK,
+                    BlockRegister.ARMOR_PIERCING_CASELESS_BLOCK, BlockRegister.GRAPESHOT_CASELESS_BLOCK, BlockRegister.SOLID_CASELESS_BLOCK)
+            .register();
+
+    public static final BlockEntityEntry<FuzedBlockEntity> FUZED_PROJECTILE_CARTRIDGE_BLOCK_ENTITY = REGISTRATE.blockEntity("fuzed_projectile_cartridge_be", FuzedBlockEntity::new)
+            .validBlocks(BlockRegister.ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK, BlockRegister.HIGH_EXPLOSIVE_CARTRIDGE_BLOCK, BlockRegister.SHRAPNEL_CARTRIDGE_BLOCK, BlockRegister.SMOKE_CARTRIDGE_BLOCK,
+                    BlockRegister.ARMOR_PIERCING_SHELL_CASELESS_BLOCK, BlockRegister.HIGH_EXPLOSIVE_CASELESS_BLOCK, BlockRegister.SHRAPNEL_CASELESS_BLOCK, BlockRegister.SMOKE_CASELESS_BLOCK)
             .register();
 
     public static final BlockEntityEntry<FluidShellBlockEntity> FLUID_SHELL_CARTRIDGE_BLOCK_ENTITY = REGISTRATE.blockEntity("fluid_shell_cartridge_be", FluidShellBlockEntity::new)

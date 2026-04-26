@@ -3,10 +3,7 @@ package com.dsvv.cbcat.cartridge;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectile;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlock;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlockEntity;
-import com.dsvv.cbcat.registry.BlockRegister;
-import com.dsvv.cbcat.registry.DataComponentRegistry;
-import com.dsvv.cbcat.registry.EntityRegister;
-import com.dsvv.cbcat.registry.ExtraDataRegister;
+import com.dsvv.cbcat.registry.*;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
@@ -165,7 +162,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 1);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HE_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_HE_ITEM.get()));
         return stack;
     }
 
@@ -179,7 +176,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 1);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEF_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_HEF_ITEM.get()));
         return stack;
     }
 
@@ -193,7 +190,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 1);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEAT_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_HEAT_ITEM.get()));
         return stack;
     }
 
@@ -207,7 +204,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CARTRIDGE_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 1);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_SMOKE_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_SMOKE_ITEM.get()));
         return stack;
     }
 
@@ -221,7 +218,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 3);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HE_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_HE_ITEM.get()));
         return stack;
     }
 
@@ -235,7 +232,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 3);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEF_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_HEF_ITEM.get()));
         return stack;
     }
 
@@ -249,7 +246,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 3);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_HEAT_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_HEAT_ITEM.get()));
         return stack;
     }
 
@@ -263,7 +260,7 @@ public class ClusterProjectileCartridgeBlock extends FuzedClusterProjectileBlock
         ItemStack stack = BlockRegister.CLUSTER_CASELESS_BLOCK.asStack();
         stack.set(CBCDataComponents.POWER, 3);
         stack.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(fuzes));
-        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(EntityRegister.HA_SMOKE_PROJECTILE.get()));
+        stack.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(ItemRegister.HA_SMOKE_ITEM.get()));
         return stack;
     }
 }

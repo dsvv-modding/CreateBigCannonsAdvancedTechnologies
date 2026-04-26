@@ -1,5 +1,6 @@
 package com.dsvv.cbcat.cartridge;
 
+import com.dsvv.cbcat.registry.BlockEntityRegister;
 import com.mojang.serialization.MapCodec;
 import com.simibubi.create.foundation.block.IBE;
 import com.tterrag.registrate.util.entry.EntityEntry;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
@@ -53,6 +55,8 @@ public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> e
     }
 
     @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
+
+    @Override public BlockEntityType<? extends FuzedBlockEntity> getBlockEntityType() { return BlockEntityRegister.FUZED_PROJECTILE_CARTRIDGE_BLOCK_ENTITY.get(); }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);

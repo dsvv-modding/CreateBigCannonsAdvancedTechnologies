@@ -158,9 +158,9 @@ public class ExtraDataRegister
         return CLUSTER_PROJECTILES.get(projectile);
     }
 
-    public static String clusterPartsReverse(EntityType entity) {
+    public static String clusterPartsReverse(Item item) {
         for (String key : CLUSTER_PROJECTILES.keySet())
-            if (CLUSTER_PROJECTILES.get(key).is(entity))
+            if (CLUSTER_PROJECTILES.get(key).is(item))
                 return key;
         return "";
     }
