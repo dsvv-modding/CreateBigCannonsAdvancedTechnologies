@@ -8,19 +8,13 @@ import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
-import net.minecraft.server.packs.PathPackResources;
-import net.minecraft.server.packs.repository.Pack;
-import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -29,7 +23,6 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
-import org.slf4j.Logger;
 
 @Mod(CreateBigCannons_AdvancedTechnology.MOD_ID)
 public class CreateBigCannons_AdvancedTechnology
@@ -84,7 +77,7 @@ public class CreateBigCannons_AdvancedTechnology
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             ItemProperties.register(BlockRegister.HEAVY_AUTOCANNON_AMMO_BOX.asItem(),
-                    ResourceLocation.fromNamespaceAndPath(MOD_ID, "ammo_box_filing"),
+                    ResourceLocation.fromNamespaceAndPath(MOD_ID, "ammo_box_filling"),
                     (stack, level, living, id) -> stack.getItem() instanceof HeavyAutocannonAmmoContainerItem && HeavyAutocannonAmmoContainerItem.getTotalAmmoCount(stack) > 0 ? 1.0f : 0.0f);
             ItemProperties.register(BlockRegister.CREATIVE_HEAVY_AUTOCANNON_AMMO_BOX.asItem(),
                     ResourceLocation.fromNamespaceAndPath(MOD_ID,"ammo_box_filling"),

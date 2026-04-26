@@ -175,5 +175,5 @@ public class HeavyAutocannonAmmoContainerItem extends BlockItem implements MenuP
         tooltipComponents.add(Component.translatable("block.createbigcannons.autocannon_ammo_container.tooltip.tracer_spacing", spacingValue));
     }
 
-    public boolean isCreative() { return !BlockRegister.HEAVY_AUTOCANNON_AMMO_BOX.get().asItem().equals(this);}//CBCBlocks.CREATIVE_AUTOCANNON_AMMO_CONTAINER.is(this); }
+    public boolean isCreative() { return BlockRegister.CREATIVE_HEAVY_AUTOCANNON_AMMO_BOX.is(this);}//CBCBlocks.CREATIVE_AUTOCANNON_AMMO_CONTAINER.is(this); }
 }

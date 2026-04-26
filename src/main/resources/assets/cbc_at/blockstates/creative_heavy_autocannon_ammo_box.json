@@ -1,8 +1,8 @@
 {
   "variants": {
-    "axis=x,state=empty"    : { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_empty_creative_ammo_box", "y": -90},
-    "axis=z,state=empty"  : { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_empty_creative_ammo_box"},
-    "axis=x,state=filled"    : { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_filled_creative_ammo_box", "y": -90},
-    "axis=z,state=filled"  : { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_filled_creative_ammo_box"}
+    "axis=x,state=empty": { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_empty_creative_ammo_box", "y": -90},
+    "axis=z,state=empty": { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_empty_creative_ammo_box"},
+    "axis=x,state=filled": { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_filled_creative_ammo_box", "y": -90},
+    "axis=z,state=filled": { "model" : "cbc_at:block/heavy_autocannon/heavy_autocannon_filled_creative_ammo_box"}
   }
 }

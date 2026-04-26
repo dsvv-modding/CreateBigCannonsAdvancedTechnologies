@@ -82,6 +82,7 @@ public class HeavyAutocannonAmmoContainerBlock extends Block implements IWrencha
             be.setMainAmmoDirect(HeavyAutocannonAmmoContainerItem.getMainAmmoStack(stack));
             be.setTracersDirect(HeavyAutocannonAmmoContainerItem.getTracerAmmoStack(stack));
             be.setSpacing(HeavyAutocannonAmmoContainerItem.getTracerSpacing(stack));
+            be.updateBlockState(state, true);
         }
     }
 

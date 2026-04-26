@@ -959,16 +959,16 @@ public class BlockRegister
             .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
-    public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_qfbreech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+    public static final BlockEntry<HeavyAutocannonQuickFireBreechBlock> UNBORED_CAST_IRON_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_cast_iron_heavy_autocannon_qfbreech", p -> new HeavyAutocannonQuickFireBreechBlock(p, CBCAutocannonMaterials.CAST_IRON, false))
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
-    public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_bronze_heavy_autocannon_qfbreech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.BRONZE, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+    public static final BlockEntry<HeavyAutocannonQuickFireBreechBlock> UNBORED_BRONZE_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_bronze_heavy_autocannon_qfbreech", p -> new HeavyAutocannonQuickFireBreechBlock(p, CBCAutocannonMaterials.BRONZE, false))
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
-    public static final BlockEntry<HeavyAutocannonBreechBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_steel_heavy_autocannon_qfbreech", p -> new HeavyAutocannonBreechBlock(p, CBCAutocannonMaterials.STEEL, false))
-            .item(HeavyAutocannonBlockItem<HeavyAutocannonBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+    public static final BlockEntry<HeavyAutocannonQuickFireBreechBlock> UNBORED_STEEL_HEAVY_AUTOCANNON_QFBREECH = REGISTRATE.block("unbored_steel_heavy_autocannon_qfbreech", p -> new HeavyAutocannonQuickFireBreechBlock(p, CBCAutocannonMaterials.STEEL, false))
+            .item(HeavyAutocannonBlockItem<HeavyAutocannonQuickFireBreechBlock>::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .transform(cannonBlock(false))
             .register();
 
