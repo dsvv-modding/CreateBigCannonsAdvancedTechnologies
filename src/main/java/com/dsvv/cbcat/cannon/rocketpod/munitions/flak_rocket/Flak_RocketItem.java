@@ -4,14 +4,13 @@ import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractFuzedRocket;
 import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractFuzedRocketItem;
 import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractRocket;
 import com.dsvv.cbcat.cannon.rocketpod.munitions.RocketCartridgeItem;
-import com.dsvv.cbcat.registry.DataComponentRegistry;
 import com.dsvv.cbcat.registry.EntityRegister;
 import com.dsvv.cbcat.registry.ItemRegister;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.level.Level;
-import rbasamoyai.createbigcannons.index.CBCDataComponents;
 
 public class Flak_RocketItem extends AbstractFuzedRocketItem {
     public Flak_RocketItem(Properties pProperties) {
@@ -21,12 +20,12 @@ public class Flak_RocketItem extends AbstractFuzedRocketItem {
     @Override
     public AbstractRocket getAutocannonProjectile(ItemStack stack, Level level) {
         AbstractFuzedRocket rocket = EntityRegister.FLAK_ROCKET.create(level);
-        if (stack.has(DataComponentRegistry.ROCKET_FUEL))
-            rocket.setFuel(stack.get(DataComponentRegistry.ROCKET_FUEL));
-        if (stack.has(CBCDataComponents.FUZE)) {
-            ItemContainerContents items = stack.getOrDefault(CBCDataComponents.FUZE, ItemContainerContents.EMPTY);
-            ItemStack fuze = items.copyOne();
-            rocket.setFuze(fuze);
+        CompoundTag tag = stack.getOrCreateTag();
+        if (tag.contains("fuel", Tag.TAG_BYTE)) {
+            rocket.setFuel(tag.getByte("fuel"));
+        }
+        if (tag.contains("Fuze", Tag.TAG_COMPOUND)) {
+            rocket.setFuze(ItemStack.of(tag.getCompound("Fuze")));
         }
         return rocket;
     }
@@ -38,7 +37,7 @@ public class Flak_RocketItem extends AbstractFuzedRocketItem {
 
     public ItemStack getCreativeTabCartridgeItem(int fuel) {
         ItemStack stack = ItemRegister.FLAK_ROCKET_ITEM.asStack();
-        stack.set(DataComponentRegistry.ROCKET_FUEL, (byte) fuel);
+        stack.getOrCreateTag().putByte("fuel", (byte) fuel);
         RocketCartridgeItem.writeProjectile(this.getDefaultInstance(), stack);
         return stack;
     }

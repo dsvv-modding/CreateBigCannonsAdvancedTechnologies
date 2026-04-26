@@ -4,6 +4,7 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
 import com.dsvv.cbcat.registry.ExtraDataRegister;
 import dev.engine_room.flywheel.api.instance.Instance;
 import dev.engine_room.flywheel.api.model.Model;
+import dev.engine_room.flywheel.api.visual.DynamicVisual;
 import dev.engine_room.flywheel.api.visualization.VisualizationContext;
 import dev.engine_room.flywheel.lib.instance.InstanceTypes;
 import dev.engine_room.flywheel.lib.instance.OrientedInstance;

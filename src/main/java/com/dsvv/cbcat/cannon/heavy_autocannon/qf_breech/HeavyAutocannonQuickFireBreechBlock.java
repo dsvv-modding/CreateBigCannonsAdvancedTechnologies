@@ -38,6 +38,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.joml.Vector3f;
+import rbasamoyai.createbigcannons.cannon_control.contraption.AbstractMountedCannonContraption;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 import rbasamoyai.createbigcannons.config.CBCConfigs;
@@ -139,7 +140,7 @@ public class HeavyAutocannonQuickFireBreechBlock extends HeavyAutocannonBaseBloc
 
     @Override
     public boolean onInteractWhileAssembled(Player player, BlockPos localPos, Direction side, InteractionHand interactionHand,
-                                            Level level, Contraption contraption, BlockEntity be, StructureTemplate.StructureBlockInfo info,
+                                            Level level, AbstractMountedCannonContraption contraption, BlockEntity be, StructureTemplate.StructureBlockInfo info,
                                             PitchOrientedContraptionEntity entity) {
         if (!(be instanceof HeavyAutocannonQuickFireBreechBlockEntity breech)) return false;
 

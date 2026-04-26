@@ -73,10 +73,10 @@ public class RocketRenderer<T extends AbstractRocket> extends EntityRenderer<T> 
             Matrix3f normal = lastPose.normal();
             VertexConsumer builder = buffers.getBuffer(SHRAPNEL);
 
-            vertexShrapnel(builder, pose, packedLight, -0.5f, -0.5f, 0, 1);
-            vertexShrapnel(builder, pose, packedLight,  0.5f, -0.5f, 1, 1);
-            vertexShrapnel(builder, pose, packedLight,  0.5f,  0.5f, 1, 0);
-            vertexShrapnel(builder, pose, packedLight, -0.5f,  0.5f, 0, 0);
+            vertexShrapnel(builder, pose, normal, packedLight, -0.5f, -0.5f, 0, 1);
+            vertexShrapnel(builder, pose, normal, packedLight,  0.5f, -0.5f, 1, 1);
+            vertexShrapnel(builder, pose, normal, packedLight,  0.5f,  0.5f, 1, 0);
+            vertexShrapnel(builder, pose, normal, packedLight, -0.5f,  0.5f, 0, 0);
 
             poseStack.popPose();
         }
@@ -97,40 +97,40 @@ public class RocketRenderer<T extends AbstractRocket> extends EntityRenderer<T> 
         float z2 = thickness;
 
         // Front
-        vertex(builder, pose, r, g, b, x1, y1, z1);
-        vertex(builder, pose, r, g, b, x1, y2, z1);
-        vertex(builder, pose, r, g, b, x2, y2, z1);
-        vertex(builder, pose, r, g, b, x2, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z1);
 
         // Right
-        vertex(builder, pose, r, g, b, x1, y1, z1);
-        vertex(builder, pose, r, g, b, x1, y1, z2);
-        vertex(builder, pose, r, g, b, x1, y2, z2);
-        vertex(builder, pose, r, g, b, x1, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z1);
 
         // Back
-        vertex(builder, pose, r, g, b, x1, y1, z2);
-        vertex(builder, pose, r, g, b, x2, y1, z2);
-        vertex(builder, pose, r, g, b, x2, y2, z2);
-        vertex(builder, pose, r, g, b, x1, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z2);
 
         // Left
-        vertex(builder, pose, r, g, b, x2, y1, z1);
-        vertex(builder, pose, r, g, b, x2, y2, z1);
-        vertex(builder, pose, r, g, b, x2, y2, z2);
-        vertex(builder, pose, r, g, b, x2, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z2);
 
         // Down
-        vertex(builder, pose, r, g, b, x2, y1, z2);
-        vertex(builder, pose, r, g, b, x1, y1, z2);
-        vertex(builder, pose, r, g, b, x1, y1, z1);
-        vertex(builder, pose, r, g, b, x2, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z1);
 
         // Up
-        vertex(builder, pose, r, g, b, x1, y2, z1);
-        vertex(builder, pose, r, g, b, x1, y2, z2);
-        vertex(builder, pose, r, g, b, x2, y2, z2);
-        vertex(builder, pose, r, g, b, x2, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z1);
     }
 
     private static void renderBoxInverted(VertexConsumer builder, Matrix4f pose, Matrix3f normal, int r, int g, int b, float length, float thickness) {
@@ -142,58 +142,60 @@ public class RocketRenderer<T extends AbstractRocket> extends EntityRenderer<T> 
         float z2 = thickness;
 
         // Front
-        vertex(builder, pose, r, g, b, x1, y1, z1);
-        vertex(builder, pose, r, g, b, x2, y1, z1);
-        vertex(builder, pose, r, g, b, x2, y2, z1);
-        vertex(builder, pose, r, g, b, x1, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z1);
 
         // Right
-        vertex(builder, pose, r, g, b, x1, y1, z1);
-        vertex(builder, pose, r, g, b, x1, y2, z1);
-        vertex(builder, pose, r, g, b, x1, y2, z2);
-        vertex(builder, pose, r, g, b, x1, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z2);
 
         // Back
-        vertex(builder, pose, r, g, b, x1, y1, z2);
-        vertex(builder, pose, r, g, b, x1, y2, z2);
-        vertex(builder, pose, r, g, b, x2, y2, z2);
-        vertex(builder, pose, r, g, b, x2, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z2);
 
         // Left
-        vertex(builder, pose, r, g, b, x2, y1, z1);
-        vertex(builder, pose, r, g, b, x2, y1, z2);
-        vertex(builder, pose, r, g, b, x2, y2, z2);
-        vertex(builder, pose, r, g, b, x2, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z1);
 
         // Down
-        vertex(builder, pose, r, g, b, x2, y1, z2);
-        vertex(builder, pose, r, g, b, x2, y1, z1);
-        vertex(builder, pose, r, g, b, x1, y1, z1);
-        vertex(builder, pose, r, g, b, x1, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z2);
+        vertex(builder, pose, normal, r, g, b, x2, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z1);
+        vertex(builder, pose, normal, r, g, b, x1, y1, z2);
 
         // Up
-        vertex(builder, pose, r, g, b, x1, y2, z1);
-        vertex(builder, pose, r, g, b, x2, y2, z1);
-        vertex(builder, pose, r, g, b, x2, y2, z2);
-        vertex(builder, pose, r, g, b, x1, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z1);
+        vertex(builder, pose, normal, r, g, b, x2, y2, z2);
+        vertex(builder, pose, normal, r, g, b, x1, y2, z2);
     }
 
-    private static void vertex(VertexConsumer builder, Matrix4f pose, int r, int g, int b, float x, float y, float z) {
-        builder.addVertex(pose, x, y, z)
-                .setColor(r, g, b, 255)
-                .setUv(0, 0)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(LightTexture.FULL_BRIGHT)
-                .setNormal(0, 1, 0);
+    private static void vertex(VertexConsumer builder, Matrix4f pose, Matrix3f normal, int r, int g, int b, float x, float y, float z) {
+        builder.vertex(pose, x, y, z)
+                .color(r, g, b, 255)
+                .uv(0, 0)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(LightTexture.FULL_BRIGHT)
+                .normal(normal, 0, 1, 0)
+                .endVertex();
     }
 
-    private static void vertexShrapnel(VertexConsumer builder, Matrix4f pose, int packedLight, float x, float y, int u, int v) {
-        builder.addVertex(pose, x, y, 0.0f)
-                .setColor(255, 255, 255, 255)
-                .setUv((float) u, (float) v)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(packedLight)
-                .setNormal(0.0f, 1.0f, 0.0f);
+    private static void vertexShrapnel(VertexConsumer builder, Matrix4f pose, Matrix3f normal, int packedLight, float x, float y, int u, int v) {
+        builder.vertex(pose, x, y, 0.0f)
+                .color(255, 255, 255, 255)
+                .uv((float) u, (float) v)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(packedLight)
+                .normal(normal, 0.0f, 1.0f, 0.0f)
+                .endVertex();
     }
 
     @Override public ResourceLocation getTextureLocation(T entity) { return null; }

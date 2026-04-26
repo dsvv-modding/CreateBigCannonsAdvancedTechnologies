@@ -44,12 +44,11 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import net.minecraft.world.level.storage.loot.functions.CopyNameFunction;
+import net.minecraft.world.level.storage.loot.functions.CopyNbtFunction;
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
-import org.openjdk.nashorn.api.tree.BreakTree;
 import rbasamoyai.createbigcannons.CBCTags;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBarrelBlock;
@@ -57,7 +56,6 @@ import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlockItem;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlockItem;
 import rbasamoyai.createbigcannons.crafting.casting.CannonCastMouldBlock;
 import rbasamoyai.createbigcannons.index.*;
-import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlockItem;
 
 import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
 
@@ -1027,8 +1025,8 @@ public class BlockRegister
     }
 
     public static <T extends Block, P> NonNullUnaryOperator<BlockBuilder<T, P>> castMould(String size) {
-        ResourceLocation baseLoc = ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/cast_mould/" + size + "_mould");
-        ResourceLocation sandLoc = ResourceLocation.fromNamespaceAndPath(CreateBigCannons.MOD_ID, "block/casting_sand");
+        ResourceLocation baseLoc = new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID,"block/cast_mould/" + size + "_mould");
+        ResourceLocation sandLoc = new ResourceLocation(CreateBigCannons.MOD_ID, "block/casting_sand");
         return b -> b.properties(p -> p.mapColor(MapColor.PODZOL))
                 .properties(p -> p.strength(2.0f, 3.0f))
                 .properties(p -> p.sound(SoundType.WOOD))
@@ -1070,12 +1068,12 @@ public class BlockRegister
                                     .build();
                         }, BlockStateProperties.WATERLOGGED))
                 .loot((t, c) -> {
-                    CopyComponentsFunction.Builder func = CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
-                            .include(CBCDataComponents.AMMO)
-                            .include(CBCDataComponents.TRACER)
-                            .include(CBCDataComponents.TRACER_SPACING);
+                    CopyNbtFunction.Builder func = CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
+                            .copy("Ammo", "Ammo")
+                            .copy("Tracers", "Tracers")
+                            .copy("TracerSpacing", "TracerSpacing");
                     if (isCreative)
-                        func = func.include(CBCDataComponents.CURRENT_INDEX);
+                        func = func.copy("CurrentIndex", "CurrentIndex");
                     t.add(c, LootTable.lootTable()
                             .withPool(t.applyExplosionCondition(c, LootPool.lootPool()
                                             .add(LootItem.lootTableItem(c))

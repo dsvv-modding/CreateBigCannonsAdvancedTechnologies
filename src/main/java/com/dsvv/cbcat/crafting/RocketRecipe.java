@@ -1,6 +1,8 @@
 package com.dsvv.cbcat.crafting;
 
-import com.dsvv.cbcat.registry.DataComponentRegistry;
+import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectileItem;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractFuzedRocketItem;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractRocketItem;
 import com.dsvv.cbcat.registry.RecipeRegister;
 import com.google.common.collect.Lists;
 import net.minecraft.core.HolderLookup;
@@ -10,13 +12,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
-import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
-import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCItems;
 import rbasamoyai.createbigcannons.munitions.FuzedItemMunition;
 import rbasamoyai.createbigcannons.munitions.autocannon.AutocannonRoundItem;
@@ -25,16 +24,16 @@ import static com.dsvv.cbcat.registry.ExtraDataRegister.getRocketForProjectile;
 
 public class RocketRecipe extends CustomRecipe
 {
-    public RocketRecipe() { super(CraftingBookCategory.MISC); }
+    public RocketRecipe(ResourceLocation location) { super(location, CraftingBookCategory.MISC); }
 
     @Override
-    public boolean matches(CraftingInput input, Level level) {
+    public boolean matches(CraftingContainer container, Level level) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack paper = ItemStack.EMPTY;
         byte power = 0;
 
-        for (int i = 0; i < input.size(); ++i) {
-            ItemStack stack = input.getItem(i);
+        for (int i = 0; i < container.getContainerSize(); ++i) {
+            ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
 
             if (stack.getItem() instanceof AutocannonRoundItem) {
@@ -60,12 +59,12 @@ public class RocketRecipe extends CustomRecipe
     }
 
     @Override
-    public ItemStack assemble(CraftingInput input, HolderLookup.Provider provider) {
+    public ItemStack assemble(CraftingContainer input, RegistryAccess access) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack paper = ItemStack.EMPTY;
         byte power = 0;
 
-        for (int i = 0; i < input.size(); ++i) {
+        for (int i = 0; i < input.getContainerSize(); ++i) {
             ItemStack stack = input.getItem(i);
             if (stack.isEmpty()) continue;
 
@@ -93,11 +92,17 @@ public class RocketRecipe extends CustomRecipe
         ItemStack result = getRocketForProjectile(round.getItem()).getDefaultInstance();
         result.setCount(1);
 
-        if (round.has(CBCDataComponents.FUZE))
-            result.set(CBCDataComponents.FUZE, round.get(CBCDataComponents.FUZE));
-
-        result.set(CBCDataComponents.PROJECTILE, ItemContainerContents.fromItems(Lists.newArrayList(round)));
-        result.set(DataComponentRegistry.ROCKET_FUEL, power);
+        CompoundTag tag = result.getOrCreateTag();
+        if (round.getItem() instanceof AbstractFuzedRocketItem fuzedRocketItem) {
+            ItemStack fuzeCopy = fuzedRocketItem.getFuze(round);
+            fuzeCopy.setCount(1);
+            if (result.getItem() instanceof FuzedItemMunition && !fuzeCopy.isEmpty()) {
+                CompoundTag projectileTag = round.getOrCreateTag();
+                projectileTag.put("Fuze", fuzeCopy.save(new CompoundTag()));
+            }
+        }
+        tag.put("Projectile", round.save(new CompoundTag()));
+        tag.putByte("fuel", power);
         return result;
     }
 

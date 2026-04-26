@@ -49,11 +49,9 @@ public enum RecipeRegister implements IRecipeTypeInfo
         String name = CreateLang.asId(name());
         id = new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
         serializerObject = IndexPlatform.registerRecipeSerializer(this.id, serializerSupplier);
-        id = ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
-        serializerObject = CreateBigCannons_AdvancedTechnology.RECIPE_SERIALIZER_REGISTER.register(this.id.getPath(), serializerSupplier);
         if (registerType) {
             typeObject = typeSupplier.get();
-            CreateBigCannons_AdvancedTechnology.RECIPE_TYPE_REGISTER.register(this.id.getPath(), typeSupplier);
+            IndexPlatform.registerRecipeType(this.id, typeSupplier);
             type = typeSupplier;
         } else {
             typeObject = null;
@@ -63,11 +61,11 @@ public enum RecipeRegister implements IRecipeTypeInfo
 
     RecipeRegister(NonNullSupplier<RecipeSerializer<?>> serializerSupplier) {
         String name = CreateLang.asId(name());
-        id = ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
-        serializerObject = CreateBigCannons_AdvancedTechnology.RECIPE_SERIALIZER_REGISTER.register(this.id.getPath(), serializerSupplier);
+        id = new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, name);
+        serializerObject = IndexPlatform.registerRecipeSerializer(this.id, serializerSupplier);
         typeObject = simpleType(id);
         type = () -> typeObject;
-        CreateBigCannons_AdvancedTechnology.RECIPE_TYPE_REGISTER.register(this.id.getPath(), this.type);
+        IndexPlatform.registerRecipeType(this.id, this.type);
     }
 
     RecipeRegister(ProcessingRecipeBuilder.ProcessingRecipeFactory<?> processingFactory) {

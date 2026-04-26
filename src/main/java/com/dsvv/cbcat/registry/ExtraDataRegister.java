@@ -15,11 +15,13 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlock;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 import rbasamoyai.createbigcannons.index.CBCBlocks;
+import rbasamoyai.createbigcannons.index.CBCItems;
 
 import java.util.HashMap;
 import java.util.logging.Logger;
@@ -36,7 +38,7 @@ public class ExtraDataRegister
 
     private static final HashMap<String, BlockEntry<?>> ALL_CARTRIDGES = new HashMap<>();
     private static final HashMap<BlockEntry<?>, String> ALL_PROJECTILE_BLOCKS = new HashMap<>();
-    private static final HashMap<String, ItemEntry<? extends AbstractFuzedHeavyAutocannonProjectileItem>> CLUSTER_PROJECTILES = new HashMap<>();
+    private static final HashMap<String, EntityEntry<? extends AbstractFuzedHeavyAutocannonProjectile>> CLUSTER_PROJECTILES = new HashMap<>();
     private static PartialModel MEDIUM_ROCKET;
     private static final HashMap<ItemEntry<?>, ItemEntry<?>> PROJECTILE_MEDIUM_ROCKET = new HashMap<>();
     private static final HashMap<ItemEntry<?>, ItemEntry<?>> PROJECTILE_ROCKET = new HashMap<>();
@@ -89,12 +91,12 @@ public class ExtraDataRegister
         ALL_PROJECTILE_BLOCKS.put(BlockRegister.CLUSTER_BLOCK, "cluster shell");
 
         //CLUSTER_PROJECTILES.put("", null);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_smoke", ItemRegister.HA_SMOKE_ITEM);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_he", ItemRegister.HA_HE_ITEM);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_hef", ItemRegister.HA_HEF_ITEM);
-        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_heat", ItemRegister.HA_HEAT_ITEM);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_smoke", EntityRegister.HA_SMOKE_PROJECTILE);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_he", EntityRegister.HA_HE_PROJECTILE);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_hef", EntityRegister.HA_HEF_PROJECTILE);
+        CLUSTER_PROJECTILES.put("tooltip.cbc_at.ha_heat", EntityRegister.HA_HEAT_PROJECTILE);
 
-        MEDIUM_ROCKET = PartialModel.of(ResourceLocation.fromNamespaceAndPath(CreateBigCannons_AdvancedTechnology.MOD_ID, "item/base/medium_rocket_item"));
+        MEDIUM_ROCKET = PartialModel.of(new ResourceLocation(CreateBigCannons_AdvancedTechnology.MOD_ID, "item/base/medium_rocket_item"));
 
         PROJECTILE_MEDIUM_ROCKET.put(ItemRegister.HA_AP_ITEM, ItemRegister.MEDIUM_AP_ROCKET_ITEM);
         PROJECTILE_MEDIUM_ROCKET.put(ItemRegister.HA_HE_ITEM, ItemRegister.MEDIUM_HE_ROCKET_ITEM);

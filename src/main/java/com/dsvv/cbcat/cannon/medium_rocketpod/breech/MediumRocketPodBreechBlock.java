@@ -5,20 +5,18 @@ import com.dsvv.cbcat.registry.BlockEntityRegister;
 import com.dsvv.cbcat.cannon.medium_rocketpod.IMediumRocketPodBreech;
 import com.dsvv.cbcat.cannon.medium_rocketpod.MediumRocketPodBaseBlock;
 import com.dsvv.cbcat.cannon.medium_rocketpod.MediumRocketPodBlock;
-import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.Contraption;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -29,6 +27,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import rbasamoyai.createbigcannons.cannon_control.contraption.AbstractMountedCannonContraption;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 import rbasamoyai.createbigcannons.crafting.casting.CannonCastShape;
@@ -40,21 +39,12 @@ public class MediumRocketPodBreechBlock extends MediumRocketPodBaseBlock impleme
 
     public MediumRocketPodBreechBlock(Properties properties, AutocannonMaterial material) {
         super(properties, material);
-        this.codec = simpleCodec(this::fromSelf);
     }
 
     public MediumRocketPodBreechBlock(Properties properties, AutocannonMaterial material, boolean isComplete) {
         this(properties, material);
         this.isComplete = isComplete;
     }
-
-    private final MapCodec<? extends DirectionalBlock> codec;
-
-    private MediumRocketPodBreechBlock fromSelf(Properties properties) {
-        return new MediumRocketPodBreechBlock(properties, this.getAutocannonMaterial());
-    }
-
-    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     @Override
     public Class<MediumRocketPodBreechBlockEntity> getBlockEntityClass() {
@@ -90,7 +80,8 @@ public class MediumRocketPodBreechBlock extends MediumRocketPodBaseBlock impleme
     }
 
     @Override
-    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
+        ItemStack stack = player.getItemInHand(hand);
         if (level.getBlockEntity(pos) instanceof MediumRocketPodBreechBlockEntity breech) {
 
             boolean changed = breech.addToInputBuffer(stack);
@@ -99,15 +90,15 @@ public class MediumRocketPodBreechBlock extends MediumRocketPodBaseBlock impleme
                 ItemStack newStack = stack.copy();
                 newStack.setCount(newStack.getCount() - 1);
                 player.setItemInHand(hand, newStack);
-                return ItemInteractionResult.sidedSuccess(level.isClientSide);
+                return InteractionResult.sidedSuccess(level.isClientSide);
             }
         }
-        return super.useItemOn(stack, state, level, pos, player, hand, result);
+        return super.use(state, level, pos, player, hand, result);
     }
 
     @Override
     public boolean onInteractWhileAssembled(Player player, BlockPos localPos, Direction side, InteractionHand interactionHand,
-                                            Level level, Contraption contraption, BlockEntity be,
+                                            Level level, AbstractMountedCannonContraption contraption, BlockEntity be,
                                             StructureTemplate.StructureBlockInfo info, PitchOrientedContraptionEntity entity) {
         if (!(be instanceof MediumRocketPodBreechBlockEntity breech)) return false;
 

@@ -2,7 +2,7 @@ package com.dsvv.cbcat.cannon.medium_rocketpod.breech;
 
 import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.MediumRocketItem;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.minecraftforge.items.IItemHandler;
 
 import javax.annotation.Nonnull;
 import java.util.Deque;

@@ -8,9 +8,11 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class MediumRocketPodBlockItem<T extends Block & MediumRocketPodBlock> extends BlockItem {
@@ -32,8 +34,8 @@ public class MediumRocketPodBlockItem<T extends Block & MediumRocketPodBlock> ex
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, TooltipContext ctx, List<Component> pTooltip, TooltipFlag pFlag) {
-        super.appendHoverText(pStack, ctx, pTooltip, pFlag);
-        Tooltips.appendTextMediumRocketPod(pStack, pTooltip, pFlag, this.rocketPodBlock);
+    public void appendHoverText(ItemStack pStack, @Nullable Level level, List<Component> pTooltip, TooltipFlag pFlag) {
+        super.appendHoverText(pStack, level, pTooltip, pFlag);
+        Tooltips.appendTextMediumRocketPod(pStack, level, pTooltip, pFlag, this.rocketPodBlock);
     }
 }

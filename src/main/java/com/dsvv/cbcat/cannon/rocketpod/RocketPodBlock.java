@@ -128,7 +128,7 @@ public interface RocketPodBlock extends WeldableBlock, CannonContraptionProvider
 
     @Override
     default boolean onInteractWhileAssembled(Player player, BlockPos blockPos, Direction direction, InteractionHand interactionHand, Level level,
-                                             Contraption abstractMountedCannonContraption, BlockEntity be,
+                                             AbstractMountedCannonContraption contraption, BlockEntity be,
                                              StructureTemplate.StructureBlockInfo structureBlockInfo, PitchOrientedContraptionEntity entity) {
         return false;
     }

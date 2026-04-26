@@ -3,6 +3,7 @@ package com.dsvv.cbcat.cannon.medium_rocketpod.munitions;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.culling.Frustum;
@@ -176,20 +177,23 @@ public class MediumRocketRenderer<T extends AbstractMediumRocket> extends Entity
     }
 
     private static void vertex(VertexConsumer builder, Matrix4f pose, Matrix3f normal, int r, int g, int b, float x, float y, float z) {
-        builder.addVertex(pose, x, y, 0.0f)
-                .setColor(r, g, b, 255)
-                .setUv(0, 0)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setNormal(0.0f, 1.0f, 0.0f);
+        builder.vertex(pose, x, y, z)
+                .color(r, g, b, 255)
+                .uv(0, 0)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(LightTexture.FULL_BRIGHT)
+                .normal(normal, 0, 1, 0)
+                .endVertex();
     }
 
     private static void vertexShrapnel(VertexConsumer builder, Matrix4f pose, Matrix3f normal, int packedLight, float x, float y, int u, int v) {
-        builder.addVertex(pose, x, y, 0.0f)
-                .setColor(255, 255, 255, 255)
-                .setUv((float) u, (float) v)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(packedLight)
-                .setNormal(0.0f, 1.0f, 0.0f);
+        builder.vertex(pose, x, y, 0.0f)
+                .color(255, 255, 255, 255)
+                .uv((float) u, (float) v)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(packedLight)
+                .normal(normal, 0.0f, 1.0f, 0.0f)
+                .endVertex();
     }
 
     @Override public ResourceLocation getTextureLocation(T entity) { return null; }

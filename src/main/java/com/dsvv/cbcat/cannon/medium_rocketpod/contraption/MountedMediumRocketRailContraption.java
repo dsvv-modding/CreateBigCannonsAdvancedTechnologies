@@ -11,7 +11,6 @@ import com.simibubi.create.content.contraptions.AssemblyException;
 import com.simibubi.create.content.contraptions.StructureTransform;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
 import net.minecraft.network.chat.Component;
@@ -31,7 +30,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.minecraftforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.cannon_control.ControlPitchContraption;
 import rbasamoyai.createbigcannons.cannon_control.cannon_mount.CannonMountBlockEntity;
@@ -51,7 +50,6 @@ import rbasamoyai.createbigcannons.index.CBCSoundEvents;
 import rbasamoyai.createbigcannons.multiloader.NetworkPlatform;
 import rbasamoyai.createbigcannons.munitions.autocannon.config.AutocannonProjectilePropertiesComponent;
 import rbasamoyai.createbigcannons.network.ClientboundAnimateCannonContraptionPacket;
-import rbasamoyai.createbigcannons.remix.GetItemStorage;
 import rbasamoyai.createbigcannons.utils.CBCUtils;
 import rbasamoyai.ritchiesprojectilelib.RitchiesProjectileLib;
 
@@ -64,7 +62,7 @@ import java.util.Map;
 
 import static rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock.writeAndSyncSingleBlockData;
 
-public class MountedMediumRocketRailContraption extends AbstractMountedCannonContraption implements ItemCannon, GetItemStorage, ICarriageAdjustableFireRate
+public class MountedMediumRocketRailContraption extends AbstractMountedCannonContraption implements ItemCannon, ICarriageAdjustableFireRate
 {
     private AutocannonMaterial cannonMaterial;
 
@@ -157,7 +155,7 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
             StructureTemplate.StructureBlockInfo localBlockInfo = new StructureTemplate.StructureBlockInfo(localPos, blockInfo.state(), blockInfo.nbt());
             this.blocks.put(localPos, localBlockInfo);
             if (blockInfo.nbt() != null) {
-                BlockEntity be = BlockEntity.loadStatic(localPos, blockInfo.state(), blockInfo.nbt(), level.registryAccess());
+                BlockEntity be = BlockEntity.loadStatic(localPos, blockInfo.state(), blockInfo.nbt());
                 this.presentBlockEntities.put(localPos, be);
             }
         }
@@ -281,7 +279,7 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
                     }
 
                     behavior.tryLoadingItem(foundProjectile);
-                    CompoundTag tag = (this.presentBlockEntities.get(currentPos)).saveWithFullMetadata(level.registryAccess());
+                    CompoundTag tag = (this.presentBlockEntities.get(currentPos)).saveWithFullMetadata();
                     tag.remove("x");
                     tag.remove("y");
                     tag.remove("z");
@@ -327,7 +325,7 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
             }
         }*/
 
-        NetworkPlatform.sendToClientTracking(ClientboundAnimateCannonContraptionPacket.entity(entity), entity);
+        NetworkPlatform.sendToClientTracking(new ClientboundAnimateCannonContraptionPacket(entity), entity);
         Vec3 spawnPos = entity.toGlobalVector(Vec3.atCenterOf(currentPos.relative(this.initialOrientation)), 0.0F);
         Vec3 vec1 = spawnPos.subtract(centerPos).normalize();
         spawnPos = spawnPos.subtract(vec1.scale(1.5F));
@@ -493,8 +491,8 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
         return ContraptionRegister.CBCATContraptionTypes.MEDIUM_ROCKET_POD;
     }
 
-    public CompoundTag writeNBT(HolderLookup.Provider registries, boolean clientData) {
-        CompoundTag tag = super.writeNBT(registries, clientData);
+    public CompoundTag writeNBT(boolean clientData) {
+        CompoundTag tag = super.writeNBT(clientData);
         tag.putString("AutocannonMaterial", this.cannonMaterial == null ? CBCAutocannonMaterials.CAST_IRON.name().toString() : this.cannonMaterial.name().toString());
         if (this.startPos != null) {
             tag.put("StartPos", NbtUtils.writeBlockPos(this.startPos));
@@ -509,7 +507,7 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
             this.cannonMaterial = CBCAutocannonMaterials.CAST_IRON;
         }
 
-        this.startPos = tag.contains("StartPos") ? NbtUtils.readBlockPos(tag, "StartPos").get() : null;
+        this.startPos = tag.contains("StartPos") ? NbtUtils.readBlockPos(tag.getCompound("StartPos")) : null;
 
     }
 
@@ -525,7 +523,7 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
         return 66.0F;
     }
 
-    @Override
+    /*@Override
     public ItemStack insertItemIntoCannon(ItemStack stack, boolean simulate) {
         if (this.getItemStorage() == null)
             return stack;
@@ -543,5 +541,14 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
     @Override
     public IItemHandler getItemStorage() {
         return this.presentBlockEntities.get(this.startPos) instanceof MediumRocketPodBreechBlockEntity breech ? breech.createItemHandler() : null;
+    }*/
+    @Override
+    public ItemStack insertItemIntoCannon(ItemStack stack, boolean simulate) {
+        return stack;
+    }
+
+    @Override
+    public ItemStack extractItemFromCannon(boolean simulate) {
+        return ItemStack.EMPTY;
     }
 }

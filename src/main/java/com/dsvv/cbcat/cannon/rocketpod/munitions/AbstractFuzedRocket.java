@@ -77,13 +77,13 @@ public abstract class AbstractFuzedRocket<T extends AbstractAutocannonProjectile
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         if (this.fuze != null)
-            tag.put("Fuze", this.fuze.saveOptional(this.level().registryAccess()));
+            tag.put("Fuze", this.fuze.save(new CompoundTag()));
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
-        this.fuze = tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.parseOptional(level().registryAccess(), tag.getCompound("Fuze")) : ItemStack.EMPTY;
+        this.fuze = tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.of(tag.getCompound("Fuze")) : ItemStack.EMPTY;
     }
 
     protected final boolean canDetonate(Predicate<FuzeItem> cons) {

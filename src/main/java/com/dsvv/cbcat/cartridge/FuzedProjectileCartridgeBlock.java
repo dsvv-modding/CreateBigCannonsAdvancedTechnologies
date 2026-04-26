@@ -23,7 +23,7 @@ import rbasamoyai.createbigcannons.munitions.big_cannon.*;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> extends SimpleShellBlock<T> implements ProjectileCartridge, IBE<FuzedBlockEntity>, BigCannonMunitionBlock
+public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> extends SimpleShellBlock<T> implements ProjectileCartridge, IBE<FuzedBlockEntity>, BigCannonMunitionBlock, IProjectileCartridgeBlock
 {
     private boolean used;
     private boolean multipleCharges = true;

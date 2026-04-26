@@ -28,7 +28,7 @@ public abstract class CannonMountPointMixin extends AllArmInteractionPointTypes.
         super(type, level, pos, state);
     }
 
-    @Inject(method = "Lrbasamoyai/createbigcannons/cannons/big_cannons/breeches/quickfiring_breech/CannonMountPoint;getInsertedResultAndDoSomething(Lnet/minecraft/world/item/ItemStack;ZLrbasamoyai/createbigcannons/cannon_control/contraption/AbstractMountedCannonContraption;Lrbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity;)Lnet/minecraft/world/item/ItemStack;",
+    @Inject(method = "getInsertedResultAndDoSomething(Lnet/minecraft/world/item/ItemStack;ZLrbasamoyai/createbigcannons/cannon_control/contraption/AbstractMountedCannonContraption;Lrbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity;)Lnet/minecraft/world/item/ItemStack;",
     at = @At("HEAD"), cancellable = true, remap = false)
     public void insertIntoNewAutocannon(ItemStack stack, boolean simulate, AbstractMountedCannonContraption cannon, PitchOrientedContraptionEntity poce, CallbackInfoReturnable<ItemStack> cir) {
         if (poce.getContraption() instanceof MountedTwinAutocannonContraption twinAutocannon)

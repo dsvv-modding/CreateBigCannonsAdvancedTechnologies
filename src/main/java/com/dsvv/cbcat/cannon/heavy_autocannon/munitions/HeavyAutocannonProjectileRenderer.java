@@ -42,10 +42,10 @@ public class HeavyAutocannonProjectileRenderer<T extends AbstractHeavyAutocannon
             poseStack.pushPose();
             if (vel.horizontalDistanceSqr() > 1e-4d && Math.abs(vel.y) > 1e-2d) {
                 Vec3 horizontal = new Vec3(vel.x, 0, vel.z).normalize();
-                poseStack.mulPose(CBCUtils.mat4x4fFacing(vel.normalize().reverse(), horizontal));
-                poseStack.mulPose(CBCUtils.mat4x4fFacing(horizontal, new Vec3(0, 0, -1)));
+                poseStack.mulPoseMatrix(CBCUtils.mat4x4fFacing(vel.normalize().reverse(), horizontal));
+                poseStack.mulPoseMatrix(CBCUtils.mat4x4fFacing(horizontal, new Vec3(0, 0, -1)));
             } else {
-                poseStack.mulPose(CBCUtils.mat4x4fFacing(vel.normalize(), new Vec3(0, 0, -1)));
+                poseStack.mulPoseMatrix(CBCUtils.mat4x4fFacing(vel.normalize(), new Vec3(0, 0, -1)));
             }
 
             PoseStack.Pose lastPose = poseStack.last();
@@ -71,10 +71,10 @@ public class HeavyAutocannonProjectileRenderer<T extends AbstractHeavyAutocannon
             Matrix3f normal = lastPose.normal();
             VertexConsumer builder = buffers.getBuffer(SHRAPNEL);
 
-            vertexShrapnel(builder, pose, packedLight, -0.5f, -0.5f, 0, 1);
-            vertexShrapnel(builder, pose, packedLight,  0.5f, -0.5f, 1, 1);
-            vertexShrapnel(builder, pose, packedLight,  0.5f,  0.5f, 1, 0);
-            vertexShrapnel(builder, pose, packedLight, -0.5f,  0.5f, 0, 0);
+            vertexShrapnel(builder, pose, normal, packedLight, -0.5f, -0.5f, 0, 1);
+            vertexShrapnel(builder, pose, normal, packedLight,  0.5f, -0.5f, 1, 1);
+            vertexShrapnel(builder, pose, normal, packedLight,  0.5f,  0.5f, 1, 0);
+            vertexShrapnel(builder, pose, normal, packedLight, -0.5f,  0.5f, 0, 0);
 
             poseStack.popPose();
         }

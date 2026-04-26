@@ -1,6 +1,6 @@
 package com.dsvv.cbcat.cannon.medium_rocketpod.munitions;
 
-import com.dsvv.cbcat.registry.DataComponentRegistry;
+import com.simibubi.create.foundation.utility.CreateLang;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
@@ -8,9 +8,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.index.CBCMunitionPropertiesHandlers;
 import rbasamoyai.createbigcannons.munitions.autocannon.config.AutocannonProjectilePropertiesComponent;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public abstract class AbstractMediumRocketItem extends Item
@@ -35,13 +37,13 @@ public abstract class AbstractMediumRocketItem extends Item
     }*/
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
-        super.appendHoverText(stack, ctx, tooltipComponents, isAdvanced);
-        if (stack.has(DataComponentRegistry.ROCKET_FUEL))
-            tooltipComponents.add(Component.translatable("tooltip.cbc_at.rocket.fuel").withStyle(ChatFormatting.WHITE).append(Byte.toString(stack.get(DataComponentRegistry.ROCKET_FUEL))));
-        /*if (stack.getOrCreateTag().getByte("Fuel")) {
-            CreateLang.builder("tooltip").translate(CreateBigCannons.MOD_ID + ".tracer").addTo(tooltipComponents);
-        }*/
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
+        super.appendHoverText(stack, level, tooltipComponents, isAdvanced);
+        /*if (stack.has(DataComponentRegistry.ROCKET_FUEL))
+            tooltipComponents.add(Component.translatable("tooltip.cbc_at.rocket.fuel").withStyle(ChatFormatting.WHITE).append(Byte.toString(stack.get(DataComponentRegistry.ROCKET_FUEL))));*/
+        if (stack.getOrCreateTag().getByte("Fuel") > 0) {
+            tooltipComponents.add(Component.translatable("tooltip.cbc_at.rocket.fuel").withStyle(ChatFormatting.WHITE).append("" + stack.getOrCreateTag().getByte("Fuel")));
+        }
     }
 
     /*public boolean isTracer(ItemStack stack) {

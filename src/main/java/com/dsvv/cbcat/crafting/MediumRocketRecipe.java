@@ -5,7 +5,7 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutoca
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectileItem;
 import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.AbstractFuzedMediumRocketItem;
 import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.AbstractMediumRocketItem;
-import com.dsvv.cbcat.registry.DataComponentRegistry;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractFuzedRocketItem;
 import com.dsvv.cbcat.registry.RecipeRegister;
 import com.google.common.collect.Lists;
 import net.minecraft.core.HolderLookup;
@@ -15,13 +15,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
-import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
-import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCItems;
 import rbasamoyai.createbigcannons.munitions.FuzedItemMunition;
 
@@ -29,15 +26,15 @@ import static com.dsvv.cbcat.registry.ExtraDataRegister.getMediumRocketForProjec
 
 public class MediumRocketRecipe extends CustomRecipe
 {
-    public MediumRocketRecipe() { super(CraftingBookCategory.MISC); }
+    public MediumRocketRecipe(ResourceLocation location) { super(location, CraftingBookCategory.MISC); }
 
     @Override
-    public boolean matches(CraftingInput container, Level level) {
+    public boolean matches(CraftingContainer container, Level level) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack[] paper = new ItemStack[] { ItemStack.EMPTY, ItemStack.EMPTY };
         byte power = 0;
 
-        for (int i = 0; i < container.size(); ++i) {
+        for (int i = 0; i < container.getContainerSize(); ++i) {
             ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
 
@@ -66,12 +63,12 @@ public class MediumRocketRecipe extends CustomRecipe
     }
 
     @Override
-    public ItemStack assemble(CraftingInput container, HolderLookup.Provider access) {
+    public ItemStack assemble(CraftingContainer container, RegistryAccess access) {
         ItemStack round = ItemStack.EMPTY;
         ItemStack[] paper = new ItemStack[] { ItemStack.EMPTY, ItemStack.EMPTY };
         byte power = 0;
 
-        for (int i = 0; i < container.size(); ++i) {
+        for (int i = 0; i < container.getContainerSize(); ++i) {
             ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
 
@@ -100,12 +97,17 @@ public class MediumRocketRecipe extends CustomRecipe
         if (power <= 0 || round.isEmpty() || paper[0].isEmpty() || paper[1].isEmpty()) return ItemStack.EMPTY;
         ItemStack result = getMediumRocketForProjectile(round.getItem()).getDefaultInstance();
         result.setCount(1);
-        if (round.has(CBCDataComponents.FUZE))
-            result.set(CBCDataComponents.FUZE, round.get(CBCDataComponents.FUZE));
-
-        result.set(CBCDataComponents.PROJECTILE, ItemContainerContents.fromItems(Lists.newArrayList(round)));
-        result.set(DataComponentRegistry.ROCKET_FUEL, power);
-
+        CompoundTag tag = result.getOrCreateTag();
+        if (round.getItem() instanceof AbstractFuzedRocketItem fuzedRocketItem) {
+            ItemStack fuzeCopy = fuzedRocketItem.getFuze(round);
+            fuzeCopy.setCount(1);
+            if (result.getItem() instanceof FuzedItemMunition && !fuzeCopy.isEmpty()) {
+                CompoundTag projectileTag = round.getOrCreateTag();
+                projectileTag.put("Fuze", fuzeCopy.save(new CompoundTag()));
+            }
+        }
+        tag.put("Projectile", round.save(new CompoundTag()));
+        tag.putByte("fuel", power);
         return result;
     }
 

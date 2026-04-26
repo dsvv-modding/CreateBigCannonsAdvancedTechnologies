@@ -2,7 +2,6 @@ package com.dsvv.cbcat.mixin;
 
 import com.dsvv.cbcat.cannon.autocannon.SpecialAutocannonBarrel;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -41,8 +40,8 @@ public abstract class MountedAutocannonContraptionMixin extends AbstractMountedC
         CBCUtils.playBlastLikeSoundOnServer(level, x, y, z, event, source, volume * volumeMultiplier, pitch * volumeMultiplier, airAbsorption);
     }
 
-    @Inject(method = "writeNBT(Lnet/minecraft/core/HolderLookup$Provider;Z)Lnet/minecraft/nbt/CompoundTag;", at = @At("TAIL"), remap = false)
-    public void writeAdditionalNBT(HolderLookup.Provider registries, boolean spawnPacket, CallbackInfoReturnable<CompoundTag> cir) {
+    @Inject(method = "writeNBT(Z)Lnet/minecraft/nbt/CompoundTag;", at = @At("TAIL"), remap = false)
+    public void writeAdditionalNBT(boolean spawnPacket, CallbackInfoReturnable<CompoundTag> cir) {
         cir.getReturnValue().putFloat("volumeMultiplier", volumeMultiplier);
     }
 

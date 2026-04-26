@@ -7,13 +7,11 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import rbasamoyai.createbigcannons.CreateBigCannons;
 import rbasamoyai.createbigcannons.index.CBCBlocks;
-import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCMunitionPropertiesHandlers;
 
 import javax.annotation.Nullable;
@@ -27,13 +25,12 @@ public interface IProjectileCartridgeBlockItem {
     }
 
     static int getPower(ItemStack stack) {
-        return stack.has(CBCDataComponents.POWER) ? stack.get(CBCDataComponents.POWER) : 0;
+        return stack.getOrCreateTag().getInt("Power");
     }
 
-    static ItemStack getWithPower(int power, BlockEntry<? extends IProjectileCartridgeBlock> block)
-    {
-        ItemStack stack = block.asStack();
-        stack.set(CBCDataComponents.POWER, power);
+    static ItemStack getWithPower(int power, BlockEntry<? extends IProjectileCartridgeBlock> blockEntry) {
+        ItemStack stack = blockEntry.asStack();
+        stack.getOrCreateTag().putInt("Power", power);
         return stack;
     }
 

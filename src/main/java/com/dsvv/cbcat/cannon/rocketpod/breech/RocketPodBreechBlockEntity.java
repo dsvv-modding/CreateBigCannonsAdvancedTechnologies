@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.minecraftforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.AnimatedAutocannon;
 
@@ -138,17 +138,17 @@ public class RocketPodBreechBlockEntity extends RocketPodBlockEntity implements 
     @Override public int getAnimationTicks() { return this.animateTicks; }
 
     @Override
-    protected void read(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
-        super.read(tag, provider, clientPacket);
+    protected void read(CompoundTag tag, boolean clientPacket) {
+        super.read(tag, clientPacket);
         this.fireRate = tag.getInt("FiringRate");
         this.firingCooldown = tag.getInt("Cooldown");
         this.animateTicks = tag.getInt("AnimateTicks");
-        this.outputBuffer = tag.contains("Output") ? ItemStack.parseOptional(provider, tag.getCompound("Output")) : ItemStack.EMPTY;
+        this.outputBuffer = tag.contains("Output") ? ItemStack.of(tag.getCompound("Output")) : ItemStack.EMPTY;
 
         this.inputBuffer.clear();
         ListTag inputTag = tag.getList("Input", Tag.TAG_COMPOUND);
         for (int i = 0; i < inputTag.size(); ++i) {
-            this.inputBuffer.add(ItemStack.parseOptional(provider, inputTag.getCompound(i)));
+            this.inputBuffer.add(ItemStack.of(inputTag.getCompound(i)));
         }
         //this.magazine = tag.contains("Magazine") ? ItemStack.of(tag.getCompound("Magazine")) : ItemStack.EMPTY;
 
@@ -157,16 +157,16 @@ public class RocketPodBreechBlockEntity extends RocketPodBlockEntity implements 
     }
 
     @Override
-    protected void write(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
-        super.write(tag, provider, clientPacket);
+    protected void write(CompoundTag tag, boolean clientPacket) {
+        super.write(tag, clientPacket);
         tag.putInt("FiringRate", this.fireRate);
         tag.putInt("Cooldown", this.firingCooldown);
         tag.putInt("AnimateTicks", this.animateTicks);
-        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(provider));
+        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(new CompoundTag()));
 
         if (!this.inputBuffer.isEmpty()) {
             tag.put("Input", this.inputBuffer.stream()
-                    .map(s -> s.save(provider))
+                    .map(s -> s.save(new CompoundTag()))
                     .collect(Collectors.toCollection(ListTag::new)));
         }
         //if (this.magazine != null && !this.magazine.isEmpty()) tag.put("Magazine", this.magazine.save(new CompoundTag()));

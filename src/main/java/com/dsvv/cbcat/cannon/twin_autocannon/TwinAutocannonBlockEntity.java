@@ -3,9 +3,12 @@ package com.dsvv.cbcat.cannon.twin_autocannon;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import org.checkerframework.checker.units.qual.C;
 import rbasamoyai.createbigcannons.cannons.ItemCannonBehavior;
 
 import java.util.List;
@@ -56,15 +59,15 @@ public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwin
     }
 
     @Override
-    protected void read(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
-        super.read(tag, provider, clientPacket);
-        this.leavesItemStack = ItemStack.parseOptional(provider, tag.getCompound("Leaves"));
+    protected void read(CompoundTag tag, boolean clientPacket) {
+        super.read(tag, clientPacket);
+        this.leavesItemStack = ItemStack.of(tag.getCompound("Leaves"));
     }
 
     @Override
-    protected void write(CompoundTag tag, HolderLookup.Provider provider, boolean clientPacket) {
-        super.write(tag, provider, clientPacket);
-        tag.put("Leaves", leavesItemStack.saveOptional(provider));
+    protected void write(CompoundTag tag, boolean clientPacket) {
+        super.write(tag, clientPacket);
+        tag.put("Leaves", leavesItemStack.save(new CompoundTag()));
     }
 
     @Override

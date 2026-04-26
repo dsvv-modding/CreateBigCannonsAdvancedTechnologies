@@ -1,8 +1,15 @@
 package com.dsvv.cbcat.crafting.jei;
 
+import com.dsvv.cbcat.cannon.autocannon.munitions.apds.AutocannonAPDSProjectileItem;
+import com.dsvv.cbcat.cannon.autocannon.munitions.apdsfs.AutocannonAPDSFSProjectileItem;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutocannonProjectileItem;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectileItem;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.HeavyAutocannonCartridgeItem;
+import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.apds_shot.HA_APDSProjectileItem;
+import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.apdsfs.HA_APDSFSProjectileItem;
+import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.smoke_shell.HA_SmokeProjectileItem;
+import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.AbstractMediumRocketItem;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractRocketItem;
 import com.dsvv.cbcat.cartridge.FuzedProjectileCartridgeBlockItem;
 import com.dsvv.cbcat.cartridge.ProjectileCartridge;
 import com.dsvv.cbcat.cartridge.ProjectileCartridgeBlock;
@@ -31,6 +38,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.Tags;
 import rbasamoyai.createbigcannons.index.CBCBlocks;
 import rbasamoyai.createbigcannons.index.CBCItems;
+import rbasamoyai.createbigcannons.munitions.autocannon.AutocannonRoundItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -140,16 +148,16 @@ public class CBCATJEI implements IModPlugin {
             String resultName = ExtraDataRegister.getCartridgeReverse(result);
             if (resultName.contains("caseless"))
                 continue;
-            recipes.add(new RecipeHolder<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, result.getDescriptionId() + "_recipe"), new ShapelessRecipe("", CraftingBookCategory.MISC, ExtraDataRegister.getCartridge(resultName).asItem().getDefaultInstance(), NonNullList.of(
-                    Ingredient.EMPTY, Ingredient.of(CBCBlocks.POWDER_CHARGE), Ingredient.of(ExtraDataRegister.getProjectileReverse(resultName))))));
-            recipes.add(new RecipeHolder<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, result.getDescriptionId() + "_recipe"), new ShapelessRecipe("", CraftingBookCategory.MISC, ExtraDataRegister.getCartridge(resultName + " caseless").asItem().getDefaultInstance(), NonNullList.of(
-                    Ingredient.EMPTY, Ingredient.of(CBCItems.NITROPOWDER), Ingredient.of(CBCItems.NITROPOWDER), Ingredient.of(CBCItems.NITROPOWDER), Ingredient.of(ExtraDataRegister.getProjectileReverse(resultName))))));
+            recipes.add(new ShapelessRecipe(new ResourceLocation(MOD_ID, result.getDescriptionId() + "_recipe"), "", CraftingBookCategory.MISC, ExtraDataRegister.getCartridge(resultName).asItem().getDefaultInstance(), NonNullList.of(
+                    Ingredient.EMPTY, Ingredient.of(CBCBlocks.POWDER_CHARGE), Ingredient.of(ExtraDataRegister.getProjectileReverse(resultName)))));
+            recipes.add(new ShapelessRecipe(new ResourceLocation(MOD_ID, result.getDescriptionId() + "_recipe"),"", CraftingBookCategory.MISC, ExtraDataRegister.getCartridge(resultName + " caseless").asItem().getDefaultInstance(), NonNullList.of(
+                    Ingredient.EMPTY, Ingredient.of(CBCItems.NITROPOWDER), Ingredient.of(CBCItems.NITROPOWDER), Ingredient.of(CBCItems.NITROPOWDER), Ingredient.of(ExtraDataRegister.getProjectileReverse(resultName)))));
         }
         return recipes;
     }
 
-    public List<RecipeHolder<CraftingRecipe>> getRocketAssemblyRecipes() {
-        List<RecipeHolder<CraftingRecipe>> recipes = new ArrayList<>();
+    public List<CraftingRecipe> getRocketAssemblyRecipes() {
+        List<CraftingRecipe> recipes = new ArrayList<>();
 
         List<Item> projectileItems = new ArrayList<>();
         List<Item> powder = new ArrayList<>();
@@ -170,17 +178,17 @@ public class CBCATJEI implements IModPlugin {
 
         for (Item result : results) {
             if (result instanceof AbstractRocketItem rocketItem) {
-                recipes.add(new RecipeHolder<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, result.getDescriptionId() + "_recipe"), new ShapelessRecipe("", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
-                        Ingredient.EMPTY, projectiles, propellant, Ingredient.of(Items.PAPER)))));
-                recipes.add(new RecipeHolder<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, result.getDescriptionId() + "_recipe"), new ShapelessRecipe("", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
-                        Ingredient.EMPTY, projectiles, propellant, propellant, propellant, propellant, Ingredient.of(Items.PAPER)))));
+                recipes.add(new ShapelessRecipe(new ResourceLocation(MOD_ID, result.getDescriptionId() + "_recipe"),"", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
+                        Ingredient.EMPTY, projectiles, propellant, Ingredient.of(Items.PAPER))));
+                recipes.add(new ShapelessRecipe(new ResourceLocation(MOD_ID, result.getDescriptionId() + "_recipe"),"", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
+                        Ingredient.EMPTY, projectiles, propellant, propellant, propellant, propellant, Ingredient.of(Items.PAPER))));
             }
         }
         return recipes;
     }
 
-    public List<RecipeHolder<CraftingRecipe>> getMediumRocketAssemblyRecipes() {
-        List<RecipeHolder<CraftingRecipe>> recipes = new ArrayList<>();
+    public List<CraftingRecipe> getMediumRocketAssemblyRecipes() {
+        List<CraftingRecipe> recipes = new ArrayList<>();
 
         List<Item> projectileItems = new ArrayList<>();
         List<Item> powder = new ArrayList<>();
@@ -201,10 +209,10 @@ public class CBCATJEI implements IModPlugin {
 
         for (Item result : results) {
             if (result instanceof AbstractMediumRocketItem rocketItem) {
-                recipes.add(new RecipeHolder<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, result.getDescriptionId() + "_recipe"), new ShapelessRecipe("", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
-                        Ingredient.EMPTY, projectiles, propellant, Ingredient.of(Items.PAPER), Ingredient.of(Items.PAPER)))));
-                recipes.add(new RecipeHolder<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, result.getDescriptionId() + "_recipe"), new ShapelessRecipe("", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
-                        Ingredient.EMPTY, projectiles, propellant, propellant, propellant, propellant, propellant, propellant, Ingredient.of(Items.PAPER), Ingredient.of(Items.PAPER)))));
+                recipes.add(new ShapelessRecipe(new ResourceLocation(MOD_ID, result.getDescriptionId() + "_recipe"),"", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
+                        Ingredient.EMPTY, projectiles, propellant, Ingredient.of(Items.PAPER), Ingredient.of(Items.PAPER))));
+                recipes.add(new ShapelessRecipe(new ResourceLocation(MOD_ID, result.getDescriptionId() + "_recipe"),"", CraftingBookCategory.MISC, rocketItem.getDefaultInstance(), NonNullList.of(
+                        Ingredient.EMPTY, projectiles, propellant, propellant, propellant, propellant, propellant, propellant, Ingredient.of(Items.PAPER), Ingredient.of(Items.PAPER))));
             }
         }
         return recipes;

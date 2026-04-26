@@ -1,6 +1,8 @@
 package com.dsvv.cbcat.base;
 
 import com.dsvv.cbcat.cannon.heavy_autocannon.HeavyAutocannonBlock;
+import com.dsvv.cbcat.cannon.medium_rocketpod.MediumRocketPodBlock;
+import com.dsvv.cbcat.cannon.rocketpod.RocketPodBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlock;
 import com.simibubi.create.content.equipment.goggles.GogglesItem;
 import com.simibubi.create.foundation.item.TooltipHelper;
@@ -18,6 +20,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import rbasamoyai.createbigcannons.CreateBigCannons;
+import rbasamoyai.createbigcannons.base.CBCTooltip;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 
 import javax.annotation.Nullable;
@@ -76,16 +79,46 @@ public class Tooltips {
         tooltip.add(tabBuilder);
     }
 
-    public static <T extends Block & HeavyAutocannonBlock> void appendTextHeavyAutocannon(ItemStack stack, @Nullable Level level,
-                                                                                          List<Component> tooltip, TooltipFlag flag, T block) {
-    public static <T extends Block & RocketPodBlock> void appendTextRocketPod(ItemStack stack, List<Component> tooltip, TooltipFlag flag, T block) {
+    public static <T extends Block & HeavyAutocannonBlock> void appendTextHeavyAutocannon(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag, T block) {
         boolean desc = Screen.hasShiftDown();
         addHoldShift(desc, tooltip);
         if (!desc) {
             return;
         }
 
-        FontHelper.Palette palette = getPalette();
+        FontHelper.Palette palette = CBCTooltip.getPalette(level, stack);
+        AutocannonMaterial material = ((HeavyAutocannonBlock)block).getAutocannonMaterial();
+        Minecraft mc = Minecraft.getInstance();
+        boolean hasGoggles = GogglesItem.isWearingGoggles(mc.player);
+        String rootKey = "block.createbigcannons.autocannon.tooltip";
+        tooltip.add(Component.literal(I18n.get(rootKey + ".materialProperties", new Object[0])).withStyle(ChatFormatting.GRAY));
+        int maxLength = material.properties().maxBarrelLength();
+        String var10001 = rootKey + ".maxBarrelLength";
+        tooltip.add(Component.literal(" " + I18n.get(var10001, new Object[0])).withStyle(ChatFormatting.GRAY));
+        if (hasGoggles) {
+            tooltip.addAll(TooltipHelper.cutStringTextComponent(I18n.get(rootKey + ".maxBarrelLength.goggles", new Object[]{Math.floor((double)((float)maxLength * 1.5F)) + (double)1.0F}), palette.primary(), palette.highlight(), 2));
+        } else {
+            tooltip.add(getNoGogglesMeter(maxLength == 0 ? 0 : ((int)Math.floor((double)((float)maxLength * 1.5F)) - 1) / 3 + 1, false, true));
+        }
+
+        var10001 = rootKey + ".weightImpact";
+        tooltip.add(Component.literal(" " + I18n.get(var10001, new Object[0])).withStyle(ChatFormatting.GRAY));
+        float weightImpact = material.properties().weight() * 2.0F;
+        if (hasGoggles) {
+            tooltip.addAll(TooltipHelper.cutStringTextComponent(I18n.get(rootKey + ".weightImpact.goggles", new Object[]{String.format("%.2f", weightImpact)}), palette.primary(), palette.highlight(), 2));
+        } else {
+            tooltip.add(getNoGogglesMeter((double)weightImpact < (double)1.0F ? 0 : Mth.ceil(weightImpact), true, true));
+        }
+    }
+
+    public static <T extends Block & RocketPodBlock> void appendTextRocketPod(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag, T block) {
+        boolean desc = Screen.hasShiftDown();
+        addHoldShift(desc, tooltip);
+        if (!desc) {
+            return;
+        }
+
+        FontHelper.Palette palette = getPalette(level, stack);
         AutocannonMaterial material = block.getAutocannonMaterial();
         Minecraft mc = Minecraft.getInstance();
         boolean hasGoggles = GogglesItem.isWearingGoggles(mc.player);
@@ -113,7 +146,7 @@ public class Tooltips {
         }
     }
 
-    public static <T extends Block & MediumRocketPodBlock> void appendTextMediumRocketPod(ItemStack stack, List<Component> tooltip, TooltipFlag flag, T block) {
+    public static <T extends Block & MediumRocketPodBlock> void appendTextMediumRocketPod(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag, T block) {
         boolean desc = Screen.hasShiftDown();
         addHoldShift(desc, tooltip);
         if (!desc) {

@@ -1,7 +1,9 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.munitions;
 
+import com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology;
 import com.dsvv.cbcat.registry.ItemRegister;
 import com.simibubi.create.foundation.utility.CreateLang;
+import net.createmod.catnip.lang.LangBuilder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
@@ -44,9 +46,9 @@ public abstract class AbstractHeavyAutocannonProjectileItem extends Item
         if (stack.getOrCreateTag().getBoolean("Tracer")) {
             CreateLang.builder("tooltip").translate(CreateBigCannons.MOD_ID + ".tracer").addTo(tooltipComponents);
         }
-        if (stack.has(DataComponentRegistry.HA_STRONG_ROUND)) {
+        if (stack.getOrCreateTag().contains("strong")) {
             LangBuilder builder = CreateLang.builder("tooltip").translate(CreateBigCannons_AdvancedTechnology.MOD_ID + ".heavy_autocannon.charged");
-            if (stack.get(DataComponentRegistry.HA_STRONG_ROUND))
+            if (stack.getOrCreateTag().getBoolean("strong"))
                 builder.add(CreateLang.builder("tooltip").translate(CreateBigCannons_AdvancedTechnology.MOD_ID + "heavy_autocannon.charged.strong"));
             else
                 builder.add(CreateLang.builder("tooltip").translate(CreateBigCannons_AdvancedTechnology.MOD_ID + "heavy_autocannon.charged.weak"));

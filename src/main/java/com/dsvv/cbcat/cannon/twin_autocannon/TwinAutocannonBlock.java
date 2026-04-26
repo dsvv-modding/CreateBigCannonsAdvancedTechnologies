@@ -135,7 +135,7 @@ public interface TwinAutocannonBlock  extends WeldableBlock, CannonContraptionPr
 
     @Override
     default boolean onInteractWhileAssembled(Player player, BlockPos localPos, Direction side, InteractionHand interactionHand,
-                                             Level level, Contraption contraption, BlockEntity be, StructureBlockInfo info,
+                                             Level level, AbstractMountedCannonContraption contraption, BlockEntity be, StructureBlockInfo info,
                                              PitchOrientedContraptionEntity entity) {
         return false;
     }

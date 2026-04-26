@@ -33,7 +33,6 @@ public class MediumRocketPodBarrelBlock extends MediumRocketPodBaseBlock impleme
     public MediumRocketPodBarrelBlock(Properties properties, AutocannonMaterial material) {
         super(properties, material);
         this.registerDefaultState(this.defaultBlockState().setValue(ASSEMBLED, false));
-        this.codec = simpleCodec(this::fromSelf);
     }
 
     public MediumRocketPodBarrelBlock(Properties properties, AutocannonMaterial material, boolean isComplete)
@@ -41,14 +40,6 @@ public class MediumRocketPodBarrelBlock extends MediumRocketPodBaseBlock impleme
         this(properties, material);
         this.isComplete = isComplete;
     }
-
-    private final MapCodec<? extends DirectionalBlock> codec;
-
-    private MediumRocketPodBarrelBlock fromSelf(Properties properties) {
-        return new MediumRocketPodBarrelBlock(properties, this.getAutocannonMaterial());
-    }
-
-    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(ASSEMBLED);

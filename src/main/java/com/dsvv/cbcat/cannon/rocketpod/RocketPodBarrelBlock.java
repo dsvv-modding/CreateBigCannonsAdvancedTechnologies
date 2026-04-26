@@ -2,7 +2,6 @@ package com.dsvv.cbcat.cannon.rocketpod;
 
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.registry.BlockEntityRegister;
-import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.IBE;
@@ -14,7 +13,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -32,7 +30,6 @@ public class RocketPodBarrelBlock extends RocketPodBaseBlock implements IBE<Rock
     public RocketPodBarrelBlock(Properties properties, AutocannonMaterial material) {
         super(properties, material);
         this.registerDefaultState(this.defaultBlockState().setValue(ASSEMBLED, false));
-        this.codec = simpleCodec(this::fromSelf);
     }
 
     public RocketPodBarrelBlock(Properties properties, AutocannonMaterial material, boolean isComplete)
@@ -40,14 +37,6 @@ public class RocketPodBarrelBlock extends RocketPodBaseBlock implements IBE<Rock
         this(properties, material);
         this.isComplete = isComplete;
     }
-
-    private final MapCodec<? extends DirectionalBlock> codec;
-
-    private RocketPodBarrelBlock fromSelf(Properties properties) {
-        return new RocketPodBarrelBlock(properties, this.getAutocannonMaterial());
-    }
-
-    @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(ASSEMBLED);

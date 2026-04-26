@@ -61,7 +61,6 @@ import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMateria
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterialProperties;
 import rbasamoyai.createbigcannons.config.CBCConfigs;
 import rbasamoyai.createbigcannons.effects.particles.plumes.AutocannonPlumeParticleData;
-import rbasamoyai.createbigcannons.forge.mixin_interface.GetItemStorage;
 import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 import rbasamoyai.createbigcannons.index.CBCEntityTypes;
 import rbasamoyai.createbigcannons.index.CBCSoundEvents;
@@ -72,12 +71,13 @@ import rbasamoyai.createbigcannons.utils.CBCUtils;
 import rbasamoyai.ritchiesprojectilelib.RitchiesProjectileLib;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.*;
 
 import static com.dsvv.cbcat.debugUtils.DebugUtils.displayCustomClientMessage;
 import static rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlock.writeAndSyncSingleBlockData;
 
-public class MountedHeavyAutocannonContraption extends AbstractMountedCannonContraption implements ItemCannon, GetItemStorage {
+public class MountedHeavyAutocannonContraption extends AbstractMountedCannonContraption implements ItemCannon {
     private AutocannonMaterial cannonMaterial;
     private final Set<BlockPos> recoilSpringPositions = new LinkedHashSet();
     private float volumeMultiplier = 1.0F;
@@ -610,7 +610,7 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
         return 66.0F;
     }
 
-    @Override
+    /*@Override
     public ItemStack insertItemIntoCannon(ItemStack stack, boolean simulate) {
         if (this.getItemStorage() == null)
             return stack;
@@ -628,5 +628,14 @@ public class MountedHeavyAutocannonContraption extends AbstractMountedCannonCont
     @Override
     public IItemHandler getItemStorage() {
         return this.presentBlockEntities.get(this.startPos) instanceof HeavyAutocannonBreechBlockEntity breech ? breech.createItemHandler() : null;
+    }*/
+    @Override
+    public ItemStack insertItemIntoCannon(ItemStack stack, boolean simulate) {
+        return stack;
+    }
+
+    @Override
+    public ItemStack extractItemFromCannon(boolean simulate) {
+        return ItemStack.EMPTY;
     }
 }

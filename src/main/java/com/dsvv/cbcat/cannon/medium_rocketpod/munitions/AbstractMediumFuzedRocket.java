@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import org.checkerframework.checker.units.qual.C;
 import rbasamoyai.createbigcannons.munitions.ProjectileContext;
 import rbasamoyai.createbigcannons.munitions.fuzes.FuzeItem;
 
@@ -75,13 +76,13 @@ public abstract class AbstractMediumFuzedRocket<T extends AbstractHeavyAutocanno
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
-        if (this.fuze != null && !this.fuze.isEmpty()) tag.put("Fuze", this.fuze.save(level().registryAccess()));
+        if (this.fuze != null && !this.fuze.isEmpty()) tag.put("Fuze", this.fuze.save(new CompoundTag()));
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
-        this.fuze = tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.parseOptional(level().registryAccess(), tag.getCompound("Fuze")) : ItemStack.EMPTY;
+        this.fuze = tag.contains("Fuze", Tag.TAG_COMPOUND) ? ItemStack.of(tag.getCompound("Fuze")) : ItemStack.EMPTY;
     }
 
     protected final boolean canDetonate(Predicate<FuzeItem> cons) {

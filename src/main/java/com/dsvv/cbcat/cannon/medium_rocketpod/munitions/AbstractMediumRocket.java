@@ -7,7 +7,7 @@ import com.tterrag.registrate.util.entry.EntityEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -335,14 +335,14 @@ public abstract class AbstractMediumRocket<T extends AbstractHeavyAutocannonProj
     }
 
     @Override
-    public void baseWriteSpawnData(RegistryFriendlyByteBuf buf) {
+    public void baseWriteSpawnData(FriendlyByteBuf buf) {
         super.baseWriteSpawnData(buf);
         buf.writeDouble(this.displacement);
         buf.writeByte(this.fuel);
     }
 
     @Override
-    public void baseReadSpawnData(RegistryFriendlyByteBuf buf) {
+    public void baseReadSpawnData(FriendlyByteBuf buf) {
         super.baseReadSpawnData(buf);
         this.displacement = buf.readDouble();
         this.fuel = buf.readByte();

@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.minecraftforge.items.IItemHandler;
 import rbasamoyai.createbigcannons.cannon_control.contraption.PitchOrientedContraptionEntity;
 
 import java.util.Arrays;
@@ -137,16 +137,16 @@ public class MediumRocketPodBreechBlockEntity extends MediumRocketPodBlockEntity
     }
 
     @Override
-    protected void read(CompoundTag tag, HolderLookup.Provider registry, boolean clientPacket) {
-        super.read(tag, registry, clientPacket);
+    protected void read(CompoundTag tag, boolean clientPacket) {
+        super.read(tag, clientPacket);
         this.fireRate = tag.getInt("FiringRate");
         this.firingCooldown = tag.getInt("Cooldown");
-        this.outputBuffer = tag.contains("Output") ? ItemStack.parseOptional(registry, tag.getCompound("Output")) : ItemStack.EMPTY;
+        this.outputBuffer = tag.contains("Output") ? ItemStack.of(tag.getCompound("Output")) : ItemStack.EMPTY;
 
         Arrays.fill(this.inputBuffer, ItemStack.EMPTY);
         ListTag inputTag = tag.getList("Input", Tag.TAG_COMPOUND);
         for (int i = 0; i < inputTag.size(); ++i) {
-            this.inputBuffer[i] = ItemStack.parseOptional(registry, inputTag.getCompound(i));
+            this.inputBuffer[i] = ItemStack.of(inputTag.getCompound(i));
         }
 
         if (!clientPacket) return;
@@ -155,14 +155,14 @@ public class MediumRocketPodBreechBlockEntity extends MediumRocketPodBlockEntity
     }
 
     @Override
-    protected void write(CompoundTag tag, HolderLookup.Provider registry, boolean clientPacket) {
-        super.write(tag, registry, clientPacket);
+    protected void write(CompoundTag tag, boolean clientPacket) {
+        super.write(tag, clientPacket);
         tag.putInt("FiringRate", this.fireRate);
         tag.putInt("Cooldown", this.firingCooldown);
-        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(registry));
+        if (this.outputBuffer != null && !this.outputBuffer.isEmpty()) tag.put("Output", this.outputBuffer.save(new CompoundTag()));
 
         tag.put("Input", Arrays.stream(this.inputBuffer)
-                    .map(s -> s.saveOptional(registry))
+                    .map(s -> s.save(new CompoundTag()))
                     .collect(Collectors.toCollection(ListTag::new)));
 
         if (!clientPacket) return;

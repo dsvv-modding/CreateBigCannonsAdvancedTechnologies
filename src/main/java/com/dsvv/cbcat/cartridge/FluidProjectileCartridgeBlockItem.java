@@ -11,6 +11,7 @@ import rbasamoyai.createbigcannons.base.CBCTooltip;
 import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlockItem;
 import rbasamoyai.createbigcannons.munitions.big_cannon.propellant.BigCartridgeBlockEntity;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class FluidProjectileCartridgeBlockItem extends FluidShellBlockItem implements IProjectileCartridgeBlockItem {
@@ -23,11 +24,11 @@ public class FluidProjectileCartridgeBlockItem extends FluidShellBlockItem imple
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext ctx, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
-        super.appendHoverText(stack, ctx, tooltipComponents, isAdvanced);
-        IProjectileCartridgeBlockItem.appendCartridgePropellantPowerText(stack, ctx, tooltipComponents, isAdvanced);
-        CBCTooltip.appendMuzzleVelocityText(stack, ctx, tooltipComponents, isAdvanced, this.cartridgeBlock);
-        CBCTooltip.appendPropellantStressText(stack, ctx, tooltipComponents, isAdvanced, this.cartridgeBlock);
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
+        super.appendHoverText(stack, level, tooltipComponents, isAdvanced);
+        IProjectileCartridgeBlockItem.appendCartridgePropellantPowerText(stack, level, tooltipComponents, isAdvanced);
+        CBCTooltip.appendMuzzleVelocityText(stack, level, tooltipComponents, isAdvanced, this.cartridgeBlock);
+        CBCTooltip.appendPropellantStressText(stack, level, tooltipComponents, isAdvanced, this.cartridgeBlock);
     }
 
     @Override

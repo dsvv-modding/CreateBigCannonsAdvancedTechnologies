@@ -1,18 +1,19 @@
 package com.dsvv.cbcat.cannon.rocketpod.munitions;
 
-import com.dsvv.cbcat.registry.DataComponentRegistry;
 import net.minecraft.ChatFormatting;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import rbasamoyai.createbigcannons.index.CBCDataComponents;
 import rbasamoyai.createbigcannons.index.CBCMunitionPropertiesHandlers;
 import rbasamoyai.createbigcannons.munitions.autocannon.config.AutocannonProjectilePropertiesComponent;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.List;
 
 public abstract class AbstractRocketItem extends Item
@@ -37,20 +38,21 @@ public abstract class AbstractRocketItem extends Item
     }*/
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
-        super.appendHoverText(stack, ctx, tooltipComponents, isAdvanced);
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
+        super.appendHoverText(stack, level, tooltipComponents, isAdvanced);
         /*if (stack.getOrCreateTag().getBoolean("Tracer")) {
             CreateLang.builder("tooltip").translate(CreateBigCannons.MOD_ID + ".tracer").addTo(tooltipComponents);
         }*/
-        if (stack.has(DataComponentRegistry.ROCKET_FUEL))
-            tooltipComponents.add(Component.translatable("tooltip.cbc_at.rocket.fuel").withStyle(ChatFormatting.WHITE).append(Byte.toString(stack.get(DataComponentRegistry.ROCKET_FUEL))));
+        if (stack.getOrCreateTag().contains("fuel", Tag.TAG_BYTE))
+            tooltipComponents.add(Component.translatable("tooltip.cbc_at.rocket.fuel").withStyle(ChatFormatting.WHITE).append(Byte.toString(stack.getTag().getByte("fuel"))));
     }
 
     public boolean isTracer(ItemStack stack) {
-        return stack.has(CBCDataComponents.AUTOCANNON_TRACER) ? stack.get(CBCDataComponents.AUTOCANNON_TRACER) : false;
+        CompoundTag tag = stack.getOrCreateTag();
+        return tag.contains("Tracer") && tag.getBoolean("Tracer");
     }
 
     public void setTracer(ItemStack stack, boolean isTracer) {
-        stack.set(CBCDataComponents.AUTOCANNON_TRACER, isTracer);
+        stack.getOrCreateTag().putBoolean("Tracer", isTracer);
     }
 }

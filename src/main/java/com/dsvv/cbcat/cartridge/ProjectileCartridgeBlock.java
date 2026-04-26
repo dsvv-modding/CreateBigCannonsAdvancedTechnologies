@@ -22,7 +22,7 @@ import rbasamoyai.createbigcannons.munitions.big_cannon.*;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ProjectileCartridgeBlock extends InertProjectileBlock implements ProjectileCartridge, IBE<BigCannonProjectileBlockEntity>, BigCannonMunitionBlock
+public class ProjectileCartridgeBlock extends InertProjectileBlock implements ProjectileCartridge, IBE<BigCannonProjectileBlockEntity>, BigCannonMunitionBlock, IProjectileCartridgeBlock
 {
     private boolean used;
     private boolean multipleCharges = true;
