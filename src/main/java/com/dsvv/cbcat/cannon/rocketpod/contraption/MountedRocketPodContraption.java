@@ -252,7 +252,7 @@ public class MountedRocketPodContraption extends AbstractMountedCannonContraptio
         AutocannonProjectilePropertiesComponent roundProperties = round.getAutocannonProperties(foundProjectile);
         boolean canFail = !(Boolean) CBCConfigs.server().failure.disableAllFailure.get();
         float speed = properties.baseSpeed() * 0.5f;//isManual ? properties.baseSpeed() * 0.75f + qfbreech.getCharge() : properties.baseSpeed();
-        float spread = properties.baseSpread();
+        float spread = properties.baseSpread() * 1.25f;
         boolean canSquib = roundProperties == null || roundProperties.canSquib();
         canSquib |= canFail;
         BlockPos currentPos = this.startPos.relative(this.initialOrientation);
@@ -273,7 +273,7 @@ public class MountedRocketPodContraption extends AbstractMountedCannonContraptio
                     speed += properties.speedIncreasePerBarrel() * 0.25f;
                 }
 
-                spread -= properties.spreadReductionPerBarrel() * 0.825f;
+                spread -= properties.spreadReductionPerBarrel() * 0.7f;
                 spread = Math.max(spread, 0.0F);
                 if (canSquib && barrelTravelled > Math.floor(properties.maxBarrelLength() * 1.5f)) {
                     StructureTemplate.StructureBlockInfo oldInfo = this.blocks.get(currentPos);

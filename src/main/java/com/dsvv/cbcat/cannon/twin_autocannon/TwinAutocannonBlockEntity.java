@@ -1,5 +1,6 @@
 package com.dsvv.cbcat.cannon.twin_autocannon;
 
+import com.dsvv.cbcat.base.LeavesCannonBlockEntity;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import net.minecraft.core.BlockPos;
@@ -13,7 +14,7 @@ import rbasamoyai.createbigcannons.cannons.ItemCannonBehavior;
 
 import java.util.List;
 
-public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwinAutocannonBlockEntity
+public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwinAutocannonBlockEntity, LeavesCannonBlockEntity
 {
     private ItemCannonBehavior behavior;
 
@@ -62,6 +63,7 @@ public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwin
     protected void read(CompoundTag tag, boolean clientPacket) {
         super.read(tag, clientPacket);
         this.leavesItemStack = ItemStack.of(tag.getCompound("Leaves"));
+        this.updateInstance = true;
     }
 
     @Override

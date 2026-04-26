@@ -36,6 +36,9 @@ public class HeavyAutocannonRecoilSpringBlockEntity extends HeavyAutocannonBlock
     public void tickFromContraption(Level level, PitchOrientedContraptionEntity poce, BlockPos localPos) {
         super.tickFromContraption(level, poce, localPos);
         this.allTick();
+        if (level.isClientSide && poce.getContraption().getBlockEntityClientSide(localPos) instanceof HeavyAutocannonRecoilSpringBlockEntity cbe) {
+            cbe.allTick();
+        }
     }
 
     private void allTick() {
