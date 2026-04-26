@@ -1,15 +1,15 @@
-[25Apr.2026 20:41:04.042] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.227, --assetIndex, 17, --assetsDir, C:\\Users\\Daniel\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.227, --fml.neoFormVersion, 20240808.144430]
-[25Apr.2026 20:41:04.045] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.6+7-LTS
-[25Apr.2026 20:41:04.046] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.6 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[25Apr.2026 20:41:04.139] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
-[25Apr.2026 20:41:04.175] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[25Apr.2026 20:41:04.266] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[25Apr.2026 20:41:04.444] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[25Apr.2026 20:41:04.525] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Daniel/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
-[25Apr.2026 20:41:04.543] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
-[25Apr.2026 20:41:04.763] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4070/PCIe/SSE2 GL version 4.6.0 NVIDIA 581.42, NVIDIA Corporation
-[25Apr.2026 20:41:04.927] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[25Apr.2026 20:41:04.928] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[26Apr.2026 08:02:07.254] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.227, --assetIndex, 17, --assetsDir, C:\\Users\\Daniel\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.227, --fml.neoFormVersion, 20240808.144430]
+[26Apr.2026 08:02:07.257] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[26Apr.2026 08:02:07.258] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.6 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[26Apr.2026 08:02:07.320] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
+[26Apr.2026 08:02:07.347] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[26Apr.2026 08:02:07.433] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[26Apr.2026 08:02:07.595] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[26Apr.2026 08:02:07.682] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Daniel/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[26Apr.2026 08:02:07.690] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
+[26Apr.2026 08:02:07.836] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4070/PCIe/SSE2 GL version 4.6.0 NVIDIA 581.42, NVIDIA Corporation
+[26Apr.2026 08:02:08.008] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[26Apr.2026 08:02:08.010] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
@@ -22,319 +22,318 @@
 		NeoForge 21.1.227 (neoforge)
 		Ponder 1.0.81+mc1.21.1 (ponder)
 		Ritchie's Projectile Library 2.1.2 (ritchiesprojectilelib)
-[25Apr.2026 20:41:05.553] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[25Apr.2026 20:41:05.555] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
-[25Apr.2026 20:41:05.574] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.227, --gameDir, ., --assetsDir, C:\Users\Daniel\.gradle\caches\neoformruntime\assets, --assetIndex, 17]
-[25Apr.2026 20:41:05.642] [main/WARN] [mixin/]: Reference map 'ponder.refmap.json' for ponder-common.mixins.json could not be read. If this is a development environment you can ignore this message
-[25Apr.2026 20:41:05.819] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/slab/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity)
-[25Apr.2026 20:41:05.820] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.framedblocks.FramedAdjustableDoubleBlockEntityAccessor from mod createbigcannons
-[25Apr.2026 20:41:05.960] [main/WARN] [mixin/]: Error loading class: xaero/map/gui/GuiMap (java.lang.ClassNotFoundException: xaero.map.gui.GuiMap)
-[25Apr.2026 20:41:05.960] [main/WARN] [mixin/]: @Mixin target xaero.map.gui.GuiMap was not found create.mixins.json:compat.xaeros.XaeroFullscreenMapAccessor from mod create
-[25Apr.2026 20:41:05.961] [main/WARN] [mixin/]: Error loading class: xaero/map/gui/GuiMap (java.lang.ClassNotFoundException: xaero.map.gui.GuiMap)
-[25Apr.2026 20:41:05.961] [main/WARN] [mixin/]: @Mixin target xaero.map.gui.GuiMap was not found create.mixins.json:compat.xaeros.XaeroFullscreenMapMixin from mod create
-[25Apr.2026 20:41:05.984] [main/WARN] [mixin/]: Error loading class: org/jetbrains/annotations/ApiStatus$ScheduledForRemoval (java.lang.ClassNotFoundException: org.jetbrains.annotations.ApiStatus$ScheduledForRemoval)
-[25Apr.2026 20:41:06.005] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
-[25Apr.2026 20:41:07.343] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 327 milliseconds
-[25Apr.2026 20:41:11.447] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Apr.2026 20:41:11.448] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Apr.2026 20:41:11.449] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[25Apr.2026 20:41:11.450] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[25Apr.2026 20:41:11.451] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Apr.2026 20:41:11.533] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23189!/assets/.mcassetsroot' uses unexpected schema
-[25Apr.2026 20:41:11.533] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23189!/data/.mcassetsroot' uses unexpected schema
-[25Apr.2026 20:41:11.562] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[25Apr.2026 20:41:11.575] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[25Apr.2026 20:41:11.650] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[25Apr.2026 20:41:11.869] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.227, for MC 1.21.1
-[25Apr.2026 20:41:11.993] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[25Apr.2026 20:41:11.997] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.048 milliseconds
-[25Apr.2026 20:41:12.001] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.9 initializing! Commit hash: e2de2b9a02406ec33ff6d8851ed6f0b56240b6ec
-[25Apr.2026 20:41:14.986] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [cbc_at]
-[25Apr.2026 20:41:15.153] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/createbigcannons, mod/flywheel, mod/ritchiesprojectilelib, mod/ponder, mod/create, mod/cbc_at, mod/neoforge, mod/jei
-[25Apr.2026 20:41:15.253] [Worker-Main-13/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[25Apr.2026 20:41:15.300] [Worker-Main-11/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[25Apr.2026 20:41:16.048] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/cast_iron_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/cast_iron_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/cast_iron_assembled_rocket_pod_rail.json
-[25Apr.2026 20:41:16.049] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/bronze_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/bronze_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/bronze_assembled_rocket_pod_rail.json
-[25Apr.2026 20:41:16.049] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/steel_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/steel_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/steel_assembled_rocket_pod_rail.json
-[25Apr.2026 20:41:16.050] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail' referenced from: cbc_at:block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail: java.io.FileNotFoundException: cbc_at:models/block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail.json
-[25Apr.2026 20:41:16.053] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer' referenced from: cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer.json
-[25Apr.2026 20:41:16.054] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake' referenced from: cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake.json
-[25Apr.2026 20:41:16.056] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon_barrel_mould' referenced from: cbc_at:block/twin_autocannon_barrel_mould: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon_barrel_mould.json
-[25Apr.2026 20:41:16.057] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=up,waterlogged=true'
-[25Apr.2026 20:41:16.057] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=down,waterlogged=true'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=up,waterlogged=false'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=south,waterlogged=false'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=west,waterlogged=true'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=north,waterlogged=false'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=down,waterlogged=false'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=east,waterlogged=true'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=south,waterlogged=true'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=north,waterlogged=true'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=east,waterlogged=false'
-[25Apr.2026 20:41:16.058] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=west,waterlogged=false'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=up,waterlogged=false'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=north,waterlogged=false'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=south,waterlogged=true'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=down,waterlogged=true'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=south,waterlogged=false'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=west,waterlogged=true'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=east,waterlogged=true'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=west,waterlogged=false'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=down,waterlogged=false'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=north,waterlogged=true'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=east,waterlogged=false'
-[25Apr.2026 20:41:16.059] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=up,waterlogged=true'
-[25Apr.2026 20:41:16.061] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_silencer.json
-[25Apr.2026 20:41:16.061] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_silencer.json
-[25Apr.2026 20:41:16.062] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_silencer.json
-[25Apr.2026 20:41:16.062] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake.json
-[25Apr.2026 20:41:16.063] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake.json
-[25Apr.2026 20:41:16.063] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake.json
-[25Apr.2026 20:41:16.072] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/cast_iron_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/cast_iron_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/cast_iron_recoil_spring.json
-[25Apr.2026 20:41:16.073] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/steel_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/steel_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/steel_recoil_spring.json
-[25Apr.2026 20:41:16.073] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/bronze_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/bronze_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/bronze_recoil_spring.json
-[25Apr.2026 20:41:16.695] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=up:
+[26Apr.2026 08:02:08.556] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[26Apr.2026 08:02:08.558] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[26Apr.2026 08:02:08.573] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.227, --gameDir, ., --assetsDir, C:\Users\Daniel\.gradle\caches\neoformruntime\assets, --assetIndex, 17]
+[26Apr.2026 08:02:08.627] [main/WARN] [mixin/]: Reference map 'ponder.refmap.json' for ponder-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[26Apr.2026 08:02:08.841] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/slab/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity)
+[26Apr.2026 08:02:08.842] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.framedblocks.FramedAdjustableDoubleBlockEntityAccessor from mod createbigcannons
+[26Apr.2026 08:02:09.026] [main/WARN] [mixin/]: Error loading class: xaero/map/gui/GuiMap (java.lang.ClassNotFoundException: xaero.map.gui.GuiMap)
+[26Apr.2026 08:02:09.027] [main/WARN] [mixin/]: @Mixin target xaero.map.gui.GuiMap was not found create.mixins.json:compat.xaeros.XaeroFullscreenMapAccessor from mod create
+[26Apr.2026 08:02:09.027] [main/WARN] [mixin/]: Error loading class: xaero/map/gui/GuiMap (java.lang.ClassNotFoundException: xaero.map.gui.GuiMap)
+[26Apr.2026 08:02:09.027] [main/WARN] [mixin/]: @Mixin target xaero.map.gui.GuiMap was not found create.mixins.json:compat.xaeros.XaeroFullscreenMapMixin from mod create
+[26Apr.2026 08:02:09.051] [main/WARN] [mixin/]: Error loading class: org/jetbrains/annotations/ApiStatus$ScheduledForRemoval (java.lang.ClassNotFoundException: org.jetbrains.annotations.ApiStatus$ScheduledForRemoval)
+[26Apr.2026 08:02:09.073] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[26Apr.2026 08:02:10.579] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 366 milliseconds
+[26Apr.2026 08:02:14.348] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[26Apr.2026 08:02:14.349] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[26Apr.2026 08:02:14.350] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[26Apr.2026 08:02:14.351] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[26Apr.2026 08:02:14.352] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[26Apr.2026 08:02:14.440] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[26Apr.2026 08:02:14.440] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[26Apr.2026 08:02:14.470] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[26Apr.2026 08:02:14.476] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[26Apr.2026 08:02:14.545] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[26Apr.2026 08:02:14.779] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.227, for MC 1.21.1
+[26Apr.2026 08:02:14.870] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.9 initializing! Commit hash: e2de2b9a02406ec33ff6d8851ed6f0b56240b6ec
+[26Apr.2026 08:02:14.874] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[26Apr.2026 08:02:14.877] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.729 milliseconds
+[26Apr.2026 08:02:18.221] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [cbc_at]
+[26Apr.2026 08:02:18.452] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/createbigcannons, mod/flywheel, mod/ritchiesprojectilelib, mod/ponder, mod/create, mod/cbc_at, mod/neoforge, mod/jei
+[26Apr.2026 08:02:18.556] [Worker-Main-12/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[26Apr.2026 08:02:18.556] [Worker-Main-13/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[26Apr.2026 08:02:19.552] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/cast_iron_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/cast_iron_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/cast_iron_assembled_rocket_pod_rail.json
+[26Apr.2026 08:02:19.553] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/bronze_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/bronze_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/bronze_assembled_rocket_pod_rail.json
+[26Apr.2026 08:02:19.553] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/steel_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/steel_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/steel_assembled_rocket_pod_rail.json
+[26Apr.2026 08:02:19.554] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail' referenced from: cbc_at:block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail: java.io.FileNotFoundException: cbc_at:models/block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail.json
+[26Apr.2026 08:02:19.558] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer' referenced from: cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer.json
+[26Apr.2026 08:02:19.559] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake' referenced from: cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake.json
+[26Apr.2026 08:02:19.563] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=up,waterlogged=true'
+[26Apr.2026 08:02:19.563] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=down,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=up,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=south,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=west,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=north,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=down,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=east,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=south,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=north,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=east,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=west,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=up,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=north,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=south,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=down,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=south,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=west,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=east,waterlogged=true'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=west,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=down,waterlogged=false'
+[26Apr.2026 08:02:19.564] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=north,waterlogged=true'
+[26Apr.2026 08:02:19.565] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=east,waterlogged=false'
+[26Apr.2026 08:02:19.565] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=up,waterlogged=true'
+[26Apr.2026 08:02:19.569] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_silencer.json
+[26Apr.2026 08:02:19.570] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_silencer.json
+[26Apr.2026 08:02:19.570] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_silencer.json
+[26Apr.2026 08:02:19.570] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake.json
+[26Apr.2026 08:02:19.571] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake.json
+[26Apr.2026 08:02:19.571] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake.json
+[26Apr.2026 08:02:19.587] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/cast_iron_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/cast_iron_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/cast_iron_recoil_spring.json
+[26Apr.2026 08:02:19.588] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/steel_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/steel_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/steel_recoil_spring.json
+[26Apr.2026 08:02:19.589] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/bronze_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/bronze_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/bronze_recoil_spring.json
+[26Apr.2026 08:02:20.862] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=up:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[25Apr.2026 20:41:16.695] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.695] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=up,waterlogged=false:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=up,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_recoil_spring#standalone:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_recoil_spring#standalone:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=west,waterlogged=false:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=west,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=north,waterlogged=true:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=north,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=east,waterlogged=false:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=east,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#inventory:
+[26Apr.2026 08:02:20.863] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#inventory:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=down:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=down:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#inventory:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=west,waterlogged=true:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=west,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=east,waterlogged=false:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=east,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=east,waterlogged=false:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=east,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#inventory:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=east,waterlogged=true:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=east,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=west:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=west:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=down,waterlogged=true:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=down,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=north:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=north:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.696] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=up,waterlogged=true:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=up,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_qfbreech_mould#inventory:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_qfbreech_mould#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:cast_mould
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=south,waterlogged=false:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=south,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#inventory:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#inventory:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=west,waterlogged=false:
+[26Apr.2026 08:02:20.864] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=west,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=up,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=up,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=north,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=north,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=west,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=west,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#inventory:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_fume_extractor#inventory:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_fume_extractor#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=down,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=down,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=south,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=south,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=down,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=down,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=west,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=west,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#inventory:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#inventory:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=east:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=east:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=north,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=north,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=south,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=south,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.697] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=south,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=south,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#inventory:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=west,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=west,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:wrought_iron_medium_rocket_rail_breech#inventory:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:wrought_iron_medium_rocket_rail_breech#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_medium_rocket_rail
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_empty_cartridge#inventory:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_empty_cartridge#inventory:
     minecraft:textures/atlas/blocks.png:minecraft:cartridge_side
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=west,waterlogged=false:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=west,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+[26Apr.2026 08:02:20.865] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#inventory:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=north,waterlogged=true:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=north,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=north,waterlogged=true:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=north,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=east,waterlogged=true:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=east,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=south:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=south:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=north,waterlogged=true:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=north,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=east,waterlogged=false:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=east,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=east:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=east:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_vert_recoil_spring#standalone:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_vert_recoil_spring#standalone:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=up:
+[26Apr.2026 08:02:20.866] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=up:
     minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=up,waterlogged=true:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=up,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=up,waterlogged=false:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=up,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=down,waterlogged=true:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=down,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.698] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=south,waterlogged=false:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=south,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:wrought_iron_medium_rocket_rail#inventory:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:wrought_iron_medium_rocket_rail#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_medium_rocket_rail
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=south,waterlogged=true:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=south,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=down:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=down:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=up,waterlogged=false:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=up,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=down,waterlogged=false:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=down,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#inventory:
+[26Apr.2026 08:02:20.867] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=down,waterlogged=false:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=down,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=up,waterlogged=true:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=up,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#inventory:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=up,waterlogged=false:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=up,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#inventory:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#inventory:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_vert_recoil_spring#standalone:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_vert_recoil_spring#standalone:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=north,waterlogged=false:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=north,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=east,waterlogged=false:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=east,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=south:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=south:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=east,waterlogged=true:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=east,waterlogged=true:
     minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=west:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=west:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_recoil_spring#standalone:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_recoil_spring#standalone:
     minecraft:textures/atlas/blocks.png:minecraft:0
-[25Apr.2026 20:41:16.699] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=north:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=north:
     minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
-[25Apr.2026 20:41:16.700] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=west,waterlogged=false:
+[26Apr.2026 08:02:20.868] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=west,waterlogged=false:
     minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
-[25Apr.2026 20:41:16.983] [Worker-Main-14/INFO] [PonderIndex/]: Registering Ponder Scenes took 89.21 ms
-[25Apr.2026 20:41:16.987] [Worker-Main-14/INFO] [PonderIndex/]: Registering Ponder Tags took 4.266 ms
-[25Apr.2026 20:41:17.152] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[25Apr.2026 20:41:17.152] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[25Apr.2026 20:41:17.191] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Realtek HD Audio 2nd output (Realtek(R) Audio)
-[25Apr.2026 20:41:17.192] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[25Apr.2026 20:41:17.320] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[25Apr.2026 20:41:17.331] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[25Apr.2026 20:41:17.331] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[25Apr.2026 20:41:17.332] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[25Apr.2026 20:41:17.332] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[25Apr.2026 20:41:17.337] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[25Apr.2026 20:41:17.337] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[25Apr.2026 20:41:17.338] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[25Apr.2026 20:41:17.338] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[25Apr.2026 20:41:17.395] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[25Apr.2026 20:41:17.396] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[25Apr.2026 20:41:17.397] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[25Apr.2026 20:41:17.397] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[25Apr.2026 20:41:17.397] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[25Apr.2026 20:41:17.415] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[25Apr.2026 20:41:17.492] [Render thread/INFO] [flywheel/backend/shaders/]: Loaded 77 shader sources in 13,918 ms
-[25Apr.2026 20:41:17.508] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 58 train hat configurations.
-[25Apr.2026 20:41:17.509] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
-[25Apr.2026 20:41:17.509] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
-[25Apr.2026 20:43:22.827] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
-[25Apr.2026 20:43:22.830] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
-[25Apr.2026 20:43:23.741] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_breech_cast_mould
+[26Apr.2026 08:02:21.245] [Worker-Main-1/INFO] [PonderIndex/]: Registering Ponder Scenes took 142.5 ms
+[26Apr.2026 08:02:21.249] [Worker-Main-1/INFO] [PonderIndex/]: Registering Ponder Tags took 3.767 ms
+[26Apr.2026 08:02:21.406] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[26Apr.2026 08:02:21.406] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[26Apr.2026 08:02:21.448] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Realtek HD Audio 2nd output (Realtek(R) Audio)
+[26Apr.2026 08:02:21.448] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[26Apr.2026 08:02:21.556] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[26Apr.2026 08:02:21.578] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[26Apr.2026 08:02:21.579] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[26Apr.2026 08:02:21.580] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[26Apr.2026 08:02:21.580] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[26Apr.2026 08:02:21.591] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[26Apr.2026 08:02:21.592] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[26Apr.2026 08:02:21.593] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[26Apr.2026 08:02:21.593] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[26Apr.2026 08:02:21.644] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[26Apr.2026 08:02:21.646] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[26Apr.2026 08:02:21.646] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[26Apr.2026 08:02:21.646] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[26Apr.2026 08:02:21.646] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[26Apr.2026 08:02:21.659] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[26Apr.2026 08:02:21.726] [Render thread/INFO] [flywheel/backend/shaders/]: Loaded 77 shader sources in 16,451 ms
+[26Apr.2026 08:02:21.742] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 58 train hat configurations.
+[26Apr.2026 08:02:21.742] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[26Apr.2026 08:02:21.742] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[26Apr.2026 08:02:58.873] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
+[26Apr.2026 08:02:58.877] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
+[26Apr.2026 08:02:59.960] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_breech_cast_mould
 com.google.gson.JsonParseException: Failed to parse either. First: No key amount in MapLike[{"item":"cbc_at:rocket_pod_breech_mould"}]; No key id in MapLike[{"item":"cbc_at:rocket_pod_breech_mould"}]; Second: Failed to parse either. First: No key id in MapLike[{"item":"cbc_at:rocket_pod_breech_mould"}]; Second: Failed to parse either. First: Not a JSON object: "cbc_at:rocket_pod_breech_mould"; Second: Compat cannot be deserialized
 	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
@@ -366,11 +365,9 @@ com.google.gson.JsonParseException: Failed to parse either. First: No key amount
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
 	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
 	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
-	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:143) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3509) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:162) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1226) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
@@ -391,7 +388,7 @@ com.google.gson.JsonParseException: Failed to parse either. First: No key amount
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[25Apr.2026 20:43:23.771] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:munition/rocket/rocket_fuzing
+[26Apr.2026 08:02:59.993] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:munition/rocket/rocket_fuzing
 com.google.gson.JsonParseException: Unknown registry key in ResourceKey[minecraft:root / minecraft:recipe_serializer]: cbc_at:rocket_munition_fuzing
 	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
@@ -423,11 +420,9 @@ com.google.gson.JsonParseException: Unknown registry key in ResourceKey[minecraf
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
 	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
 	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
-	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:143) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3509) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:162) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1226) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
@@ -448,7 +443,7 @@ com.google.gson.JsonParseException: Unknown registry key in ResourceKey[minecraf
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[25Apr.2026 20:43:23.786] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/twin_autocannon_barrel_cast_mould
+[26Apr.2026 08:03:00.006] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/twin_autocannon_barrel_cast_mould
 com.google.gson.JsonParseException: Failed to parse either. First: No key amount in MapLike[{"item":"cbc_at:twin_autocannon_barrel_mould"}]; No key id in MapLike[{"item":"cbc_at:twin_autocannon_barrel_mould"}]; Second: Failed to parse either. First: No key id in MapLike[{"item":"cbc_at:twin_autocannon_barrel_mould"}]; Second: Failed to parse either. First: Not a JSON object: "cbc_at:twin_autocannon_barrel_mould"; Second: Compat cannot be deserialized
 	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
@@ -480,11 +475,9 @@ com.google.gson.JsonParseException: Failed to parse either. First: No key amount
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
 	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
 	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
-	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:143) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3509) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:162) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1226) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
@@ -505,7 +498,7 @@ com.google.gson.JsonParseException: Failed to parse either. First: No key amount
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[25Apr.2026 20:43:23.796] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_rail_cast_mould
+[26Apr.2026 08:03:00.018] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_rail_cast_mould
 com.google.gson.JsonParseException: Failed to parse either. First: No key amount in MapLike[{"item":"cbc_at:rocket_pod_rail_mould"}]; No key id in MapLike[{"item":"cbc_at:rocket_pod_rail_mould"}]; Second: Failed to parse either. First: No key id in MapLike[{"item":"cbc_at:rocket_pod_rail_mould"}]; Second: Failed to parse either. First: Not a JSON object: "cbc_at:rocket_pod_rail_mould"; Second: Compat cannot be deserialized
 	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
@@ -537,11 +530,9 @@ com.google.gson.JsonParseException: Failed to parse either. First: No key amount
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
 	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
 	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
-	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:143) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3509) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:162) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1226) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
@@ -562,119 +553,120 @@ com.google.gson.JsonParseException: Failed to parse either. First: No key amount
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[25Apr.2026 20:43:23.801] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 2980 recipes
-[25Apr.2026 20:43:23.927] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2545 advancements
-[25Apr.2026 20:43:25.101] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
-[25Apr.2026 20:43:25.101] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[25Apr.2026 20:43:25.314] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[25Apr.2026 20:43:25.509] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Apr.2026 20:43:25.585] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[25Apr.2026 20:43:25.598] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 250 ms
-[25Apr.2026 20:43:25.672] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 32, from 10
-[25Apr.2026 20:43:25.672] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 32, from 0
-[25Apr.2026 20:43:26.045] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
-[25Apr.2026 20:43:26.046] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
-[25Apr.2026 20:43:26.307] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:f25abd5f] logged in with entity id 14 at (6.2015543080203575, -60.0, -8.537068674186601)
-[25Apr.2026 20:43:26.376] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[25Apr.2026 20:43:27.282] [Render thread/INFO] [flywheel/]: Started 10 worker threads
-[25Apr.2026 20:43:27.317] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
-[25Apr.2026 20:43:27.324] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
-[25Apr.2026 20:43:27.331] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 6.651 milliseconds
-[25Apr.2026 20:43:27.332] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
-[25Apr.2026 20:43:27.335] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 2.807 milliseconds
-[25Apr.2026 20:43:27.337] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
-[25Apr.2026 20:43:27.405] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 2 duplicate items were found in 'Create Big Cannons' creative tab's: displayItems
+[26Apr.2026 08:03:00.023] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 2980 recipes
+[26Apr.2026 08:03:00.149] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2545 advancements
+[26Apr.2026 08:03:01.410] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
+[26Apr.2026 08:03:01.411] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[26Apr.2026 08:03:01.676] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[26Apr.2026 08:03:01.842] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Apr.2026 08:03:01.921] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[26Apr.2026 08:03:01.943] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 251 ms
+[26Apr.2026 08:03:01.992] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 32, from 10
+[26Apr.2026 08:03:01.993] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 32, from 0
+[26Apr.2026 08:03:02.388] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
+[26Apr.2026 08:03:02.390] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
+[26Apr.2026 08:03:02.677] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:89abcc68] logged in with entity id 22 at (-16.58708028793864, -57.50032801293218, -20.345054599796917)
+[26Apr.2026 08:03:02.734] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[26Apr.2026 08:03:02.978] [Render thread/INFO] [flywheel/]: Started 10 worker threads
+[26Apr.2026 08:03:03.027] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[26Apr.2026 08:03:03.035] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[26Apr.2026 08:03:03.043] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 7.476 milliseconds
+[26Apr.2026 08:03:03.044] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[26Apr.2026 08:03:03.047] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 3.014 milliseconds
+[26Apr.2026 08:03:03.050] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[26Apr.2026 08:03:03.135] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 2 duplicate items were found in 'Create Big Cannons' creative tab's: displayItems
 This may indicate that these types of item need a subtype interpreter added to JEI:
-[createbigcannons:big_cartridge, createbigcannons:autocannon_cartridge]
-[25Apr.2026 20:43:27.427] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 13 duplicate items were found in 'CBC: Advanced Technologies' creative tab's: displayItems
+[createbigcannons:autocannon_cartridge, createbigcannons:big_cartridge]
+[26Apr.2026 08:03:03.164] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 22 duplicate items were found in 'CBC: Advanced Technologies' creative tab's: displayItems
 This may indicate that these types of item need a subtype interpreter added to JEI:
-[cbc_at:heavy_autocannon_cartridge]
-[25Apr.2026 20:43:27.447] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 109.1 milliseconds
-[25Apr.2026 20:43:27.448] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 110.4 milliseconds
-[25Apr.2026 20:43:27.448] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
-[25Apr.2026 20:43:27.454] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 5.222 milliseconds
-[25Apr.2026 20:43:27.454] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
-[25Apr.2026 20:43:27.455] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 964.9 microseconds
-[25Apr.2026 20:43:27.474] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
-[25Apr.2026 20:43:27.475] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 544.5 microseconds
-[25Apr.2026 20:43:27.490] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
-[25Apr.2026 20:43:27.505] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 14.81 milliseconds
-[25Apr.2026 20:43:27.553] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: createbigcannons:jei_plugin took 47.72 milliseconds
-[25Apr.2026 20:43:27.608] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create:jei_plugin took 54.30 milliseconds
-[25Apr.2026 20:43:27.615] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 125.1 milliseconds
-[25Apr.2026 20:43:27.617] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
-[25Apr.2026 20:43:27.621] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 3.903 milliseconds
-[25Apr.2026 20:43:27.622] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
-[25Apr.2026 20:43:27.624] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 2.358 milliseconds
-[25Apr.2026 20:43:27.625] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
-[25Apr.2026 20:43:27.637] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 12.24 milliseconds
-[25Apr.2026 20:43:27.639] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
-[25Apr.2026 20:43:27.639] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 531.7 microseconds
-[25Apr.2026 20:43:27.640] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
-[25Apr.2026 20:43:27.837] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 197.3 milliseconds
-[25Apr.2026 20:43:27.858] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: createbigcannons:jei_plugin took 20.64 milliseconds
-[25Apr.2026 20:43:27.946] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: create:jei_plugin took 87.81 milliseconds
-[25Apr.2026 20:43:27.988] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 35.31 milliseconds
-[25Apr.2026 20:43:27.988] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 348.1 milliseconds
-[25Apr.2026 20:43:27.996] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
-[25Apr.2026 20:43:28.000] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 4.055 milliseconds
-[25Apr.2026 20:43:28.005] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
-[25Apr.2026 20:43:28.009] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
-[25Apr.2026 20:43:28.019] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 9.637 milliseconds
-[25Apr.2026 20:43:28.021] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
-[25Apr.2026 20:43:28.023] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[25Apr.2026 20:43:28.023] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
-[25Apr.2026 20:43:28.041] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 18.12 milliseconds
-[25Apr.2026 20:43:28.042] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
-[25Apr.2026 20:43:28.097] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2790 ingredients
-[25Apr.2026 20:43:28.337] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2790 ingredients
-[25Apr.2026 20:43:28.338] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 296.2 milliseconds
-[25Apr.2026 20:43:28.475] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 453.2 milliseconds
-[25Apr.2026 20:43:28.475] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 454.1 milliseconds
-[25Apr.2026 20:43:28.476] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 471.3 milliseconds
-[25Apr.2026 20:43:28.476] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
-[25Apr.2026 20:43:28.477] [Render thread/INFO] [rbasamoyai.createbigcannons.CreateBigCannons/]: Attempting to load CBC deployer recipes
-[25Apr.2026 20:43:28.483] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 6.521 milliseconds
-[25Apr.2026 20:43:28.483] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.167 seconds
-[25Apr.2026 20:43:28.501] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 166 advancements
-[25Apr.2026 20:43:30.738] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Apr.2026 20:43:30.765] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
-[25Apr.2026 20:43:31.534] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
-[25Apr.2026 20:43:31.535] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
-[25Apr.2026 20:44:45.361] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 69474ms or 1389 ticks behind
-[25Apr.2026 20:44:45.388] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Apr.2026 20:44:45.398] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
-[25Apr.2026 20:44:45.405] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
-[25Apr.2026 20:44:45.405] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
-[25Apr.2026 20:46:07.625] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Apr.2026 20:46:07.642] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
-[25Apr.2026 20:46:07.649] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
-[25Apr.2026 20:46:07.649] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
-[25Apr.2026 20:46:07.657] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 67321ms or 1346 ticks behind
-[25Apr.2026 20:49:39.008] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 6271ms or 125 ticks behind
-[25Apr.2026 20:49:39.038] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Apr.2026 20:49:39.047] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
-[25Apr.2026 20:49:39.053] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
-[25Apr.2026 20:49:39.053] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
-[25Apr.2026 20:49:45.387] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Apr.2026 20:49:45.405] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
-[25Apr.2026 20:49:45.410] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
-[25Apr.2026 20:49:45.410] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
-[25Apr.2026 20:49:47.279] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
-[25Apr.2026 20:49:47.280] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
-[25Apr.2026 20:49:47.280] [Render thread/INFO] [mezz.jei.neoforge.plugins.neoforge.NeoForgeGuiPlugin/]: Stopping JEI GUI
-[25Apr.2026 20:49:47.282] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 2.153 milliseconds
-[25Apr.2026 20:49:47.293] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[25Apr.2026 20:49:47.293] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[25Apr.2026 20:49:47.311] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
-[25Apr.2026 20:49:47.355] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[25Apr.2026 20:49:47.356] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[25Apr.2026 20:49:47.356] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[25Apr.2026 20:49:47.527] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
-[25Apr.2026 20:49:47.592] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
-[25Apr.2026 20:49:47.601] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
-[25Apr.2026 20:49:47.613] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Test 1_21_1 Port): All chunks are saved
-[25Apr.2026 20:49:47.613] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[25Apr.2026 20:49:47.613] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[25Apr.2026 20:49:47.613] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[25Apr.2026 20:49:48.712] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[cbc_at:cluster_caseless, cbc_at:heavy_autocannon_cartridge, cbc_at:cluster_cartridge, cbc_at:cluster]
+[26Apr.2026 08:03:03.185] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 133.9 milliseconds
+[26Apr.2026 08:03:03.185] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 135.3 milliseconds
+[26Apr.2026 08:03:03.186] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
+[26Apr.2026 08:03:03.191] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 5.192 milliseconds
+[26Apr.2026 08:03:03.192] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
+[26Apr.2026 08:03:03.193] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 987.2 microseconds
+[26Apr.2026 08:03:03.214] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
+[26Apr.2026 08:03:03.215] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 895.4 microseconds
+[26Apr.2026 08:03:03.231] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[26Apr.2026 08:03:03.247] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 16.45 milliseconds
+[26Apr.2026 08:03:03.265] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: createbigcannons:jei_plugin took 17.70 milliseconds
+[26Apr.2026 08:03:03.311] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create:jei_plugin took 45.10 milliseconds
+[26Apr.2026 08:03:03.317] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 86.62 milliseconds
+[26Apr.2026 08:03:03.319] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[26Apr.2026 08:03:03.324] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 4.849 milliseconds
+[26Apr.2026 08:03:03.325] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[26Apr.2026 08:03:03.329] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 3.564 milliseconds
+[26Apr.2026 08:03:03.330] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[26Apr.2026 08:03:03.342] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 12.40 milliseconds
+[26Apr.2026 08:03:03.344] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[26Apr.2026 08:03:03.345] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 604.9 microseconds
+[26Apr.2026 08:03:03.346] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[26Apr.2026 08:03:03.551] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 204.4 milliseconds
+[26Apr.2026 08:03:03.571] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: createbigcannons:jei_plugin took 20.12 milliseconds
+[26Apr.2026 08:03:03.666] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: create:jei_plugin took 94.36 milliseconds
+[26Apr.2026 08:03:03.696] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 23.56 milliseconds
+[26Apr.2026 08:03:03.696] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 350.2 milliseconds
+[26Apr.2026 08:03:03.706] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[26Apr.2026 08:03:03.711] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 4.710 milliseconds
+[26Apr.2026 08:03:03.714] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[26Apr.2026 08:03:03.718] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[26Apr.2026 08:03:03.729] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 10.78 milliseconds
+[26Apr.2026 08:03:03.732] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[26Apr.2026 08:03:03.734] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[26Apr.2026 08:03:03.734] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[26Apr.2026 08:03:03.756] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 21.54 milliseconds
+[26Apr.2026 08:03:03.756] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[26Apr.2026 08:03:03.797] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2790 ingredients
+[26Apr.2026 08:03:04.060] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2790 ingredients
+[26Apr.2026 08:03:04.061] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 304.6 milliseconds
+[26Apr.2026 08:03:04.210] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 477.1 milliseconds
+[26Apr.2026 08:03:04.210] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 478.0 milliseconds
+[26Apr.2026 08:03:04.211] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 496.3 milliseconds
+[26Apr.2026 08:03:04.211] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[26Apr.2026 08:03:04.212] [Render thread/INFO] [rbasamoyai.createbigcannons.CreateBigCannons/]: Attempting to load CBC deployer recipes
+[26Apr.2026 08:03:04.217] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 6.035 milliseconds
+[26Apr.2026 08:03:04.217] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.191 seconds
+[26Apr.2026 08:03:04.238] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 166 advancements
+[26Apr.2026 08:03:05.175] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:03:05.200] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:03:05.366] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:03:05.366] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:04:37.724] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:04:37.739] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:04:37.746] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:04:37.746] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:05:59.324] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:05:59.336] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:05:59.342] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:05:59.343] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:06:52.224] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:06:52.241] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:06:52.248] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:06:52.248] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:19:14.124] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:19:14.133] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:19:14.139] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:19:14.139] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:19:24.724] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:19:24.740] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:19:24.746] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:19:24.746] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:19:58.624] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:19:58.636] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:19:58.641] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:19:58.641] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:20:19.001] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Saved screenshot as 2026-04-26_08.20.18.png
+[26Apr.2026 08:20:27.974] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:20:27.985] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:20:27.989] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:20:27.989] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:20:38.223] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:20:38.241] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:20:38.245] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:20:38.245] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
+[26Apr.2026 08:21:12.092] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Saved screenshot as 2026-04-26_08.21.11.png
+[26Apr.2026 08:21:13.273] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[26Apr.2026 08:21:13.280] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:overworld
+[26Apr.2026 08:21:13.284] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_end
+[26Apr.2026 08:21:13.285] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test 1.21.1 Port]'/minecraft:the_nether
