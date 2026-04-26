@@ -4,6 +4,7 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutoca
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectile;
 import net.minecraft.core.Position;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
@@ -25,7 +26,7 @@ public class HA_SmokeProjectile extends AbstractFuzedHeavyAutocannonProjectile {
     protected void detonate(Position position) {
         SmokeShellProperties properties = CBCMunitionPropertiesHandlers.SMOKE_SHELL.getPropertiesOf(CBCEntityTypes.SMOKE_SHELL.get());
         SmokeExplosion explosion = new SmokeExplosion(this.level(), null, position.x(), position.y(), position.z(), 1.75f,
-                Level.ExplosionInteraction.NONE);
+                Explosion.BlockInteraction.KEEP);
         CreateBigCannons.handleCustomExplosion(this.level(), explosion);
         SmokeEmitterEntity smoke = CBCEntityTypes.SMOKE_EMITTER.create(this.level());
         smoke.setPos(new Vec3(position.x(), position.y(), position.z()));

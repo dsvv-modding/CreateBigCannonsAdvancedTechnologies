@@ -1,11 +1,2 @@
 Manifest-Version: 1.0
-Specification-Title: cbc_at
-Specification-Vendor: _dsvv
-Specification-Version: 1
-Implementation-Title: CBCAT
-Implementation-Version: com.dsvv
-Implementation-Vendor: _dsvv
-Implementation-Timestamp: 2026-04-12T09:24:48+0200
-TweakClass: org.spongepowered.asm.launch.MixinTweaker
-MixinConfigs: cbc_at.mixins.json
 
