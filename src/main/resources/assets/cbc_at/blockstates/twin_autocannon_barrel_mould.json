@@ -1,5 +1,5 @@
 {
   "variants": {
-    ""    : { "model" : "cbc_at:block/twin_autocannon_barrel_mould" }
+    ""    : { "model" : "cbc_at:block/cast_mould/twin_autocannon_barrel_mould" }
   }
 }

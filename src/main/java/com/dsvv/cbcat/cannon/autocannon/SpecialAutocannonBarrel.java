@@ -1,13 +1,16 @@
 package com.dsvv.cbcat.cannon.autocannon;
 
+import com.dsvv.cbcat.registry.BlockEntityRegister;
 import com.simibubi.create.AllShapes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBarrelBlock;
+import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlockEntity;
 import rbasamoyai.createbigcannons.cannons.autocannon.material.AutocannonMaterial;
 
 public class SpecialAutocannonBarrel extends AutocannonBarrelBlock {
@@ -30,6 +33,8 @@ public class SpecialAutocannonBarrel extends AutocannonBarrelBlock {
         if (this.volumeMultiplier > 1)
             isComplete = false;
     }
+
+    @Override public BlockEntityType<? extends AutocannonBlockEntity> getBlockEntityType() { return BlockEntityRegister.SPECIAL_AUTOCANNON_BLOCK_ENTITY.get(); }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
