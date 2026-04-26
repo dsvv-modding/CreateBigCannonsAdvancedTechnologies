@@ -40,7 +40,7 @@ public class AutocannonHEProjectile extends AbstractAutocannonProjectile
                 false,
                 true,
                 false,
-                1
+                0.5f
         );
     }
 

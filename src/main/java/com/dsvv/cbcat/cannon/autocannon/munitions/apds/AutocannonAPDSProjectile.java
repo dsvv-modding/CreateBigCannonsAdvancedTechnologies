@@ -30,7 +30,7 @@ public class AutocannonAPDSProjectile extends AbstractAutocannonProjectile {
                 -0.02,
                 0.01,
                 false,
-                2.5f,
+                1.75f,
                 2.5f,
                 1.25f,
                 0.7f

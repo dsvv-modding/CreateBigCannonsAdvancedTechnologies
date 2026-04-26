@@ -22,7 +22,7 @@ public class HA_APDSProjectile extends AbstractHeavyAutocannonProjectile
                 false,
                 true,
                 false,
-                1.2f
+                1.3f
         );
     }
 
@@ -31,12 +31,12 @@ public class HA_APDSProjectile extends AbstractHeavyAutocannonProjectile
     protected BallisticPropertiesComponent getBallisticProperties() {
         return new BallisticPropertiesComponent(
                 -0.02,
-                0.0025,
+                0.011,
                 true,
-                1.25f,
-                0.66f,
-                0.875f,
-                0.7f
+                3f,
+                3.1f,
+                1.45f,
+                0.66f
         );
     }
 }

@@ -31,12 +31,12 @@ public class HA_APProjectile extends AbstractHeavyAutocannonProjectile
     protected BallisticPropertiesComponent getBallisticProperties() {
         return new BallisticPropertiesComponent(
                 -0.03,
-                0.005,
+                0.013,
                 true,
-                1.25f,
-                0.5f,
-                0.75f,
-                0.7f
+                3.25f,
+                2.75f,
+                1.33f,
+                0.66f
         );
     }
 }
