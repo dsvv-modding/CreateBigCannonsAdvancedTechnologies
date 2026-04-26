@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "assembled=false,facing=up"    : { "model" : "cbc_at:block/rocket_pod/unbored_cast_iron_rocket_pod_rail", "x":  0},
+    "assembled=false,facing=down"  : { "model" : "cbc_at:block/rocket_pod/unbored_cast_iron_rocket_pod_rail", "x": 180},
+    "assembled=false,facing=north" : { "model" : "cbc_at:block/rocket_pod/unbored_cast_iron_rocket_pod_rail", "x": 90},
+    "assembled=false,facing=east"  : { "model" : "cbc_at:block/rocket_pod/unbored_cast_iron_rocket_pod_rail", "y": 90, "x": 90},
+    "assembled=false,facing=south" : { "model" : "cbc_at:block/rocket_pod/unbored_cast_iron_rocket_pod_rail", "x": 270},
+    "assembled=false,facing=west"  : { "model" : "cbc_at:block/rocket_pod/unbored_cast_iron_rocket_pod_rail", "y": 90, "x": 270}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "cbc_at:block/medium_rocket_rail/medium_rocket_rail_breech",
+  "textures": {
+    "0": "createbigcannons:block/cannon_chamber/wrought_iron_cannon_chamber_side",
+    "particle": "cbc_at:block/bronze_medium_rocket_rail"
+  }
+}

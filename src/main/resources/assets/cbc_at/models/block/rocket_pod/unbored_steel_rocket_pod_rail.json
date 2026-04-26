@@ -1,0 +1,8 @@
+{
+  "parent": "cbc_at:block/rocket_pod/rocket_pod",
+  "textures": {
+    "0": "cbc_at:block/steel_cannon_chamber_side",
+    "1": "cbc_at:block/rocket_pod/unbored_steel_rocket_pod_end",
+    "particle": "cbc_at:block/bronze_rocket_pod"
+  }
+}
