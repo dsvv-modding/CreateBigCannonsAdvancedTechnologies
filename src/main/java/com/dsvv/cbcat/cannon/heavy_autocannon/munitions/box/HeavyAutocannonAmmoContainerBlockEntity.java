@@ -1,10 +1,14 @@
 package com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box;
 
 import com.dsvv.cbcat.registry.BlockRegister;
+import com.google.common.collect.Lists;
+import com.simibubi.create.api.schematic.nbt.PartialSafeNBT;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentMap;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.component.PatchedDataComponentMap;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -19,19 +23,17 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 
 import javax.annotation.Nullable;
 
-public class HeavyAutocannonAmmoContainerBlockEntity extends BlockEntity implements IHeavyAutocannonAmmoContainerContainer, MenuProvider, Nameable {
-    private ItemStack ammo = ItemStack.EMPTY;
-    private ItemStack tracers = ItemStack.EMPTY;
-    private int spacing = 1;
-    private int currentIndex = 0;
+public class HeavyAutocannonAmmoContainerBlockEntity extends BlockEntity implements IHeavyAutocannonAmmoContainerContainer, MenuProvider, Nameable, PartialSafeNBT {
     private Component name;
 
     private ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
@@ -61,45 +63,32 @@ public class HeavyAutocannonAmmoContainerBlockEntity extends BlockEntity impleme
         super(type, pos, state);
     }
 
-    @Override public ItemStack getMainAmmoStack() { return this.ammo == null ? ItemStack.EMPTY : this.ammo; }
-    @Override public ItemStack getTracerStack() { return this.tracers == null ? ItemStack.EMPTY : this.tracers; }
+    @Override public ItemStack getMainAmmoStack() { return this.components().getOrDefault(CBCDataComponents.AMMO, ItemContainerContents.EMPTY).copyOne(); }
+    @Override public ItemStack getTracerStack() { return this.components().getOrDefault(CBCDataComponents.TRACERS, ItemContainerContents.EMPTY).copyOne(); }
 
-    public int getSpacing() { return this.spacing; }
+    public int getSpacing() { return Math.max(this.components().getOrDefault(CBCDataComponents.TRACER_SPACING, 1), 1); }
 
-    public void setMainAmmoDirect(ItemStack stack) { this.ammo = stack == null ? ItemStack.EMPTY : stack; }
-    public void setTracersDirect(ItemStack stack) { this.tracers = stack == null ? ItemStack.EMPTY : stack; }
-    public void setSpacing(int spacing) { this.spacing = Mth.clamp(spacing, 1, 6); }
+    public void setMainAmmoDirect(ItemStack stack) {
+        if (stack == null)
+            stack = ItemStack.EMPTY;
+        PatchedDataComponentMap patched = new PatchedDataComponentMap(this.components());
+        patched.set(CBCDataComponents.AMMO, ItemContainerContents.fromItems(Lists.newArrayList(stack)));
+        this.setComponents(patched);
+    }
+    public void setTracersDirect(ItemStack stack) {
+        if (stack == null)
+            stack = ItemStack.EMPTY;
+        PatchedDataComponentMap patched = new PatchedDataComponentMap(this.components());
+        patched.set(CBCDataComponents.TRACERS, ItemContainerContents.fromItems(Lists.newArrayList(stack)));
+        this.setComponents(patched);
+    }
+    public void setSpacing(int spacing) {
+        PatchedDataComponentMap patched = new PatchedDataComponentMap(this.components());
+        patched.set(CBCDataComponents.TRACER_SPACING, Mth.clamp(spacing, 1, 6));
+        this.setComponents(patched);
+    }
 
     public boolean canDropInCreative() { return !this.getMainAmmoStack().isEmpty() || !this.getTracerStack().isEmpty(); }
-
-    @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider provider) {
-        super.saveAdditional(tag, provider);
-        if (this.ammo != null && !this.ammo.isEmpty()) tag.put("Ammo", this.ammo.save(provider));
-        if (this.tracers != null && !this.tracers.isEmpty()) tag.put("Tracers", this.tracers.save(provider));
-        if (this.name != null) tag.putString("CustomName", Component.Serializer.toJson(this.name, provider));
-        if (this.isCreativeContainer()) tag.putInt("CurrentIndex", this.currentIndex);
-        tag.putInt("TracerSpacing", this.spacing);
-    }
-
-    @Override
-    public void loadAdditional(CompoundTag tag, HolderLookup.Provider provider) {
-        super.loadAdditional(tag, provider);
-        this.ammo = tag.contains("Ammo") ? ItemStack.parseOptional(provider, tag.getCompound("Ammo")) : ItemStack.EMPTY;
-        this.tracers = tag.contains("Tracers") ? ItemStack.parseOptional(provider, tag.getCompound("Tracers")) : ItemStack.EMPTY;
-        this.spacing = tag.contains("TracerSpacing") ? Mth.clamp(tag.getInt("TracerSpacing"), 1, 6) : 1;
-        this.name = tag.contains("CustomName", Tag.TAG_STRING) ? Component.Serializer.fromJson(tag.getString("CustomName"), provider) : null;
-        this.currentIndex = tag.contains("CurrentIndex", Tag.TAG_INT) ? tag.getInt("CurrentIndex") : 0;
-    }
-
-    /*@Override
-    public void saveToItem(ItemStack stack, HolderLookup.Provider provider) {
-        CompoundTag tag = stack.getOrCreateTag();
-        if (this.ammo != null && !this.ammo.isEmpty()) tag.put("Ammo", this.ammo.save(provider));
-        if (this.tracers != null && !this.tracers.isEmpty()) tag.put("Tracers", this.tracers.save(provider));
-        if (this.isCreativeContainer()) tag.putInt("CurrentIndex", this.currentIndex);
-        tag.putInt("TracerSpacing", this.spacing);
-    }*/
 
     @Override public CompoundTag getUpdateTag(HolderLookup.Provider provider) { return this.saveWithFullMetadata(provider); }
 
@@ -145,9 +134,9 @@ public class HeavyAutocannonAmmoContainerBlockEntity extends BlockEntity impleme
     public ItemStack removeItemNoUpdate(int slot) {
         ItemStack ret = this.getItem(slot);
         if (slot == AMMO_SLOT) {
-            this.ammo = ItemStack.EMPTY;
+            this.setMainAmmoDirect(ItemStack.EMPTY);
         } else if (slot == TRACER_SLOT) {
-            this.tracers = ItemStack.EMPTY;
+            this.setTracersDirect(ItemStack.EMPTY);
         }
         return ret;
     }
@@ -179,8 +168,8 @@ public class HeavyAutocannonAmmoContainerBlockEntity extends BlockEntity impleme
 
     @Override
     public void clearContent() {
-        this.ammo = ItemStack.EMPTY;
-        this.tracers = ItemStack.EMPTY;
+        this.setMainAmmoDirect(ItemStack.EMPTY);
+        this.setTracersDirect(ItemStack.EMPTY);
     }
 
     @Override
@@ -213,5 +202,18 @@ public class HeavyAutocannonAmmoContainerBlockEntity extends BlockEntity impleme
         double y = (double) this.worldPosition.getY() + 0.5d;
         double z = (double) this.worldPosition.getZ() + 0.5d;
         this.level.playSound(null, x, y, z, sound, SoundSource.BLOCKS, 0.5F, this.level.getRandom().nextFloat() * 0.1F + 0.9F);
+    }
+
+    @Override
+    public void writeSafe(CompoundTag tag, HolderLookup.Provider registries) {
+        // NOTE: susceptible to data loss on schematic saving. Hacky solution! --ritchie
+        PatchedDataComponentMap patchedRestore = new PatchedDataComponentMap(this.components());
+        PatchedDataComponentMap copy = new PatchedDataComponentMap(DataComponentMap.EMPTY);
+        copy.set(CBCDataComponents.TRACER_SPACING, patchedRestore.getOrDefault(CBCDataComponents.TRACER_SPACING, 1));
+        if (patchedRestore.has(DataComponents.CUSTOM_NAME))
+            copy.set(DataComponents.CUSTOM_NAME, patchedRestore.get(DataComponents.CUSTOM_NAME));
+        this.setComponents(copy);
+        super.saveAdditional(tag, registries);
+        this.setComponents(patchedRestore);
     }
 }
