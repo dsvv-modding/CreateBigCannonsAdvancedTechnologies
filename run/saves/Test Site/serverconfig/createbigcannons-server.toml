@@ -111,6 +111,14 @@
 		#Spacing of the detection points of the Proximity Fuze.
 		#Range: 0.5 ~ 2.0
 		proximityFuzeSpacing = 1.5
+		#.
+		#Chance that the Inertia Fuze/Delayed Inertia Fuze will detonate on hitting something. 0 is 0% (never), 1 is 100% (always).
+		#Range: 0.0 ~ 1.0
+		inertiaFuzeDetonationChance = 0.8999999761581421
+		#.
+		#How many blocks the Inertia Fuze/Delayed Inertia Fuze can hit before breaking. Set to -1 to never break.
+		#Range: > -1
+		inertiaFuzeDurability = 3
 
 	#.
 	#Grouped Munitions
@@ -256,7 +264,7 @@
 		[kinetics.stressValues.v2]
 
 			#.
-			#
+			#.
 			#[in Stress Units]
 			#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
 			[kinetics.stressValues.v2.impact]
