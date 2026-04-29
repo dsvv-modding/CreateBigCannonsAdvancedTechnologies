@@ -55,9 +55,11 @@ import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBarrelBlock;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlockItem;
 import rbasamoyai.createbigcannons.cannons.big_cannons.BigCannonBlockItem;
 import rbasamoyai.createbigcannons.crafting.casting.CannonCastMouldBlock;
+import rbasamoyai.createbigcannons.datagen.assets.CBCBuilderTransformers;
 import rbasamoyai.createbigcannons.index.*;
 
 import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
+import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
 public class BlockRegister
 {
@@ -224,63 +226,140 @@ public class BlockRegister
             .register();*/
 
     public static final BlockEntry<ProjectileCartridgeBlock> ARMOR_PIERCING_CARTRIDGE_BLOCK = REGISTRATE.block("armor_piercing_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHOT, "ap shot"))
-            .item(ProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_LIGHT_GRAY))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/ap_shot"))
+            .loot(CBCBuilderTransformers.tracerProjectileLoot())
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK = REGISTRATE.block("armor_piercing_shell_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHELL, "ap shell"))
-            .item(FuzedProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_BLUE))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/ap_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<FluidProjectileCartridgeBlock> FLUID_SHELL_CARTRIDGE_BLOCK = REGISTRATE.block("fluid_shell_cartridge", p -> new FluidProjectileCartridgeBlock(p, "fluid shell"))
-            .item(FluidProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FluidProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_ORANGE))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/fluid_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CARTRIDGE_BLOCK = REGISTRATE.block("grapeshot_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot"))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .properties(p -> p.mapColor(MapColor.WOOL))
+            .properties(p -> p.strength(0.8f))
+            .properties(p -> p.sound(SoundType.WOOL))
+            //.transform(CBCBuilderTransformers.projectileLegacy("projectile/grapeshot"))
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> HIGH_EXPLOSIVE_CARTRIDGE_BLOCK = REGISTRATE.block("high_explosive_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.HE_SHELL, "he shell"))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_RED))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/he_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SHRAPNEL_CARTRIDGE_BLOCK = REGISTRATE.block("shrapnel_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SHRAPNEL_SHELL, "shrapnel shell"))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_GREEN))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/shrapnel_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SMOKE_CARTRIDGE_BLOCK = REGISTRATE.block("smoke_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SMOKE_SHELL, "smoke shell"))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_LIGHT_BLUE))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/smoke_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> SOLID_CARTRIDGE_BLOCK = REGISTRATE.block("solid_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.SHOT, "solid shot"))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .properties(p -> p.strength(2.0f, 3.0f))
+            .properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/solid_shot"))
+            .loot(CBCBuilderTransformers.tracerProjectileLoot())
             .register();
     public static final BlockEntry<ClusterProjectileCartridgeBlock> CLUSTER_CARTRIDGE_BLOCK = REGISTRATE.block("cluster_cartridge", p -> new ClusterProjectileCartridgeBlock(p, "cluster shell", true))
             .item(FuzedClusterProjectileBlockItem::new).build()///*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_RED))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/he_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
 
     public static final BlockEntry<ProjectileCartridgeBlock> ARMOR_PIERCING_CASELESS_BLOCK = REGISTRATE.block("armor_piercing_caseless", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHOT, "ap shot caseless", false))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_LIGHT_GRAY))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/ap_shot"))
+            .loot(CBCBuilderTransformers.tracerProjectileLoot())
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> ARMOR_PIERCING_SHELL_CASELESS_BLOCK = REGISTRATE.block("armor_piercing_shell_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHELL, "ap shell caseless", false))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_BLUE))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/ap_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<FluidProjectileCartridgeBlock> FLUID_SHELL_CASELESS_BLOCK = REGISTRATE.block("fluid_shell_caseless", p -> new FluidProjectileCartridgeBlock(p, "fluid shell caseless", false))
-            .item(FluidProjectileCartridgeBlockItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
+            .item(FluidProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_ORANGE))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/fluid_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CASELESS_BLOCK = REGISTRATE.block("grapeshot_caseless", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot caseless", false))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .properties(p -> p.mapColor(MapColor.WOOL))
+            .properties(p -> p.strength(0.8f))
+            .properties(p -> p.sound(SoundType.WOOL))
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> HIGH_EXPLOSIVE_CASELESS_BLOCK = REGISTRATE.block("high_explosive_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.HE_SHELL, "he shell caseless", false))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_RED))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/he_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SHRAPNEL_CASELESS_BLOCK = REGISTRATE.block("shrapnel_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SHRAPNEL_SHELL, "shrapnel shell caseless", false))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_GREEN))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/shrapnel_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SMOKE_CASELESS_BLOCK = REGISTRATE.block("smoke_caseless", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SMOKE_SHELL, "smoke shell caseless", false))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_LIGHT_BLUE))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/smoke_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
     public static final BlockEntry<ProjectileCartridgeBlock> SOLID_CASELESS_BLOCK = REGISTRATE.block("solid_caseless", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.SHOT, "solid shot caseless", false))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .properties(p -> p.strength(2.0f, 3.0f))
+            .properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/solid_shot"))
+            .loot(CBCBuilderTransformers.tracerProjectileLoot())
             .register();
     public static final BlockEntry<ClusterProjectileCartridgeBlock> CLUSTER_CASELESS_BLOCK = REGISTRATE.block("cluster_caseless", p -> new ClusterProjectileCartridgeBlock(p, "cluster shell caseless", false))
             .item(FuzedClusterProjectileBlockItem::new).build()///*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_RED))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/he_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
 
     public static final BlockEntry<FuzedClusterProjectileBlock> CLUSTER_BLOCK = REGISTRATE.block("cluster", p -> new FuzedClusterProjectileBlock(p))
             .item(FuzedClusterProjectileBlockItem::new).build()///*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
+            .transform(shell(MapColor.COLOR_RED))
+            .transform(axeOrPickaxe())
+            //.transform(CBCBuilderTransformers.projectile("projectile/he_shell"))
+            .loot(CBCBuilderTransformers.shellLoot())
             .register();
 
     public static final BlockEntry<TwinAutocannonBarrelBlock> CAST_IRON_TWIN_AUTOCANNON_BARREL = REGISTRATE.block("cast_iron_twin_autocannon_barrel", p -> new TwinAutocannonBarrelBlock(p, CBCAutocannonMaterials.CAST_IRON, BlockRegister::getCastIronBarrel, false))
@@ -1022,6 +1101,13 @@ public class BlockRegister
                 .tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .tag(BlockTags.NEEDS_DIAMOND_TOOL);
         return canPassThrough ? transform.andThen(b -> b.tag(CBCTags.CBCBlockTags.DRILL_CAN_PASS_THROUGH)) : transform;
+    }
+
+    private static <T extends Block, P> NonNullUnaryOperator<BlockBuilder<T, P>> shell(MapColor color) {
+        return b -> b.addLayer(() -> RenderType::solid)
+                .properties(p -> p.mapColor(color))
+                .properties(p -> p.strength(2.0f, 3.0f))
+                .properties(p -> p.sound(SoundType.STONE));
     }
 
     public static <T extends Block, P> NonNullUnaryOperator<BlockBuilder<T, P>> castMould(String size) {

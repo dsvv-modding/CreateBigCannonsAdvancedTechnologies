@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cbc_at:wrought_iron_medium_rocket_rail"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "createbigcannons:blocks/wrought_iron_cannon_chamber"
+}

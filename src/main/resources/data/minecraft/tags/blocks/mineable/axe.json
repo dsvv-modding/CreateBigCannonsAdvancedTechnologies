@@ -19,6 +19,8 @@
     "cbc_at:heavy_autocannon_barrel_mould",
     "cbc_at:heavy_autocannon_recoil_spring_mould",
     "cbc_at:heavy_autocannon_breech_mould",
-    "cbc_at:heavy_autocannon_qfbreech_mould"
+    "cbc_at:heavy_autocannon_qfbreech_mould",
+    "cbc_at:rocket_pod_rail_mould",
+    "cbc_at:rocket_pod_breech_mould"
   ]
 }

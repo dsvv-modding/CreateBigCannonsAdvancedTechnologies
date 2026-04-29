@@ -146,6 +146,22 @@
     "cbc_at:unbored_steel_heavy_autocannon_silencer",
     "cbc_at:unbored_steel_heavy_autocannon_recoil_spring",
     "cbc_at:unbored_steel_heavy_autocannon_breech",
-    "cbc_at:unbored_steel_heavy_autocannon_qfbreech"
+    "cbc_at:unbored_steel_heavy_autocannon_qfbreech",
+
+    "cbc_at:bronze_rocket_pod_rail",
+    "cbc_at:bronze_rocket_pod_breech",
+    "cbc_at:cast_iron_rocket_pod_rail",
+    "cbc_at:cast_iron_rocket_pod_breech",
+    "cbc_at:steel_rocket_pod_rail",
+    "cbc_at:steel_rocket_pod_breech",
+    "cbc_at:unbored_bronze_rocket_pod_rail",
+    "cbc_at:unbored_bronze_rocket_pod_breech",
+    "cbc_at:unbored_cast_iron_rocket_pod_rail",
+    "cbc_at:unbored_cast_iron_rocket_pod_breech",
+    "cbc_at:unbored_steel_rocket_pod_rail",
+    "cbc_at:unbored_steel_rocket_pod_breech",
+
+    "cbc_at:wrought_iron_medium_rocket_rail",
+    "cbc_at:wrought_iron_medium_rocket_rail_breech"
   ]
 }
