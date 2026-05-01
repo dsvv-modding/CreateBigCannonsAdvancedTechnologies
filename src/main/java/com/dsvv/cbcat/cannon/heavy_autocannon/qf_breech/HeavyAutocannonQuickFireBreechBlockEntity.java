@@ -55,12 +55,6 @@ public class HeavyAutocannonQuickFireBreechBlockEntity extends HeavyAutocannonBl
         super(type, pos, state);
     }
 
-    public int getQueueLimit() { return 5; }
-
-    public Deque<ItemStack> getInputBuffer() { return this.inputBuffer; }
-    public ItemStack getOutputBuffer() { return this.outputBuffer; }
-    public void setOutputBuffer(ItemStack stack) { this.outputBuffer = stack; }
-
     @Override
     public void tick() {
         super.tick();
