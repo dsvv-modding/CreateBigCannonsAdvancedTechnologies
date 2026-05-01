@@ -43,14 +43,6 @@ public class TwinAutocannonBreechRenderer extends SmartBlockEntityRenderer<TwinA
                         .light(light)
                         .renderInto(ms, buffer.getBuffer(RenderType.cutoutMipped()));
             }
-        } else {
-            Vector3f normal = facing.step();
-            normal.mul(breech.getAnimateOffset(partialTicks) * -0.5f);
-            CachedBuffers.partialFacing(getPartialModelForState(breech), state, facing)
-                    .translate(normal)
-                    .rotateCentered(Axis.YP.rotationDegrees(facing.getAxis().isVertical() ? 180 : 0))
-                    .light(light)
-                    .renderInto(ms, buffer.getBuffer(RenderType.cutoutMipped()));
         }
 
         ItemStack container = breech.getMagazine();
@@ -78,12 +70,6 @@ public class TwinAutocannonBreechRenderer extends SmartBlockEntityRenderer<TwinA
         }
 
         ms.popPose();
-    }
-
-    private static PartialModel getPartialModelForState(TwinAutocannonBreechBlockEntity breech) {
-        return breech.getBlockState().getBlock() instanceof TwinAutocannonBlock cBlock
-                ? CBCBlockPartials.autocannonEjectorFor(cBlock.getAutocannonMaterial())
-                : CBCBlockPartials.CAST_IRON_AUTOCANNON_EJECTOR;
     }
 
     private static BlockState getAmmoContainerModel(ItemStack stack) {

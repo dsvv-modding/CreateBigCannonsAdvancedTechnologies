@@ -55,8 +55,8 @@ public class HeavyAutocannonQuickFireBreechInstance extends AbstractBlockEntityV
         float progress = this.blockEntity.getOpenProgress(partialTick);
         BlockPos visualPos = this.getVisualPosition();
 
-        float renderedBreechblockOffset = progress / 16.0f * 13.0f;
-        Vector3f normal = this.blockRotation.getClockWise(Direction.Axis.X).step();
+        float renderedBreechblockOffset = progress / 16.0f * -14.5f;
+        Vector3f normal = Direction.UP.step();
         normal.mul(renderedBreechblockOffset);
         this.breechblock.position(visualPos).translatePosition(normal.x(), normal.y(), normal.z()).setChanged();
     }

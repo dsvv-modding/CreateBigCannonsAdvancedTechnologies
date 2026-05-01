@@ -20,6 +20,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.joml.Vector3f;
+import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 
 import java.util.Map;
 
@@ -36,7 +37,7 @@ public class HeavyAutocannonRecoilSpringRenderer extends SmartBlockEntityRendere
 
         BlockState state = spring.getBlockState();
         Direction facing = state.getValue(BlockStateProperties.FACING);
-        SuperByteBuffer ejectorBuf = CachedBuffers.partialFacing(getPartialModelForState(state), state, facing);
+        //SuperByteBuffer ejectorBuf = CachedBuffers.partialFacing(getPartialModelForState(state), state, facing);
 
         Direction.Axis axis = facing.getAxis();
 
@@ -49,13 +50,13 @@ public class HeavyAutocannonRecoilSpringRenderer extends SmartBlockEntityRendere
 
         ms.pushPose();
 
-        if (facing.getAxisDirection() == Direction.AxisDirection.NEGATIVE) {
+        /*if (facing.getAxisDirection() == Direction.AxisDirection.NEGATIVE) {
             ejectorBuf.rotateCentered(Mth.PI, axis.isVertical() ? Direction.EAST : Direction.UP);
             //.translate(facing.getOpposite().step());
         }
         ejectorBuf.scale(fx, fy, fz)
                 .light(light)
-                .renderInto(ms, buffer.getBuffer(RenderType.cutoutMipped()));
+                .renderInto(ms, buffer.getBuffer(RenderType.cutoutMipped()));*/
 
         BlockRenderDispatcher brd = Minecraft.getInstance().getBlockRenderer();
         Vector3f normal = facing.step();
@@ -75,6 +76,6 @@ public class HeavyAutocannonRecoilSpringRenderer extends SmartBlockEntityRendere
     private static PartialModel getPartialModelForState(BlockState state) {
         return state.getBlock() instanceof HeavyAutocannonBlock cBlock
                 ? ExtraDataRegister.heavyAutocannonSpringFor(cBlock.getAutocannonMaterial())
-                : null;//ExtraDataRegister.twinAutocannonSpringFor(CBCAutocannonMaterials.CAST_IRON, false);
+                : ExtraDataRegister.heavyAutocannonSpringFor(CBCAutocannonMaterials.CAST_IRON);
     }
 }

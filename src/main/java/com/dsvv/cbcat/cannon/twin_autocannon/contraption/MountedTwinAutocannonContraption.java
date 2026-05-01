@@ -6,7 +6,6 @@
 package com.dsvv.cbcat.cannon.twin_autocannon.contraption;
 
 import com.dsvv.cbcat.base.ICarriageAdjustableFireRate;
-import com.dsvv.cbcat.cannon.heavy_autocannon.breech.HeavyAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.*;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlock;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlockEntity;

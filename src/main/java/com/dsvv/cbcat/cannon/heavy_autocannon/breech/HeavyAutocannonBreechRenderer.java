@@ -38,23 +38,27 @@ public class HeavyAutocannonBreechRenderer extends SmartBlockEntityRenderer<Heav
 
         Vector3f normal = facing.step();
         normal.mul(breech.getAnimateOffset(partialTicks) * -0.5f);
-        CachedBuffers.partialFacing(getPartialModelForState(breech), state, facing)
-                .translate(normal)
-                .rotateCentered(Axis.YP.rotationDegrees(facing.getAxis().isVertical() ? 180 : 0))
-                .light(light)
-                .renderInto(ms, buffer.getBuffer(RenderType.cutoutMipped()));
 
         ItemStack container = breech.getMagazine();
         if (container.getItem() instanceof HeavyAutocannonAmmoContainerItem) {
             boolean flag = facing.getAxis().isVertical();
             Quaternionf q1;
-            if (flag) {
+            /*if (flag) {
                 float f = facing == Direction.UP ? 90 : -90;
                 q1 = Axis.ZP.rotationDegrees(f);
                 q1.mul(Axis.XP.rotationDegrees(f));
             } else {
                 q1 = Axis.YP.rotationDegrees(-90 - facing.toYRot());
                 q1.mul(facing.getAxis() == Direction.Axis.X ? Axis.XP.rotationDegrees(90) : Axis.ZP.rotationDegrees(90));
+            }*/
+
+            if (flag) {
+                float f = facing == Direction.UP ? 90 : -90;
+                q1 = Axis.ZP.rotationDegrees(f);
+                q1.mul(Axis.XP.rotationDegrees(f));
+            } else {
+                q1 = Axis.YP.rotationDegrees(-90 - facing.toYRot());
+                q1.mul(Axis.XP.rotationDegrees(-90));
             }
 
             Direction offset = flag
@@ -71,12 +75,6 @@ public class HeavyAutocannonBreechRenderer extends SmartBlockEntityRenderer<Heav
         }
 
         ms.popPose();
-    }
-
-    private static PartialModel getPartialModelForState(HeavyAutocannonBreechBlockEntity breech) {
-        return breech.getBlockState().getBlock() instanceof HeavyAutocannonBlock cBlock
-                ? CBCBlockPartials.autocannonEjectorFor(cBlock.getAutocannonMaterial())
-                : CBCBlockPartials.CAST_IRON_AUTOCANNON_EJECTOR;
     }
 
     private static BlockState getAmmoContainerModel(ItemStack stack) {
