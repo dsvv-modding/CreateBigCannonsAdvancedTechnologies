@@ -15,6 +15,7 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.recoil_spring.HeavyAutocannonRecoi
 import com.dsvv.cbcat.cannon.medium_rocketpod.MediumRocketPodBlockEntity;
 import com.dsvv.cbcat.cannon.medium_rocketpod.breech.MediumRocketPodBreechBlockEntity;
 import com.dsvv.cbcat.cannon.medium_rocketpod.breech.MediumRocketPodBreechInstance;
+import com.dsvv.cbcat.cannon.medium_rocketpod.breech.MediumRocketPodBreechRenderer;
 import com.dsvv.cbcat.cannon.rocketpod.RocketPodBlockEntity;
 import com.dsvv.cbcat.cannon.rocketpod.breech.RocketPodBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlockEntity;
@@ -75,8 +76,8 @@ public class BlockEntityRegister
 
     public static final BlockEntityEntry<MediumRocketPodBreechBlockEntity> MEDIUM_ROCKET_POD_BREECH_BLOCK_ENTITY = REGISTRATE.blockEntity("medium_rocket_rail_breech_be", MediumRocketPodBreechBlockEntity::new)
             .visual(() -> MediumRocketPodBreechInstance::new)
-            //.renderer(() -> MediumRocketPodBreechRenderer::new)
-            .validBlocks(/*BlockRegister.CAST_IRON_MEDIUM_ROCKET_POD_BREECH, BlockRegister.BRONZE_MEDIUM_ROCKET_POD_BREECH, BlockRegister.STEEL_MEDIUM_ROCKET_POD_BREECH*/ BlockRegister.WROUGHT_IRON_MEDIUM_ROCKET_RAIL_BREECH)
+            .renderer(() -> MediumRocketPodBreechRenderer::new)
+            .validBlocks(BlockRegister.WROUGHT_IRON_MEDIUM_ROCKET_RAIL_BREECH)
             .register();
 
     public static final BlockEntityEntry<ProjectileCartridgeBlockEntity> PROJECTILE_CARTRIDGE_BLOCK_ENTITY = REGISTRATE.blockEntity("projectile_cartridge_be", ProjectileCartridgeBlockEntity::new)

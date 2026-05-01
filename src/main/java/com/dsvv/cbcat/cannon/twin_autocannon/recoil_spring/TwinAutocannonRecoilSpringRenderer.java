@@ -61,13 +61,32 @@ public class TwinAutocannonRecoilSpringRenderer extends SmartBlockEntityRenderer
         BlockRenderDispatcher brd = Minecraft.getInstance().getBlockRenderer();
         Vector3f normal = facing.step();
         normal.mul((1 - scale) * -0.5f);
+        Vector3f offs2 = spring.isVertical() ? new Vector3f(0, 0.25f, 0) : new Vector3f((facing.getAxis() == Direction.Axis.Z ? -0.25f : 0), 0, (facing.getAxis() == Direction.Axis.X ? -0.25f : 0));
+        boolean firstFire = spring.firstFire;
+        boolean isFirstIteration = true;
+
         for (Map.Entry<BlockPos, BlockState> entry : spring.toAnimate.entrySet()) {
             if (entry.getValue() == null) continue;
             ms.pushPose();
             BlockPos pos = entry.getKey();
-            ms.translate(pos.getX() + normal.x(), pos.getY() + normal.y(), pos.getZ() + normal.z());
+            ms.translate(pos.getX(), pos.getY(), pos.getZ());
+            if (!isFirstIteration)
+                ms.translate(offs2.x(), offs2.y(), offs2.z());
+            if (firstFire)
+                ms.translate(normal.x(), normal.y(), normal.z());
             brd.renderSingleBlock(entry.getValue(), ms, buffer, light, OverlayTexture.NO_OVERLAY);
             ms.popPose();
+
+            ms.pushPose();
+            pos = entry.getKey();
+            ms.translate(pos.getX(), pos.getY(), pos.getZ());
+            if (!isFirstIteration)
+                ms.translate(-offs2.x(), -offs2.y(), -offs2.z());
+            if (!firstFire)
+                ms.translate(normal.x(), normal.y(), normal.z());
+            brd.renderSingleBlock(entry.getValue(), ms, buffer, light, OverlayTexture.NO_OVERLAY);
+            ms.popPose();
+            isFirstIteration = false;
         }
 
         ms.popPose();

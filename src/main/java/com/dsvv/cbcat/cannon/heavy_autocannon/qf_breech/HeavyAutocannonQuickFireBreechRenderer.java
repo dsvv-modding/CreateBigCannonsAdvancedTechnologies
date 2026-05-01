@@ -41,22 +41,22 @@ public class HeavyAutocannonQuickFireBreechRenderer extends SmartBlockEntityRend
         Quaternionf qrot;
 
         boolean alongFirst = blockState.getValue(HeavyAutocannonQuickFireBreechBlock.AXIS);
-        if (facing.getAxis().isHorizontal() && !alongFirst) {
-            Direction rotDir = facing.getAxis() == Direction.Axis.X ? Direction.UP : Direction.EAST;
+        if (!alongFirst) {
+            Direction rotDir = facing.getAxisDirection() == Direction.AxisDirection.NEGATIVE ? Direction.WEST : Direction.EAST;
             qrot = Axis.of(rotDir.step()).rotationDegrees(90f);
-        } else if (facing.getAxis() == Direction.Axis.X && alongFirst) {
-            qrot = Axis.of(blockRotation.step()).rotationDegrees(90f);
         } else {
-            qrot = Axis.of(blockRotation.step()).rotationDegrees(0);
+            qrot = Axis.of(blockRotation.step()).rotationDegrees(90f);
         }
+
+        qrot.rotateAxis((float) -Math.PI / 2, new Vector3f(0, 1, 0));
 
         VertexConsumer vcons = buffer.getBuffer(RenderType.solid());
 
         ms.pushPose();
 
         float progress = breech.getOpenProgress(partialTicks);
-        float renderedBreechblockOffset = progress / 16.0f * 13.0f;
-        Vector3f normal = blockRotation.step();
+        float renderedBreechblockOffset = progress / 16.0f * -14.5f;
+        Vector3f normal = Direction.UP.step();
         normal.mul(renderedBreechblockOffset);
 
         CachedBuffers.partialFacing(getPartialModelForState(breech), blockState, blockRotation)
@@ -64,28 +64,6 @@ public class HeavyAutocannonQuickFireBreechRenderer extends SmartBlockEntityRend
                 .rotateCentered(qrot)
                 .light(light)
                 .renderInto(ms, vcons);
-
-        ms.popPose();
-        ms.pushPose();
-
-        float angle = progress * 90;
-        Direction dir = facing.getCounterClockWise(blockRotation.getAxis());
-        Vector3f normal1 = dir.step();
-        Axis axis1 = Axis.of(normal1);
-
-        CachedBuffers.block(AllBlocks.SHAFT.getDefaultState().setValue(BlockStateProperties.AXIS, axis))
-                .rotateCentered(axis1.rotationDegrees(angle))
-                .light(light)
-                .renderInto(ms, vcons);
-
-        ms.popPose();
-        ms.pushPose();
-
-        /*CachedBuffers.partialFacing(CBCBlockPartials.QUICKFIRING_BREECH_LEVER, blockState, dir)
-                .rotateCentered(axis1.rotationDegrees(angle))
-                .translate(normal1)
-                .light(light)
-                .renderInto(ms, vcons);*/
 
         ms.popPose();
     }
