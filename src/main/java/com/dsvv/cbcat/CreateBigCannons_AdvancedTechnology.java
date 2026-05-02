@@ -4,17 +4,23 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoC
 import com.dsvv.cbcat.casting.CannonCastingShapes;
 import com.dsvv.cbcat.config.CBCATConfigs;
 import com.dsvv.cbcat.registry.*;
-import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackLocationInfo;
+import net.minecraft.server.packs.PackSelectionConfig;
 import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.repository.KnownPack;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -23,6 +29,10 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
+import net.neoforged.neoforgespi.language.IModInfo;
+import org.intellij.lang.annotations.Identifier;
+
+import java.util.Optional;
 
 @Mod(CreateBigCannons_AdvancedTechnology.MOD_ID)
 public class CreateBigCannons_AdvancedTechnology
@@ -39,7 +49,7 @@ public class CreateBigCannons_AdvancedTechnology
         //IEventBus modEventBus = NeoForge.EVENT_BUS;
         //MinecraftForge.EVENT_BUS.register(this);
 
-        //NeoForge.EVENT_BUS.register(this); Add back when resource pack is reactivated
+        //NeoForge.EVENT_BUS.register(this);
 
         REGISTRATE.registerEventListeners(modEventBus);
         RECIPE_SERIALIZER_REGISTER.register(modEventBus);
@@ -57,7 +67,7 @@ public class CreateBigCannons_AdvancedTechnology
         CBCATConfigs.registerConfigs(modContainer::registerConfig);
 
         modEventBus.addListener(this::onRegister);
-        //modEventBus.addListener(this::addPackFinders);
+        modEventBus.addListener(this::addPackFinder);
     }
 
     /*public void registerBlockColors(RegisterColorHandlersEvent.Block event) {
@@ -86,14 +96,11 @@ public class CreateBigCannons_AdvancedTechnology
     }
 
     //@SubscribeEvent
-    public void addPackFinders(AddPackFindersEvent event)
+    public void addPackFinder(final AddPackFindersEvent event)
     {
-        if (event.getPackType() == PackType.CLIENT_RESOURCES)
-        {
-            var resourcePath = ModList.get().getModFileById(MOD_ID).getFile().findResource("resourcepacks/green_creative_ammo_boxes");
-            /*var pack = Pack.readMetaAndCreate("builtin/cbc_at", Component.literal("Green Creative Ammo Container"), false,
-                    (path) -> new PathPackResources(path, false, resourcePath), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-            event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));*/
-        }
+        event.addPackFinders(
+                ResourceLocation.fromNamespaceAndPath(MOD_ID, "resourcepacks/green_creative_ammo_boxes"),
+                PackType.CLIENT_RESOURCES, Component.literal("Green Creative Ammo Container"), PackSource.BUILT_IN,
+                false, Pack.Position.TOP);
     }
 }

@@ -1,8 +1,6 @@
 {
   "pack": {
-    "pack_format": 15,
-    "description": "Green Ammo Container",
-    "forge:resource_pack_format": 15,
-    "forge:data_pack_format": 12
+    "pack_format": 34,
+    "description": "Green Ammo Container"
   }
 }
