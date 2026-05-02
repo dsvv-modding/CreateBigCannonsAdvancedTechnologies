@@ -21,25 +21,18 @@ import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 
 import java.util.function.Consumer;
 
-import static com.dsvv.cbcat.debugUtils.DebugUtils.displayCustomClientMessage;
-
-
 public class HeavyAutocannonQuickFireBreechInstance extends AbstractBlockEntityVisual<HeavyAutocannonQuickFireBreechBlockEntity> implements SimpleDynamicVisual
 {
     private final OrientedInstance breechblock;
-    private final Direction blockRotation;
 
     public HeavyAutocannonQuickFireBreechInstance(VisualizationContext ctx, HeavyAutocannonQuickFireBreechBlockEntity blockEntity, float partialTick) {
         super(ctx, blockEntity, partialTick);
-        Direction.Axis axis = getRotationAxis(this.blockState);
         Direction facing = this.blockState.getValue(BlockStateProperties.FACING);
-        Direction blockRotation = facing.getCounterClockWise(axis);
-        if (blockRotation == Direction.DOWN)
-            blockRotation = Direction.UP;
-        this.blockRotation = blockRotation;
 
         this.breechblock = instancerProvider().instancer(InstanceTypes.ORIENTED, Models.partial(getPartialModelForState(this.blockState)))
                 .createInstance();
+
+        if (!(blockState.getBlock() instanceof HeavyAutocannonQuickFireBreechBlock haBreechBlock) || !haBreechBlock.isComplete(blockState)) return;
 
         boolean alongFirst = this.blockState.getValue(HeavyAutocannonQuickFireBreechBlock.AXIS);
         if (alongFirst) {
@@ -52,6 +45,8 @@ public class HeavyAutocannonQuickFireBreechInstance extends AbstractBlockEntityV
     }
 
     private void transformModels(float partialTick) {
+        if (!(blockState.getBlock() instanceof HeavyAutocannonQuickFireBreechBlock haBreechBlock) || !haBreechBlock.isComplete(blockState)) return;
+
         float progress = this.blockEntity.getOpenProgress(partialTick);
         BlockPos visualPos = this.getVisualPosition();
 
@@ -85,14 +80,5 @@ public class HeavyAutocannonQuickFireBreechInstance extends AbstractBlockEntityV
     @Override
     public void beginFrame(DynamicVisual.Context context) {
         this.transformModels(context.partialTick());
-    }
-
-    private static Direction.Axis getRotationAxis(BlockState state) {
-        boolean flag = state.getValue(HeavyAutocannonQuickFireBreechBlock.AXIS);
-        return switch (state.getValue(HeavyAutocannonQuickFireBreechBlock.FACING).getAxis()) {
-            case X -> flag ? Direction.Axis.Y : Direction.Axis.Z;
-            case Y -> flag ? Direction.Axis.X : Direction.Axis.Z;
-            case Z -> flag ? Direction.Axis.X : Direction.Axis.Y;
-        };
     }
 }

@@ -31,6 +31,7 @@ public class HeavyAutocannonQuickFireBreechRenderer extends SmartBlockEntityRend
     protected void renderSafe(HeavyAutocannonQuickFireBreechBlockEntity breech, float partialTicks, PoseStack ms, MultiBufferSource buffer, int light, int overlay) {
         BlockState blockState = breech.getBlockState();
 
+        if (!(blockState.getBlock() instanceof HeavyAutocannonQuickFireBreechBlock breechBlock) || !breechBlock.isComplete(blockState)) return;
         if (VisualizationManager.supportsVisualization(breech.getLevel())) return;
 
         Direction facing = blockState.getValue(BlockStateProperties.FACING);
