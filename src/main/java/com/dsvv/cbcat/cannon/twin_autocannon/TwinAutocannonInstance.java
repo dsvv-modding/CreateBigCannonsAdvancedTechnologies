@@ -1,6 +1,5 @@
 package com.dsvv.cbcat.cannon.twin_autocannon;
 
-import com.dsvv.cbcat.registry.ExtraDataRegister;
 import dev.engine_room.flywheel.api.instance.Instance;
 import dev.engine_room.flywheel.api.visualization.VisualizationContext;
 import dev.engine_room.flywheel.lib.instance.*;

@@ -21,6 +21,7 @@ import com.dsvv.cbcat.cannon.rocketpod.breech.RocketPodBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonInstance;
 import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonBreechBlockEntity;
+import com.dsvv.cbcat.cannon.twin_autocannon.TwinAutocannonRenderer;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechInstance;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechRenderer;
 import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilSpringBlockEntity;
@@ -101,6 +102,7 @@ public class BlockEntityRegister
 
     public static final BlockEntityEntry<TwinAutocannonBlockEntity> TWIN_AUTOCANNON_BLOCK_ENTITY = REGISTRATE.blockEntity("twin_autocannon_be", TwinAutocannonBlockEntity::new)
             .visual(() -> TwinAutocannonInstance::new)
+            .renderer(() -> TwinAutocannonRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_TWIN_AUTOCANNON_BARREL, BlockRegister.BRONZE_TWIN_AUTOCANNON_BARREL, BlockRegister.STEEL_TWIN_AUTOCANNON_BARREL,
                     BlockRegister.CAST_IRON_VERT_TWIN_AUTOCANNON_BARREL, BlockRegister.BRONZE_VERT_TWIN_AUTOCANNON_BARREL, BlockRegister.STEEL_VERT_TWIN_AUTOCANNON_BARREL,
                     BlockRegister.CAST_IRON_TWIN_AUTOCANNON_SILENCER, BlockRegister.BRONZE_TWIN_AUTOCANNON_SILENCER, BlockRegister.STEEL_TWIN_AUTOCANNON_SILENCER,
@@ -116,7 +118,6 @@ public class BlockEntityRegister
             .register();
 
     public static final BlockEntityEntry<TwinAutocannonRecoilSpringBlockEntity> TWIN_AUTOCANNON_RECOIL_SPRING_BLOCK_ENTITY = REGISTRATE.blockEntity("twin_autocannon_recoil_spring_be", TwinAutocannonRecoilSpringBlockEntity::new)
-            .visual(() -> TwinAutocannonInstance::new)
             .visual(() -> TwinAutocannonRecoilSpringInstance::new)
             .renderer(() -> TwinAutocannonRecoilSpringRenderer::new)
             .validBlocks(BlockRegister.CAST_IRON_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.BRONZE_TWIN_AUTOCANNON_RECOIL_SPRING, BlockRegister.STEEL_TWIN_AUTOCANNON_RECOIL_SPRING,

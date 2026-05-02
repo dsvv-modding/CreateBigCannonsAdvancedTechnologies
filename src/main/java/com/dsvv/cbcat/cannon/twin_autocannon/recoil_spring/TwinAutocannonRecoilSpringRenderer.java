@@ -17,8 +17,10 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.phys.Vec3;
 import org.joml.Vector3f;
 import rbasamoyai.createbigcannons.index.CBCAutocannonMaterials;
 
@@ -89,6 +91,18 @@ public class TwinAutocannonRecoilSpringRenderer extends SmartBlockEntityRenderer
             isFirstIteration = false;
         }
 
+        ms.popPose();
+        ms.pushPose();
+        if (!spring.getLeavesItemStack().isEmpty() && spring.getLeavesItemStack().getItem() instanceof BlockItem leavesBlockItem) {
+            ms.pushPose();
+            float x = axis == Direction.Axis.X ? -0.005f : 0;
+            float y = axis == Direction.Axis.Y ? -0.005f : 0;
+            float z = axis == Direction.Axis.Z ? -0.005f : 0;
+            Vec3 leavesOffset = new Vec3(x, y, z).scale(facing.getAxisDirection() == Direction.AxisDirection.NEGATIVE ? -1 : 1);
+            ms.translate(leavesOffset.x(), leavesOffset.y(), leavesOffset.z());
+            brd.renderSingleBlock(leavesBlockItem.getBlock().defaultBlockState(), ms, buffer, light, OverlayTexture.NO_OVERLAY);
+            ms.popPose();
+        }
         ms.popPose();
     }
 

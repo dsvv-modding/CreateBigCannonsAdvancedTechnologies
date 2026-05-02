@@ -5,11 +5,9 @@ import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import org.checkerframework.checker.units.qual.C;
 import rbasamoyai.createbigcannons.cannons.ItemCannonBehavior;
 
 import java.util.List;
@@ -48,6 +46,7 @@ public class TwinAutocannonBlockEntity extends SmartBlockEntity implements ITwin
     public void setLeavesItemStack(ItemStack leavesItemStack) {
         this.leavesItemStack = leavesItemStack;
         this.leavesItemStack.setCount(1);
+        this.setChanged();
         this.updateInstance = true;
     }
 

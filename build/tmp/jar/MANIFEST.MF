@@ -5,7 +5,7 @@ Specification-Version: 1
 Implementation-Title: CBCAT
 Implementation-Version: com.dsvv
 Implementation-Vendor: _dsvv
-Implementation-Timestamp: 2026-05-02T06:27:30+0200
+Implementation-Timestamp: 2026-05-02T08:14:41+0200
 TweakClass: org.spongepowered.asm.launch.MixinTweaker
 MixinConfigs: cbc_at.mixins.json
 
