@@ -28,9 +28,7 @@ public class HA_HEATProjectile extends AbstractFuzedHeavyAutocannonProjectile {
     }
 
     public void tick() {
-        if  (orientation != null) {
-            velocity = orientation.normalize();
-        }
+        velocity = getOrientation().normalize();
         if(spawnCopper)
             spawnCopper();
         super.tick();

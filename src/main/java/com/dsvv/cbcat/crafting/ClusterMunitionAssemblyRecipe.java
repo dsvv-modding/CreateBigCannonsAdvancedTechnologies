@@ -4,13 +4,7 @@ import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractFuzedHeavyAutoca
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.AbstractHeavyAutocannonProjectileItem;
 import com.dsvv.cbcat.registry.*;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.component.DataComponentType;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -21,6 +15,7 @@ import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.SlabBlock;
+import rbasamoyai.createbigcannons.index.CBCDataComponents;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,8 +84,16 @@ public class ClusterMunitionAssemblyRecipe extends CustomRecipe
 
         ItemStack result = BlockRegister.CLUSTER_BLOCK.asStack(1);
 
-        ItemContainerContents fuzeContainer = ItemContainerContents.fromItems(clusterParts);
-        result.set(DataComponentRegistry.CLUSTER_FUZES, fuzeContainer);
+        result.set(DataComponentRegistry.CLUSTER_PROJECTILE, ExtraDataRegister.clusterPartsReverse(reference));
+
+        ArrayList<ItemStack> secondaryFuzes = new ArrayList<>();
+        for (int i = 0; i < clusterParts.size(); i++) {
+            ItemContainerContents secondaryFuzeContainer = clusterParts.get(i).getComponents().get(CBCDataComponents.FUZE);
+            ItemStack secondaryFuze = secondaryFuzeContainer.copyOne();
+            secondaryFuzes.add(secondaryFuze);
+        }
+        result.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(secondaryFuzes));
+
         return result;
     }
 

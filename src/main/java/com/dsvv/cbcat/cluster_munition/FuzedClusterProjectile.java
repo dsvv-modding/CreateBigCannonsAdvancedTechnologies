@@ -87,7 +87,7 @@ public class FuzedClusterProjectile extends FuzedBigCannonProjectile {
             return;
         Vec3[] directions = new Vec3[secondaryFuzes.length];
         for (int i = 0; i < directions.length; i++)
-            directions[i] = this.orientation.normalize().scale(2).add(i % 2 == 0 ? 1 : -1, 0, i % 4 > 1 ? 1 : -1);
+            directions[i] = this.getOrientation().normalize().scale(2).add(i % 2 == 0 ? 1 : -1, 0, i % 4 > 1 ? 1 : -1);
 
         for (int i = 0; i < directions.length; i++) {
             AbstractFuzedHeavyAutocannonProjectile entity = (AbstractFuzedHeavyAutocannonProjectile) projectiles.get().getAutocannonProjectile(projectiles.asStack(), level());
