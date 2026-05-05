@@ -224,7 +224,7 @@ public class BlockRegister
             .item(RevolverDrumItem::new).tab(TabRegister.SIMPLE_TAB.getKey()).build()
             .register();*/
 
-    public static final BlockEntry<ProjectileCartridgeBlock> ARMOR_PIERCING_CARTRIDGE_BLOCK = REGISTRATE.block("armor_piercing_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHOT, "ap shot"))
+    public static final BlockEntry<ProjectileCartridgeBlock> ARMOR_PIERCING_CARTRIDGE_BLOCK = REGISTRATE.block("armor_piercing_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHOT, "ap shot", true))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> ARMOR_PIERCING_SHELL_CARTRIDGE_BLOCK = REGISTRATE.block("armor_piercing_shell_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.AP_SHELL, "ap shell"))
@@ -233,7 +233,7 @@ public class BlockRegister
     public static final BlockEntry<FluidProjectileCartridgeBlock> FLUID_SHELL_CARTRIDGE_BLOCK = REGISTRATE.block("fluid_shell_cartridge", p -> new FluidProjectileCartridgeBlock(p, "fluid shell"))
             .item(FluidProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
-    public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CARTRIDGE_BLOCK = REGISTRATE.block("grapeshot_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot"))
+    public static final BlockEntry<ProjectileCartridgeBlock> GRAPESHOT_CARTRIDGE_BLOCK = REGISTRATE.block("grapeshot_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.BAG_OF_GRAPESHOT, "grapeshot", true))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<FuzedProjectileCartridgeBlock> HIGH_EXPLOSIVE_CARTRIDGE_BLOCK = REGISTRATE.block("high_explosive_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.HE_SHELL, "he shell"))
@@ -245,7 +245,7 @@ public class BlockRegister
     public static final BlockEntry<FuzedProjectileCartridgeBlock> SMOKE_CARTRIDGE_BLOCK = REGISTRATE.block("smoke_cartridge", p -> new FuzedProjectileCartridgeBlock(p, CBCEntityTypes.SMOKE_SHELL, "smoke shell"))
             .item(FuzedProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
-    public static final BlockEntry<ProjectileCartridgeBlock> SOLID_CARTRIDGE_BLOCK = REGISTRATE.block("solid_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.SHOT, "solid shot"))
+    public static final BlockEntry<ProjectileCartridgeBlock> SOLID_CARTRIDGE_BLOCK = REGISTRATE.block("solid_cartridge", p -> new ProjectileCartridgeBlock(p, CBCEntityTypes.SHOT, "solid shot", true))
             .item(ProjectileCartridgeBlockItem::new)/*.tab(TabRegister.SIMPLE_TAB.getKey())*/.build()
             .register();
     public static final BlockEntry<ClusterProjectileCartridgeBlock> CLUSTER_CARTRIDGE_BLOCK = REGISTRATE.block("cluster_cartridge", p -> new ClusterProjectileCartridgeBlock(p, "cluster shell", true))

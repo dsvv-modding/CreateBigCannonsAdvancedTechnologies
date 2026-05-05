@@ -32,7 +32,7 @@ public class ProjectileCartridgeBlock extends InertProjectileBlock implements IP
 
     private String name;
 
-    public ProjectileCartridgeBlock(Properties properties, EntityEntry<? extends AbstractBigCannonProjectile> entityType, String name)
+    protected ProjectileCartridgeBlock(Properties properties, EntityEntry<? extends AbstractBigCannonProjectile> entityType, String name)
     {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
@@ -51,7 +51,7 @@ public class ProjectileCartridgeBlock extends InertProjectileBlock implements IP
     private final MapCodec<? extends DirectionalBlock> codec;
 
     private ProjectileCartridgeBlock fromSelf(Properties properties) {
-        return new ProjectileCartridgeBlock(properties, this.projectileEntityEntry, name);
+        return new ProjectileCartridgeBlock(properties, this.projectileEntityEntry, name, multipleCharges);
     }
 
     @Override protected MapCodec<? extends DirectionalBlock> codec() { return this.codec; }
