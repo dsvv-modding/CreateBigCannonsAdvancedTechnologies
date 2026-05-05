@@ -85,6 +85,7 @@ public class MediumRocketPodBreechBlockEntity extends MediumRocketPodBlockEntity
                 if (this.inputBuffer[i].isEmpty()) {
                     this.inputBuffer[i] = stack.copy();
                     this.inputBuffer[i].setCount(1);
+                    this.updateInstance = true;
                     return true;
                 }
         }

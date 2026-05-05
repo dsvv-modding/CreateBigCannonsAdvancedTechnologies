@@ -3,6 +3,9 @@ package com.dsvv.cbcat.mixin;
 import com.dsvv.cbcat.cannon.heavy_autocannon.breech.HeavyAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.heavy_autocannon.contraption.MountedHeavyAutocannonContraption;
 import com.dsvv.cbcat.cannon.heavy_autocannon.munitions.box.HeavyAutocannonAmmoContainerItem;
+import com.dsvv.cbcat.cannon.medium_rocketpod.breech.MediumRocketPodBreechBlockEntity;
+import com.dsvv.cbcat.cannon.medium_rocketpod.contraption.MountedMediumRocketRailContraption;
+import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.AbstractMediumRocketItem;
 import com.dsvv.cbcat.cannon.twin_autocannon.breech.TwinAutocannonBreechBlockEntity;
 import com.dsvv.cbcat.cannon.twin_autocannon.contraption.MountedTwinAutocannonContraption;
 import com.simibubi.create.content.kinetics.mechanicalArm.AllArmInteractionPointTypes;
@@ -28,13 +31,15 @@ public abstract class CannonMountPointMixin extends AllArmInteractionPointTypes.
         super(type, level, pos, state);
     }
 
-    @Inject(method = "Lrbasamoyai/createbigcannons/cannons/big_cannons/breeches/quickfiring_breech/CannonMountPoint;getInsertedResultAndDoSomething(Lnet/minecraft/world/item/ItemStack;ZLrbasamoyai/createbigcannons/cannon_control/contraption/AbstractMountedCannonContraption;Lrbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity;)Lnet/minecraft/world/item/ItemStack;",
+    @Inject(method = "getInsertedResultAndDoSomething(Lnet/minecraft/world/item/ItemStack;ZLrbasamoyai/createbigcannons/cannon_control/contraption/AbstractMountedCannonContraption;Lrbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity;)Lnet/minecraft/world/item/ItemStack;",
     at = @At("HEAD"), cancellable = true, remap = false)
     public void insertIntoNewAutocannon(ItemStack stack, boolean simulate, AbstractMountedCannonContraption cannon, PitchOrientedContraptionEntity poce, CallbackInfoReturnable<ItemStack> cir) {
         if (poce.getContraption() instanceof MountedTwinAutocannonContraption twinAutocannon)
             cir.setReturnValue(twinAutocannonInsert(stack, simulate, twinAutocannon, poce));
         if (poce.getContraption() instanceof MountedHeavyAutocannonContraption heavyAutocannon)
             cir.setReturnValue(heavyAutocannonInsert(stack, simulate, heavyAutocannon, poce));
+        if (poce.getContraption() instanceof MountedMediumRocketRailContraption rocketRail)
+            cir.setReturnValue(mediumRocketRailInsert(stack, simulate, rocketRail, poce));
     }
 
     private static ItemStack twinAutocannonInsert(ItemStack stack, boolean simulate, MountedTwinAutocannonContraption autocannon, PitchOrientedContraptionEntity poce) {
@@ -63,5 +68,25 @@ public abstract class CannonMountPointMixin extends AllArmInteractionPointTypes.
         if (simulate) return ItemStack.EMPTY;
         breech.setMagazine(stack);
         return oldContainer.isEmpty() ? ItemStack.EMPTY : oldContainer.copy();
+    }
+
+    private static ItemStack mediumRocketRailInsert(ItemStack stack, boolean simulate, MountedMediumRocketRailContraption rocketRail, PitchOrientedContraptionEntity poce) {
+        if (!(stack.getItem() instanceof AbstractMediumRocketItem)) return stack;
+        BlockEntity be = rocketRail.presentBlockEntities.get(rocketRail.getStartPos());
+        if (!(be instanceof MediumRocketPodBreechBlockEntity breech)) return stack;
+        if (breech.isInputFull()) return stack;
+
+        if (simulate) return ItemStack.EMPTY;
+        boolean succeeded = breech.addToInputBuffer(stack);
+        if (succeeded) {
+            if (stack.getCount() == 1)
+                return ItemStack.EMPTY;
+            else {
+                ItemStack result = stack.copy();
+                result.setCount(result.getCount() - 1);
+                return result;
+            }
+        }
+        return stack.copy();
     }
 }
