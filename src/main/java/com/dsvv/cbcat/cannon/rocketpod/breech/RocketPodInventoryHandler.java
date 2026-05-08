@@ -1,6 +1,7 @@
 package com.dsvv.cbcat.cannon.rocketpod.breech;
 
 import com.dsvv.cbcat.cannon.medium_rocketpod.munitions.MediumRocketItem;
+import com.dsvv.cbcat.cannon.rocketpod.munitions.AbstractRocketItem;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.IItemHandler;
 
@@ -55,6 +56,6 @@ public record RocketPodInventoryHandler (RocketPodBreechBlockEntity breech) impl
 
     @Override
     public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-        return stack.getItem() instanceof MediumRocketItem;
+        return stack.getItem() instanceof AbstractRocketItem;
     }
 }

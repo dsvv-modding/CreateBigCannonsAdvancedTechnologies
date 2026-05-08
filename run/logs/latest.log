@@ -1,12 +1,15 @@
-[02Mai2026 16:16:32.810] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.227, --fml.neoFormVersion, 20240808.144430, --nogui]
-[02Mai2026 16:16:32.813] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.6+7-LTS
-[02Mai2026 16:16:32.813] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.6 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[02Mai2026 16:16:32.871] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
-[02Mai2026 16:16:32.890] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
-[02Mai2026 16:16:32.933] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Daniel/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
-[02Mai2026 16:16:32.946] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
-[02Mai2026 16:16:33.299] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[02Mai2026 16:16:33.301] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[07Mai2026 19:01:13.832] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.227, --assetIndex, 17, --assetsDir, C:\\Users\\Daniel\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.227, --fml.neoFormVersion, 20240808.144430]
+[07Mai2026 19:01:13.836] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[07Mai2026 19:01:13.838] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.6 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[07Mai2026 19:01:13.899] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
+[07Mai2026 19:01:13.926] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[07Mai2026 19:01:14.019] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[07Mai2026 19:01:14.160] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[07Mai2026 19:01:14.250] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Daniel/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[07Mai2026 19:01:14.257] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\fml.toml is not correct. Correcting
+[07Mai2026 19:01:14.436] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4070/PCIe/SSE2 GL version 4.6.0 NVIDIA 581.42, NVIDIA Corporation
+[07Mai2026 19:01:14.570] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[07Mai2026 19:01:14.571] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
@@ -19,171 +22,665 @@
 		NeoForge 21.1.227 (neoforge)
 		Ponder 1.0.82+mc1.21.1 (ponder)
 		Ritchie's Projectile Library 2.1.2 (ritchiesprojectilelib)
-[02Mai2026 16:16:34.210] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[02Mai2026 16:16:34.212] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
-[02Mai2026 16:16:34.224] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, ., --nogui]
-[02Mai2026 16:16:34.339] [main/WARN] [mixin/]: Reference map 'ponder.refmap.json' for ponder-common.mixins.json could not be read. If this is a development environment you can ignore this message
-[02Mai2026 16:16:34.597] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/slab/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity)
-[02Mai2026 16:16:34.598] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.framedblocks.FramedAdjustableDoubleBlockEntityAccessor from mod createbigcannons
-[02Mai2026 16:16:34.681] [main/WARN] [mixin/]: Error loading class: org/jetbrains/annotations/ApiStatus$ScheduledForRemoval (java.lang.ClassNotFoundException: org.jetbrains.annotations.ApiStatus$ScheduledForRemoval)
-[02Mai2026 16:16:34.912] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
-[02Mai2026 16:16:40.043] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[02Mai2026 16:16:40.043] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[02Mai2026 16:16:40.045] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[02Mai2026 16:16:40.046] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[02Mai2026 16:16:40.046] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[02Mai2026 16:16:40.128] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.227, for MC 1.21.1
-[02Mai2026 16:16:40.130] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.10 initializing! Commit hash: ac0c444d9828da3453ae8cc65338e8de063286fb
-[02Mai2026 16:16:42.733] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[02Mai2026 16:16:42.756] [NeoForge Version Check/INFO] [net.neoforged.fml.VersionChecker/]: [create] Starting version check at https://api.modrinth.com/updates/create/forge_updates.json?neoforge=only
-[02Mai2026 16:16:42.789] [main/WARN] [net.neoforged.neoforge.common.CommonHooks/WP]: The following mods have version differences that were not resolved:
-create (version 6.0.9 -> 6.0.10)
-ponder (version 1.0.81+mc1.21.1 -> 1.0.82+mc1.21.1)
-Things may not work well.
-[02Mai2026 16:16:42.794] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23125!/assets/.mcassetsroot' uses unexpected schema
-[02Mai2026 16:16:42.794] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23125!/data/.mcassetsroot' uses unexpected schema
-[02Mai2026 16:16:42.859] [main/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
-[02Mai2026 16:16:42.864] [main/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
-[02Mai2026 16:16:43.178] [NeoForge Version Check/INFO] [net.neoforged.fml.VersionChecker/]: [create] Found status: OUTDATED Current: 6.0.10 Target: 6.0.10+mc1.21.1
-[02Mai2026 16:16:43.728] [main/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_breech_cast_mould
+[07Mai2026 19:01:15.284] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[07Mai2026 19:01:15.286] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[07Mai2026 19:01:15.303] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.227, --gameDir, ., --assetsDir, C:\Users\Daniel\.gradle\caches\neoformruntime\assets, --assetIndex, 17]
+[07Mai2026 19:01:15.363] [main/WARN] [mixin/]: Reference map 'ponder.refmap.json' for ponder-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[07Mai2026 19:01:15.544] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/slab/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity)
+[07Mai2026 19:01:15.544] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.slab.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.framedblocks.FramedAdjustableDoubleBlockEntityAccessor from mod createbigcannons
+[07Mai2026 19:01:15.733] [main/WARN] [mixin/]: Error loading class: org/jetbrains/annotations/ApiStatus$ScheduledForRemoval (java.lang.ClassNotFoundException: org.jetbrains.annotations.ApiStatus$ScheduledForRemoval)
+[07Mai2026 19:01:15.759] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[07Mai2026 19:01:17.136] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 319 milliseconds
+[07Mai2026 19:01:20.894] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[07Mai2026 19:01:20.895] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[07Mai2026 19:01:20.897] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[07Mai2026 19:01:20.897] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[07Mai2026 19:01:20.898] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[07Mai2026 19:01:20.980] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[07Mai2026 19:01:20.980] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Daniel/Desktop/CBCAT/build/moddev/artifacts/neoforge-21.1.227.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[07Mai2026 19:01:21.010] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[07Mai2026 19:01:21.024] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[07Mai2026 19:01:21.099] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[07Mai2026 19:01:21.301] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.227, for MC 1.21.1
+[07Mai2026 19:01:21.392] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.10 initializing! Commit hash: ac0c444d9828da3453ae8cc65338e8de063286fb
+[07Mai2026 19:01:21.405] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[07Mai2026 19:01:21.409] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.879 milliseconds
+[07Mai2026 19:01:24.581] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [cbc_at]
+[07Mai2026 19:01:24.768] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/createbigcannons, mod/flywheel, mod/ritchiesprojectilelib, mod/ponder, mod/create, mod/cbc_at, mod/neoforge, mod/jei
+[07Mai2026 19:01:24.837] [NeoForge Version Check/INFO] [net.neoforged.fml.VersionChecker/]: [create] Starting version check at https://api.modrinth.com/updates/create/forge_updates.json?neoforge=only
+[07Mai2026 19:01:24.871] [Worker-Main-13/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[07Mai2026 19:01:24.940] [Worker-Main-3/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[07Mai2026 19:01:25.508] [NeoForge Version Check/INFO] [net.neoforged.fml.VersionChecker/]: [create] Found status: OUTDATED Current: 6.0.10 Target: 6.0.10+mc1.21.1
+[07Mai2026 19:01:25.950] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/cast_iron_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/cast_iron_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/cast_iron_assembled_rocket_pod_rail.json
+[07Mai2026 19:01:25.951] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/bronze_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/bronze_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/bronze_assembled_rocket_pod_rail.json
+[07Mai2026 19:01:25.951] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/rocket_pod/steel_assembled_rocket_pod_rail' referenced from: cbc_at:block/rocket_pod/steel_assembled_rocket_pod_rail: java.io.FileNotFoundException: cbc_at:models/block/rocket_pod/steel_assembled_rocket_pod_rail.json
+[07Mai2026 19:01:25.952] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail' referenced from: cbc_at:block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail: java.io.FileNotFoundException: cbc_at:models/block/medium_rocket_rail/wrought_iron_assembled_medium_rocket_rail.json
+[07Mai2026 19:01:25.956] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer' referenced from: cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_silencer.json
+[07Mai2026 19:01:25.957] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake' referenced from: cbc_at:block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/twin_autocannon/cast_iron_assembled_vert_twin_autocannon_muzzle_brake.json
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=up,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=down,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=up,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=south,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=west,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=north,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=down,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=east,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=south,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=north,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=east,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_cast_iron_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=true,facing=west,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=up,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=north,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=south,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=down,waterlogged=true'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=south,waterlogged=false'
+[07Mai2026 19:01:25.961] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=west,waterlogged=true'
+[07Mai2026 19:01:25.962] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=east,waterlogged=true'
+[07Mai2026 19:01:25.962] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=west,waterlogged=false'
+[07Mai2026 19:01:25.962] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=down,waterlogged=false'
+[07Mai2026 19:01:25.962] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=north,waterlogged=true'
+[07Mai2026 19:01:25.962] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=east,waterlogged=false'
+[07Mai2026 19:01:25.962] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Exception loading blockstate definition: 'cbc_at:blockstates/unbored_bronze_rocket_pod_rail.json' missing model for variant: 'cbc_at:unbored_bronze_rocket_pod_rail#assembled=true,facing=up,waterlogged=true'
+[07Mai2026 19:01:25.965] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_silencer.json
+[07Mai2026 19:01:25.965] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_silencer.json
+[07Mai2026 19:01:25.966] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer' referenced from: cbc_at:block/autocannon/unbored_steel_assembled_autocannon_silencer: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_silencer.json
+[07Mai2026 19:01:25.966] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_cast_iron_assembled_autocannon_muzzle_brake.json
+[07Mai2026 19:01:25.967] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_bronze_assembled_autocannon_muzzle_brake.json
+[07Mai2026 19:01:25.967] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake' referenced from: cbc_at:block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake: java.io.FileNotFoundException: cbc_at:models/block/autocannon/unbored_steel_assembled_autocannon_muzzle_brake.json
+[07Mai2026 19:01:25.979] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/cast_iron_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/cast_iron_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/cast_iron_recoil_spring.json
+[07Mai2026 19:01:25.979] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/steel_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/steel_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/steel_recoil_spring.json
+[07Mai2026 19:01:25.980] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'cbc_at:block/heavy_autocannon/bronze_recoil_spring' referenced from: cbc_at:block/heavy_autocannon/bronze_recoil_spring: java.io.FileNotFoundException: cbc_at:models/block/heavy_autocannon/bronze_recoil_spring.json
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=up:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=up,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_recoil_spring#standalone:
+    minecraft:textures/atlas/blocks.png:minecraft:0
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=west,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=north,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=east,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=down:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=west,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=east,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.669] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=east,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=east,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=west:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=down,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=north:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=up,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_qfbreech_mould#inventory:
+    minecraft:textures/atlas/blocks.png:minecraft:cast_mould
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=south,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#inventory:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=west,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=up,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=north,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=west,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_fume_extractor#inventory:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=down,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=south,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=south,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=down,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=west,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=east:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=north,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=south,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=south,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=west,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:wrought_iron_medium_rocket_rail_breech#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_medium_rocket_rail
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:heavy_autocannon_empty_cartridge#inventory:
+    minecraft:textures/atlas/blocks.png:minecraft:cartridge_side
+[07Mai2026 19:01:26.670] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=west,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=down,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=north,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=north,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=east,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=south,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=south:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=north,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=east,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=east:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_vert_recoil_spring#standalone:
+    minecraft:textures/atlas/blocks.png:minecraft:0
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_fume_extractor#facing=up:
+    minecraft:textures/atlas/blocks.png:minecraft:bronze_cannon_barrel_side
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=down,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=up,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_breech#facing=up,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=up,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=down,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=south,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:wrought_iron_medium_rocket_rail#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_medium_rocket_rail
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=south,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=down:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=up,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=down,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:bronze_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_breech#facing=down,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.671] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_breech#facing=up,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_steel_rocket_pod_rail#assembled=false,facing=up,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#inventory:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/bronze_vert_recoil_spring#standalone:
+    minecraft:textures/atlas/blocks.png:minecraft:0
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_breech#facing=north,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_breech#facing=east,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=south:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_rail#assembled=false,facing=east,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_bronze_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=west,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:steel_rocket_pod_breech#facing=east,waterlogged=true:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/bronze_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:cast_iron_rocket_pod_rail#assembled=false,facing=north,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=west:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:block/twin_autocannon/cast_iron_recoil_spring#standalone:
+    minecraft:textures/atlas/blocks.png:minecraft:0
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:built_up_nethersteel_rifled_barrel#facing=north:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/built_up_nethersteel_barrel_side
+[07Mai2026 19:01:26.672] [Worker-Main-12/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cbc_at:unbored_cast_iron_rocket_pod_rail#assembled=false,facing=west,waterlogged=false:
+    minecraft:textures/atlas/blocks.png:cbc_at:block/cast_iron_rocket_pod
+[07Mai2026 19:01:26.876] [Worker-Main-5/INFO] [PonderIndex/]: Registering Ponder Scenes took 86.62 ms
+[07Mai2026 19:01:26.880] [Worker-Main-5/INFO] [PonderIndex/]: Registering Ponder Tags took 3.526 ms
+[07Mai2026 19:01:27.022] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[07Mai2026 19:01:27.022] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[07Mai2026 19:01:27.061] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Realtek HD Audio 2nd output (Realtek(R) Audio)
+[07Mai2026 19:01:27.062] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[07Mai2026 19:01:27.136] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[07Mai2026 19:01:27.152] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[07Mai2026 19:01:27.153] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[07Mai2026 19:01:27.153] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[07Mai2026 19:01:27.154] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[07Mai2026 19:01:27.160] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[07Mai2026 19:01:27.160] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[07Mai2026 19:01:27.161] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[07Mai2026 19:01:27.161] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[07Mai2026 19:01:27.213] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[07Mai2026 19:01:27.215] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[07Mai2026 19:01:27.215] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[07Mai2026 19:01:27.216] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[07Mai2026 19:01:27.216] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[07Mai2026 19:01:27.229] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[07Mai2026 19:01:27.322] [Render thread/INFO] [flywheel/backend/shaders/]: Loaded 77 shader sources in 21,571 ms
+[07Mai2026 19:01:27.344] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 58 train hat configurations.
+[07Mai2026 19:01:27.345] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[07Mai2026 19:01:27.345] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[07Mai2026 19:01:31.539] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
+[07Mai2026 19:01:31.544] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
+[07Mai2026 19:01:32.530] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_breech_cast_mould
 com.google.gson.JsonParseException: Failed to parse either. First: No key amount in MapLike[{"item":"cbc_at:rocket_pod_breech_mould"}]; No key id in MapLike[{"item":"cbc_at:rocket_pod_breech_mould"}]; Second: Failed to parse either. First: No key id in MapLike[{"item":"cbc_at:rocket_pod_breech_mould"}]; Second: Failed to parse either. First: Not a JSON object: "cbc_at:rocket_pod_breech_mould"; Second: Compat cannot be deserialized
-	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%2379!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23125!/:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23189!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire$$$capture(CompletableFuture.java:718) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java) ~[?:?]
 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:872) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:861) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:204) ~[neoforge-21.1.227.jar%23125!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:122) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:135) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldDataBlocking(WorldOpenFlows.java:201) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:142) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelStem(WorldOpenFlows.java:346) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckVersionCompatibility(WorldOpenFlows.java:335) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelData(WorldOpenFlows.java:297) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorld(WorldOpenFlows.java:261) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:498) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:481) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:303) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:43) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:451) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.onPress(MouseHandler.java:95) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:147) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeServerDevLaunchHandler.runService(NeoForgeServerDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%2382!/:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23128!/:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[02Mai2026 16:16:43.757] [main/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:munition/rocket/rocket_fuzing
+[07Mai2026 19:01:32.558] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:munition/rocket/rocket_fuzing
 com.google.gson.JsonParseException: Unknown registry key in ResourceKey[minecraft:root / minecraft:recipe_serializer]: cbc_at:rocket_munition_fuzing
-	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%2379!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23125!/:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23189!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire$$$capture(CompletableFuture.java:718) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java) ~[?:?]
 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:872) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:861) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:204) ~[neoforge-21.1.227.jar%23125!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:122) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:135) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldDataBlocking(WorldOpenFlows.java:201) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:142) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelStem(WorldOpenFlows.java:346) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckVersionCompatibility(WorldOpenFlows.java:335) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelData(WorldOpenFlows.java:297) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorld(WorldOpenFlows.java:261) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:498) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:481) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:303) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:43) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:451) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.onPress(MouseHandler.java:95) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:147) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeServerDevLaunchHandler.runService(NeoForgeServerDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%2382!/:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23128!/:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[02Mai2026 16:16:43.769] [main/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/twin_autocannon_barrel_cast_mould
+[07Mai2026 19:01:32.572] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/twin_autocannon_barrel_cast_mould
 com.google.gson.JsonParseException: Failed to parse either. First: No key amount in MapLike[{"item":"cbc_at:twin_autocannon_barrel_mould"}]; No key id in MapLike[{"item":"cbc_at:twin_autocannon_barrel_mould"}]; Second: Failed to parse either. First: No key id in MapLike[{"item":"cbc_at:twin_autocannon_barrel_mould"}]; Second: Failed to parse either. First: Not a JSON object: "cbc_at:twin_autocannon_barrel_mould"; Second: Compat cannot be deserialized
-	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%2379!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23125!/:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23189!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire$$$capture(CompletableFuture.java:718) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java) ~[?:?]
 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:872) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:861) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:204) ~[neoforge-21.1.227.jar%23125!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:122) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:135) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldDataBlocking(WorldOpenFlows.java:201) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:142) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelStem(WorldOpenFlows.java:346) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckVersionCompatibility(WorldOpenFlows.java:335) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelData(WorldOpenFlows.java:297) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorld(WorldOpenFlows.java:261) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:498) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:481) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:303) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:43) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:451) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.onPress(MouseHandler.java:95) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:147) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeServerDevLaunchHandler.runService(NeoForgeServerDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%2382!/:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23128!/:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[02Mai2026 16:16:43.778] [main/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_rail_cast_mould
+[07Mai2026 19:01:32.583] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe cbc_at:cutting/rocket_pod_rail_cast_mould
 com.google.gson.JsonParseException: Failed to parse either. First: No key amount in MapLike[{"item":"cbc_at:rocket_pod_rail_mould"}]; No key id in MapLike[{"item":"cbc_at:rocket_pod_rail_mould"}]; Second: Failed to parse either. First: No key id in MapLike[{"item":"cbc_at:rocket_pod_rail_mould"}]; Second: Failed to parse either. First: Not a JSON object: "cbc_at:rocket_pod_rail_mould"; Second: Compat cannot be deserialized
-	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%2379!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23125!/:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar%23121!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:60) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:36) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.227.jar%23189!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire$$$capture(CompletableFuture.java:718) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java) ~[?:?]
 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:872) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.blockUntilDone(Util.java:861) ~[neoforge-21.1.227.jar%23125!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:204) ~[neoforge-21.1.227.jar%23125!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:122) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:135) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldDataBlocking(WorldOpenFlows.java:201) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:142) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelStem(WorldOpenFlows.java:346) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckVersionCompatibility(WorldOpenFlows.java:335) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelData(WorldOpenFlows.java:297) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorld(WorldOpenFlows.java:261) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:498) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:481) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:303) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:43) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:451) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.onPress(MouseHandler.java:95) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:98) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:207) ~[neoforge-21.1.227.jar%23189!/:?]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23183!/:build 5]
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23172!/:build 5]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:147) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.227.jar%23189!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.227.jar%23189!/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeServerDevLaunchHandler.runService(NeoForgeServerDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23102!/:4.0]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%2382!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%2382!/:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23146!/:4.0]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23128!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23128!/:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?]
 	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[02Mai2026 16:16:43.782] [main/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 3014 recipes
-[02Mai2026 16:16:44.041] [main/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2578 advancements
-[02Mai2026 16:16:45.164] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting minecraft server version 1.21.1
-[02Mai2026 16:16:45.164] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Loading properties
-[02Mai2026 16:16:45.164] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Default game type: SURVIVAL
-[02Mai2026 16:16:45.164] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[02Mai2026 16:16:45.197] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting Minecraft server on *:25565
-[02Mai2026 16:16:45.246] [Server thread/INFO] [net.minecraft.server.network.ServerConnectionListener/]: Using default channel type
-[02Mai2026 16:16:45.268] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[02Mai2026 16:16:45.268] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: The server will make no attempt to authenticate usernames. Beware.
-[02Mai2026 16:16:45.268] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[02Mai2026 16:16:45.268] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: To change this, set "online-mode" to "true" in the server.properties file.
-[02Mai2026 16:16:45.284] [Server thread/WARN] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Configuration file C:\Users\Daniel\Desktop\CBCAT\run\config\create-server.toml is not correct. Correcting
-[02Mai2026 16:16:45.330] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Preparing level "world"
-[02Mai2026 16:16:45.773] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[02Mai2026 16:16:45.951] [worldgen/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[02Mai2026 16:16:46.122] [Server thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 348 ms
-[02Mai2026 16:16:46.122] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Done (0.847s)! For help, type "help"
-[02Mai2026 16:16:46.155] [Server thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [cbc_at]
-[02Mai2026 16:16:46.169] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[02Mai2026 16:16:56.553] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: _dsvv[/[fe80::db9f:8818:9c51:2c5f]:57029] logged in with entity id 62 at (-0.5, 109.0, 32.5)
-[02Mai2026 16:16:56.579] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: _dsvv joined the game
+[07Mai2026 19:01:32.587] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 3014 recipes
+[07Mai2026 19:01:32.781] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2578 advancements
+[07Mai2026 19:01:34.052] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
+[07Mai2026 19:01:34.052] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[07Mai2026 19:01:34.114] [Server thread/INFO] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Found config file override in path .\saves\Tests\serverconfig\ritchiesprojectilelib-server.toml
+[07Mai2026 19:01:34.116] [Server thread/INFO] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Found config file override in path .\saves\Tests\serverconfig\jei-server.toml
+[07Mai2026 19:01:34.118] [Server thread/INFO] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Found config file override in path .\saves\Tests\serverconfig\cbc_at-server.toml
+[07Mai2026 19:01:34.119] [Server thread/INFO] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Found config file override in path .\saves\Tests\serverconfig\createbigcannons-server.toml
+[07Mai2026 19:01:34.120] [Server thread/INFO] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Found config file override in path .\saves\Tests\serverconfig\create-server.toml
+[07Mai2026 19:01:34.797] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[07Mai2026 19:01:35.007] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[07Mai2026 19:01:35.127] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[07Mai2026 19:01:35.157] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 350 ms
+[07Mai2026 19:01:35.203] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 32, from 10
+[07Mai2026 19:01:35.203] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 32, from 0
+[07Mai2026 19:01:35.535] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
+[07Mai2026 19:01:35.537] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
+[07Mai2026 19:01:35.821] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:d22be6b2] logged in with entity id 93 at (67.77170845966877, 76.59933517521989, -250.84699918171427)
+[07Mai2026 19:01:35.876] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[07Mai2026 19:01:36.133] [Render thread/INFO] [flywheel/]: Started 10 worker threads
+[07Mai2026 19:01:36.180] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[07Mai2026 19:01:36.188] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[07Mai2026 19:01:36.196] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 7.267 milliseconds
+[07Mai2026 19:01:36.197] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[07Mai2026 19:01:36.200] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 2.880 milliseconds
+[07Mai2026 19:01:36.202] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[07Mai2026 19:01:36.278] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 2 duplicate items were found in 'Create Big Cannons' creative tab's: displayItems
+This may indicate that these types of item need a subtype interpreter added to JEI:
+[createbigcannons:big_cartridge, createbigcannons:autocannon_cartridge]
+[07Mai2026 19:01:36.299] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: 22 duplicate items were found in 'CBC: Advanced Technologies' creative tab's: displayItems
+This may indicate that these types of item need a subtype interpreter added to JEI:
+[cbc_at:cluster_cartridge, cbc_at:cluster, cbc_at:heavy_autocannon_cartridge, cbc_at:cluster_caseless]
+[07Mai2026 19:01:36.321] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 118.7 milliseconds
+[07Mai2026 19:01:36.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 119.8 milliseconds
+[07Mai2026 19:01:36.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
+[07Mai2026 19:01:36.327] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 4.927 milliseconds
+[07Mai2026 19:01:36.328] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
+[07Mai2026 19:01:36.329] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 983.8 microseconds
+[07Mai2026 19:01:36.349] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
+[07Mai2026 19:01:36.350] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 877.3 microseconds
+[07Mai2026 19:01:36.367] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[07Mai2026 19:01:36.381] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 13.86 milliseconds
+[07Mai2026 19:01:36.395] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: createbigcannons:jei_plugin took 13.30 milliseconds
+[07Mai2026 19:01:36.454] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create:jei_plugin took 58.32 milliseconds
+[07Mai2026 19:01:36.461] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 94.04 milliseconds
+[07Mai2026 19:01:36.463] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[07Mai2026 19:01:36.467] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 4.606 milliseconds
+[07Mai2026 19:01:36.469] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[07Mai2026 19:01:36.474] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 4.616 milliseconds
+[07Mai2026 19:01:36.475] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[07Mai2026 19:01:36.494] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 18.83 milliseconds
+[07Mai2026 19:01:36.495] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[07Mai2026 19:01:36.496] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 827.1 microseconds
+[07Mai2026 19:01:36.498] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[07Mai2026 19:01:36.670] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 172.6 milliseconds
+[07Mai2026 19:01:36.687] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: createbigcannons:jei_plugin took 16.57 milliseconds
+[07Mai2026 19:01:36.784] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: create:jei_plugin took 96.78 milliseconds
+[07Mai2026 19:01:36.817] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 26.06 milliseconds
+[07Mai2026 19:01:36.817] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 319.7 milliseconds
+[07Mai2026 19:01:36.827] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[07Mai2026 19:01:36.832] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 4.744 milliseconds
+[07Mai2026 19:01:36.839] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[07Mai2026 19:01:36.842] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[07Mai2026 19:01:36.859] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 16.13 milliseconds
+[07Mai2026 19:01:36.863] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[07Mai2026 19:01:36.865] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[07Mai2026 19:01:36.866] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[07Mai2026 19:01:36.926] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 60.07 milliseconds
+[07Mai2026 19:01:36.926] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[07Mai2026 19:01:36.968] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2791 ingredients
+[07Mai2026 19:01:37.193] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2791 ingredients
+[07Mai2026 19:01:37.194] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 268.1 milliseconds
+[07Mai2026 19:01:37.293] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 428.6 milliseconds
+[07Mai2026 19:01:37.293] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 429.5 milliseconds
+[07Mai2026 19:01:37.294] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 455.1 milliseconds
+[07Mai2026 19:01:37.295] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[07Mai2026 19:01:37.295] [Render thread/INFO] [rbasamoyai.createbigcannons.CreateBigCannons/]: Attempting to load CBC deployer recipes
+[07Mai2026 19:01:37.301] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 6.206 milliseconds
+[07Mai2026 19:01:37.301] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.121 seconds
+[07Mai2026 19:01:37.336] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 248 advancements
+[07Mai2026 19:01:38.278] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Mai2026 19:01:38.312] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[07Mai2026 19:01:38.355] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[07Mai2026 19:01:38.355] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[07Mai2026 19:08:41.815] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 256186ms or 5123 ticks behind
+[07Mai2026 19:08:41.879] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Mai2026 19:08:41.889] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[07Mai2026 19:08:42.526] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[07Mai2026 19:08:42.526] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[07Mai2026 19:10:41.132] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 94654ms or 1893 ticks behind
+[07Mai2026 19:10:41.132] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Mai2026 19:10:41.152] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[07Mai2026 19:10:41.163] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[07Mai2026 19:10:41.163] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[07Mai2026 19:10:45.380] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Mai2026 19:10:45.399] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[07Mai2026 19:10:45.410] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[07Mai2026 19:10:45.410] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[07Mai2026 19:13:06.100] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 9872ms or 197 ticks behind
+[07Mai2026 19:13:06.129] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Mai2026 19:13:06.138] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[07Mai2026 19:13:06.148] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[07Mai2026 19:13:06.148] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[07Mai2026 19:13:10.279] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Mai2026 19:13:10.296] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[07Mai2026 19:13:10.307] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[07Mai2026 19:13:10.307] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[07Mai2026 19:25:20.090] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
+[07Mai2026 19:25:20.090] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
+[07Mai2026 19:25:20.091] [Render thread/INFO] [mezz.jei.neoforge.plugins.neoforge.NeoForgeGuiPlugin/]: Stopping JEI GUI
+[07Mai2026 19:25:20.093] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 2.688 milliseconds
+[07Mai2026 19:25:20.143] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[07Mai2026 19:25:20.144] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[07Mai2026 19:25:20.155] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
+[07Mai2026 19:25:20.199] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[07Mai2026 19:25:20.199] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[07Mai2026 19:25:20.199] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[07Mai2026 19:25:20.462] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:overworld
+[07Mai2026 19:25:20.606] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_nether
+[07Mai2026 19:25:20.614] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Tests]'/minecraft:the_end
+[07Mai2026 19:25:20.624] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Tests): All chunks are saved
+[07Mai2026 19:25:20.624] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[07Mai2026 19:25:20.624] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[07Mai2026 19:25:20.625] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[07Mai2026 19:25:21.678] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
