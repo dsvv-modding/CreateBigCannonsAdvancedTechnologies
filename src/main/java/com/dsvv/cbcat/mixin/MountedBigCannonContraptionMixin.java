@@ -9,7 +9,9 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.network.protocol.Packet;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.network.ServerGamePacketListenerImpl;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -142,7 +144,7 @@ public abstract class MountedBigCannonContraptionMixin extends AbstractMountedCa
     public CannonBlastWaveEffectParticleData alternativeBlast(double blastRadius, Holder soundEvent, SoundSource soundSource, float volume, float pitch, float airAbsorption, float power, Operation<CannonBlastWaveEffectParticleData> original) {
         boolean rework = !CBCATConfigs.SERVER.bigCannons.disablePhysicRework.get();
         if (rework) {
-            return new CannonBlastWaveEffectParticleData(blastRadius, soundEvent, soundSource, volume * propelCtx.volume, pitch * propelCtx.volume, airAbsorption, power);
+            return new CannonBlastWaveEffectParticleData(blastRadius, soundEvent, soundSource, volume * propelCtx.volume, pitch * propelCtx.volume, airAbsorption, propelCtx.recoil);
         }
         else {
             return new CannonBlastWaveEffectParticleData(blastRadius, soundEvent, soundSource, volume, pitch, airAbsorption, power);
