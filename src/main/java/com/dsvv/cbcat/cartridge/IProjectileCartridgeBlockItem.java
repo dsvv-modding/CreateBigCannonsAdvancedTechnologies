@@ -20,11 +20,17 @@ import java.util.List;
 import static rbasamoyai.createbigcannons.base.CBCTooltip.getPalette;
 
 public interface IProjectileCartridgeBlockItem {
-    static int getMaximumPowerLevels() {
-        return CBCMunitionPropertiesHandlers.BIG_CARTRIDGE.getPropertiesOf(CBCBlocks.BIG_CARTRIDGE.get()).maxPowerLevels() - 1;
+    static int getMaximumPowerLevels(ItemStack stack) {
+        if (stack.getItem() instanceof IProjectileCartridgeBlockItem cartridgeBlockItem)
+            if (cartridgeBlockItem.getBlock() instanceof ProjectileCartridge block)
+                return block.getMaximumPowerLevels();
+        return CBCMunitionPropertiesHandlers.BIG_CARTRIDGE.getPropertiesOf(CBCBlocks.BIG_CARTRIDGE.get()).maxPowerLevels();
     }
 
     static int getPower(ItemStack stack) {
+        if (stack.getItem() instanceof IProjectileCartridgeBlockItem cartridgeBlockItem)
+            if (cartridgeBlockItem.getBlock() instanceof ProjectileCartridge block)
+                return block.allowsMultipleCharges() ? 1 : 3;
         return stack.has(CBCDataComponents.POWER) ? stack.get(CBCDataComponents.POWER) : 0;
     }
 
@@ -41,7 +47,9 @@ public interface IProjectileCartridgeBlockItem {
         String key = "block." + CreateBigCannons.MOD_ID + ".propellant.tooltip.power";
         tooltip.add(Component.literal(I18n.get(key)).withStyle(ChatFormatting.GRAY));
         int min = getPower(stack);
-        int max = getMaximumPowerLevels();
+        int max = getMaximumPowerLevels(stack);
         tooltip.addAll(TooltipHelper.cutStringTextComponent(I18n.get(key + ".value", min, max), palette.primary(), palette.highlight(), 1));
     }
+
+    Block getBlock();
 }

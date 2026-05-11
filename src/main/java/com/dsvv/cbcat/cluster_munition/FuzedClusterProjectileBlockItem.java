@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem {
+public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem implements IProjectileCartridgeBlockItem {
     private ItemStack[] fuzes = new ItemStack[] {ItemStack.EMPTY, ItemStack.EMPTY};
     private String projectile = "";
 
@@ -77,7 +77,6 @@ public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem {
                 i++;
             }
         }
-        //return result;
     }
 
     @Override
@@ -100,29 +99,6 @@ public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem {
                     secondaryFuzes[i] = fuzesContainer.getStackInSlot(i);
                 clusterBE.setSecondaryFuzes(secondaryFuzes);
             }
-
-        /*CompoundTag baseTag = context.getItemInHand().getOrCreateTag();
-
-        if (!baseTag.contains("BlockEntityTag"))
-            return result;
-
-        CompoundTag stackTag = baseTag.getCompound("BlockEntityTag");
-
-        if (!stackTag.contains("SecondaryFuzes") && !stackTag.contains("Projectile"))
-            return result;
-
-        ListTag fuzeList = stackTag.getList("SecondaryFuzes", 10);
-        String projectile = stackTag.getString("Projectile");
-
-        ItemStack[] clusterParts = new ItemStack[fuzeList.size()];
-        for (int i = 0; i < clusterParts.length; i++)
-            clusterParts[i] = ItemStack.of((CompoundTag) fuzeList.get(i));
-
-        Level level = context.getLevel();
-        if (!level.isClientSide && level.getBlockEntity(context.getClickedPos()) instanceof FuzedClusterProjectileBlockEntity clusterBE) {
-            clusterBE.setFuzes(clusterParts);
-            clusterBE.setProjectile(projectile);
-        }*/
         }
         return result;
     }
@@ -151,26 +127,9 @@ public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem {
         for(ItemStack fuzeStack : stack.get(DataComponentRegistry.CLUSTER_FUZES).nonEmptyItems())
             result[index++] = fuzeStack;
         return result;
-        /*
-        stack.getOrCreateTag().put("BlockEntityTag", new CompoundTag());
-        CompoundTag tag = stack.getTag().getCompound("BlockEntityTag");
-        if (!tag.contains("SecondaryFuzes"))
-            return new ItemStack[] { ItemStack.EMPTY };
-        ListTag fuzes = tag.getList("SecondaryFuzes", 10);
-        ItemStack[] result = new ItemStack[fuzes.size()];
-        for (int i = 0; i < fuzes.size(); i++)
-            result[i] = ItemStack.of(fuzes.getCompound(i));
-        return result;*/
     }
 
     public String getProjectileFromStack(ItemStack stack) {
         return stack.getOrDefault(DataComponentRegistry.CLUSTER_PROJECTILE, "");
-        /*CompoundTag baseTag = stack.getOrCreateTag();
-        if (!baseTag.contains("BlockEntityTag"))
-            return "";
-        CompoundTag tag = baseTag.getCompound("BlockEntityTag");
-        if (!tag.contains("Projectile"))
-            return "";
-        return tag.getString("Projectile");*/
     }
 }

@@ -31,36 +31,36 @@ public class ItemRegister
     //public static final ItemEntry<HeavyAutocannonPowderCharge> HEAVY_AUTOCANNON_POWDER_CHARGE = REGISTRATE.item("heavy_autocannon_powder_charge", HeavyAutocannonPowderCharge::new)
     //        .register();
     public static final ItemEntry<AP_RocketItem> AP_ROCKET_ITEM = REGISTRATE.item("ap_rocket_item", AP_RocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
     public static final ItemEntry<Flak_RocketItem> FLAK_ROCKET_ITEM = REGISTRATE.item("flak_rocket_item", Flak_RocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
     public static final ItemEntry<HE_RocketItem> HE_ROCKET_ITEM = REGISTRATE.item("he_rocket_item", HE_RocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
     public static final ItemEntry<HEI_RocketItem> HEI_ROCKET_ITEM = REGISTRATE.item("hei_rocket_item", HEI_RocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
 
     public static final ItemEntry<APMediumRocketItem> MEDIUM_AP_ROCKET_ITEM = REGISTRATE.item("medium_ap_rocket_item", APMediumRocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
     public static final ItemEntry<HEMediumRocketItem> MEDIUM_HE_ROCKET_ITEM = REGISTRATE.item("medium_he_rocket_item", HEMediumRocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
     public static final ItemEntry<HEFMediumRocketItem> MEDIUM_HEF_ROCKET_ITEM = REGISTRATE.item("medium_hef_rocket_item", HEFMediumRocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
     public static final ItemEntry<HEATMediumRocketItem> MEDIUM_HEAT_ROCKET_ITEM = REGISTRATE.item("medium_heat_rocket_item", HEATMediumRocketItem::new)
-            ////.tab(TabRegister.SIMPLE_TAB.getKey())
+            //.tab(TabRegister.SIMPLE_TAB.getKey())
             .tag(CBCTags.CBCItemTags.AUTOCANNON_ROUNDS)
             .register();
 

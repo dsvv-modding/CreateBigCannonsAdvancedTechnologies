@@ -55,6 +55,11 @@ public class CreateBigCannons_AdvancedTechnology
         RECIPE_SERIALIZER_REGISTER.register(modEventBus);
         RECIPE_TYPE_REGISTER.register(modEventBus);
 
+        modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::onRegister);
+        modEventBus.addListener(this::addPackFinders);
+        modEventBus.addListener(TabRegister::buildCreativeTab)
+
         TabRegister.register(modEventBus);
         BlockRegister.register();
         ItemRegister.register();
@@ -65,14 +70,7 @@ public class CreateBigCannons_AdvancedTechnology
         MenuRegister.register();
         RecipeRegister.register();
         CBCATConfigs.registerConfigs(modContainer::registerConfig);
-
-        modEventBus.addListener(this::onRegister);
-        modEventBus.addListener(this::addPackFinder);
     }
-
-    /*public void registerBlockColors(RegisterColorHandlersEvent.Block event) {
-        event.register(BiomeSpecialEffects.GrassColorModifier.ColorModifier);
-    }*/
 
     private void onRegister(RegisterEvent event){
         CannonCastingShapes.register();
