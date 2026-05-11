@@ -109,7 +109,7 @@ public class ProjectileCartridgeBlock extends InertProjectileBlock implements Pr
 
     public int getMaximumPowerLevels()
     {
-        return CBCMunitionPropertiesHandlers.BIG_CARTRIDGE.getPropertiesOf(this).maxPowerLevels() - 1;
+        return multipleCharges ? 1 : 3;
     }
 
     public EntityType<? extends AbstractBigCannonProjectile> getAssociatedEntityType()

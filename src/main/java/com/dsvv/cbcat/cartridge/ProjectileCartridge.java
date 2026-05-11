@@ -15,4 +15,6 @@ public interface ProjectileCartridge extends BigCannonPropellantBlock
     AbstractBigCannonProjectile getProjectile(Level level, List<StructureTemplate.StructureBlockInfo> projectileBlocks);
 
     boolean allowsMultipleCharges();
+
+    int getMaximumPowerLevels();
 }

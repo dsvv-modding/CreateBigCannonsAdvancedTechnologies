@@ -45,6 +45,11 @@ public class CreateBigCannons_AdvancedTechnology
 
         REGISTRATE.registerEventListeners(modEventBus);
 
+        modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::onRegister);
+        modEventBus.addListener(this::addPackFinders);
+        modEventBus.addListener(TabRegister::buildCreativeTab);
+
         TabRegister.register(modEventBus);
         BlockRegister.register();
         ItemRegister.register();
@@ -55,10 +60,6 @@ public class CreateBigCannons_AdvancedTechnology
         MenuRegister.register();
         RecipeRegister.register();
         CBCATConfigs.registerConfigs(ModLoadingContext.get()::registerConfig);
-
-        modEventBus.addListener(this::addCreative);
-        modEventBus.addListener(this::onRegister);
-        modEventBus.addListener(this::addPackFinders);
     }
 
     private void onRegister(RegisterEvent event){

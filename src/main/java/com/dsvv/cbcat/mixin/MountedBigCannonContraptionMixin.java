@@ -149,7 +149,7 @@ public abstract class MountedBigCannonContraptionMixin extends AbstractMountedCa
     public CannonBlastWaveEffectParticleData alternativeBlast(double blastRadius, Holder soundEvent, SoundSource soundSource, float volume, float pitch, float airAbsorption, float power, Operation<CannonBlastWaveEffectParticleData> original) {
         boolean rework = !CBCATConfigs.SERVER.bigCannons.disablePhysicRework.get();
         if (rework) {
-            return new CannonBlastWaveEffectParticleData(blastRadius, soundEvent, soundSource, volume * propelCtx.volume, pitch * propelCtx.volume, airAbsorption, power);
+            return new CannonBlastWaveEffectParticleData(blastRadius, soundEvent, soundSource, volume * propelCtx.volume, pitch * propelCtx.volume, airAbsorption, propelCtx.recoil);
         }
         else {
             return new CannonBlastWaveEffectParticleData(blastRadius, soundEvent, soundSource, volume, pitch, airAbsorption, power);

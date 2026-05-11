@@ -1,5 +1,8 @@
 package com.dsvv.cbcat.cluster_munition;
 
+import com.dsvv.cbcat.cartridge.ClusterProjectileCartridgeBlock;
+import com.dsvv.cbcat.cartridge.IProjectileCartridgeBlockItem;
+import com.simibubi.create.foundation.utility.CreateLang;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -10,14 +13,16 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import rbasamoyai.createbigcannons.base.CBCTooltip;
 import rbasamoyai.createbigcannons.munitions.big_cannon.ProjectileBlockItem;
+import rbasamoyai.createbigcannons.munitions.fuzes.FuzeItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem {
+public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem implements IProjectileCartridgeBlockItem {
     private ItemStack[] fuzes = new ItemStack[] {ItemStack.EMPTY, ItemStack.EMPTY};
     private String projectile = "";
 
@@ -32,6 +37,21 @@ public class FuzedClusterProjectileBlockItem extends ProjectileBlockItem {
         if (!baseTag.contains("BlockEntityTag"))
             return;
         CompoundTag tag = baseTag.getCompound("BlockEntityTag");
+        ItemStack fuze = ItemStack.of(tag.getCompound("Fuze"));
+        if (!fuze.isEmpty()) {
+            CreateLang.builder("block").translate("createbigcannons.shell.tooltip.fuze", new Object[0]).add(Component.literal(" ")).add(fuze.getDisplayName().copy()).addTo(tooltip);
+            if (fuze.getItem() instanceof FuzeItem) {
+                List<Component> subTooltip = new ArrayList();
+                fuze.getItem().appendHoverText(fuze, level, subTooltip, flag);
+                subTooltip.replaceAll((sibling) -> Component.literal("  ").append(sibling).withStyle(ChatFormatting.GRAY));
+                tooltip.addAll(subTooltip);
+            }
+        }
+        if (getBlock() instanceof ClusterProjectileCartridgeBlock clusterCartridgeBlock) {
+            IProjectileCartridgeBlockItem.appendCartridgePropellantPowerText(stack, level, tooltip, flag);
+            CBCTooltip.appendMuzzleVelocityText(stack, level, tooltip, flag, clusterCartridgeBlock);
+            CBCTooltip.appendPropellantStressText(stack, level, tooltip, flag, clusterCartridgeBlock);
+        }
         if (tag.contains("Projectile"))
             tooltip.add(Component.translatable(tag.getString("Projectile")));
         if (tag.contains("SecondaryFuzes")) {

@@ -116,7 +116,7 @@ public class FuzedProjectileCartridgeBlock<T extends FuzedBigCannonProjectile> e
 
     public int getMaximumPowerLevels()
     {
-        return CBCMunitionPropertiesHandlers.BIG_CARTRIDGE.getPropertiesOf(this).maxPowerLevels() - 1;
+        return multipleCharges ? 1 : 3;
     }
 
     public boolean isBaseFuze() {
