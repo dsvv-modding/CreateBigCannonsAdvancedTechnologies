@@ -1,5 +1,6 @@
 package com.dsvv.cbcat.cluster_munition;
 
+import com.dsvv.cbcat.cartridge.IProjectileCartridgeBlockItem;
 import com.dsvv.cbcat.registry.DataComponentRegistry;
 import com.simibubi.create.foundation.utility.CreateLang;
 import net.minecraft.ChatFormatting;

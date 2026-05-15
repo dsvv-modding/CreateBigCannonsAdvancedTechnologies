@@ -55,10 +55,10 @@ public class CreateBigCannons_AdvancedTechnology
         RECIPE_SERIALIZER_REGISTER.register(modEventBus);
         RECIPE_TYPE_REGISTER.register(modEventBus);
 
-        modEventBus.addListener(this::addCreative);
+        //modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::onRegister);
-        modEventBus.addListener(this::addPackFinders);
-        modEventBus.addListener(TabRegister::buildCreativeTab)
+        //modEventBus.addListener(this::addPackFinders);
+        modEventBus.addListener(TabRegister::buildCreativeTab);
 
         TabRegister.register(modEventBus);
         BlockRegister.register();

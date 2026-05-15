@@ -24,7 +24,7 @@ public abstract class CannonCarriageEntityMixin extends Entity implements Contro
         super(pEntityType, pLevel);
     }
 
-    @Inject(method = "Lrbasamoyai/createbigcannons/cannon_control/carriage/CannonCarriageEntity;trySettingFireRateCarriage(I)V", at = @At("TAIL"), remap = false)
+    @Inject(method = "trySettingFireRateCarriage(I)V", at = @At("TAIL"), remap = false)
     public void trySettingFireRateCarriage(int fireRateAdjustment, CallbackInfo ci) {
         if (!this.level().isClientSide && this.cannonContraption != null && this.cannonContraption.getContraption() instanceof ICarriageAdjustableFireRate autocannon)
             autocannon.trySettingFireRateCarriage(fireRateAdjustment);
