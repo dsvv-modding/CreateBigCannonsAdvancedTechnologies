@@ -1,7 +1,0 @@
-{
-  "parent": "cbc_at:block/projectile_cartridge/projectile_cartridge",
-  "textures": {
-    "top": "cbc_at:block/projectile_cartridge/grapeshot_top",
-    "side": "cbc_at:block/projectile_cartridge/grapeshot_side"
-  }
-}
