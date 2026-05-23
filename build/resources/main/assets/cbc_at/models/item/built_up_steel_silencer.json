@@ -1,8 +1,0 @@
-{
-  "parent": "cbc_at:block/built_up_silencer",
-  "textures": {
-    "0": "cbc_at:block/built_up_steel_cannon_barrel_side",
-    "1": "cbc_at:block/built_up_steel_cannon_barrel_end",
-    "particle": "cbc_at:block/built_up_steel_cannon_barrel_side"
-  }
-}

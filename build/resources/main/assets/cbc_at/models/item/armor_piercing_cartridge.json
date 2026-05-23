@@ -1,7 +1,0 @@
-{
-  "parent": "cbc_at:block/projectile_cartridge/projectile_cartridge",
-  "textures": {
-    "top": "cbc_at:block/projectile_cartridge/armor_piercing_shot_top",
-    "side": "cbc_at:block/projectile_cartridge/armor_piercing_shot_side"
-  }
-}
