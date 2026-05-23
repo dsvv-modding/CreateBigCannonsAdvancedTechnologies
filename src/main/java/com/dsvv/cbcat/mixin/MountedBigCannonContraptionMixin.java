@@ -137,7 +137,7 @@ public abstract class MountedBigCannonContraptionMixin extends AbstractMountedCa
     @WrapOperation(method = "fireShot(Lnet/minecraft/server/level/ServerLevel;Lrbasamoyai/createbigcannons/cannon_control/contraption/PitchOrientedContraptionEntity;)V", at = @At(value = "INVOKE", target = "Lrbasamoyai/createbigcannons/munitions/big_cannon/AbstractBigCannonProjectile;shoot(DDDFF)V"), remap = false)
     public void shoot(AbstractBigCannonProjectile instance, double x, double y, double z, float velocity, float spread, Operation<Void> original) {
         boolean rework = !CBCATConfigs.SERVER.bigCannons.disablePhysicRework.get();
-        if (propelCtx.getDoomedToFail())
+        if (propelCtx.getDoomedToFail() && !CBCConfigs.server().failure.disableAllFailure.get())
             fail(startPos, instance.level(), (PitchOrientedContraptionEntity) entity, null, (int) propelCtx.chargesUsed);
         if (rework)
             original.call(instance, x, y, z, propelCtx.getVelocity(), propelCtx.spread);

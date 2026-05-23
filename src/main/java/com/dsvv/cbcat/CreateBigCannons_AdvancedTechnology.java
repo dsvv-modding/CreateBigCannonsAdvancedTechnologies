@@ -36,7 +36,7 @@ public class CreateBigCannons_AdvancedTechnology
 
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
     private static final Logger LOGGER = LogUtils.getLogger();
-    public CreateBigCannons_AdvancedTechnology() 
+    public CreateBigCannons_AdvancedTechnology()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 

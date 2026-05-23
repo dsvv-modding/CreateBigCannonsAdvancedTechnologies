@@ -3,6 +3,6 @@
   "textures": {
     "0": "cbc_at:block/bronze_cannon_chamber_side",
     "1": "cbc_at:block/rocket_pod/unbored_bronze_rocket_pod_end",
-    "particle": "cbc_at:block/bronze_rocket_pod"
+    "particle": "cbc_at:block/bronze_cannon_chamber_side"
   }
 }

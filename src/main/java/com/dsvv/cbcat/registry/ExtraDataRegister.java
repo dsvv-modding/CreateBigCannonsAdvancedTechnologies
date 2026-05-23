@@ -105,8 +105,8 @@ public class ExtraDataRegister
 
         PROJECTILE_ROCKET.put(CBCItems.AP_AUTOCANNON_ROUND, ItemRegister.AP_ROCKET_ITEM);
         PROJECTILE_ROCKET.put(CBCItems.FLAK_AUTOCANNON_ROUND, ItemRegister.FLAK_ROCKET_ITEM);
-        PROJECTILE_ROCKET.put(ItemRegister.HE_ROCKET_ITEM, ItemRegister.HE_ROCKET_ITEM);
-        PROJECTILE_ROCKET.put(ItemRegister.HEI_ROCKET_ITEM, ItemRegister.HEI_ROCKET_ITEM);
+        PROJECTILE_ROCKET.put(ItemRegister.HE_ITEM, ItemRegister.HE_ROCKET_ITEM);
+        PROJECTILE_ROCKET.put(ItemRegister.HEI_ITEM, ItemRegister.HEI_ROCKET_ITEM);
     }
 
     public static PartialModel twinAutocannonSpringFor(AutocannonMaterial mat, boolean vertical)
