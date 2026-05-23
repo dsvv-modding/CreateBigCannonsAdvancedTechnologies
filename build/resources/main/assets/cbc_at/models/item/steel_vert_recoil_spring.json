@@ -1,6 +1,0 @@
-{
-  "parent": "cbc_at:block/autocannon/vert_spring",
-  "textures": {
-    "0": "cbc_at:block/steel_autocannon"
-  }
-}
