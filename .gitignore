@@ -1,5 +1,5 @@
 /.idea/
-/run/logs/
+/run-data/
 /build/
 /.gradle/
 /run/
