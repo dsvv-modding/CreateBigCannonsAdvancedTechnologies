@@ -48,7 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","mod_resources"]
+resourcePacks:["vanilla","mod_resources","mod/cbc_at:resourcepacks/green_creative_ammo_boxes"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
