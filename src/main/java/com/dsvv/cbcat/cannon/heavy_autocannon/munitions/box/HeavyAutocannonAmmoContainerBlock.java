@@ -123,7 +123,7 @@ public class HeavyAutocannonAmmoContainerBlock extends Block implements IWrencha
         if (level.getBlockEntity(pos) instanceof HeavyAutocannonAmmoContainerBlockEntity be) {
             if (player instanceof ServerPlayer sPlayer) {
                 MenuRegister.HEAVY_AUTOCANNON_AMMO_BOX.open(sPlayer, be.getDisplayName(), be, buf -> {
-                    buf.writeBoolean(!be.isCreativeContainer());
+                    buf.writeBoolean(be.isCreativeContainer());
                     buf.writeVarInt(be.getSpacing());
                     buf.writeBoolean(true);
                     buf.writeBlockPos(pos);

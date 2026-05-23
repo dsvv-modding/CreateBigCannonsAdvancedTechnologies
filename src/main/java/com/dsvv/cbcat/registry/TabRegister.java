@@ -31,7 +31,7 @@ public class TabRegister
     }
 
     public static void buildCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() != CreativeModeTabs.COLORED_BLOCKS || event.getTab().contains(BlockRegister.CAST_IRON_MUZZLE_BRAKE.asStack()))// || !event.hasPermissions())
+        if (event.getTab() != TabRegister.SIMPLE_TAB.get())//  || event.getTab().contains(BlockRegister.CAST_IRON_MUZZLE_BRAKE.asStack()) || !event.hasPermissions())
             return;
         event.acceptAll(List.of(new ItemStack[]{
             BlockRegister.CAST_IRON_MUZZLE_BRAKE.asStack(),
@@ -284,6 +284,6 @@ public class TabRegister
             BlockRegister.UNBORED_BRONZE_ROCKET_POD_BREECH.asStack(),
             BlockRegister.UNBORED_STEEL_ROCKET_POD_BARREL.asStack(),
             BlockRegister.UNBORED_STEEL_ROCKET_POD_BREECH.asStack()
-        }));
+        }), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
     }
 }

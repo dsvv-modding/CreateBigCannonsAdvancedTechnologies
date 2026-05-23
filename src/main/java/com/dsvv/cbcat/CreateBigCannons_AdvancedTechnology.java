@@ -57,7 +57,7 @@ public class CreateBigCannons_AdvancedTechnology
 
         //modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::onRegister);
-        //modEventBus.addListener(this::addPackFinders);
+        modEventBus.addListener(this::addPackFinder);
         modEventBus.addListener(TabRegister::buildCreativeTab);
 
         TabRegister.register(modEventBus);
