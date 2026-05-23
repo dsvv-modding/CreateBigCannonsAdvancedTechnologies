@@ -1,5 +1,3 @@
-<span><span><span><span><span><span><span><iframe src="https://www.youtube.com/embed/BRCfqaflNAs" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></span></span></span></span></span></span></span>
-
 ## This Mod is an addon for the well known Create Big Cannons (CBC) mod.
 
 ### In this mod are 110 new cannon blocks
