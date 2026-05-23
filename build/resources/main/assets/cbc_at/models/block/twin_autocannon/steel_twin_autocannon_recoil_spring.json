@@ -1,9 +1,0 @@
-{
-  "parent": "cbc_at:block/twin_autocannon/twin_autocannon_recoil_spring",
-  "textures": {
-    "0": "cbc_at:block/steel_autocannon",
-    "1": "cbc_at:block/steel_autocannon",
-    "2": "cbc_at:block/steel_autocannon_1",
-    "particle": "cbc_at:block/steel_autocannon"
-  }
-}
