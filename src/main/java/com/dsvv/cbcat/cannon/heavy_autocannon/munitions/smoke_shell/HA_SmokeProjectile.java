@@ -24,7 +24,7 @@ public class HA_SmokeProjectile extends AbstractFuzedHeavyAutocannonProjectile {
     @Override
     protected void detonate(Position position) {
         SmokeShellProperties properties = CBCMunitionPropertiesHandlers.SMOKE_SHELL.getPropertiesOf(CBCEntityTypes.SMOKE_SHELL.get());
-        SmokeExplosion explosion = new SmokeExplosion(this.level(), null, position.x(), position.y(), position.z(), 1.75f,
+        SmokeExplosion explosion = new SmokeExplosion(this.level(), null, position.x(), position.y(), position.z(), 1.66f, 2,
                 Level.ExplosionInteraction.NONE);
         CreateBigCannons.handleCustomExplosion(this.level(), explosion);
         SmokeEmitterEntity smoke = CBCEntityTypes.SMOKE_EMITTER.create(this.level());

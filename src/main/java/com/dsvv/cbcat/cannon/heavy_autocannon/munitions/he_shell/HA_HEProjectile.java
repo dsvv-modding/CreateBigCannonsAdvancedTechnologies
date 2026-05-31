@@ -48,7 +48,7 @@ public class HA_HEProjectile extends AbstractFuzedHeavyAutocannonProjectile {
     protected void detonate(Position position) {
         FlakAutocannonProjectileProperties properties = CBCMunitionPropertiesHandlers.FLAK_AUTOCANNON.getPropertiesOf(CBCEntityTypes.FLAK_AUTOCANNON.get());
         ShellExplosion explosion = new ShellExplosion(this.level(), this, this.indirectArtilleryFire(false), position.x(),
-                position.y(), position.z(), properties.explosion().explosivePower() * 1.66f, false,
+                position.y(), position.z(), properties.explosion().blockDamagePower() * 1.66f, properties.explosion().entityDamagePower() * 1.66f, false,
                 CBCConfigs.server().munitions.damageRestriction.get().explosiveInteraction());
         CreateBigCannons.handleCustomExplosion(this.level(), explosion);
     }

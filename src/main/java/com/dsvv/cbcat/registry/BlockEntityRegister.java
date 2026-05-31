@@ -31,8 +31,6 @@ import com.dsvv.cbcat.cartridge.ProjectileCartridgeBlockEntity;
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlockEntity;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlockEntity;
-import rbasamoyai.createbigcannons.munitions.big_cannon.BigCannonProjectileBlockEntity;
-import rbasamoyai.createbigcannons.munitions.big_cannon.FuzedBlockEntity;
 import rbasamoyai.createbigcannons.forge.munitions.fluid_shell.FluidShellBlockEntity;
 
 import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
