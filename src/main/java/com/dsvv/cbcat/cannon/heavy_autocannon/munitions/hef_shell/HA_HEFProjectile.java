@@ -26,7 +26,7 @@ public class HA_HEFProjectile extends AbstractFuzedHeavyAutocannonProjectile {
         Vec3 oldDelta = this.getDeltaMovement();
         FlakAutocannonProjectileProperties properties = CBCMunitionPropertiesHandlers.FLAK_AUTOCANNON.getPropertiesOf(CBCEntityTypes.FLAK_AUTOCANNON.get());
         FlakExplosion explosion = new FlakExplosion(this.level(), null, this.indirectArtilleryFire(false), position.x(), position.y(), position.z(),
-                properties.explosion().explosivePower() * 1.33f, CBCConfigs.server().munitions.damageRestriction.get().explosiveInteraction());
+                properties.explosion().blockDamagePower() * 1.3f, properties.explosion().entityDamagePower() * 1.4f, CBCConfigs.server().munitions.damageRestriction.get().explosiveInteraction());
         CreateBigCannons.handleCustomExplosion(this.level(), explosion);
         CBCProjectileBurst.spawnConeBurst(this.level(), CBCEntityTypes.FLAK_BURST.get(), new Vec3(position.x(), position.y(), position.z()),
                 oldDelta, properties.flakBurst().burstProjectileCount() * 8, properties.flakBurst().burstSpread() * 4);

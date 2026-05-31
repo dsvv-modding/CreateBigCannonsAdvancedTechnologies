@@ -29,9 +29,10 @@ import com.dsvv.cbcat.cannon.twin_autocannon.recoil_spring.TwinAutocannonRecoilS
 import com.dsvv.cbcat.cluster_munition.FuzedClusterProjectileBlockEntity;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBlockEntity;
+import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlockEntity;
 import rbasamoyai.createbigcannons.munitions.big_cannon.BigCannonProjectileBlockEntity;
 import rbasamoyai.createbigcannons.munitions.big_cannon.FuzedBlockEntity;
-import rbasamoyai.createbigcannons.munitions.big_cannon.fluid_shell.FluidShellBlockEntity;
+
 
 import static com.dsvv.cbcat.CreateBigCannons_AdvancedTechnology.REGISTRATE;
 

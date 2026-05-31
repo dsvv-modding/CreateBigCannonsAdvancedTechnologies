@@ -357,7 +357,7 @@ public class MountedMediumRocketRailContraption extends AbstractMountedCannonCon
 
         recoilMagnitude *= CBCConfigs.server().cannons.autocannonRecoilScale.getF() * 2.0F;
         if (controller != null) {
-            controller.onRecoil(vec1.scale((-recoilMagnitude)), entity);
+            controller.onRecoil(vec1.scale((-recoilMagnitude)), centerPos, entity);
         }
 
         Vec3 particleVel = vec1.scale(1.25F);

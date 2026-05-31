@@ -36,7 +36,7 @@ public class FuzedClusterProjectileBlockEntity extends FuzedBlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider provider) {
+    public void saveAdditional(CompoundTag tag, HolderLookup.Provider provider) {
         super.saveAdditional(tag, provider);
         ListTag fuzeTags = new ListTag();
         for (int i = 0; i < secondaryFuzes.length; i++)
