@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -220,8 +221,8 @@ public abstract class AbstractHeavyAutocannonProjectile extends AbstractCannonPr
                     momentum *= Math.max(0.25, 1 - hardnessPenalty / ballistics.toughness());
                 }
             }
-            if (!unbreakable)
-                CreateBigCannons.BLOCK_DAMAGE.damageBlock(pos.immutable(), Math.max(Mth.ceil(momentum), 0), state, this.level());
+            if (!unbreakable && this.level() instanceof ServerLevel serverLevel) //* Patched by @lines8810 6-16-26
+                CreateBigCannons.BLOCK_DAMAGE.damageBlock(pos.immutable(), Math.max(Mth.ceil(momentum), 0), state, serverLevel);
         }
         this.onImpact(blockHitResult, new ImpactResult(outcome, shatter), projectileContext);
         return new ImpactResult(outcome, !this.level().isClientSide && (shatter || outcome != ImpactResult.KinematicOutcome.BOUNCE));

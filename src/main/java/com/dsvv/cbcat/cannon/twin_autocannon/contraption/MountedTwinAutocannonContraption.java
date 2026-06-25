@@ -419,7 +419,7 @@ public class MountedTwinAutocannonContraption extends AbstractMountedCannonContr
             }
 
             recoilMagnitude *= CBCConfigs.server().cannons.autocannonRecoilScale.getF() * 2.0F;
-            if (controller != null) {
+            if (controller instanceof ControlPitchContraption) { //* Patched by Brotality
                 controller.onRecoil(vec1.scale((-recoilMagnitude)), centerPos, entity);
             }
 
