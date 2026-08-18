@@ -41,6 +41,7 @@ public class ClusterMunitionAssemblyRecipe extends CustomRecipe
                 if (!powder.isEmpty()) return false;
                 powder = stack;
             } else if (stack.getItem() instanceof AbstractHeavyAutocannonProjectileItem) {
+                if(stack.getComponents().get(CBCDataComponents.FUZE) == null) return false;
                 clusterParts.add(stack);
             }else
             {
@@ -78,9 +79,10 @@ public class ClusterMunitionAssemblyRecipe extends CustomRecipe
         if (slab.isEmpty() || powder.isEmpty() || clusterParts.size() < 4) return ItemStack.EMPTY;
 
         AbstractFuzedHeavyAutocannonProjectileItem reference = (AbstractFuzedHeavyAutocannonProjectileItem) clusterParts.get(0).getItem();
-        for (int i = 0; i < clusterParts.size(); i++)
-            if (!clusterParts.get(i).getItem().equals(reference))
-                return ItemStack.EMPTY;
+        for (int i = 0; i < clusterParts.size(); i++){
+            if (!clusterParts.get(i).getItem().equals(reference)) return ItemStack.EMPTY;
+            if(clusterParts.get(i).getComponents().get(CBCDataComponents.FUZE) == null) return ItemStack.EMPTY;
+        }
 
         ItemStack result = BlockRegister.CLUSTER_BLOCK.asStack(1);
 
@@ -89,7 +91,7 @@ public class ClusterMunitionAssemblyRecipe extends CustomRecipe
         ArrayList<ItemStack> secondaryFuzes = new ArrayList<>();
         for (int i = 0; i < clusterParts.size(); i++) {
             ItemContainerContents secondaryFuzeContainer = clusterParts.get(i).getComponents().get(CBCDataComponents.FUZE);
-            ItemStack secondaryFuze = secondaryFuzeContainer.copyOne();
+            ItemStack secondaryFuze = secondaryFuzeContainer == null ? ItemStack.EMPTY : secondaryFuzeContainer.copyOne();
             secondaryFuzes.add(secondaryFuze);
         }
         result.set(DataComponentRegistry.CLUSTER_FUZES, ItemContainerContents.fromItems(secondaryFuzes));
